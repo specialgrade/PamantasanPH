@@ -7,5 +7,5 @@ This repository contains the code and assets for the application project of Grou
 ### 🖥️ Technology Used
 
 - Figma: The Collaborative Interface Design Tool - UI/UX
-- HTML, CSS, JavaScript - three basic web technologies for creating web apps
+- HTML, CSS, JavaScript - three basic web technologies for creating web applications
 - Python and Flask - for developing web applications using Python
