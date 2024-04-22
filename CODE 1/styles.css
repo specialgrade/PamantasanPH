@@ -1,0 +1,745 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root { /* global styling */
+    --white: #FFFFFF; /* main color */
+    --gray: #EEEEEE; /* bg color */
+    --black: #000000; /* secondary color */
+    --green: #39811D; /* accent color */
+    --box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* box shadow */
+}
+
+*, /* resets default browser styling */
+*::after,
+*::before { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.topnav {
+    overflow: hidden;
+
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #189c33;
+    color: black;
+    border-radius: 10%;
+   
+  }
+  
+  /* Style the "active" element to highlight the current page */
+  .topnav a.active {
+    background-color: #ab0707;
+    color: wheat;
+    border-radius: 10%;
+  }
+  
+  /* Style the search box inside the navigation bar */
+  .topnav input[type=text] {
+    float: down;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+  }
+  
+  /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+  @media screen and (max-width: 600px) {
+    .topnav a, .topnav input[type=text] {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    .topnav input[type=text] {
+      border: 1px solid #af9b9b;
+    }
+  }
+
+a {
+    text-decoration: none; 
+}
+
+ol, ul, li {
+    list-style: none; 
+}
+
+html {
+    font-size: 62.5%; 
+}
+
+html:focus-within {
+    scroll-behavior: smooth; 
+}
+  
+
+img, picture {
+    max-width: 100%; 
+}
+
+article, aside, footer, header, nav, section {
+	display: block; 
+}
+
+/* navigation styling */
+
+nav { /* navigation bar styles */
+    display: flex;
+    position: flex; 
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 16px;
+    background-color: #ffffff;
+    box-shadow: var(--box-shadow);
+}
+
+.logo {
+    position: absolute;
+    top: 10px; /* Adjust this value to change vertical position */
+    left: 10px; /* Adjust this value to change horizontal position */
+    height: 50px; /* Adjust this value as needed */
+    width: auto;
+    border-radius: 50%;
+    
+}
+
+nav p { /* navigation text styles */
+    font-size: 25px;
+    font-weight: bold;
+    color: #990909;  
+    cursor: pointer;
+    transition: color 0.3s ease;  
+    
+}
+
+
+nav p span { /* navigation span styles */
+    color: #000000;
+    transition: color 0.3s ease;
+    margin-left: 50px;
+}
+
+
+nav ul { /* navigation list styles */
+    display: flex;
+    gap: 16px; 
+    font-size: 16px;
+    z-index: 1; 
+    margin-left: auto;  
+}
+
+nav ul li { /* navigation list item styles */
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    background-color: #FFFFFF;  
+}
+
+nav ul li:hover { /* navigation list item hover styles */
+    background-color: #39811D;
+    color: #FFFFFF;
+}
+
+nav ul li a { /* navigation list item anchor styles */
+    color: #000000;
+    font-weight: normal;
+    transition: color 0.3s ease; 
+}
+
+nav ul li:hover > a { /* navigation list item anchor hover styles */
+    color: #FFFFFF;
+    transition: color 0.3s ease; 
+}
+
+/* Style the search box */
+  
+  /* Style the navigation menu */
+  #myMenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: absolute;
+  }
+  
+  /* Style the navigation links */
+  #myMenu li a {
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+    display: block
+  }
+  
+  #myMenu li a:hover {
+    background-color: #eee;
+  }
+
+
+
+section{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    color: #FFFFFF;
+    flex: none;
+}
+
+section:nth-child(1){
+    background-color: #006aff;
+}
+
+section:nth-child(2){
+    background-color: wheat;
+}
+
+section:nth-child(3){
+    background-color: #c3ff00;
+}
+section:nth-child(4){
+    background-color: #c300ff;
+}
+
+section h1 {
+    font-size: 5em;
+}
+
+section p {
+    margin-top: -50px;
+    line-height: 30px;
+    width: 85%;
+    text-align: justify;
+}
+* {
+    box-sizing: border-box;
+  }
+  
+
+.column {
+    padding: 20px;
+    border: 1px solid #000000;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-with-border {
+    color: white; /* Set the text color */
+    -webkit-text-stroke: 1px black; /* Add a black stroke around the text */
+    
+}
+
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(30%);
+    width: 20px;
+    padding: 15px 0;
+    margin-top: -50px;
+    color: rgb(12, 2, 2);
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 0 1x 1px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+@media only screen and (max-width: 880px) { /* responsive styles for navigation */
+    nav {
+        margin: 0 auto; 
+    }
+}
+
+@media only screen and (max-width: 700px) { /* responsive styles for hidden navigation on small screens */
+    nav ul {
+        display: none; 
+    }
+}
+
+/* slider section styling */
+
+section { /* section styles */
+    position: relative;
+    background-color: #39811D;
+    height: 90vh; 
+    overflow: hidden; 
+    justify-content: center;
+
+}
+
+section h1 { /* heading styles */
+    font-size: 64px;  
+    line-height: 1.2;
+    margin-bottom: 16px;
+    color: forestgreen;
+    text-align: center; 
+    padding-top: 0vh;  
+    width: 100%;
+    box-sizing: border-box;
+}
+
+section h3 { /* heading styles */
+    font-size: 64px;  
+    line-height: 1.2;
+    margin-bottom: 1px;
+    color: #FFFFFF;
+    text-align: center;  
+    width:50%;
+    box-sizing: border-box;
+}
+
+section p { /* paragraph styles */
+    font-size: 18px; 
+    line-height: 1.5;
+    margin-bottom: 32px;
+    color: black;
+    text-align: center;  
+    padding-top: 5vh;  
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 300px) {
+    .content h2 {
+        font-size: 28.8px; 
+    }
+    
+    .content p {
+        font-size: 16px;
+        display: none; 
+    }
+}
+
+/* main content section styling */
+
+.main-content { /* main content container styles */
+    display: none;
+    align-items: center;
+    text-align: center;
+    margin: 20px auto;
+    gap: 20px;
+    overflow-x: auto;
+}
+
+@media only screen and (max-width: 1124px) {
+    .main-content {
+        margin: 10px; 
+        flex-direction: column;  
+    }
+}
+
+.blog { /* blog section styles */
+    flex: 2; 
+}
+
+.sidebar { /* sidebar section styles */
+    flex: 1; 
+}
+
+/* CSS for post container */
+.post {
+    display:flex;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: relative;
+    min-height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+    transition: transform 0.5s ease; /* Use transform for animation */
+}
+
+/* CSS for post image */
+.post-image {
+    min-height: 200px;
+    transition: opacity 0.3s ease;
+    overflow: hidden;
+    width: 30%;
+    cursor: pointer;
+}
+
+/* CSS for post image hover effect */
+.post:hover .post-image img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* CSS for post image inner styles */
+.post-image img {
+    height: 100%;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* CSS for post content */
+.post-content {
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 78%;
+}
+
+/* CSS for post title */
+.post-title {
+    color: #000000;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: default;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    text-decoration: none;
+}
+
+/* CSS for post title hover effect */
+.post-title:hover {
+    color: #0000FF;
+    text-decoration: underline;
+}
+
+/* CSS for post info */
+.post-info {
+    text-align: left;
+    color: #000000;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* CSS for post summary */
+.post-summary {
+    line-height: 1.5;
+    color: #000000;
+    font-size: 16px;
+}
+
+/* Animation for slide-in effect */
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+        opacity: 0; /* Start with opacity 0 */
+    }
+    100% {
+        transform: translateX(0); /* Slide in to the left */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+
+/* sidebar styling */
+
+.sidebar { /* sidebar container styles */
+    text-align: right;
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    align-items: center;
+    align-content: flex-start; 
+}
+
+.popular-posts-side { /* popular posts container styles */
+    margin: 0px 20px;
+    width: 100%; 
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+}
+
+.popular-posts-side h2, .social-side h2 { /* popular posts heading styles */
+    font-size: 24px;
+    color: #000000;
+    font-weight: bold;
+    padding-bottom: 10px;
+    padding-top: 0; 
+    text-align: center;
+    order: -1;  
+}
+
+.popular-post { /* popular post styles */
+    position: relative;
+    background-color: #FFFFFF;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    padding: 20px;
+    gap: 20px; 
+    border-radius: 8px;
+    margin: 30px 30px;
+    float: left;
+    width: 40%;
+    margin-left: 80px; 
+}
+
+.popular-post-image img:hover { /* popular post hover styles */
+    transform: scale(1.1);
+    transition: transform 0.3s ease; 
+} 
+
+.popular-post-image { /* popular post image styles */
+    width: 100px;
+    height: 120px; 
+    overflow: hidden;  
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.popular-post-image img { /* popular post image hover styles */
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s ease;  
+}
+
+.popular-post-title { /* popular post title styles */
+    font-size: 16px;  
+    color: #000000;
+    font-weight: bold; 
+    margin-bottom: 5px;
+    text-align: right;  
+    cursor: pointer;
+    transition: color 0.3s ease, text-decoration 0.3s ease; 
+    text-decoration: none; 
+}
+
+.popular-post-title:hover { /* popular post title hover styles */
+    color: #0000FF; 
+    text-decoration: underline; 
+  }
+
+.popular-post-desc { /* popular post description styles */
+    font-size: 14px; 
+    color: #000000;  
+    margin-bottom: 10px;
+    text-align: right;  
+}
+
+@media only screen and (max-width: 500px) { /* responsive styles for popular posts container */
+    .popular-posts-side {
+        margin: 10px 0; 
+    }
+
+    .sidebar {
+        flex-direction: column; 
+    }
+}
+
+.social-side { /* social side styles */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    margin: 10px auto;
+    padding: 5px;
+  }
+  
+  .social-side h2 { /* heading styles */
+    background-color: transparent;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px; 
+  }
+  
+  .social-side div { /* social side div styles */
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #FFFFFF; 
+    border-radius: 8px;
+    height: 70px;
+    align-items: center;
+    flex-wrap: wrap; 
+  }
+  
+  .social-side div a { /* social side icons styles */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .social-side div a:hover { /* social side icons hover styles */
+    transform: scale(1.2);
+    filter: grayscale(100%);
+  }
+  
+  .social-side img { /* social side img styles */
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    margin-bottom: 0;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+  }  
+
+@media only screen and (max-width: 992px) { /* footer splitter styles */
+  .sidebar {
+        flex-direction: column; 
+    }
+
+    .popular-posts-side {
+        flex: 1; 
+    }
+}
+
+/* footer styling */
+
+.container footer { /* footer container styles */
+    background-color: #000000;
+    color: #000000; 
+   
+}
+
+.container footer .footerBoxes { /* footer boxes container styles */
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px;
+    padding: 0px 0;
+    margin: 0px;
+}
+
+@media only screen and (max-width: 1000px) { /* responsive styles for footer boxes container */
+    .container footer .footerBoxes {
+        padding: 10px 0; 
+    }
+}
+
+@media only screen and (max-width: 600px) { /* responsive styles for footer boxes container (mobile) */
+    .container footer .footerBoxes {
+        flex-direction: column; 
+    }
+}
+
+.container footer .footerBoxes .footerBox { /* footer box styles */
+    flex: 1;
+    text-align: center; 
+    flex-basis: calc(30% - 40%);
+    margin: 0 20px;
+}
+
+.container footer .footerBoxes .footerBox h3 { /* footer box heading styles */
+    color: forestgreen;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    padding-bottom: 10px; 
+    margin-bottom: 10px; 
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    margin: 20px 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.container footer .footerBoxes .footerBox hr { /* footer box divider styles */
+    height: 1px;
+    width: 100%;
+    background: #000000;
+    border: none;
+    margin-bottom: 20px; 
+}
+
+.container footer .footerBoxes .footerBox p { /* footer box text styles */
+    font-size: 13px;
+    color: #FFFFFF; 
+    margin: 20px 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-width: 25px;
+}
+
+.container footer .splitter { /* footer splitter styles */
+    height: 1px;
+    width: 95%;
+    margin: 20px 20px;
+    background: #FFFFFF;
+    border: none;
+    margin-bottom: 10px; 
+}
+
+.copy-right { /* copy-right text styles */
+    font-size: 10px;
+    width: 100%;
+    text-align: center;
+    opacity: 0.5;
+    padding: 10px 10px; 
+    color: #FFFFFF;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+br {
+    margin-left: 10px; /* Adjust this value as needed */
+}
