@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Template</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div> 
+        <header>
+            <nav> <!--navigation-->
+                <img src="logo.jpg" alt="" class="logo">
+                <p><span>Welcome to </span>Pamantasan PH</p> 
+                <div class="topnav">
+                    <a class="active" href="#home">Home</a>
+                    <a href="#about">Universities</a>
+                    <style>
+                        #myMenu {
+                            display: none;
+                            max-height: 200px; /* Adjust the max height as needed */
+                            overflow-y: auto; /* Enable vertical scrolling */
+                        }
+                    </style>
+                    
+                    <input type="text" id="mySearch" onkeyup="filterMenu()" onfocus="showMenu()" onblur="hideMenu()" placeholder="Search.." title="Type in a category">
+
+                    <ul id="myMenu">
+                        <li><a href="#">TUP</a></li>
+                            <li><a href="#">UP</a></li>
+                              <li><a href="#">UP</a></li>
+                                 <li><a href="#">JRU</a></li>
+                                     <li><a href="#">RTU</a></li>
+                                        <li><a href="#">PNU</a></li>
+                                            <li><a href="#">EAR</a></li>
+                      </ul>
+                      
+                    <script>
+                        function filterMenu() {
+                          var input, filter, ul, li, a, i, txtValue;
+                          input = document.getElementById('mySearch');
+                          filter = input.value.toUpperCase();
+                          ul = document.getElementById('myMenu');
+                          li = ul.getElementsByTagName('li');
+                        
+                          for (i = 0; i < li.length; i++) {
+                            a = li[i].getElementsByTagName('a')[0];
+                            txtValue = a.textContent || a.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                              li[i].style.display = '';
+                            } else {
+                              li[i].style.display = 'none';
+                            }
+                          }
+                        }
+                        
+                        function showMenu() {
+                          document.getElementById('myMenu').style.display = 'block';
+                        }
+                        
+                        function hideMenu() {
+                          setTimeout(function() {
+                            document.getElementById('myMenu').style.display = 'none';
+                          }, 200);
+                        }
+                    </script>
+            </nav>
+        </header>
+        <section id="home">
+            <div class="container">
+                <div class="mySlides">
+                    <!-- Content for the first slide -->
+                    <h1>PAMANTASAN PH</h1>
+                    <p>DESCRIPTION...</p>
+                </div>   
+        
+                <div class="mySlides">
+                    <!-- Content for the third slide -->
+                    <h1>ABOUT</h1>
+                    <p>What is this page for?</p>
+                </div>
+
+                
+                <div class="mySlides">
+                    <div class="column">
+                        <h3 class="text-with-border">MISSION</h3>
+                    </div>
+                    <div class="column">
+                        <h3 class="text-with-border">VISION</h3>
+                    </div>
+                </div> 
+        
+                <!-- Navigation buttons -->
+                <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+                <button class="next" onclick="plusSlides(1)">&#10095;</button>
+            </div>
+        </section>
+
+        <main id="blog" class="main-content">
+            <div class="blog">
+                <article>
+                    <div class="post">
+                        <div class="post-image">
+                            <img src="logo.jpg" alt="Unveiling the Blueprint-Mastering HTML Document Structure">
+                        </div>
+                        <div class="post-content">
+                            <a class="post-title">Unveiling the Blueprint-Mastering HTML Document Structure</a>
+                            <p class="post-info">Posted on November 13, 2023 by AWSCC-DSWD</p>
+                            <span class="spacer"></span>
+                            <p class="post-summary">Imagine you're about to embark on a journey to build your dream house. What's the first thing you need? A solid blueprint, right? Well, welcome to the world of web development, where your canvas is a blank web page, and your blueprint is the HTML document structure.</p>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="post-image">
+                            <img src="logo.jpg" alt="Mastering the Art: Creating Interactive Web Experiences">
+                        </div>
+                        <div class="post-content">
+                            <a class="post-title">Mastering the Art: Creating Interactive Web Experiences</a>
+                            <p class="post-info">Posted on November 12, 2023 by AWSCC-DSWD</p>
+                            <span class="spacer"></span>
+                            <p class="post-summary">Explore the art of creating contact forms, surveys, and more. Understand how to collect user data, validate inputs, and enhance the user experience. From simple text inputs to radio buttons and dropdown menus, we'll cover it all in this exciting journey into web forms.</p>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="post-image">
+                            <img src="logo.jpg" alt="Revolutionize Web Design: Crafting Dynamic Layouts">
+                        </div>
+                        <div class="post-content">
+                            <a class="post-title">Revolutionize Web Design: Crafting Dynamic Layouts</a>
+                            <p class="post-info">Posted on November 11, 2023 by AWSCC-DSWD</p>
+                            <span class="spacer"></span>
+                            <p class="post-summary">Unlock the magic of CSS Flexbox and transform your web layout! Say goodbye to the days of complex grids and welcome the simplicity and flexibility of Flexbox. Learn how to create responsive and dynamic layouts that adapt effortlessly to different screen sizes.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+        
+        <aside id="SCHOOLS" class="sidebar"> <!--sidebar-->
+            <div class="popular-posts-side"> <!--popular posts-->
+                <h2>POPULAR POSTS</h2> <!--serves as a title-->
+                <div class="popular-posts"> <!--posts-->
+                    <div class="popular-post"> <!--post 1-->
+                        <div class="popular-post-image"> <!--serves as a thumbnail-->
+                            <img src="logo.jpg" alt="Interesting HTML tags">
+                        </div>
+                        <div class="popular-post-content"> <!--texts-->
+                            <a href="#popular" class="popular-post-title">Interesting HTML tags</a>
+                            <p class="popular-post-desc">I am going to show you the top 9 interesting HTML...</p>
+                        </div>
+                    </div>
+                    <div class="popular-post"> <!--post 2-->
+                        <div class="popular-post-image"> <!--serves as a thumbnail-->
+                            <img src="logo.jpg" alt="Unleash the Potential of Lists">
+                        </div>
+                        <div class="popular-post-content"> <!--texts-->
+                            <a href="#popular" class="popular-post-title">Unleash the Potential of Lists</a>
+                            <p class="popular-post-desc">HTML lists are a powerful tool for organizing...</p>
+                        </div>
+                    </div>
+                    <div class="popular-post"> <!--post 3-->
+                        <div class="popular-post-image"> <!--serves as a thumbnail-->
+                            <img src="logo.jpg" alt="Master HTML in 24 Mins">
+                        </div>
+                        <div class="popular-post-content"> <!--texts-->
+                            <a href="#popular" class="popular-post-title">Master HTML in 24 Mins</a>
+                            <p class="popular-post-desc">Learn HTML & CSS right from the basics...</p>
+                        </div>
+                    </div>
+                    <div class="popular-post"> <!--post 4-->
+                        <div class="popular-post-image"> <!--serves as a thumbnail-->
+                            <img src="logo.jpg" alt="The state of a checkbox">
+                        </div>
+                        <div class="popular-post-content"> <!--texts-->
+                            <a href="#popular" class="popular-post-title">The state of a checkbox</a>
+                            <p class="popular-post-desc">I was in the middle of creating a small web...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    <div class="container">
+        <footer> 
+            <footer> 
+                <div class="footerBoxes">
+                    <div class="footerBox">
+                        <h3>Privacy Notice</h3> 
+                        <p>We are committed to protecting your privacy. We will only use the information we collect about you lawfully (Data Protection Act 1998). Please read on if you wish to learn more about our privacy policy.</p>
+                    </div>
+                    <div class="footerBox"> 
+                        <h3>Copyright</h3>
+                        <p>Our Service allows you to post, link, store, share, and otherwise make available certain information, text, graphics, videos, or other material. You are responsible for the content posted on the service.</p>
+                    </div>
+                    <div class="footerBox"> 
+                        <h3>Contacts</h3> 
+                        <div>
+                            <a href="https://www.facebook.com/"><img src="images\social\facebook.png" alt="Facebook"></a>
+                            <a href="https://twitter.com/"><img src="images\social\twitter.png" alt="Twitter"></a>
+                            <a href="https://www.linkedin.com/"><img src="images\social\linkedin.png" alt="LinkedIn"></a>
+                            <a href="https://www.pinterest.com/"><img src="images\social\pinterest.png" alt="Pinterest"></a>
+                        </div>
+                        <p>If you have any questions or need assistance, our support team is here to help. Contact us via email or visit our help center for answers to frequently asked questions.</p>
+                    </div>
+                </div>
+                <hr class="splitter"> 
+                <p class="copy-right"> &copy; Republic Act No. 8293 - The State recognizes that an effective intellectual and industrial property system is vital to the development of domestic and creative activity, facilitates transfer of technology, attracts foreign investments, and ensures market access for our products. It shall protect and secure the exclusive rights of scientists, inventors, artists and other gifted citizens to their intellectual property and creations, particularly when beneficial to the people, for such periods as provided in this Act.</p> <!--copy-right-->
+        </footer>
+    </div>
+
+    <!-- JavaScript for slideshow -->
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("demo");
+          let captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+    </script>
+</body>
+</html>
