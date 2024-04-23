@@ -13,3 +13,4 @@ This repository contains the code and assets for the application project of Grou
 
 ## 📱Design
 **WEBSITE DESIGN:**
+<img src="assets\home_pg1.png">
