@@ -117,15 +117,16 @@ nav { /* navigation bar styles */
     padding: 16px;
     background-color: #ffffff;
     box-shadow: var(--box-shadow);
+    position: fixed;
 }
 
 .logo {
     position: absolute;
-    top: 10px; /* Adjust this value to change vertical position */
+    top: 16px; /* Adjust this value to change vertical position */
     left: 10px; /* Adjust this value to change horizontal position */
     height: 50px; /* Adjust this value as needed */
     width: auto;
-    border-radius: 50%;
+    border-radius: 100%;
     
 }
 
@@ -178,45 +179,17 @@ nav ul li:hover > a { /* navigation list item anchor hover styles */
     transition: color 0.3s ease; 
 }
 
-/* Style the search box */
-  
-  /* Style the navigation menu */
-  #myMenu {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: absolute;
-  }
-  
-  /* Style the navigation links */
-  #myMenu li a {
-    padding: 12px;
-    text-decoration: none;
-    color: black;
-    display: block
-  }
-  
-  #myMenu li a:hover {
-    background-color: #eee;
-  }
-
-
-
-section{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100%;
-    color: #FFFFFF;
-    flex: none;
-}
 
 section:nth-child(1){
     background-color: #006aff;
 }
 
 section:nth-child(2){
-    background-color: wheat;
+    background-image: url('pup-campus.jpg');
+    background-size : cover;
+    background-position: center left;
+    
+    
 }
 
 section:nth-child(3){
@@ -242,9 +215,9 @@ section p {
   
 
 .column {
-    padding: 20px;
+    flex: 1; /* Each column takes up equal space */
+    padding: 15px;
     border: 1px solid #000000;
-    margin: 10px;
     align-items: center;
     justify-content: center;
 }
@@ -256,11 +229,11 @@ section p {
 }
 
   /* Position the image container (needed to position the left and right arrows) */
-  .container {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 50%;
     flex-direction: column;
 }
 
@@ -268,14 +241,14 @@ section p {
 .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    transform: translateY(30%);
-    width: 20px;
+    top: 30%;
+    transform: translateY(70%);
+    width: 30px;
     padding: 15px 0;
     margin-top: -50px;
     color: rgb(12, 2, 2);
     font-weight: bold;
-    font-size: 15px;
+    font-size: 45px;
     border-radius: 0 1x 1px 0;
     user-select: none;
     -webkit-user-select: none;
@@ -313,47 +286,137 @@ section p {
 
 /* slider section styling */
 
-section { /* section styles */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(30%);
     position: relative;
     background-color: #39811D;
-    height: 90vh; 
-    overflow: hidden; 
-    justify-content: center;
-
+    height: 25vh;
+    overflow: hidden;
+    margin-top: -5px;
+    margin-bottom: 5px;
 }
 
-section h1 { /* heading styles */
-    font-size: 64px;  
+section h1 {
+    font-size: 30px;
     line-height: 1.2;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     color: forestgreen;
-    text-align: center; 
-    padding-top: 0vh;  
+    text-align: center;
+    padding-top: 0;
     width: 100%;
     box-sizing: border-box;
+    transform: translateY(50%);
 }
 
-section h3 { /* heading styles */
-    font-size: 64px;  
+section h3 {
+    font-size: 30px;
     line-height: 1.2;
     margin-bottom: 1px;
     color: #FFFFFF;
-    text-align: center;  
-    width:50%;
+    text-align: center;
+    transform: translateY(50%);
+    width: 50%;
     box-sizing: border-box;
 }
 
-section p { /* paragraph styles */
-    font-size: 18px; 
+section p {
+    font-size: 18px;
     line-height: 1.5;
     margin-bottom: 32px;
     color: black;
-    text-align: center;  
-    padding-top: 5vh;  
+    transform: translateY(30%);
+    text-align: center;
+    padding-top: 5vh;
     width: 100%;
     box-sizing: border-box;
 }
 
+
+.additional-div {
+    position: relative; /* Change from absolute to relative */
+    z-index: 1; /* Ensure it's above other content */
+    margin-bottom: 100px; /* Add margin to create space between the additional div and the footer */
+}
+
+
+body{
+background-color: beige;
+color: #333;
+}
+
+.search-box {
+    width: 600px;
+    background: #fff;
+    position: fixed; /* Set position to fixed */
+    top: 380px; /* Adjust as needed to position the search box */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    border-radius: 5px;
+    z-index: 1000; /* Ensure it's above other content */
+    border-radius: 25px;
+    height: 60px;
+    background-color: #000000;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+input {
+    flex: 1;
+    height: 50px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+button {
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+
+button .fa-solid {
+    width: 25px;
+    color:white;
+    font-size: 22px;
+    cursor: pointer;
+   
+}
+
+.result-box ul {
+    border-top: 1px solid #999;
+    padding: 15px 10px;
+    margin-top: 60px; /* Adjust as needed to create space between search box and results */
+}
+
+.result-box ul li {
+    list-style: none;
+    border-radius: 3px;
+    padding: 10px 20px; /* Adjust padding for the items */
+    cursor: pointer;
+    font-size: 16px; /* Adjust font size */
+}
+
+.result-box ul li:hover {
+    background: #e9f3ff;
+}
+.result-box {
+    max-height: 300px;
+    overflow-y: scroll;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    border-radius: 12px;
+}
 @media only screen and (max-width: 300px) {
     .content h2 {
         font-size: 28.8px; 
@@ -365,296 +428,17 @@ section p { /* paragraph styles */
     }
 }
 
-/* main content section styling */
-
-.main-content { /* main content container styles */
-    display: none;
-    align-items: center;
-    text-align: center;
-    margin: 20px auto;
-    gap: 20px;
-    overflow-x: auto;
-}
-
-@media only screen and (max-width: 1124px) {
-    .main-content {
-        margin: 10px; 
-        flex-direction: column;  
-    }
-}
-
-.blog { /* blog section styles */
-    flex: 2; 
-}
-
-.sidebar { /* sidebar section styles */
-    flex: 1; 
-}
-
-/* CSS for post container */
-.post {
-    display:flex;
-    background-color: #FFFFFF;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    position: relative;
-    min-height: 200px;
-    border-radius: 8px;
-    overflow: hidden;
-    margin: 20px;
-    transition: transform 0.5s ease; /* Use transform for animation */
-}
-
-/* CSS for post image */
-.post-image {
-    min-height: 200px;
-    transition: opacity 0.3s ease;
-    overflow: hidden;
-    width: 30%;
-    cursor: pointer;
-}
-
-/* CSS for post image hover effect */
-.post:hover .post-image img {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-}
-
-/* CSS for post image inner styles */
-.post-image img {
-    height: 100%;
-    transition: transform 0.3s ease;
-    object-fit: cover;
-    width: 100%;
-}
-
-/* CSS for post content */
-.post-content {
-    padding: 20px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 78%;
-}
-
-/* CSS for post title */
-.post-title {
-    color: #000000;
-    font-size: 32px;
-    font-weight: bold;
-    cursor: default;
-    margin-bottom: 10px;
-    cursor: pointer;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
-    text-decoration: none;
-}
-
-/* CSS for post title hover effect */
-.post-title:hover {
-    color: #0000FF;
-    text-decoration: underline;
-}
-
-/* CSS for post info */
-.post-info {
-    text-align: left;
-    color: #000000;
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-/* CSS for post summary */
-.post-summary {
-    line-height: 1.5;
-    color: #000000;
-    font-size: 16px;
-}
-
-/* Animation for slide-in effect */
-@keyframes slideInRight {
-    0% {
-        transform: translateX(100%); /* Start off-screen to the right */
-        opacity: 0; /* Start with opacity 0 */
-    }
-    100% {
-        transform: translateX(0); /* Slide in to the left */
-        opacity: 1; /* Fully visible */
-    }
-}
-
-
-/* sidebar styling */
-
-.sidebar { /* sidebar container styles */
-    text-align: right;
-    display: none;
-    flex-direction: row;
-    flex-wrap: wrap; 
-    align-items: center;
-    align-content: flex-start; 
-}
-
-.popular-posts-side { /* popular posts container styles */
-    margin: 0px 20px;
-    width: 100%; 
-    text-align: left;
-    position: relative;
-    overflow: hidden;
-    align-items: center;
-}
-
-.popular-posts-side h2, .social-side h2 { /* popular posts heading styles */
-    font-size: 24px;
-    color: #000000;
-    font-weight: bold;
-    padding-bottom: 10px;
-    padding-top: 0; 
-    text-align: center;
-    order: -1;  
-}
-
-.popular-post { /* popular post styles */
-    position: relative;
-    background-color: #FFFFFF;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-content: center;
-    padding: 20px;
-    gap: 20px; 
-    border-radius: 8px;
-    margin: 30px 30px;
-    float: left;
-    width: 40%;
-    margin-left: 80px; 
-}
-
-.popular-post-image img:hover { /* popular post hover styles */
-    transform: scale(1.1);
-    transition: transform 0.3s ease; 
-} 
-
-.popular-post-image { /* popular post image styles */
-    width: 100px;
-    height: 120px; 
-    overflow: hidden;  
-    border-radius: 8px;
-    transition: opacity 0.3s ease;
-    cursor: pointer;
-}
-
-.popular-post-image img { /* popular post image hover styles */
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover; 
-    transition: transform 0.3s ease;  
-}
-
-.popular-post-title { /* popular post title styles */
-    font-size: 16px;  
-    color: #000000;
-    font-weight: bold; 
-    margin-bottom: 5px;
-    text-align: right;  
-    cursor: pointer;
-    transition: color 0.3s ease, text-decoration 0.3s ease; 
-    text-decoration: none; 
-}
-
-.popular-post-title:hover { /* popular post title hover styles */
-    color: #0000FF; 
-    text-decoration: underline; 
-  }
-
-.popular-post-desc { /* popular post description styles */
-    font-size: 14px; 
-    color: #000000;  
-    margin-bottom: 10px;
-    text-align: right;  
-}
-
-@media only screen and (max-width: 500px) { /* responsive styles for popular posts container */
-    .popular-posts-side {
-        margin: 10px 0; 
-    }
-
-    .sidebar {
-        flex-direction: column; 
-    }
-}
-
-.social-side { /* social side styles */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: transparent;
-    margin: 10px auto;
-    padding: 5px;
-  }
-  
-  .social-side h2 { /* heading styles */
-    background-color: transparent;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 30px; 
-  }
-  
-  .social-side div { /* social side div styles */
-    display: flex;
-    gap: 5px;
-    justify-content: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background: #FFFFFF; 
-    border-radius: 8px;
-    height: 70px;
-    align-items: center;
-    flex-wrap: wrap; 
-  }
-  
-  .social-side div a { /* social side icons styles */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 30px;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .social-side div a:hover { /* social side icons hover styles */
-    transform: scale(1.2);
-    filter: grayscale(100%);
-  }
-  
-  .social-side img { /* social side img styles */
-    height: 50px;
-    width: 50px;
-    object-fit: contain;
-    margin-bottom: 0;
-    transition: transform 0.3s ease;
-    border-radius: 8px;
-  }  
-
-@media only screen and (max-width: 992px) { /* footer splitter styles */
-  .sidebar {
-        flex-direction: column; 
-    }
-
-    .popular-posts-side {
-        flex: 1; 
-    }
-}
 
 /* footer styling */
 
-.container footer { /* footer container styles */
-    background-color: #000000;
+.container footer {
+    position: fixed; /* Set position to fixed */
+    bottom: 0; /* Align footer to the bottom */
+    left: 0; /* Align footer to the left */
+    width: 100%; /* Make footer full width */
+    z-index: 1000; /* Ensure it's above other content */
+    background-color:rgb(157, 10, 10);
     color: #000000; 
-   
 }
 
 .container footer .footerBoxes { /* footer boxes container styles */
@@ -688,8 +472,8 @@ section p { /* paragraph styles */
 }
 
 .container footer .footerBoxes .footerBox h3 { /* footer box heading styles */
-    color: forestgreen;
-    font-size: 18px;
+    color: white;
+    font-size: 25px;
     font-weight: bold;
     letter-spacing: 1.5px;
     padding-bottom: 10px; 
@@ -734,7 +518,7 @@ section p { /* paragraph styles */
     opacity: 0.5;
     padding: 10px 10px; 
     color: #FFFFFF;
-    background-color: #000000;
+    background-color: rgb(157, 10, 10);;
     display: flex;
     align-items: center;
     justify-content: center;
