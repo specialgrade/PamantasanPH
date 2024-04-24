@@ -2,25 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="short icon" type="x-icon" href="logo_1.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>Blog Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PamantasanPH</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/73a6805774.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div> 
         <header>
             <nav> <!--navigation-->
-                <img src="logo_1.png" alt="" class="logo">
+                <img src="logo.jpg" alt="" class="logo">
                 <p><span>Welcome to </span>Pamantasan PH</p> 
                 <div class="topnav">
                     <a class="active" href="#home">Home</a>
                     <a href="#about">Universities</a>
+                    <style>
+                        #myMenu {
+                            display: none;
+                            max-height: 200px; /* Adjust the max height as needed */
+                            overflow-y: auto; /* Enable vertical scrolling */
+                        }
+                    </style>
+                    
+                    <input type="text" id="mySearch" onkeyup="filterMenu()" onfocus="showMenu()" onblur="hideMenu()" placeholder="Search.." title="Type in a category">
+
+                    <ul id="myMenu">
+                    <li><a href="#">TUP</a></li>
+                            <li><a href="#">UP</a></li>
+                              <li><a href="#">UP</a></li>
+                                 <li><a href="#">JRU</a></li>
+                                     <li><a href="#">RTU</a></li>
+                                        <li><a href="#">PNU</a></li>
+                                            <li><a href="#">EAR</a></li>
+                      </ul>
+                      
+                    <script>
+                        function filterMenu() {
+                          var input, filter, ul, li, a, i, txtValue;
+                          input = document.getElementById('mySearch');
+                          filter = input.value.toUpperCase();
+                          ul = document.getElementById('myMenu');
+                          li = ul.getElementsByTagName('li');
+                        
+                          for (i = 0; i < li.length; i++) {
+                            a = li[i].getElementsByTagName('a')[0];
+                            txtValue = a.textContent || a.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                              li[i].style.display = '';
+                            } else {
+                              li[i].style.display = 'none';
+                            }
+                          }
+                        }
+                        
+                        function showMenu() {
+                          document.getElementById('myMenu').style.display = 'block';
+                        }
+                        
+                        function hideMenu() {
+                          setTimeout(function() {
+                            document.getElementById('myMenu').style.display = 'none';
+                          }, 200);
+                        }
+                    </script>
             </nav>
         </header>
         <section id="home">
@@ -45,24 +90,97 @@
                     <div class="column">
                         <h3 class="text-with-border">VISION</h3>
                     </div>
-                </div>
+                </div> 
+        
                 <!-- Navigation buttons -->
                 <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
                 <button class="next" onclick="plusSlides(1)">&#10095;</button>
             </div>
         </section>
 
-    <div class="additional-div">
-        <div class="search-box">
-            <div class="row">
-              <input type="text" id="input-box" placeholder="Search..." autocomplete="off">
-              <button><i class="fa-solid fa-magnifying-glass"></i></i></button>
+        <main id="blog" class="main-content"> <!--PALITAN TAGS AND IDS-->
+            <div class="blog">
+                <article>
+                    <div class="post">
+                        <div class="post-image">
+                            <img src="logo.jpg" alt="Unveiling the Blueprint-Mastering HTML Document Structure">
+                        </div>
+                        <div class="post-content">
+                            <a class="post-title">Unveiling the Blueprint-Mastering HTML Document Structure</a>
+                            <p class="post-info">Posted on November 13, 2023 by AWSCC-DSWD</p>
+                            <span class="spacer"></span>
+                            <p class="post-summary">Imagine you're about to embark on a journey to build your dream house. What's the first thing you need? A solid blueprint, right? Well, welcome to the world of web development, where your canvas is a blank web page, and your blueprint is the HTML document structure.</p>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="post-image">
+                            <img src="logo.jpg" alt="Mastering the Art: Creating Interactive Web Experiences">
+                        </div>
+                        <div class="post-content">
+                            <a class="post-title">Mastering the Art: Creating Interactive Web Experiences</a>
+                            <p class="post-info">Posted on November 12, 2023 by AWSCC-DSWD</p>
+                            <span class="spacer"></span>
+                            <p class="post-summary">Explore the art of creating contact forms, surveys, and more. Understand how to collect user data, validate inputs, and enhance the user experience. From simple text inputs to radio buttons and dropdown menus, we'll cover it all in this exciting journey into web forms.</p>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="post-image">
+                            <img src="logo.jpg" alt="Revolutionize Web Design: Crafting Dynamic Layouts">
+                        </div>
+                        <div class="post-content">
+                            <a class="post-title">Revolutionize Web Design: Crafting Dynamic Layouts</a>
+                            <p class="post-info">Posted on November 11, 2023 by AWSCC-DSWD</p>
+                            <span class="spacer"></span>
+                            <p class="post-summary">Unlock the magic of CSS Flexbox and transform your web layout! Say goodbye to the days of complex grids and welcome the simplicity and flexibility of Flexbox. Learn how to create responsive and dynamic layouts that adapt effortlessly to different screen sizes.</p>
+                        </div>
+                    </div>
+                </article>
             </div>
-            <div class="result-box">
-            </div>      
-          </div>
-    <script src="script1.js"></script>
-    </div>
+        </main>
+        
+        <aside id="SCHOOLS" class="sidebar"> <!--sidebar--> <!--PALITAN TAGS AND IDS-->
+            <div class="popular-posts-side"> <!--popular posts-->
+                <h2>POPULAR POSTS</h2> <!--serves as a title-->
+                <div class="popular-posts"> <!--posts-->
+                    <div class="popular-post"> <!--post 1-->
+                        <div class="popular-post-image"> <!--serves as a thumbnail-->
+                            <img src="logo.jpg" alt="Interesting HTML tags">
+                        </div>
+                        <div class="popular-post-content"> <!--texts-->
+                            <a href="#popular" class="popular-post-title">Interesting HTML tags</a>
+                            <p class="popular-post-desc">I am going to show you the top 9 interesting HTML...</p>
+                        </div>
+                    </div>
+                    <div class="popular-post"> <!--post 2-->
+                        <div class="popular-post-image"> <!--serves as a thumbnail-->
+                            <img src="logo.jpg" alt="Unleash the Potential of Lists">
+                        </div>
+                        <div class="popular-post-content"> <!--texts-->
+                            <a href="#popular" class="popular-post-title">Unleash the Potential of Lists</a>
+                            <p class="popular-post-desc">HTML lists are a powerful tool for organizing...</p>
+                        </div>
+                    </div>
+                    <div class="popular-post"> <!--post 3-->
+                        <div class="popular-post-image"> <!--serves as a thumbnail-->
+                            <img src="logo.jpg" alt="Master HTML in 24 Mins">
+                        </div>
+                        <div class="popular-post-content"> <!--texts-->
+                            <a href="#popular" class="popular-post-title">Master HTML in 24 Mins</a>
+                            <p class="popular-post-desc">Learn HTML & CSS right from the basics...</p>
+                        </div>
+                    </div>
+                    <div class="popular-post"> <!--post 4-->
+                        <div class="popular-post-image"> <!--serves as a thumbnail-->
+                            <img src="logo.jpg" alt="The state of a checkbox">
+                        </div>
+                        <div class="popular-post-content"> <!--texts-->
+                            <a href="#popular" class="popular-post-title">The state of a checkbox</a>
+                            <p class="popular-post-desc">I was in the middle of creating a small web...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
 
     <div class="container">
         <footer> 
@@ -123,6 +241,5 @@
           captionText.innerHTML = dots[slideIndex-1].alt;
         }
     </script>
-    <script src="script1.js"></script>
 </body>
 </html>
