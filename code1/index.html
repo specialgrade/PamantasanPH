@@ -5,16 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PamantasanPH</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
 </head>
 
 <body>
-    <div> 
+    <div> <!--can be removed-->
         <header>
             <nav> <!--navigation-->
-                <img src="logo.jpg" alt="" class="logo">
-                <p><span>Welcome to</span>Pamantasan<span>PH</span></p> <!--need styling-->
-                <div class="topnav">
+                <img src="assets\logo_1.png" alt="PamantasanPH" class="logo">
+                <p>Pamantasan<span>PH</span></p> <!--can be h1, need styling-->
+                <ul>
+                    <li><a class="active" href="#home">Home</a></li>
+                    <li><a class="active" href="#univs">Universities</a></li>
+                </ul>
+                
+                <!-- <div class="topnav">
                     <a class="active" href="#home">Home</a>
                     <a href="#univs">Universities</a>
                     <style>
@@ -27,15 +32,15 @@
                     
                     <input type="text" id="mySearch" onkeyup="filterMenu()" onfocus="showMenu()" onblur="hideMenu()" placeholder="Search.." title="Type in a category">
 
-                    <ul id="myMenu"> <!--need to finalize-->
-                    <li><a href="#">TUP</a></li>
-                            <li><a href="#">UP</a></li>
-                              <li><a href="#">PUP</a></li>
-                                 <li><a href="#">JRU</a></li>
-                                     <li><a href="#">RTU</a></li>
-                                        <li><a href="#">PNU</a></li>
-                                            <li><a href="#">EAR</a></li>
-                      </ul>
+                    <ul id="myMenu"> 
+                        <li><a href="#">TUP</a></li>
+                        <li><a href="#">UP</a></li>
+                        <li><a href="#">PUP</a></li>
+                        <li><a href="#">JRU</a></li>
+                        <li><a href="#">RTU</a></li>
+                        <li><a href="#">PNU</a></li>
+                        <li><a href="#">EAR</a></li>
+                    </ul>
                       
                     <script>
                         function filterMenu() {
@@ -65,27 +70,27 @@
                             document.getElementById('myMenu').style.display = 'none';
                           }, 200);
                         }
-                    </script>
+                    </script> -->
                 </div>
             </nav>
         </header>
 
         <section id="home">
             <div class="container">
-                <div class="mySlides">
+                <div class="slides">
                     <!-- content for the first slide -->
                     <h1>Discover Universities in Metro!</h1>
                     <p>Lorem ipsum dolor...</p>
                 </div>   
         
-                <div class="mySlides">
+                <div class="slides">
                     <!-- content for the third slide -->
                     <h1>About</h1>
                     <p>Lorem ipsum dolor...</p>
                 </div>
 
                 
-                <div class="mySlides">
+                <div class="slides">
                     <div class="column">
                         <h3 class="text-with-border">Mission</h3>
                         <p>Lorem ipsum dolor...</p>
@@ -110,7 +115,7 @@
                             <img src="" alt="">
                         </div>
                         <div class="">
-                            <a class=""</a>
+                            <a class=""></a>
                             <p class="">Lorem ipsum dolor...</p>
                             <span class="spacer"></span>
                             <p class="">Lorem ipsum dolor...</p>
@@ -120,81 +125,50 @@
             </div>
         </main>
         
-        <!--wait hindi ba tatanggalin na sidebar?-->
-        <aside id="schools" class="sidebar"> <!--sidebar--> 
-            <div class="popular-posts-side"> <!--popular posts-->
-                <h2>Lorem ipsum dolor...</h2> <!--serves as a title-->
-                <div class=""> <!--posts-->
-                    <div class="t"> <!--post 1-->
-                        <div class=""> <!--serves as a thumbnail-->
+        <!-- <aside id="schools" class="sidebar">  
+            <div class="">  
+                <h2>Lorem ipsum dolor...</h2>  
+                <div class="">  
+                    <div class="t">  
+                        <div class="">  
                             <img src="" alt="">
                         </div>
-                        <div class=""> <!--texts-->
+                        <div class="">  
                             <a href="" class="">Lorem ipsum dolor...</a>
                             <p class="">Lorem ipsum dolor...</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </aside>
+        </aside> -->
+    </div>
 
     <div class="container">
         <footer> 
-            <footer> 
-                <div class="footerBoxes">
-                    <div class="footerBox">
-                        <h3>Privacy Policy</h3> 
-                        <p>Lorem ipsum dolor...</p>
-                    </div>
-                    <div class="footerBox"> 
-                        <h3>Terms of Service</h3>
-                        <p>Lorem ipsum dolor...</p>
-                    </div>
-                    <div class="footerBox"> 
-                        <h3>Contacts</h3> 
-                        <div>
-                            <a href="https://www.facebook.com/"><img src="images\social\facebook.png" alt="Facebook"></a>
-                            <a href="https://www.linkedin.com/"><img src="images\social\linkedin.png" alt="LinkedIn"></a>
-                            <a href=""><img src="" alt="Email"></a>
-                        </div>
-                        <p>If you have any questions or need assistance, our support team is here to help. Contact us via email or visit our help center for answers to frequently asked questions.</p>
-                    </div>
+            <div class="footerBoxes">
+                <div class="footerBox">
+                    <h3>Privacy Policy</h3> 
+                    <p>Lorem ipsum dolor...</p>
                 </div>
-                <hr class="splitter"> 
-                <p class="copy-right"> &copy; 2024 PamantasanPH, All rights reserved</p> <!--copy-right-->
+                <div class="footerBox"> 
+                    <h3>Terms of Service</h3>
+                    <p>Lorem ipsum dolor...</p>
+                </div>
+                <div class="footerBox"> 
+                    <h3>Help and Support</h3> 
+                    <div>
+                        <a href="https://www.facebook.com/"><img src="images\social\facebook.png" target="_blank" alt="Facebook"></a>
+                        <a href=""><img src="" target="_blank" alt="Email"></a> <!--pwede ibahin dito para dito na lang sa faqs & help desk-->
+                        <a href="https://www.linkedin.com/"><img src="images\social\linkedin.png" target="_blank" alt="LinkedIn"></a>
+                    </div>
+                    <p>If you have any questions or need for assistance, our support team is here to help. Contact us via email or visit our help center for answers to frequently asked questions.</p>
+                </div>
+            </div>
+            <hr class="splitter"> 
+            <p class="copy-right"> &copy; 2024 PamantasanPH, All rights reserved</p> <!--copy-right-->
         </footer>
     </div>
 
-    <!-- js for slideshow -->
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-          let i;
-          let slides = document.getElementsByClassName("mySlides");
-          let dots = document.getElementsByClassName("demo");
-          let captionText = document.getElementById("caption");
-          if (n > slides.length) {slideIndex = 1}
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-          }
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";
-          dots[slideIndex-1].className += " active";
-          captionText.innerHTML = dots[slideIndex-1].alt;
-        }
-    </script>
+    <script src="main.js" defer></script> <!-- js for slideshow -->
 </body>
 </html>
