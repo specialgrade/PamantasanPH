@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 :root { /* global styling */
-    --white: ; /* main color */
-    --maroon: ; /* bg color */
-    --dark-blue: ; /* secondary color */
-    --black: ; /* accent color */
+    --maroon: #722828; /* main color */
+    --pale-gray: #FBEEEE; /* bg color */
+    --white: #FFFFFF; /* nav bg color */
+    --dark-blue: #092334; /* secondary color */
+    --red: #FF0000; /* accent color_1 */
+    --green: #00FF00; /* accent color_2 */
     --box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* box shadow */
 }
 

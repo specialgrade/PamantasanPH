@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PamantasanPH</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="prototype.css">
 </head>
 
 <body>
-    <div> <!--can be removed-->
-        <header>
+    <div class="body-container"> <!--can be removed-->
+        <header class="header">
+            <div class="title">
+                <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\logo_1.png" alt="PamantasanPH" class="logo">
+                <p>Pamantasan<span>PH</span></p>
+            </div>
             <nav> <!--navigation-->
-                <img src="assets\logo_1.png" alt="PamantasanPH" class="logo">
-                <p>Pamantasan<span>PH</span></p> <!--can be h1, need styling-->
                 <ul>
                     <li><a class="active" href="#home">Home</a></li>
                     <li><a class="active" href="#univs">Universities</a></li>
@@ -70,8 +72,8 @@
                             document.getElementById('myMenu').style.display = 'none';
                           }, 200);
                         }
-                    </script> -->
-                </div>
+                    </script> 
+                </div> -->
             </nav>
         </header>
 
@@ -143,7 +145,7 @@
         </aside> -->
     </div>
 
-    <div class="container">
+    <div class="footer-container">
         <footer> 
             <div class="footerBoxes">
                 <div class="footerBox">
@@ -168,7 +170,6 @@
             <p class="copy-right"> &copy; 2024 PamantasanPH, All rights reserved</p> <!--copy-right-->
         </footer>
     </div>
-
-    <script src="main.js" defer></script> <!-- js for slideshow -->
+    <!-- <script src="main.js" defer></script> js for slideshow -->
 </body>
 </html>
