@@ -5,171 +5,99 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PamantasanPH</title>
-    <link rel="stylesheet" href="prototype.css">
+    <link rel="stylesheet" href="Untitled-1.css">
 </head>
 
 <body>
-    <div class="body-container"> <!--can be removed-->
-        <header class="header">
-            <div class="title">
-                <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\logo_1.png" alt="PamantasanPH" class="logo">
-                <p>Pamantasan<span>PH</span></p>
+    <header class="header"> <!--navigation div-->
+        <div class="title">
+            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\logo_1.png" alt="PamantasanPH" class="logo">
+            <p>Pamantasan<span>PH</span></p>
+        </div>
+        <nav> 
+            <ul>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a class="active" href="#univs">Universities</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home"> <!--default 'page' div-->
+        <div class="container">
+            <div class="slides"> <!-- content for the first slide -->
+                <h1>Discover Universities in Metro!</h1>
+                <p>Lorem ipsum dolor...</p>
+            </div>   
+    
+            <div class="slides"> <!-- content for the second slide -->
+                <h1>About</h1>
+                <p>Lorem ipsum dolor...</p>
             </div>
-            <nav> <!--navigation-->
-                <ul>
-                    <li><a class="active" href="#home">Home</a></li>
-                    <li><a class="active" href="#univs">Universities</a></li>
-                </ul>
-                
-                <!-- <div class="topnav">
-                    <a class="active" href="#home">Home</a>
-                    <a href="#univs">Universities</a>
-                    <style>
-                        #myMenu {
-                            display: none;
-                            max-height: 200px; /* adjust the max height as needed */
-                            overflow-y: auto; /* enable vertical scrolling */
-                        }
-                    </style>
-                    
-                    <input type="text" id="mySearch" onkeyup="filterMenu()" onfocus="showMenu()" onblur="hideMenu()" placeholder="Search.." title="Type in a category">
-
-                    <ul id="myMenu"> 
-                        <li><a href="#">TUP</a></li>
-                        <li><a href="#">UP</a></li>
-                        <li><a href="#">PUP</a></li>
-                        <li><a href="#">JRU</a></li>
-                        <li><a href="#">RTU</a></li>
-                        <li><a href="#">PNU</a></li>
-                        <li><a href="#">EAR</a></li>
-                    </ul>
-                      
-                    <script>
-                        function filterMenu() {
-                          var input, filter, ul, li, a, i, txtValue;
-                          input = document.getElementById('mySearch');
-                          filter = input.value.toUpperCase();
-                          ul = document.getElementById('myMenu');
-                          li = ul.getElementsByTagName('li');
-                        
-                          for (i = 0; i < li.length; i++) {
-                            a = li[i].getElementsByTagName('a')[0];
-                            txtValue = a.textContent || a.innerText;
-                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                              li[i].style.display = '';
-                            } else {
-                              li[i].style.display = 'none';
-                            }
-                          }
-                        }
-                        
-                        function showMenu() {
-                          document.getElementById('myMenu').style.display = 'block';
-                        }
-                        
-                        function hideMenu() {
-                          setTimeout(function() {
-                            document.getElementById('myMenu').style.display = 'none';
-                          }, 200);
-                        }
-                    </script> 
-                </div> -->
-            </nav>
-        </header>
-
-        <section id="home">
-            <div class="container">
-                <div class="slides">
-                    <!-- content for the first slide -->
-                    <h1>Discover Universities in Metro!</h1>
+            
+            <div class="slides"> <!-- content for the third slide -->
+                <div class="column">
+                    <h3 class="text-with-border">Mission</h3>
                     <p>Lorem ipsum dolor...</p>
-                </div>   
+                </div>
+                <div class="column">
+                    <h3 class="text-with-border">Vision</h3>
+                    <p>Lorem ipsum dolor...</p>
+                </div>
+            </div> 
         
-                <div class="slides">
-                    <!-- content for the third slide -->
-                    <h1>About</h1>
-                    <p>Lorem ipsum dolor...</p>
-                </div>
+            <button class="prev" onclick="plusSlides(-1)">&#10094;</button>  <!-- swipe buttons -->
+            <button class="next" onclick="plusSlides(1)">&#10095;</button>
+        </div>
+    </section>
 
-                
-                <div class="slides">
-                    <div class="column">
-                        <h3 class="text-with-border">Mission</h3>
-                        <p>Lorem ipsum dolor...</p>
-                    </div>
-                    <div class="column">
-                        <h3 class="text-with-border">Vision</h3>
-                        <p>Lorem ipsum dolor...</p>
-                    </div>
-                </div> 
-        
-                <!-- navigation buttons -->
-                <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
-                <button class="next" onclick="plusSlides(1)">&#10095;</button>
+    <main id="univs" class="search-bar"> <!--search bar div-->
+        <div class="search">
+            <div class="search-container">
+                <label for="search-input" class="search-icon">
+                    <i class="fas fa-search"></i>
+                </label>
+                <input type="text" id="search-input" class="search-input" placeholder="Search here">
+                <button id="search-button" class="search-button">Search</button>
             </div>
-        </section>
 
-        <main id="univs" class="search-bar"> <!--div for search bar-->
-            <div class="search">
-                <article>
-                    <div class="">
-                        <div class="">
-                            <img src="" alt="">
-                        </div>
-                        <div class="">
-                            <a class=""></a>
-                            <p class="">Lorem ipsum dolor...</p>
-                            <span class="spacer"></span>
-                            <p class="">Lorem ipsum dolor...</p>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </main>
-        
-        <!-- <aside id="schools" class="sidebar">  
-            <div class="">  
-                <h2>Lorem ipsum dolor...</h2>  
-                <div class="">  
-                    <div class="t">  
-                        <div class="">  
-                            <img src="" alt="">
-                        </div>
-                        <div class="">  
-                            <a href="" class="">Lorem ipsum dolor...</a>
-                            <p class="">Lorem ipsum dolor...</p>
-                        </div>
-                    </div>
+        <article>
+            <div class="univ-info">
+                <div class="univ-logo">
+                    <img src="" alt="University Logo">
+                </div>
+                <div class="univ-details">
+                    <a href="#" class="univ-name">University Name</a><p class="univ-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <span class="spacer"></span>
+                    <p class="univ-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
-        </aside> -->
-    </div>
+        </article>
+        </div>
+    </main>
 
-    <div class="footer-container">
-        <footer> 
-            <div class="footerBoxes">
-                <div class="footerBox">
-                    <h3>Privacy Policy</h3> 
-                    <p>Lorem ipsum dolor...</p>
-                </div>
-                <div class="footerBox"> 
-                    <h3>Terms of Service</h3>
-                    <p>Lorem ipsum dolor...</p>
-                </div>
-                <div class="footerBox"> 
-                    <h3>Help and Support</h3> 
-                    <div>
-                        <a href="https://www.facebook.com/"><img src="images\social\facebook.png" target="_blank" alt="Facebook"></a>
-                        <a href=""><img src="" target="_blank" alt="Email"></a> <!--pwede ibahin dito para dito na lang sa faqs & help desk-->
-                        <a href="https://www.linkedin.com/"><img src="images\social\linkedin.png" target="_blank" alt="LinkedIn"></a>
-                    </div>
-                    <p>If you have any questions or need for assistance, our support team is here to help. Contact us via email or visit our help center for answers to frequently asked questions.</p>
+    <footer> <!--footer div-->
+        <div class="footerBoxes">
+            <div class="footerBox">
+                <h3>Privacy Policy</h3> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="footerBox"> 
+                <h3>Terms of Service</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="footerBox"> 
+                <h3>Help and Support</h3> 
+                <div>
+                    <a href="https://www.facebook.com/"><img src="images\social\facebook.png" target="_blank" class="social-links" alt="Facebook"></a>
+                    <a href=""><img src="" target="_blank" class="social-links" alt="Email"></a> <!--[SUGGESTION] +1 feature where user will enter their email to be updated with the faqs & updates about the web app-->
+                    <a href="https://www.linkedin.com/"><img src="images\social\linkedin.png" target="_blank" class="social-links" alt="LinkedIn"></a>
                 </div>
             </div>
-            <hr class="splitter"> 
-            <p class="copy-right"> &copy; 2024 PamantasanPH, All rights reserved</p> <!--copy-right-->
-        </footer>
-    </div>
-    <!-- <script src="main.js" defer></script> js for slideshow -->
+        </div>
+        <hr class="splitter"> 
+        <p class="copy-right"> &copy; 2024 PamantasanPH, All rights reserved</p> <!--copy-right-->
+    </footer>
+    
+    <script src="main.js" defer></script>
 </body>
 </html>
