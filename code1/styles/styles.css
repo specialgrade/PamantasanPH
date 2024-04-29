@@ -249,8 +249,8 @@ section p {
     font-weight: bold;
     font-size: 45px;
     border-radius: 0 1x 1px 0;
-    user-select: none;
-    -webkit-user-select: none;
+    /* user-select: none; */
+    /* -webkit-user-select: none; */
 }
 
 /* position the "next button" to the right */
