@@ -29,12 +29,14 @@ next.addEventListener('click', () => {
   showSlide(currentSlide);
 });
 
-showSlide(currentSlide);\
+showSlide(currentSlide);
 
-// search bar & search button
+// search bar & search button [WILL FINALIZE]
 const searchButton = document.getElementById("search-button");
 searchButton.addEventListener("click", function() {
   const searchInput = document.getElementById("search-input");
   const searchTerm = searchInput.value;
   console.log(`Searching for: ${searchTerm}`);
 });
+
+// filter [WILL FINALIZE]
