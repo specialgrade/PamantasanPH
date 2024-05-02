@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PamantasanPH</title>
-    <link rel="stylesheet" href="prototype.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/prototype.css') }}">
 </head>
 
 <body>
@@ -109,6 +109,7 @@
         <p class="copy-right"> &copy; 2024 PamantasanPH, All rights reserved</p> <!--copy-right-->
     </footer>
     
-    <script src="prototype.js" defer></script>
+    <!--<script src="prototype.js" defer></script>-->
+    <script src="{{ url_for('static', filename='js/your_script.js') }}"></script>
 </body>
 </html>
