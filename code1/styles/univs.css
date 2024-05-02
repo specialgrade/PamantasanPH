@@ -130,6 +130,71 @@ nav a:hover {
 }
   
 /* this is where the style for univ details goes */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #FBEEEE;
+  border: 1px solid #ddd; /* WILL FINALIZE */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.status-icon {
+  font-size: 18px;
+  color: #ccc; /* WILL FINALIZE */
+  margin-right: 10px;
+}
+
+.status-text {
+  font-size: 18px;
+  color: #666; /* WILL FINALIZE */
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+ol, ul {
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #337ab7; /* WILL FINALIZE */
+}
+
+a:hover {
+  color: #23527c; /* WILL FINALIZE */
+}
+
+ul ul {
+  margin-left: 20px;
+}
 
 footer { /* footer styling */
   background-color: #722828;
