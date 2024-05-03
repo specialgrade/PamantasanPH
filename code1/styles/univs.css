@@ -1,6 +1,8 @@
+/* Imported font families */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root { /* global styling */
+/* Global styling variables */
+:root {
     --maroon: #722828; /* main color */
     --pale-gray: #FBEEEE; /* bg color */
     --white: #FFFFFF; /* nav bg color */
@@ -10,268 +12,273 @@
     --box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* box shadow */
 }
 
-*, /* resets default browser styling */
+/* Reset default browser styling */
+*,
 *::after,
-*::before { 
+*::before {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Raleway', 'Inter'; /* or sans-serif */
+    font-family: 'Raleway', sans-serif; /* Adjusted font stack */
 }
 
-body {
-    margin: 0;
-    padding-bottom: 0;
-}
-
-.container { /* header & nav styling */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-  
+/* Header and navigation styling */
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px; 
-  height: 80px;
-  background-color: #FFFFFF;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 80px;
+    background-color: var(--white); /* Changed to variable */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 .logo {
-  height: 50px;
-  width: auto;
-  border-radius: 50%; 
-  overflow: hidden;
-  padding: 0 1rem; 
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 0 1rem;
 }
 
 .logo img {
-  height: 100%;
-  width: auto;
+    height: 100%;
+    width: auto;
 }
 
 .title {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .title p {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #722828;
-  margin-left: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--maroon); /* Changed to variable */
+    margin-left: 10px;
 }
 
 .title span {
-  color: #092334;
+    color: var(--dark-blue); /* Changed to variable */
 }
 
 nav {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav li {
-  margin-right: 2rem;
+    margin-right: 2rem;
 }
 
 nav a {
-  display: block;
-  padding: 0.5rem 1rem;
-  color: #722828;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: all 0.3s ease;
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--maroon); /* Changed to variable */
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
-  color: #092334;
-  text-decoration: underline;
+    color: var(--dark-blue); /* Changed to variable */
+    text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .title {
-    margin-bottom: 1rem;
-  }
-
-  nav {
-    margin-top: 1rem;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav li {
-    margin-right: 0;
-    margin-bottom: 1rem;
-  }
-}
-  
-/* this is where the style for univ details goes */
+/* container styling */
 .container {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #FBEEEE;
-  border: 1px solid #ddd; /* WILL FINALIZE */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto; /* Center horizontally */
+    margin-top: 120px; /* Adjust to create space between header and container */
+    margin-bottom: 120px; /* Adjust to create space between container and footer */
+    padding: 20px;
+    background-color: var(--pale-gray);
+    border: 1px solid #ddd;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Inter', sans-serif; /* Use Inter font for the container */
+    color: var(--dark-blue); /* Change text color */
+    text-align: justify; /* Justify text for better readability */
 }
 
-h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+.container h2,
+.container h3,
+.container h4 {
+    margin: 20px 0; /* Add margin to headings */
+    color: var(--maroon); /* Change heading color */
 }
 
-p {
-  margin-bottom: 20px;
+.container p,
+.container ol,
+.container ul {
+    margin: 10px 0; /* Add margin to paragraphs and lists */
 }
 
+.container ol,
+.container ul {
+    padding-left: 20px; /* Add indentation to lists */
+}
+
+.container a {
+    text-decoration: none;
+    color: var(--maroon); /* Change link color */
+}
+
+.container a:hover {
+    color: var(--dark-blue); /* Change link hover color */
+}
+
+.univ-logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* status styling */
 .status {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.status-icon {
-  font-size: 18px;
-  color: #ccc; /* WILL FINALIZE */
-  margin-right: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: var(--red); /* Changed to variable */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    justify-content: center;
+    color: var(--white); /* Changed to variable */
+    font-size: 12px;
 }
 
 .status-text {
-  font-size: 18px;
-  color: #666; /* WILL FINALIZE */
+    font-size: 18px;
+    color: #666; /* Placeholder color, will be updated */
 }
 
+/* Text styles */
 h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 h4 {
-  font-size: 18px;
-  margin-bottom: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
 }
 
 ol, ul {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 li {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 a {
-  text-decoration: none;
-  color: #337ab7; /* WILL FINALIZE */
+    text-decoration: none;
+    color: #337ab7; /* Placeholder color, will be updated */
 }
 
 a:hover {
-  color: #23527c; /* WILL FINALIZE */
+    color: #23527c; /* Placeholder color, will be updated */
 }
 
 ul ul {
-  margin-left: 20px;
+    margin-left: 20px;
 }
 
-footer { /* footer styling */
-  background-color: #722828;
-  color: #FBEEEE;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Footer styling */
+footer {
+    background-color: var(--maroon); /* Changed to variable */
+    color: var(--pale-gray); /* Changed to variable */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footerBoxes {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-  margin: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin: 0 20px;
 }
 
 .footerBox {
-  flex: 1 1 calc(30% - 40px); /* adjusted width for three boxes in one row */
-  margin-top: 5px; /* decreased margin to lessen space above */
-  padding: 20px; 
+    flex: 1 1 calc(30% - 40px);
+    margin-top: 5px;
+    padding: 20px;
 }
 
 .footerBox h3 {
-  font-size: 1rem; 
-  font-weight: bold;
-  margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .footerBox p {
-  font-size: 0.6rem; 
-  text-align: justify;
-  color: #FBEEEE; 
-  margin-bottom: 10px;
+    font-size: 0.6rem;
+    text-align: justify;
+    margin-bottom: 10px;
 }
 
 .social-links {
-  align-items: center;
-  margin-bottom: 10px;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .social-links a {
-  display: inline-block;
-  margin-right: 10px;
+    display: inline-block;
+    margin-right: 10px;
 }
 
 .social-links img {
-  width: 32px;
-  height: 32px;
+    width: 32px;
+    height: 32px;
 }
 
 .newsletter {
-  /* insert properties */
+    /* Insert properties */
 }
 
 .splitter {
-  width: 95%; 
-  height: 1px;
-  background-color: #FBEEEE; 
-  margin: 10px 0; 
+    width: 95%;
+    height: 1px;
+    background-color: var(--pale-gray); /* Changed to variable */
+    margin: 10px 0;
 }
 
 .copy-right {
-  font-size: 0.6rem;
-  text-align: right; 
-  margin-bottom: 0.8rem;
-  width: 95%; 
+    font-size: 0.6rem;
+    text-align: right;
+    margin-bottom: 0.8rem;
+    width: 95%;
 }
 
 @media (max-width: 768px) {
-  .footerBox {
-    flex: 1 1 calc(50% - 20px);
-  }
+    .footerBox {
+        flex: 1 1 calc(50% - 20px);
+    }
 }
 
 @media (max-width: 500px) {
-  .footerBox {
-    flex: 1 1 100%;
-  }
+    .footerBox {
+        flex: 1 1 100%;
+    }
 }
