@@ -1,0 +1,284 @@
+/* Imported font families */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Global styling variables */
+:root {
+    --maroon: #722828; /* main color */
+    --pale-gray: #FBEEEE; /* bg color */
+    --white: #FFFFFF; /* nav bg color */
+    --dark-blue: #092334; /* secondary color */
+    --red: #FF0000; /* accent color_1 */
+    --green: #00FF00; /* accent color_2 */
+    --box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* box shadow */
+}
+
+/* Reset default browser styling */
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif; /* Adjusted font stack */
+}
+
+/* Header and navigation styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 80px;
+    background-color: var(--white); /* Changed to variable */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 0 1rem;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.title p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--maroon); /* Changed to variable */
+    margin-left: 10px;
+}
+
+.title span {
+    color: var(--dark-blue); /* Changed to variable */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-right: 2rem;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--maroon); /* Changed to variable */
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--dark-blue); /* Changed to variable */
+    text-decoration: underline;
+}
+
+/* container styling */
+.container {
+    max-width: 800px;
+    margin: auto; /* Center horizontally */
+    margin-top: 120px; /* Adjust to create space between header and container */
+    margin-bottom: 120px; /* Adjust to create space between container and footer */
+    padding: 20px;
+    background-color: var(--pale-gray);
+    border: 1px solid #ddd;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Inter', sans-serif; /* Use Inter font for the container */
+    color: var(--dark-blue); /* Change text color */
+    text-align: justify; /* Justify text for better readability */
+}
+
+.container h2,
+.container h3,
+.container h4 {
+    margin: 20px 0; /* Add margin to headings */
+    color: var(--maroon); /* Change heading color */
+}
+
+.container p,
+.container ol,
+.container ul {
+    margin: 10px 0; /* Add margin to paragraphs and lists */
+}
+
+.container ol,
+.container ul {
+    padding-left: 20px; /* Add indentation to lists */
+}
+
+.container a {
+    text-decoration: none;
+    color: var(--maroon); /* Change link color */
+}
+
+.container a:hover {
+    color: var(--dark-blue); /* Change link hover color */
+}
+
+.univ-logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* status styling */
+.status {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: var(--red); /* Changed to variable */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    justify-content: center;
+    color: var(--white); /* Changed to variable */
+    font-size: 12px;
+}
+
+.status-text {
+    font-size: 18px;
+    color: #666; /* Placeholder color, will be updated */
+}
+
+/* Text styles */
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+ol, ul {
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #337ab7; /* Placeholder color, will be updated */
+}
+
+a:hover {
+    color: #23527c; /* Placeholder color, will be updated */
+}
+
+ul ul {
+    margin-left: 20px;
+}
+
+/* Footer styling */
+footer {
+    background-color: var(--maroon); /* Changed to variable */
+    color: var(--pale-gray); /* Changed to variable */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerBoxes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin: 0 20px;
+}
+
+.footerBox {
+    flex: 1 1 calc(30% - 40px);
+    margin-top: 5px;
+    padding: 20px;
+}
+
+.footerBox h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footerBox p {
+    font-size: 0.6rem;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.social-links {
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-links img {
+    width: 32px;
+    height: 32px;
+}
+
+.newsletter {
+    /* Insert properties */
+}
+
+.splitter {
+    width: 95%;
+    height: 1px;
+    background-color: var(--pale-gray); /* Changed to variable */
+    margin: 10px 0;
+}
+
+.copy-right {
+    font-size: 0.6rem;
+    text-align: right;
+    margin-bottom: 0.8rem;
+    width: 95%;
+}
+
+@media (max-width: 768px) {
+    .footerBox {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 500px) {
+    .footerBox {
+        flex: 1 1 100%;
+    }
+}
