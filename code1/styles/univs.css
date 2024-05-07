@@ -19,7 +19,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif; /* Adjusted font stack */
+    font-family: 'Raleway', sans-serif; 
+    font-family: 'Inter', sans-serif; 
 }
 
 body {
@@ -33,7 +34,7 @@ body {
     align-items: center;
     padding: 10px 20px;
     height: 80px;
-    background-color: var(--white); /* Changed to variable */
+    background-color: var(--white);  
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
@@ -63,12 +64,12 @@ body {
 .title p {
     font-size: 1rem;
     font-weight: bold;
-    color: var(--maroon); /* Changed to variable */
+    color: var(--maroon);  
     margin-left: 10px;
 }
 
 .title span {
-    color: var(--dark-blue); /* Changed to variable */
+    color: var(--dark-blue);  
 }
 
 nav {
@@ -90,7 +91,7 @@ nav li {
 nav a {
     display: block;
     padding: 0.5rem 1rem;
-    color: var(--maroon); /* Changed to variable */
+    color: var(--maroon); 
     font-weight: bold;
     text-decoration: none;
     border-radius: 5px;
@@ -98,31 +99,52 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--dark-blue); /* Changed to variable */
+    color: var(--dark-blue);  
+    text-decoration: underline;
+} 
+
+/* Page indicator styling */
+#univs {
     text-decoration: underline;
 }
 
-/* Styling the container for each university */
+/* Title styling */
+h1 {
+    text-align: center; 
+    margin-top: 100px;
+    padding-bottom: 5px; 
+    font-family: 'Raleway';
+    font-style: italic;
+    color: var(--dark-blue);
+  }
+  
+  .list {
+    width: 80%;
+    margin: 20px auto; 
+    border: 1px solid var(--dark-blue);
+  }
+
+/* University container styling */
 .bg-container {
-    width: 80%; /* Adjust the width as needed */
-    max-width: 80%; /* Set the maximum width to 80% of the screen width */
-    margin: 20px auto; /* Center the container horizontally */
+    width: 80%;  
+    max-width: 80%;  
+    margin: 20px auto;  
     overflow: hidden;
-    border-radius: 15px; /* Round the corners */
-    height: 50%; /* Set the height to 50% of the viewport height */
-    position: relative; /* Ensure relative positioning for absolute positioning of children */
+    border-radius: 15px;  
+    height: 50%;  
+    position: relative; 
     box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
 }
 
-/* Styling the background image and overlay */
+/* Background image styling */
 .bg-img {
     position: relative;
-    height: 50%; /* Ensure the image follows the height of its container */
+    height: 50%;  
 }
 
 .bg-img img {
     width: 100%;
-    height: 100%; /* Ensure the image follows the height of its container */
+    height: 100%; 
     transition: transform 0.5s ease;
 }
 
@@ -135,43 +157,44 @@ nav a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px; /* Adjust padding as needed */
+    padding: 10px;  
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.4); /* Adjust overlay color and transparency */
-    color: white;
-    transition: background-color 0.3s; /* Add transition for smooth effect */
+    background-color: rgba(0, 0, 0, 0.4);  
+    color: var(--white);
+    transition: background-color 0.3s;  
 }
 
 .overlay:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* Darken the background color on hover */
+    background-color: rgba(0, 0, 0, 0.7); 
 }
 
 .overlay p {
     margin: 0;
     cursor: pointer;
+    font-family: 'Inter';
+    color: var(--white);
 }
 
 .overlay:hover p {
-    text-decoration: underline; /* Underline the text on hover */
+    text-decoration: underline; 
 }
 
-/* Styling the link inside the container */
+/* Link styling */
 .bg-container a {
     display: block;
-    color: #FFFFFF; /* Inherit text color from parent */
+    color: var(--white); 
     text-decoration: none;
 }
 
-/* Hover effect for link */
 .bg-container a:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
-/* Footer styling */
-footer {
-    background-color: var(--maroon); /* Changed to variable */
-    color: var(--pale-gray); /* Changed to variable */
+/* Footer styling */ /* WILL FINALIZE */
+footer { 
+    background-color: var(--maroon);  
+    color: var(--pale-gray);  
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -218,14 +241,14 @@ footer {
     height: 32px;
 }
 
-.newsletter {
+.newsletter { /* WILL FINALIZE */
     /* Insert properties */
 }
 
 .splitter {
     width: 95%;
     height: 1px;
-    background-color: var(--pale-gray); /* Changed to variable */
+    background-color: var(--pale-gray);  
     margin: 10px 0;
 }
 
