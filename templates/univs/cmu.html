@@ -4,31 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PamantasanPH</title>
-    <link rel="stylesheet" href="C:\Users\Jane\Documents\GitHub\PamantasanPH\code1\styles\univs.css">
+    <link rel="stylesheet" href="C:\Users\Jane\Documents\GitHub\PamantasanPH\code1\styles\univs21.css">
 </head>
 
 <body>
 	<header class="header"> <!--navigation div-->
         <div class="title">
-            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\sw_logo\logo_1.png" alt="PamantasanPH" class="logo">
+            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\sw_logo\logo.png" alt="PamantasanPH" class="logo">
             <p>Pamantasan<span>PH</span></p>
         </div>
         <nav> 
-            <ul>
-                <li><a class="active" href="#home">Home</a></li>
-                <li><a class="active" href="#univs">Universities</a></li>
+            <ul id="navigation">
+                <li><a id="home" href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\index.html">Home</a></li>
+                <li><a id="univs" href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\univs.html">Universities</a></li>
+                <li><a id="favs" href="#favs">Favorites</a></li> <!-- WILL FINALIZE -->
             </ul>
         </nav>
     </header>
 
     <!-- City of Malabon University -->
 	<div class="container">
+		<img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\univ_logos\CMULogo.png" alt="City of Malabon University" class="univ-logo">
 		<h2>City of Malabon University</h2>
-		<p>Pampano cor., Maya-Maya Sts., Longos City of Malabon</p>
-		<div class="status">
+		<h3>Pampano cor., Maya-Maya Sts., Longos City of Malabon</>
+		<!-- <div class="status"> 
 		  <i class="status-icon fa fa-circle" id="status-icon"></i>
 		  <span id="status-text">NOT YET OPENED</span>
-		</div>
+		</div> WILL FINALIZE  -->
 
 		<h3>Admission Requirements</h3> <!-- Admission Requirements -->
 		<h4>FOR GRADUATING SHS STUDENTS</h4>
@@ -157,29 +159,31 @@
         <div class="footerBoxes">
             <div class="footerBox">
                 <h3>Privacy Policy</h3> 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>PamantasanPH ensures stirct confidentiality of the user's privacy, only collecting necessary information to provide a consistent user experience. The user's privacy is protected and for reassurance, we, as the creators will not share without the consent of the user.</p>
             </div>
             <div class="footerBox"> 
                 <h3>Terms of Service</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>By agreeing to use PamantasanPH for educational and lawful means, shall refrain from unathorized use or modification of content as PamantasanPH reserves its rights to modify content indefinitely. Other things like review session and other activities ultimately depends on the user.</p>
             </div>
             <div class="footerBox"> 
                 <h3>Help and Support</h3> 
                 <div>
-                    <a href="https://www.facebook.com/"><img src="images\social\facebook.png" target="_blank" class="social-links" alt="Facebook"></a>
-                    <a href=""><img src="" target="_blank" class="social-links" alt="Email"></a> 
-                    <a href="https://www.linkedin.com/"><img src="images\social\linkedin.png" target="_blank" class="social-links" alt="LinkedIn"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61558938243853&mibextid=ZbWKwL"><img src="images\social\facebook.png" target="_blank" class="social-links" alt="Facebook"></a>
+                    <a href=""><img src="" target="_blank" class="social-links" alt="Email"></a> <!-- WILL FINALIZE -->
+                    <a href="https://www.linkedin.com/in/pamantasan-ph-1b2045307/"><img src="images\social\linkedin.png" target="_blank" class="social-links" alt="LinkedIn"></a>
                 </div>
                 
-                <div class="newsletter"> <!--newsletter--> 
-                    <h3>Stay Updated!</h3>
-                    <p>Subscribe to our newsletter to receive updates and FAQs about PamantasanPH.</p>
+                <<div class="newsletter"> <!--newsletter--> <!-- WILL FINALIZE, style -->
+                    <h2>Subscribe to our Newsletter!</h2>
+                    <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
                     <form action="subscribe.py" method="POST">
-                        <label for="email">Enter your email:</label>
-                        <input type="email" id="email" name="email" placeholder="Your email address" required>
-                        <button type="submit">Subscribe</button>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter a valid email address" required>
+                        <br>
+                        <button type="submit" style="background-color: rgb(154, 40, 9); color: rgb(255, 255, 255); border-radius:4px; margin-block-start: 10px">Subscribe</button>
                     </form>
                 </div>
+
             </div>
         </div>
         <hr class="splitter"> 

@@ -19,7 +19,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif; /* Adjusted font stack */
+    font-family: 'Raleway', sans-serif; 
+    font-family: 'Inter', sans-serif; 
+}
+
+body {
+    background-color: #FBEEEE;
 }
 
 /* Header and navigation styling */
@@ -29,7 +34,7 @@
     align-items: center;
     padding: 10px 20px;
     height: 80px;
-    background-color: var(--white); /* Changed to variable */
+    background-color: var(--white);  
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
@@ -59,12 +64,12 @@
 .title p {
     font-size: 1rem;
     font-weight: bold;
-    color: var(--maroon); /* Changed to variable */
+    color: var(--maroon);  
     margin-left: 10px;
 }
 
 .title span {
-    color: var(--dark-blue); /* Changed to variable */
+    color: var(--dark-blue);  
 }
 
 nav {
@@ -86,7 +91,7 @@ nav li {
 nav a {
     display: block;
     padding: 0.5rem 1rem;
-    color: var(--maroon); /* Changed to variable */
+    color: var(--maroon); 
     font-weight: bold;
     text-decoration: none;
     border-radius: 5px;
@@ -94,119 +99,69 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--dark-blue); /* Changed to variable */
+    color: var(--dark-blue);  
+    text-decoration: underline;
+} 
+
+/* Page indicator styling */
+#univs {
     text-decoration: underline;
 }
 
-/* container styling */
+/* Container styling */
 .container {
-    max-width: 800px;
-    margin: auto; /* Center horizontally */
-    margin-top: 120px; /* Adjust to create space between header and container */
-    margin-bottom: 120px; /* Adjust to create space between container and footer */
+    width: 80%;
+    margin: 40px auto; 
+    background-color: var(--white);
+    border-radius: 10px; 
     padding: 20px;
-    background-color: var(--pale-gray);
-    border: 1px solid #ddd;
-    box-shadow: var(--box-shadow);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+  }
+  
+  .container img.univ-logo {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    display: block;
+  }
+  
+  .container h2,.container h3,.container h4 { /* WILL FINALIZE */
+    text-align: center;
+    font-family: 'Raleway';
+    color: var(--dark-blue);
+    line-height: 2;
+    padding: 10px;
+  }
+  
+  .container p,.container ol,.container ul {
+    text-align: justify;
+    font-family: 'Inter';
+    color: var(--dark-blue);
+    line-height: 1.5;
+    padding: 10px;
+  }
+  
+  .status {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    font-family: 'Inter', sans-serif; /* Use Inter font for the container */
-    color: var(--dark-blue); /* Change text color */
-    text-align: justify; /* Justify text for better readability */
-}
-
-.container h2,
-.container h3,
-.container h4 {
-    margin: 20px 0; /* Add margin to headings */
-    color: var(--maroon); /* Change heading color */
-}
-
-.container p,
-.container ol,
-.container ul {
-    margin: 10px 0; /* Add margin to paragraphs and lists */
-}
-
-.container ol,
-.container ul {
-    padding-left: 20px; /* Add indentation to lists */
-}
-
-.container a {
-    text-decoration: none;
-    color: var(--maroon); /* Change link color */
-}
-
-.container a:hover {
-    color: var(--dark-blue); /* Change link hover color */
-}
-
-.univ-logo {
-    height: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .status-icon {
+    font-size: 24px;
     margin-right: 10px;
-}
-
-/* status styling */
-.status {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    background-color: var(--red); /* Changed to variable */
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    justify-content: center;
-    color: var(--white); /* Changed to variable */
-    font-size: 12px;
-}
-
-.status-text {
+  }
+  
+  .status-text {
     font-size: 18px;
-    color: #666; /* Placeholder color, will be updated */
-}
+    font-weight: bold;
+  }
 
-/* Text styles */
-h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-h4 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-p {
-    margin-bottom: 20px;
-}
-
-ol, ul {
-    margin-bottom: 20px;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-a {
-    text-decoration: none;
-    color: #337ab7; /* Placeholder color, will be updated */
-}
-
-a:hover {
-    color: #23527c; /* Placeholder color, will be updated */
-}
-
-ul ul {
-    margin-left: 20px;
-}
-
-/* Footer styling */
+/* Footer styling */ /* WILL FINALIZE */
 footer {
-    background-color: var(--maroon); /* Changed to variable */
-    color: var(--pale-gray); /* Changed to variable */
+    background-color: var(--maroon); 
+    color: var(--pale-gray); 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -253,14 +208,14 @@ footer {
     height: 32px;
 }
 
-.newsletter {
+.newsletter { /* WILL FINALIZE */
     /* Insert properties */
 }
 
 .splitter {
     width: 95%;
     height: 1px;
-    background-color: var(--pale-gray); /* Changed to variable */
+    background-color: var(--pale-gray);  
     margin: 10px 0;
 }
 
