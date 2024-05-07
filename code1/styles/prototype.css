@@ -1,3 +1,4 @@
+/* WILL FINALIZE */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root { /* global styling */
@@ -16,7 +17,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Raleway', 'Inter'; /* or sans-serif */
+    font-family: 'Raleway', sans-serif; 
+    font-family: 'Inter', sans-serif; 
 }
 
 body {
@@ -24,19 +26,14 @@ body {
     padding-bottom: 0;
 }
 
-.container { /* header & nav styling */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-  
+/* Header and navigation styling */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px; 
+  padding: 10px 20px;
   height: 80px;
-  background-color: #FFFFFF;
+  background-color: var(--white);  
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
@@ -48,9 +45,9 @@ body {
 .logo {
   height: 50px;
   width: auto;
-  border-radius: 50%; 
+  border-radius: 50%;
   overflow: hidden;
-  padding: 0 1rem; 
+  padding: 0 1rem;
 }
 
 .logo img {
@@ -66,12 +63,12 @@ body {
 .title p {
   font-size: 1rem;
   font-weight: bold;
-  color: #722828;
+  color: var(--maroon);  
   margin-left: 10px;
 }
 
 .title span {
-  color: #092334;
+  color: var(--dark-blue);  
 }
 
 nav {
@@ -93,7 +90,7 @@ nav li {
 nav a {
   display: block;
   padding: 0.5rem 1rem;
-  color: #722828;
+  color: var(--maroon); 
   font-weight: bold;
   text-decoration: none;
   border-radius: 5px;
@@ -101,7 +98,12 @@ nav a {
 }
 
 nav a:hover {
-  color: #092334;
+  color: var(--dark-blue);  
+  text-decoration: underline;
+} 
+
+/* Page indicator styling */
+#home {
   text-decoration: underline;
 }
 
