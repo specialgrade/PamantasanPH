@@ -22,10 +22,6 @@
     font-family: 'Raleway', sans-serif; /* Adjusted font stack */
 }
 
-body {
-    background-color: #FBEEEE;
-}
-
 /* Header and navigation styling */
 .header {
     display: flex;
@@ -102,70 +98,109 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Styling the container for each university */
-.bg-container {
-    width: 80%; /* Adjust the width as needed */
-    max-width: 80%; /* Set the maximum width to 80% of the screen width */
-    margin: 20px auto; /* Center the container horizontally */
-    overflow: hidden;
-    border-radius: 15px; /* Round the corners */
-    height: 50%; /* Set the height to 50% of the viewport height */
-    position: relative; /* Ensure relative positioning for absolute positioning of children */
-    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+/* container styling */
+.container {
+    max-width: 800px;
+    margin: auto; /* Center horizontally */
+    margin-top: 120px; /* Adjust to create space between header and container */
+    margin-bottom: 120px; /* Adjust to create space between container and footer */
+    padding: 20px;
+    background-color: var(--pale-gray);
+    border: 1px solid #ddd;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Inter', sans-serif; /* Use Inter font for the container */
+    color: var(--dark-blue); /* Change text color */
+    text-align: justify; /* Justify text for better readability */
 }
 
-/* Styling the background image and overlay */
-.bg-img {
-    position: relative;
-    height: 50%; /* Ensure the image follows the height of its container */
+.container h2,
+.container h3,
+.container h4 {
+    margin: 20px 0; /* Add margin to headings */
+    color: var(--maroon); /* Change heading color */
 }
 
-.bg-img img {
-    width: 100%;
-    height: 100%; /* Ensure the image follows the height of its container */
-    transition: transform 0.5s ease;
+.container p,
+.container ol,
+.container ul {
+    margin: 10px 0; /* Add margin to paragraphs and lists */
 }
 
-.bg-img:hover img {
-    transform: scale(1.1);
+.container ol,
+.container ul {
+    padding-left: 20px; /* Add indentation to lists */
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px; /* Adjust padding as needed */
-    box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.4); /* Adjust overlay color and transparency */
-    color: white;
-    transition: background-color 0.3s; /* Add transition for smooth effect */
-}
-
-.overlay:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* Darken the background color on hover */
-}
-
-.overlay p {
-    margin: 0;
-    cursor: pointer;
-}
-
-.overlay:hover p {
-    text-decoration: underline; /* Underline the text on hover */
-}
-
-/* Styling the link inside the container */
-.bg-container a {
-    display: block;
-    color: #FFFFFF; /* Inherit text color from parent */
+.container a {
     text-decoration: none;
+    color: var(--maroon); /* Change link color */
 }
 
-/* Hover effect for link */
-.bg-container a:hover {
-    text-decoration: underline;
-    cursor: pointer;
+.container a:hover {
+    color: var(--dark-blue); /* Change link hover color */
+}
+
+.univ-logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* status styling */
+.status {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: var(--red); /* Changed to variable */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    justify-content: center;
+    color: var(--white); /* Changed to variable */
+    font-size: 12px;
+}
+
+.status-text {
+    font-size: 18px;
+    color: #666; /* Placeholder color, will be updated */
+}
+
+/* Text styles */
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+ol, ul {
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #337ab7; /* Placeholder color, will be updated */
+}
+
+a:hover {
+    color: #23527c; /* Placeholder color, will be updated */
+}
+
+ul ul {
+    margin-left: 20px;
 }
 
 /* Footer styling */
