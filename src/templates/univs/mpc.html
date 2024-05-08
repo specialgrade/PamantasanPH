@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static/images/logos/website/logo.png">
+    <title>PamantasanPH</title>
+    <script src="{{ url_for('static', filename='styles/univs21.css') }}"></script>
+</head>
+
+<body>
+	<header class="header"> <!--navigation div-->
+        <div class="title">
+            <img src="static/images/logos/website/logo.png" alt="PamantasanPH" class="logo">
+            <p>Pamantasan<span>PH</span></p>
+        </div>
+        <nav> 
+            <ul>
+                <li><a id="home" href="{{ url_for('index') }}">Home</a></li>
+                <li><a id="univs" href="{{ url_for('universities') }}">Universities</a></li>
+                <li><a id="favs" href="{{ url_for('favorites') }}">Favorites</a></li> <!-- WILL FINALIZE -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Marikina Polytechnic College  -->
+	<div class="container">
+		<h2>Marikina Polytechnic College</h2>
+		<p>#2 Mayor Chanyungco Street, Sta. Elena, Marikina City, Philippines 1800</p>
+		<div class="status">
+		  <i class="status-icon fa fa-circle" id="status-icon"></i>
+		  <span id="status-text">NOT YET OPENED</span>
+		</div>
+
+		<h3>Admission Requirements</h3> <!-- Admission Requirements -->
+		<h4>FOR GRADUATING SHS STUDENTS</h4>
+		<ol>
+		  <li>Photocopy of latest report card (Form 138)</li>
+		  <li>Original and photocopy of certificate of good moral character</li>
+		  <li>Three (3) pieces 2x2 ID picture with name tag and white background</li>
+		</ol>
+
+		<h4>FOR TRANSFEREES</h4>
+		<ol>
+		  <li>Photocopy of Transcript of Records/ Certificate of Grades</li>
+		  <li>Original and photocopy of certificate of good moral character</li>
+		  <li>Photocopy of honorable dismissal certificate or transfer credentials</li>
+		  <li>Three (3) pieces 2x2 ID Picture with Name Tag and White Background</li>
+		</ol>
+
+		<h4>FOR PASSERS OF ALS/PEPT</h4>
+		<ol>
+		  <li>Certificate of Rating (COR)</li>
+		  <li>Three (3) pieces 2x2 ID Picture with Name Tag and White Background</li>
+		</ol>
+
+		<h4>FOR RETURNEES</h4>
+		<ol>
+		  <li>Please proceed directly to the registrar’s office</li>
+		  <li>Bring scanned copy of birth certificat</li>
+		</ol>
+
+		<h3>University Specializations</h3> <!-- University Specializations -->
+		<ul>
+			<li>Education</li>
+		</ul>
+
+		<h3>University Courses</h3> <!-- University Courses -->
+		<h4>UNDERGRADUATE PROGRAMS</h4>
+		<ul>
+		  <li>Bachelor of Technical Vocational Teacher Education 
+			<p>Major in:</p>
+			<ul>
+				<li>Automotive Technology</li>
+				<li>Civil Technology</li>
+				<li>Drafting Technology</li>
+				<li>Electrical Technology</li>
+				<li>Electronics Technology</li>
+				<li>Food and Service Management</li>
+				<li>Garments, Fashion and Design</li>
+				<li>Heating, Ventilating, Air-Conditioning and Refrigeration Technology</li>
+				<li>Mechanical Technology</li>
+				<li>Welding and Fabrication Technology</li>
+			</ul>
+		  </li>
+		  <li>Bachelor of Industrial Technology 
+			<p>Major in:</p>
+			<ul> 
+				<li>Automotive Technology</li>
+				<li>Civil Technology</li>
+				<li>Drafting Technology</li>
+				<li>Electrical Technology</li>
+				<li>Electronics Technology</li>
+				<li>Food and Service Management</li>
+				<li>Garments, Fashion and Design</li>
+				<li>Heating, Ventilating, Air-Conditioning and Refrigeration Technology</li>
+				<li>Mechanical Technology</li>
+				<li>Welding and Fabrication Technology</li>
+			</ul>
+		  </li>
+		  <li>Certificate of Technology  
+			<p>Major in:</p>
+			<ul> 
+				<li>Automotive Technology</li>
+				<li>Civil Technology</li>
+				<li>Drafting Technology</li>
+				<li>Electrical Technology</li>
+				<li>Electronics Technology</li>
+				<li>Food and Service Management</li>
+				<li>Garments, Fashion and Design</li>
+				<li>Heating, Ventilating, Air-Conditioning and Refrigeration Technology</li>
+				<li>Mechanical Technology</li>
+				<li>Welding and Fabrication Technology</li>
+			</ul>
+		  </li>
+		  <li>Bachelor of Science in Electronics Engineering</li>
+		  <li>Bachelor of Science in Entrepreneurship</li>
+		  <li>Continuing Professional Education</li>  
+		</ul>
+
+		<h4>GRADUATE PROGRAMS</h4>
+		<ul>
+			<li>Doctor of Education</li>
+			<li>Master of Education</li>
+			<li>Master of Technician Education</li>
+			<li>Master of Arts in Teaching</li>
+		</ul>
+
+		<h3>Application Process</h3> <!-- Application Process -->
+		<ol>
+			<li>Pre-register first using the Google Form Link in this post.</li>
+			<li>Visit us at the admission office to submit your requirements.</li>
+		</ol>
+
+		<h3>Contact Information</h3> <!-- Contact Information -->
+		<ul>
+			<li>Email: <a href="earistofficial1945@gmail.com">earistofficial1945@gmail.com</a></li>
+			<li>Trunk Line: 8682-0672</li> 
+			<!-- <li>Website: <a href=""></a></li> WILL FINALIZE -->
+			<li>University Announcement: <a href="https://www.facebook.com/mpceduph">https://www.facebook.com/mpceduph</a></li>
+		</ul>
+	</div>
+    
+    <footer> <!--footer div-->
+        <div class="footerBoxes">
+            <div class="footerBox">
+                <h3>Privacy Policy</h3> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="footerBox"> 
+                <h3>Terms of Service</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="footerBox"> 
+                <h3>Help and Support</h3> 
+                <div>
+                    <a href="https://www.facebook.com/"><img src="images\social\facebook.png" target="_blank" class="social-links" alt="Facebook"></a>
+                    <a href=""><img src="" target="_blank" class="social-links" alt="Email"></a> 
+                    <a href="https://www.linkedin.com/"><img src="images\social\linkedin.png" target="_blank" class="social-links" alt="LinkedIn"></a>
+                </div>
+                
+                <div class="newsletter"> <!--newsletter--> 
+                    <h3>Stay Updated!</h3>
+                    <p>Subscribe to our newsletter to receive updates and FAQs about PamantasanPH.</p>
+                    <form action="/newsletter" method="POST">
+                        <label for="email">Enter your email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <hr class="splitter"> 
+        <p class="copy-right"> &copy; 2024 PamantasanPH, All rights reserved</p> <!--copy-right-->
+    </footer>
+
+    <!-- <script src="univs.js" defer></script> -->
+</body>
+</html>
