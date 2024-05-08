@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static/images/logos/website/logo.png">
+    <title>PamantasanPH</title>
+    <script src="{{ url_for('static', filename='styles/univs21.css') }}"></script>
+</head>
+
+<body>
+	<header class="header"> <!--navigation div-->
+        <div class="title">
+            <img src="static/images/logos/website/logo.png" alt="PamantasanPH" class="logo">
+            <p>Pamantasan<span>PH</span></p>
+        </div>
+        <nav> 
+            <ul>
+                <li><a id="home" href="{{ url_for('index') }}">Home</a></li>
+                <li><a id="univs" href="{{ url_for('universities') }}">Universities</a></li>
+                <li><a id="favs" href="{{ url_for('favorites') }}">Favorites</a></li> <!-- WILL FINALIZE -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Technological University of the Philippines -->
+	<div class="container">
+		<h2>Technological University of the Philippines</h2>
+		<p>Address - San Marcelino St, Ayala Blvd, Ermita, Manila, 1000</p>
+		<div class="status">
+			<i class="status-icon fa fa-circle" id="status-icon"></i>
+			<span id="status-text">OPEN</span>
+		</div>
+
+		<h3>Admission Requirements</h3> <!-- Admission Requirements -->
+		<h4>GENERAL REQUIREMENTS</h4>
+		<h4>For Senior High School Graduates</h4>
+		  <ol>
+			<li>Passed the written TUP Scholastic and Technical Aptitude Test (TUPSTAT) and oral tests.</li>
+			<li>With Good Moral Character</li>
+			<li>Physically and Mentally Fit</li>
+			<li>Have met the prescribed admission requirements for the program/course applied for.</li>
+		  </ol>
+
+		<h4>For Transferees (Within the TUP System)</h4>
+		  <ol>
+			<li>Endorsement from the Admissions Office</li>
+			<li>With Good Scholastic Records</li>
+			<li>With Good Moral Character</li>
+			<li>Certification of Available Slot from the Department</li>
+		  </ol>
+
+		<h4>For Transferees (From other schools)</h4>
+		  <ol>
+			<li>Certificate of Transfer Credentials</li>
+			<li>With Good Scholastic Records (No Failing Grades)</li>
+			<li>With Good Moral Character</li>
+			<li>Certification of Available Slot from the Department</li>
+			<li>Have met the prescribed admission requirements for the program/course applied for.</li>
+		  </ol>
+
+		<h4>For Foreign Students</h4>
+		  <ol>
+			<li>Meet the prescribed admission requirements for the program/course applied for.</li>
+			<li>Submission of necessary requirements for student visa conversion.
+			  <ul>
+				<li>Transcript of Records/Scholastic records duly authenticated by the Philippine Foreign Service</li>
+				<li>Proficiency in English Test (for non-native speakers of English language)</li>
+				<li>Notarized affidavit of support including bank statement, notice accommodation, and other subsistence, as well as other school dues and incidental expenses.</li>
+				<li>Five (5) copies of duly signed signed student's personal history statement (PHS), both in English, and his/her national alphabet accompanied by his/her personal seal, if any, and containing among others, his left and right thumbprint and 2x2 photograph on plain white background taken not more than six months prior to submission.</li>
+				<li>Photocopy of data page of the student's passport showing date and place of birth, and birth certificate or its equivalent</li>
+				<li>Philippine Police Clearance</li>
+			  </ul>
+			</li>
+		  </ol>
+
+		<h4>For Second Degree Takers</h4>
+		<p>Second Degree is allowed only for TUP graduates of Bachelor of Engineering Technology, Bachelor of Technical Teacher Education (BTTE) and Bachelor of Arts in Management Major Industrial Management (BAM-IM), if slot if available.</p>
+		<ul>
+			<li>Bachelor in Engineering Technology
+				<ol>
+					<li>No failing grades</li>
+					<li>Must obtain a grade point average (GPA) of 2.25 or higher</li>
+					<li>With Good Moral Character</li>
+					<li>Must pass the qualifying examination to be conducted by the College of Engineering</li>
+					<li>Third year and fourth year subjects taken in Bachelor of Engineering Technology shall be credited to BSCE, BSECE, BSEE, and BSME upon passing a comprehensive examination (student applicant must get a score of 70 out of 100).</li>
+				  </ol>
+			</li> 
+			<li>Bachelor of Arts Major in Industrial Management
+				<ol>
+					<li>Must obtain a grade point average (GPA) of 2.50 or highers</li>
+					<li>With Good Moral Character</li>
+				  </ol>
+			</li>  
+			<li>Bachelor of Technical Teacher Education
+				<ol>
+					<li>With Good Moral Character</li>
+				  </ol>
+			</li> 
+		</ul>
+
+		<h4>SPECIFIC REQUIREMENTS</h4>  
+		<h4>College of Science</h4>
+		<p>For the following courses:
+		<ul>
+		  <li>Bachelor of Science in Computer Science (BSCS)</li>
+		  <li>Bachelor of Science in Information Technology (BSIT)</li>
+		  <li>Bachelor of Science in Information System (BSIS)</li>
+		  <li>Bachelor of Applied Science in Laboratory Technology (BAS-LT)</li>
+		  <li>Bachelor of Science in Environmental Science (BSeS)</li>
+		</ul>
+		</p>
+		  <ol>
+			<li>For SHS STEM graduates: with at least 80% GPA in Mathematics, Science and English</li>
+			<li>For other tracks:
+			  <ul>
+				<li>Will take bridging programs (not included in the free tuition)
+				  <ul>
+					  <li>Basic Calculus (5 units), General Physics (5 units), General Chemistry (5 units) and Research (3 units) - for BSIS, BSIT, BSES and BAS-LT programs</li>
+					  <li>Biology (3 units), - for BSES program</li>
+				  </ul>
+				</li>
+				<li>With at least 85% GPA in Mathematics, Science and English</li>
+			  </ul>
+			</li>
+		  </ol>
+
+		<h4>College of Industrial Education</h4>
+		<p>For the following courses:
+		  <ul>
+			<li>Bachelor of Technical Teacher Education (BTTE)</li>
+			<li>Bachelor of Technical Vocational Teacher Education (all majors)</li>
+			<li>Bachelor of Science in Industrial Education (all majors)</li>
+			<li>Certification of Available Slot from the Department</li>
+		  </ul>
+		</p>
+		<ol>
+		  <li>Open to all SHS graduates, with at least 80% GPA</li>
+		</ol>
+
+		<h4>College of Liberal Arts</h4>
+		<p>For the following courses:
+		  <ul>
+			<li>Bachelor of Science in Entrepreneurial Management</li>
+			<li>Bachelor of Arts in Management Major in Industrial Management</li>
+		  </ul>
+		</p>
+		<ol>
+		  <li>Preferrably a SHS Accountancy, Business and Management Strand graduate</li>
+		  <li>Other Tracks: With Bridging Program embedded in the course curriculum</li>
+		  <li>With at least 80% GPA</li>
+		  <li>With at least 80% in English</li>
+		</ol>
+
+		<h4>College of Architecture and Fine Arts</h4>
+		<p>For the following courses:
+		  <ul>
+			<li>Bachelor of Science in Architecture
+			  <ol>
+				<li>For SHS Stem graduates: with at least 85% GPA in Mathematics, Science and English</li>
+				<li>For other tracks: With at least 85% GPA and no grade lower than 85% in Mathematics, Science, and English for Four (4) grading periods</li>
+			  </ol>
+			</li>
+			<li>Bachelor of Science in Graphics Technology (all majors)
+			  <ol>
+				<li>Preferrably a SHS Stem and TechVoc graduate</li>
+				<li>For other tracks: With at least 80% GPA and will take bridging programs embedded in the curriculum</li>
+			  </ol>
+			</li>
+			<li>Bachelor of Fine Arts
+			  <ol>
+				<li>Open to all Senior High School graduates</li>
+				<li>Will take bridging programs embedded in the curriculum</li>
+				<li>With at least 80% GPA</li>
+			  </ol>
+			</li>
+		  </ul>
+		</p>
+
+		<h4>College of Industrial Technology</h4>
+		<p>For the following courses:
+		  <ul>
+			<li>Bachelor of Technology
+			  <ol>
+				<li>Open to all SHS graduates</li>
+			  </ol>
+			</li>
+			<li>Bachelor of Engineering Technology Major in Electronics Technology (all options)</li>
+			<li>Bachelor of Engineering Technology Major in Mechanical Technology (all options)
+			  <ol>
+				<li>Open to all SHS STEM graduates</li>
+				<li>For other tracks: will take bridging programs embedded in the curriculum</li>
+			  </ol>
+			</li>
+			<li>Bachelor of Science in Food Technology
+			  <ol>
+				<li>For SHS STEM graduates: with no grade lower than 80% in Mathematics, Science, English and GPA</li>
+				<li>For other tracks: With at least 85% grade in Mathematics, Science and English and will take bridging programs embedded in the curriculum</li>
+				<li>With height of at least 5' height for female and 5'2" for male</li>
+				<li>With a GPA of 83% and above</li>
+			  </ol>
+			</li>
+			<li>Bachelor of Science in Hotel and Restaurant Management
+				<ul>
+					<li>Open to all SHS graduates with a GPA of 80% and above</li>
+					<li>With height of at least 5'4 height for female and 5'6 for male.</li>
+				</ul>
+			</li>
+		  </ul>
+		</p>
+
+		<h4>College of Engineering</h4>
+		<p>For the following courses:
+		  <ul>
+			<li>Bachelor of Science in Civil Engineering</li>
+			<li>Bachelor of Science in Electrical Engineering</li>
+			<li>Bachelor of Science in Mechanical Engineering</li>
+			<li>Bachelor of Science in Electronics Engineering </li>
+		  </ul>
+		</p>
+		<ol>
+		  <li>For SHS STEM graduates: with no grade lower than 80% in Mathematics, Science, English and GPA</li>
+		  <li>For other tracks: With at least 85% grade in Mathematics, Science and English and will take bridging programs embedded in the curriculum.</li>
+		</ol>
+
+		<h3>University Specializations</h3> <!-- University Specializations -->
+		<ul>
+			<li>Engineering Courses
+				<ul>
+				  <li>Bachelor of Science in Civil Engineering</li>
+				  <li>Bachelor of Science in Electrical Engineering</li>
+				  <li>Bachelor of Science in Electronics Engineering</li>
+				  <li>Bachelor of Science in Mechanical Engineering</li>
+				</ul>
+			  </li>
+			  <li>Technology Courses
+				<ul>
+				  <li>Bachelor of Science in Computer Science</li>
+				  <li>Bachelor of Science in Information Technology</li>
+				  <li>Bachelor of Science in Information Systems</li>
+				  <li>Bachelor of Science in Environmental Science</li>
+				  <li>Bachelor of Applied Science major in Laboratory Technology</li>
+				</ul>
+			  </li>
+		</ul>
+
+        <h3>University Courses</h3> <!-- University Courses -->
+		<h4>UNDERGRADUATE PROGRAMS</h4>
+		<ul>
+		  <li><strong>College of Industrial Technology (CIT)</strong>
+			<ul>
+			  <li>Bachelor of Science in Food Technology</li>
+			  <li>Bachelor of Engineering Technology major in:
+				<ul>
+				  <li>Computer Engineering Technology</li>
+				  <li>Civil Technology</li>
+				  <li>Electrical Technology</li>
+				  <li>Electronics Communication Technology</li>
+				  <li>Electronics Technology</li>
+				  <li>Instrumentation and Control Technology</li>
+				  <li>Mechanical Technology</li>
+				  <li>Mechatronics Technology</li>
+				  <li>Railway Technology</li>
+				  <li>Mechanical Engineering Technology option in:
+					<ul>
+					  <li>Automotive Technology</li>
+					  <li>Foundry Technology</li>
+					  <li>Heating Ventilating & Air-Conditioning / Refrigerator Technology</li>
+					  <li>Power Plant Technology</li>
+					  <li>Welding Technology</li>
+					  <li>Moulds Technology</li>
+					</ul>
+				  </li>
+				</ul>
+			  </li>
+			  <li>Bachelor of Technology in Apparel Fashion</li>
+			  <li>Bachelor of Technology in Nutrition and Food Technology</li>
+			  <li>Bachelor of Technology in Print Media Technology</li>
+			</ul>
+		  </li>
+
+		  <li><strong>College Of Industrial Education (CIE)</strong>
+			<ul>
+			  <li>Bachelor of Science in Industrial Education major in:
+				<ul>
+				  <li>Information and Communication Technology</li>
+				  <li>Home Economics</li>
+				  <li>Industrial Arts</li>
+				  <li>Animation</li>
+				  <li>Beauty Care and Wellness</li>
+				  <li>Computer Programming</li>
+			  	  <li>Electrical</li>
+				  <li>Electronics</li>
+				  <li>Food Service Management</li>
+				  <li>Fashion and Garment</li>
+				  <li>Heat Ventilation and Air Conditioning</li>
+				</ul>
+			  </li>
+			  <li>Bachelor of Technical Teacher Education </li>
+			</ul>
+		  </li>
+
+		  <li><strong>College Of Engineering (COE)</strong>
+			<ul>
+			  <li>Bachelor of Science in Civil Engineering</li>
+			  <li>Bachelor of Science in Electrical Engineering</li>
+			  <li>Bachelor of Science in Electronics Engineering</li>
+			  <li>Bachelor of Science in Mechanical Engineering</li>
+			</ul>
+		  </li>
+
+		  <li><strong>College Of Liberal Arts (CLA)</strong>
+			<ul>
+			  <li>Bachelor of Arts in Management major in Industrial Management</li>
+			  <li>Bachelor of Science in Entrepreneurship Management</li>
+			  <li>Bachelor of Science in Hospitality Management</li>
+			</ul>
+		  </li>
+
+		  <li><strong>College of Architecture and Fine Arts (CAFA)</strong>
+			<ul>
+			  <li>Bachelor of Science in Architecture</li>
+			  <li>Bachelor of Fine Arts</li>
+			  <li>Bachelor in Graphics Technology major in:
+				<ul>
+				  <li>Architecture Technology</li>
+				  <li>Industrial Design</li>
+				  <li>Mechanical Drafting Technology</li>
+				</ul>
+			  </li>
+			</ul>
+		  </li>
+		</ul>
+
+        <h3>Application Process</h3> <!-- Application Process -->
+		<ol>
+		  <li>Report to Office of Admissions
+			<p>Present the following documents:
+			  <ol>
+				<li>Pre-Registration Form (Printed and Filled Out)</li>
+				<li>Applicant Patient Record Form (Printed and Filled Out)</li>
+				<li>Original and Photocopy of Grade 12 SHS card</li>
+				<li>Certificate of Good Moral Character</li>
+				<li>PSA/NSO Birth Certificate (Original and Photocopy) PSA/NSO Marriage Certificate (Original and Photocopy for married female students only)</li>
+			  </ol>
+			</p>
+		  </li>
+		  <li>Report to College for Interview</li>
+		  <li>Report to Medical/Dental Clinic
+			<p>Bring the Original and Photocopy of the following medical requirements:
+			  <ol>
+				<li>Chest X-ray (PA View)</li>
+				<li>Drug Test</li>
+			  </ol>
+			</p>
+		  </li>
+		  <li>Report to Office of Admissions
+			<p>Report back to Office of Admission for notice of admission, undertaking ans student pledge.</p>
+		  </li>
+		  <li>Report to College for Enlistment</li>
+		  <li>Confirmation of Enrollment by the Registrar </li>
+		</ol>
+
+		<h3>Contact Information</h3> <!-- Contact Information -->
+		<ul>
+			<li>Email: 
+				<ul>
+					<li><a href="uitc@tup.edu.ph">uitc@tup.edu.ph</a></li>
+					<li><a href="tup@tup.edu.ph">tup@tup.edu.ph</a></li>
+					<li><a href="admissions@tup.edu.ph">admissions@tup.edu.ph</a></li>
+				</ul>
+			</li>
+			<li>Telephone: +632-301-3001 loc 603 / (02) 301 3001 </li>
+			<li>Website: <a href="http://www.tup.edu.ph"> http://www.tup.edu.ph</a></li>
+			<li>University Announcement: <a href="https://www.facebook.com/share/p/UMiKv8Yse4Mg5KgB/?mibextid=oFDknk"> https://www.facebook.com/share/p/UMiKv8Yse4Mg5KgB/?mibextid=oFDknk</a></li>
+		</ul>
+	</div>
+
+	<footer> <!--footer div-->
+        <div class="footerBoxes">
+            <div class="footerBox">
+                <h3>Privacy Policy</h3> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="footerBox"> 
+                <h3>Terms of Service</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="footerBox"> 
+                <h3>Help and Support</h3> 
+                <div>
+                    <a href="https://www.facebook.com/"><img src="images\social\facebook.png" target="_blank" class="social-links" alt="Facebook"></a>
+                    <a href=""><img src="" target="_blank" class="social-links" alt="Email"></a> 
+                    <a href="https://www.linkedin.com/"><img src="images\social\linkedin.png" target="_blank" class="social-links" alt="LinkedIn"></a>
+                </div>
+                
+                <div class="newsletter"> <!--newsletter--> 
+                    <h3>Stay Updated!</h3>
+                    <p>Subscribe to our newsletter to receive updates and FAQs about PamantasanPH.</p>
+                    <form action="/newsletter" method="POST">
+                        <label for="email">Enter your email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <hr class="splitter"> 
+        <p class="copy-right"> &copy; 2024 PamantasanPH, All rights reserved</p> <!--copy-right-->
+    </footer>
+
+	<!-- <script src="univs.js" defer></script> -->
+</body>
+</html>
