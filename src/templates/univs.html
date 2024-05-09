@@ -2,23 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="static/images/logos/website/logo.png">
+	<link rel="icon" href="../static/images/logos/website/logo.png">
     <title>PamantasanPH</title>
-    <script src="{{ url_for('static', filename='styles/univs.css') }}"></script>
+    <link rel="stylesheet" type="text/css" href="../static/styles/univs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
 	<header class="header"> <!--navigation div-->
         <div class="title">
-            <img src="static/images/logos/website/logo.png" alt="PamantasanPH" class="logo">
+            <img src="../static/images/logos/website/logo.png" alt="PamantasanPH" class="logo">
             <p>Pamantasan<span>PH</span></p>
         </div>
         <nav> 
             <ul id="navigation">
-                <li><a id="home" href="{{ url_for('index') }}">Home</a></li>
-                <li><a id="univs" href="{{ url_for('universities') }}">Universities</a></li>
-                <li><a id="favs" href="{{ url_for('favorites') }}">Favorites</a></li> <!-- WILL FINALIZE -->
+                <li><a id="home" href="index.html">Home</a></li>
+                <li><a id="univs" href="univs.html">Universities</a></li>
+                <li><a id="favs" href="favs.html">Favorites</a></li>  
             </ul>
         </nav>
     </header>
@@ -26,190 +30,253 @@
     <h1>List of Universities</h1>
     <hr class="list">
 	<div class="bg-container">  
+        <div class="bookmark-icon">
+            <i class="fas fa-bookmark"></i>
+        </div>
         <div class="bg-img">  
-            <img src="static/images/logos/universities/CMULogo.png" alt="City of Malabon University"> <!-- insert univ -->
+            <img src="../static/images/logos/bg_img/cmu-standard-scale-2_00x-gigapixel.jpg" alt="City of Malabon University">  
             <div class="overlay">
-                <p><a href="{{ url_for('CMU') }}">City of Malabon University</a></p>
+                <p><a href="../templates/univs/cmu.html">City of Malabon University</a></p>
+            </div>
+        </div>
+    </div>
+
+	<div class="bg-container">
+        <div class="bookmark-icon">
+            <i class="fas fa-bookmark"></i>
+        </div> 
+        <div class="bg-img">  
+            <img src="../static/images/logos/bg_img/dr.fil-gigapixel-standard-height-1080px.jpg" alt="Dr. Filemon C. Aguilar Memorial College of Las Pinas">  
+            <div class="overlay">
+                <p><a href="../templates/univs/dr.fil.html">Dr. Filemon C. Aguilar Memorial College of Las Pinas</a></p>
             </div>
         </div>
     </div>
 
 	<div class="bg-container">  
+        <div class="bookmark-icon">
+            <i class="fas fa-bookmark"></i>
+        </div>
         <div class="bg-img">  
-            <img src="static/images/logos/universities/DR.FILLogo.png" alt="Dr. Filemon C. Aguilar Memorial College of Las Pinas"> <!-- insert univ -->
+            <img src="../static/images/logos/bg_img/earist-gigapixel-standard-height-1080px.jpg" alt="Eulogio "Amang" Rodriguez Institute of Science & Technology">  
             <div class="overlay">
-                <p><a href="{{ url_for('Dr_Fil') }}">Dr. Filemon C. Aguilar Memorial College of Las Pinas</a></p>
+                <p><a href="../templates/univs/earist.html">Eulogio "Amang" Rodriguez Institute of Science & Technology</a></p>
             </div>
         </div>
     </div>
 
 	<div class="bg-container">  
-        <div class="bg-img">  
-            <img src="static/images/logos/universities/EARISTLogo.png" alt="Eulogio "Amang" Rodriguez Institute of Science & Technology"> <!-- insert univ -->
-            <div class="overlay">
-                <p><a href="{{ url_for('Earist') }}">Eulogio "Amang" Rodriguez Institute of Science & Technology</a></p>
-            </div>
+        <div class="bookmark-icon">
+            <i class="fas fa-bookmark"></i>
         </div>
-    </div>
-
-	<div class="bg-container">  
         <div class="bg-img"> 
-            <img src="static/images/logos/universities/MPCLogo.png" alt="Marikina Polytechnic College"> <!-- insert univ -->
+            <img src="../static/images/logos/bg_img/mpc-gigapixel-standard-height-1080px.jpg" alt="Marikina Polytechnic College"> 
             <div class="overlay">
-                <p><a href="{{ url_for('MPC') }}">Marikina Polytechnic College</a></p>
+                <p><a href="../templates/univs/mpc.html">Marikina Polytechnic College</a></p>
             </div>
         </div>
     </div>
 
 	<div class="bg-container">  
+        <div class="bookmark-icon">
+            <i class="fas fa-bookmark"></i>
+        </div>
         <div class="bg-img">  
-            <img src="static/images/logos/universities/NPCLogo.png" alt="Navotas Polytechnic College"> <!-- insert univ -->
+            <img src="../static/images/logos/bg_img/npc-gigapixel-standard-height-1080px.jpg" alt="Navotas Polytechnic College">  
             <div class="overlay">
-                <p><a href="{{ url_for('NPC') }}">Navotas Polytechnic College</a></p>
+                <p><a href="../templates/univs/npc.html">Navotas Polytechnic College</a></p>
             </div>
         </div>
     </div>
 
 	<div class="bg-container">  
+        <div class="bookmark-icon">
+            <i class="fas fa-bookmark"></i>
+        </div>
         <div class="bg-img">  
-            <img src="static/images/logos/universities/PLMARLogo.png" alt="Pamantasan ng Lungsod ng Marikina"> <!-- insert univ -->
+            <img src="../static/images/logos/bg_img/plmar-gigapixel-standard-height-1080px.jpg" alt="Pamantasan ng Lungsod ng Marikina">  
             <div class="overlay">
-                <p><a href="{{ url_for('PLMAR') }}">Pamantasan ng Lungsod ng Marikina</a></p>
+                <p><a href="../templates/univs/plmar.html">Pamantasan ng Lungsod ng Marikina</a></p>
             </div>
         </div>
     </div>
 
 	<div class="bg-container">  
+        <div class="bookmark-icon">
+            <i class="fas fa-bookmark"></i>
+        </div>
         <div class="bg-img"> 
-            <img src="static/images/logos/universities/PLMLogo.png" alt="Pamantasan ng Lungsod ng Maynila"> <!-- insert univ -->
+            <img src="../static/images/logos/bg_img/plm-gigapixel-standard-height-1080px.jpg" alt="Pamantasan ng Lungsod ng Maynila">  
             <div class="overlay">
-                <p><a href="{{ url_for('PLM') }}">Pamantasan ng Lungsod ng Maynila</a></p>
+                <p><a href="../templates/univs/plm.html">Pamantasan ng Lungsod ng Maynila</a></p>
             </div>
         </div>
     </div>
 
 	<div class="bg-container"> 
+        <div class="bookmark-icon">
+            <i class="fas fa-bookmark"></i>
+        </div>
         <div class="bg-img">  
-            <img src="static/images/logos/universities/PLMUNLogo.png" alt="Pamantasan ng Lungsod ng Muntinlupa"> <!-- insert univ -->
+            <img src="../static/images/logos/bg_img/plmun-gigapixel-standard-height-1080px.jpg" alt="Pamantasan ng Lungsod ng Muntinlupa">  
             <div class="overlay">
-                <p><a href="{{ url_for('PLMUN') }}">Pamantasan ng Lungsod ng Muntinlupa</a></p>
+                <p><a href="../templates/univs/plmun.html">Pamantasan ng Lungsod ng Muntinlupa</a></p>
             </div>
         </div>
     </div>
 
 	<div class="bg-container">  
+        <div class="bookmark-icon">
+            <i class="fas fa-bookmark"></i>
+        </div>
         <div class="bg-img">  
-            <img src="static/images/logos/universities/PLPLogo.png" alt="Pamantasan ng Lungsod ng Pasig"> <!-- insert univ -->
+            <img src="../static/images/logos/bg_img/plp-gigapixel-standard-height-1080px.jpg" alt="Pamantasan ng Lungsod ng Pasig">  
             <div class="overlay">
-                <p><a href="{{ url_for('PLP') }}">Pamantasan ng Lungsod ng Pasig</a></p>
+                <p><a href="../templates/univs/plp.html">Pamantasan ng Lungsod ng Pasig</a></p>
             </div>
         </div>
     </div>
 
 	<div class="bg-container">  
+        <div class="bookmark-icon">
+            <i class="fas fa-bookmark"></i>
+        </div>
         <div class="bg-img">  
-            <img src="static/images/logos/universities/PLVLogo.png" alt="Pamantasan ng Valenzuela"> <!-- insert univ -->
+            <img src="../static/images/logos/bg_img/plv-gigapixel-standard-height-1080px.jpg" alt="Pamantasan ng Lungsod ng Valenzuela">  
             <div class="overlay">
-                <p><a href="{{ url_for('PLV') }}">Pamantasan ng Valenzuela</a></p>
+                <p><a href="../templates/univs/plv.html">Pamantasan ng Lungsod ng Valenzuela</a></p>
             </div>
         </div>
     </div>
 
 	<div class="bg-container">  
+        <div class="bookmark-icon">
+            <i class="fas fa-bookmark"></i>
+        </div>
         <div class="bg-img">  
-            <img src="static/images/logos/universities/PCCLogo.png" alt="Paranaque City College"> <!-- insert univ -->
+            <img src="../static/images/logos/bg_img/pcc-gigapixel-standard-height-1080px.jpg" alt="Paranaque City College">  
             <div class="overlay">
-                <p><a href="{{ url_for('PCC') }}">Paranaque City College</a></p>
+                <p><a href="../templates/univs/pcc.html">Paranaque City College</a></p>
             </div>
         </div>
     </div>
 
 	<div class="bg-container">  
+        <div class="bookmark-icon">
+            <i class="fas fa-bookmark"></i>
+        </div>
         <div class="bg-img">  
-            <img src="static/images/logos/universities/PNULogo.png" alt="Philippine Normal University Manila"> <!-- insert univ -->
+            <img src="../static/images/logos/bg_img/pnu-gigapixel-standard-height-1080px.jpg" alt="Philippine Normal University Manila">  
             <div class="overlay">
-                <p><a href="{{ url_for('PNU') }}">Philippine Normal University Manila</a></p>
+                <p><a href="../templates/univs/pnu.html">Philippine Normal University Manila</a></p>
             </div>
         </div>
     </div>
 
 	<div class="bg-container">  
+        <div class="bookmark-icon">
+            <i class="fas fa-bookmark"></i>
+        </div>
         <div class="bg-img">  
-            <img src="static/images/logos/universities/PSCALogo.png" alt="Philippine State College of Aeronautics"> <!-- insert univ -->
+            <img src="../static/images/logos/bg_img/psca-gigapixel-standard-height-1080px.jpg" alt="Philippine State College of Aeronautics">  
             <div class="overlay">
-                <p><a href="{{ url_for('PSCA') }}">Philippine State College of Aeronautics</a></p>
+                <p><a href="../templates/univs/psca.html">Philippine State College of Aeronautics</a></p>
             </div>
         </div>
     </div>
 
 	<div class="bg-container">  
+        <div class="bookmark-icon">
+            <i class="fas fa-bookmark"></i>
+        </div>
         <div class="bg-img">  
-            <img src="static/images/logos/universities/PCCMLogo.png" alt="Polytechnic College of the City of Meycauayan"> <!-- insert univ -->
+            <img src="../static/images/logos/bg_img/pccm-gigapixel-standard-height-1080px.jpg" alt="Polytechnic College of the City of Meycauayan">  
             <div class="overlay">
-                <p><a href="{{ url_for('PCCM') }}">Polytechnic College of the City of Meycauayan</a></p>
+                <p><a href="../templates/univs/pccm.html">Polytechnic College of the City of Meycauayan</a></p>
             </div>
         </div>
     </div>
 
 	<div class="bg-container">  
+        <div class="bookmark-icon">
+            <i class="fas fa-bookmark"></i>
+        </div>
         <div class="bg-img">  
-            <img src="static/images/logos/universities/PUPLogo.png" alt="Polytechnic University of the Philippines"> <!-- insert univ -->
+            <img src="../static/images/logos/bg_img/pup-gigapixel-standard-height-1080px.jpg" alt="Polytechnic University of the Philippines"> 
             <div class="overlay">
-                <p><a href="{{ url_for('PUP') }}">Polytechnic University of the Philippines</a></p>
+                <p><a href="../templates/univs/pup.html">Polytechnic University of the Philippines</a></p>
             </div>
         </div>
     </div>
 
 	<div class="bg-container">  
+        <div class="bookmark-icon">
+            <i class="fas fa-bookmark"></i>
+        </div>
         <div class="bg-img">  
-            <img src="static/images/logos/universities/QCULogo.png" alt="Quezon City University"> <!-- insert univ -->
+            <img src="../static/images/logos/bg_img/qcu-gigapixel-standard-height-1080px.jpg" alt="Quezon City University">  
             <div class="overlay">
-                <p><a href="{{ url_for('QCU') }}">Quezon City University</a></p>
+                <p><a href="../templates/univs/qcu.html">Quezon City University</a></p>
             </div>
         </div>
     </div>
 
 	<div class="bg-container">  
+        <div class="bookmark-icon">
+            <i class="fas fa-bookmark"></i>
+        </div>
         <div class="bg-img">  
-            <img src="static/images/logos/universities/TCULogo.png" alt="Taguig City University"> <!-- insert univ -->
+            <img src="../static/images/logos/bg_img/tcu-gigapixel-standard-height-1080px.jpg" alt="Taguig City University">  
             <div class="overlay">
-                <p><a href="{{ url_for('TCU') }}">Taguig City University</a></p>
+                <p><a href="../templates/univs/tcu.html">Taguig City University</a></p>
             </div>
         </div>
     </div>
 
 	<div class="bg-container">  
+        <div class="bookmark-icon">
+            <i class="fas fa-bookmark"></i>
+        </div>
         <div class="bg-img">  
-            <img src="static/images/logos/universities/TUPLogo.png" alt="Technological University of the Philippines"> <!-- insert univ -->
+            <img src="../static/images/logos/bg_img/tup-gigapixel-standard-height-1080px.jpg" alt="Technological University of the Philippines">  
             <div class="overlay">
-                <p><a href="{{ url_for('TUP') }}">Technological University of the Philippines</a></p>
+                <p><a href="../templates/univs/tup.html">Technological University of the Philippines</a></p>
             </div>
         </div>
     </div>
 
 	<div class="bg-container">  
+        <div class="bookmark-icon">
+            <i class="fas fa-bookmark"></i>
+        </div>
         <div class="bg-img">  
-            <img src="static/images/logos/universities/UDMLogo.png" alt="Universidad de Manila"> <!-- insert univ -->
+            <img src="../static/images/logos/bg_img/udm-gigapixel-standard-height-1080px.jpg" alt="Universidad de Manila">  
             <div class="overlay">
-                <p><a href="{{ url_for('UDM') }}">Universidad de Manila</a></p>
+                <p><a href="../templates/univs/udm.html">Universidad de Manila</a></p>
             </div>
         </div>
     </div>
 
 	<div class="bg-container">  
+        <div class="bookmark-icon">
+            <i class="fas fa-bookmark"></i>
+        </div>
         <div class="bg-img">  
-            <img src="static/images/logos/universities/UMLogo.png" alt="University of Makati"> <!-- insert univ -->
+            <img src="../static/images/logos/bg_img/um-gigapixel-standard-height-1080px.jpg" alt="University of Makati">  
             <div class="overlay">
-                <p><a href="{{ url_for('UM') }}">University of Makati</a></p>
+                <p><a href="../templates/univs/um.html">University of Makati</a></p>
             </div>
         </div>
     </div>
 
 	<div class="bg-container">  
+        <div class="bookmark-icon">
+            <i class="fas fa-bookmark"></i>
+        </div>
         <div class="bg-img">  
-            <img src="static/images/logos/universities/UPLogo.png" alt="University of The Philippines"> <!-- insert univ -->
+            <img src="../static/images/logos/bg_img/up-gigapixel-standard-height-1080px.jpg" alt="University of The Philippines"> 
             <div class="overlay">
-                <p><a href="{{ url_for('UP') }}">University of The Philippines</a></p>
+                <p><a href="../templates/univs/up.html">University of The Philippines</a></p>
             </div>
         </div>
     </div>
@@ -226,56 +293,17 @@
             </div>
             <div class="footerBox"> 
                 <h3>Help and Support</h3> 
-                <div>
-                    <a href="https://www.facebook.com/profile.php?id=61558938243853&mibextid=ZbWKwL"><img src="images\social\facebook.png" target="_blank" class="social-links" alt="Facebook"></a>
-                    <a href=""><img src="" target="_blank" class="social-links" alt="Email"></a> <!-- WILL FINALIZE -->
-                    <a href="https://www.linkedin.com/in/pamantasan-ph-1b2045307/"><img src="images\social\linkedin.png" target="_blank" class="social-links" alt="LinkedIn"></a>
+                <div> 
+                    <a href="https://www.facebook.com/profile.php?id=61558938243853&mibextid=ZbWKwL" target="_blank" class="social-links" aria-label="Facebook" rel="noopener"><i class="fab fa-facebook-square"></i></a>
+                    <a href="mailto:pamantasanph@gmail.com" target="_blank" class="social-links" aria-label="Email" rel="noopener"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/pamantasan-ph-1b2045307/" target="_blank" class="social-links" aria-label="LinkedIn" rel="noopener"><i class="fab fa-linkedin"></i></a>
                 </div>
-                
-                <<div class="newsletter"> <!--newsletter--> <!-- WILL FINALIZE, style -->
-                    <h2>Subscribe to our Newsletter!</h2>
-                    <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
-                    <form action="/newsletter" method="POST">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Enter a valid email address" required>
-                        <br>
-                        <button type="submit" style="background-color: rgb(154, 40, 9); color: rgb(255, 255, 255); border-radius:4px; margin-block-start: 10px">Subscribe</button>
-                    </form>
-                </div>
-
             </div>
         </div>
         <hr class="splitter"> 
         <p class="copy-right"> &copy; 2024 PamantasanPH, All rights reserved</p> <!--copy-right-->
     </footer>
 
-    <!-- <script>
-        window.onload = function() {
-            var navigation = document.getElementById("navigation");
-             var links = navigation.getElementsByTagName("a");
-            var currentPage = window.location.href;
-    
-            for (var i = 0; i < links.length; i++) {
-                var href = links[i].getAttribute("href");
-
-                if (currentPage.indexOf(href) !== -1) {
-                    links[i].classList.add("active"); 
-                    break; 
-                }
-            }
-        };
-
-        function setActive(element) {
-            var navigation = document.getElementById("navigation");
-            var links = navigation.getElementsByTagName("a");
-
-            for (var i = 0; i < links.length; i++) {
-                links[i].classList.remove("active");
-            }
-
-            element.classList.add("active");
-        }
-    </script> -->
-	<script src="{{ url_for('static', filename='js/univs.js') }}"></script>
+	<!-- <script src="{{ url_for('static', filename='js/univs.js') }}"></script> -->
 </body>
 </html>
