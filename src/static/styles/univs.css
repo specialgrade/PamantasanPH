@@ -105,7 +105,13 @@ nav a:hover {
 
 /* Page indicator styling */
 #univs {
+    color: var(--dark-blue);
     text-decoration: underline;
+}
+
+#univs:hover {
+    color: var(--maroon);
+    text-decoration: none;
 }
 
 /* Title styling */
