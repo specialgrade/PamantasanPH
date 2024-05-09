@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PamantasanPH</title>
     <link rel="stylesheet" href="C:\Users\Jane\Documents\GitHub\PamantasanPH\code1\styles\univs.css">
-</head>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">">
 <body>
 	<header class="header"> <!--navigation div-->
         <div class="title">
@@ -17,25 +16,31 @@
             <ul id="navigation">
                 <li><a id="home" href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\index.html">Home</a></li>
                 <li><a id="univs" href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\univs.html">Universities</a></li>
-                <li><a id="favs" href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\favs.html">Favorites</a></li> <!-- WILL FINALIZE -->
+                <li><a id="favs" href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\favs.html">Favorites</a></li> 
             </ul>
         </nav>
     </header>
 
-    <h1>List of Universities</h1>
+    <h1>List of Universities</h1> <!-- WILL FINALIZE -->
     <hr class="list">
 	<div class="bg-container">  
         <div class="bg-img">  
             <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\cmu.jpg" alt="City of Malabon University"> <!-- insert univ -->
             <div class="overlay">
                 <p><a href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\univs\cmu.html">City of Malabon University</a></p>
+                <i class="fas fa-bookmark icon" 
+                style="color: var(--white); font-size: 16px; margin-left: 5px; cursor: pointer; transition: color 0.2s;"
+                onmouseover="this.style.animation='hover-animation 0.5s'; this.style.color='var(--dark-blue)';"
+                onmouseout="this.style.animation=''; this.style.color='var(--white)';"
+                onclick="this.classList.toggle('bookmarked'); if (this.classList.contains('bookmarked')) { this.style.color='var(--dark-blue)'; } else { this.style.color='var(--white)'; }">
+                </i>
             </div>
         </div>
     </div>
 
 	<div class="bg-container">  
         <div class="bg-img">  
-            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\dr.fil.jpg" alt="Dr. Filemon C. Aguilar Memorial College of Las Pinas"> <!-- insert univ -->
+            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\dr.fil.jpg" alt="Dr. Filemon C. Aguilar Memorial College of Las Pinas">  
             <div class="overlay">
                 <p><a href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\univs\dr.fil.html">Dr. Filemon C. Aguilar Memorial College of Las Pinas</a></p>
             </div>
@@ -44,7 +49,7 @@
 
 	<div class="bg-container">  
         <div class="bg-img">  
-            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\earist.jpg" alt="Eulogio "Amang" Rodriguez Institute of Science & Technology"> <!-- insert univ -->
+            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\earist.jpg" alt="Eulogio "Amang" Rodriguez Institute of Science & Technology">  
             <div class="overlay">
                 <p><a href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\univs\earist.html">Eulogio "Amang" Rodriguez Institute of Science & Technology</a></p>
             </div>
@@ -53,7 +58,7 @@
 
 	<div class="bg-container">  
         <div class="bg-img"> 
-            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\mpc.jpg" alt="Marikina Polytechnic College"> <!-- insert univ -->
+            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\mpc.jpg" alt="Marikina Polytechnic College">  
             <div class="overlay">
                 <p><a href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\univs\mpc.html">Marikina Polytechnic College</a></p>
             </div>
@@ -62,7 +67,7 @@
 
 	<div class="bg-container">  
         <div class="bg-img">  
-            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\npc.jpg" alt="Navotas Polytechnic College"> <!-- insert univ -->
+            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\npc.jpg" alt="Navotas Polytechnic College">  
             <div class="overlay">
                 <p><a href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\univs\npc.html">Navotas Polytechnic College</a></p>
             </div>
@@ -71,7 +76,7 @@
 
 	<div class="bg-container">  
         <div class="bg-img">  
-            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\plmar.jpg" alt="Pamantasan ng Lungsod ng Marikina"> <!-- insert univ -->
+            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\plmar.jpg" alt="Pamantasan ng Lungsod ng Marikina">  
             <div class="overlay">
                 <p><a href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\univs\plmar.html">Pamantasan ng Lungsod ng Marikina</a></p>
             </div>
@@ -80,7 +85,7 @@
 
 	<div class="bg-container">  
         <div class="bg-img"> 
-            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\plm.jpg" alt="Pamantasan ng Lungsod ng Maynila"> <!-- insert univ -->
+            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\plm.jpg" alt="Pamantasan ng Lungsod ng Maynila">  
             <div class="overlay">
                 <p><a href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\univs\plm.html">Pamantasan ng Lungsod ng Maynila</a></p>
             </div>
@@ -89,7 +94,7 @@
 
 	<div class="bg-container"> 
         <div class="bg-img">  
-            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\plmun.jpg" alt="Pamantasan ng Lungsod ng Muntinlupa"> <!-- insert univ -->
+            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\plmun.jpg" alt="Pamantasan ng Lungsod ng Muntinlupa">  
             <div class="overlay">
                 <p><a href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\univs\plmun.html">Pamantasan ng Lungsod ng Muntinlupa</a></p>
             </div>
@@ -98,7 +103,7 @@
 
 	<div class="bg-container">  
         <div class="bg-img">  
-            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\plp.jpg" alt="Pamantasan ng Lungsod ng Pasig"> <!-- insert univ -->
+            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\plp.jpg" alt="Pamantasan ng Lungsod ng Pasig">  
             <div class="overlay">
                 <p><a href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\univs\plp.html">Pamantasan ng Lungsod ng Pasig</a></p>
             </div>
@@ -107,7 +112,7 @@
 
 	<div class="bg-container">  
         <div class="bg-img">  
-            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\plv.jpg" alt="Pamantasan ng Valenzuela"> <!-- insert univ -->
+            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\plv.jpg" alt="Pamantasan ng Valenzuela">  
             <div class="overlay">
                 <p><a href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\univs\plv.html">Pamantasan ng Valenzuela</a></p>
             </div>
@@ -116,7 +121,7 @@
 
 	<div class="bg-container">  
         <div class="bg-img">  
-            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\pcc.jpg" alt="Paranaque City College"> <!-- insert univ -->
+            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\pcc.jpg" alt="Paranaque City College">  
             <div class="overlay">
                 <p><a href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\univs\pcc.html">Paranaque City College</a></p>
             </div>
@@ -125,7 +130,7 @@
 
 	<div class="bg-container">  
         <div class="bg-img">  
-            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\pnu.jpg" alt="Philippine Normal University Manila"> <!-- insert univ -->
+            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\pnu.jpg" alt="Philippine Normal University Manila">  
             <div class="overlay">
                 <p><a href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\univs\pnu.html">Philippine Normal University Manila</a></p>
             </div>
@@ -134,7 +139,7 @@
 
 	<div class="bg-container">  
         <div class="bg-img">  
-            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\psca.jpg" alt="Philippine State College of Aeronautics"> <!-- insert univ -->
+            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\psca.jpg" alt="Philippine State College of Aeronautics">  
             <div class="overlay">
                 <p><a href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\univs\psca.html">Philippine State College of Aeronautics</a></p>
             </div>
@@ -143,7 +148,7 @@
 
 	<div class="bg-container">  
         <div class="bg-img">  
-            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\pccm.jpg" alt="Polytechnic College of the City of Meycauayan"> <!-- insert univ -->
+            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\pccm.jpg" alt="Polytechnic College of the City of Meycauayan">  
             <div class="overlay">
                 <p><a href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\univs\pccm.html">Polytechnic College of the City of Meycauayan</a></p>
             </div>
@@ -152,7 +157,7 @@
 
 	<div class="bg-container">  
         <div class="bg-img">  
-            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\pup.jpg" alt="Polytechnic University of the Philippines"> <!-- insert univ -->
+            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\pup.jpg" alt="Polytechnic University of the Philippines">  
             <div class="overlay">
                 <p><a href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\univs\pup.html">Polytechnic University of the Philippines</a></p>
             </div>
@@ -161,7 +166,7 @@
 
 	<div class="bg-container">  
         <div class="bg-img">  
-            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\qcu.jpg" alt="Quezon City University"> <!-- insert univ -->
+            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\qcu.jpg" alt="Quezon City University">  
             <div class="overlay">
                 <p><a href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\univs\qcu.html">Quezon City University</a></p>
             </div>
@@ -170,7 +175,7 @@
 
 	<div class="bg-container">  
         <div class="bg-img">  
-            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\tcu.jpg" alt="Taguig City University"> <!-- insert univ -->
+            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\tcu.jpg" alt="Taguig City University">  
             <div class="overlay">
                 <p><a href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\univs\tcu.html">Taguig City University</a></p>
             </div>
@@ -179,7 +184,7 @@
 
 	<div class="bg-container">  
         <div class="bg-img">  
-            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\tup.jpg" alt="Technological University of the Philippines"> <!-- insert univ -->
+            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\tup.jpg" alt="Technological University of the Philippines">  
             <div class="overlay">
                 <p><a href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\univs\tup.html">Technological University of the Philippines</a></p>
             </div>
@@ -188,7 +193,7 @@
 
 	<div class="bg-container">  
         <div class="bg-img">  
-            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\udm.jpg" alt="Universidad de Manila"> <!-- insert univ -->
+            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\udm.jpg" alt="Universidad de Manila">  
             <div class="overlay">
                 <p><a href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\univs\udm.html">Universidad de Manila</a></p>
             </div>
@@ -197,7 +202,7 @@
 
 	<div class="bg-container">  
         <div class="bg-img">  
-            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\um.jpg" alt="University of Makati"> <!-- insert univ -->
+            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\um.jpg" alt="University of Makati">  
             <div class="overlay">
                 <p><a href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\univs\um.html">University of Makati</a></p>
             </div>
@@ -206,7 +211,7 @@
 
 	<div class="bg-container">  
         <div class="bg-img">  
-            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\up.jpg" alt="University of The Philippines"> <!-- insert univ -->
+            <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\assets\bg_img\up.jpg" alt="University of The Philippines">  
             <div class="overlay">
                 <p><a href="C:\Users\Jane\Documents\GitHub\PamantasanPH\templates\univs\up.html">University of The Philippines</a></p>
             </div>
@@ -225,11 +230,11 @@
             </div>
             <div class="footerBox"> 
                 <h3>Help and Support</h3> 
-                <div>
+                <!-- <div>
                     <a href="https://www.facebook.com/profile.php?id=61558938243853&mibextid=ZbWKwL"><img src="images\social\facebook.png" target="_blank" class="social-links" alt="Facebook"></a>
                     <a href=""><img src="" target="_blank" class="social-links" alt="Email"></a> <!-- WILL FINALIZE -->
-                    <a href="https://www.linkedin.com/in/pamantasan-ph-1b2045307/"><img src="images\social\linkedin.png" target="_blank" class="social-links" alt="LinkedIn"></a>
-                </div>
+                    <!-- <a href="https://www.linkedin.com/in/pamantasan-ph-1b2045307/"><img src="images\social\linkedin.png" target="_blank" class="social-links" alt="LinkedIn"></a>
+                </div> --> 
                 
                 <div class="newsletter"> <!--newsletter--> <!-- WILL FINALIZE, style -->
                     <h2>Subscribe to our Newsletter!</h2>
