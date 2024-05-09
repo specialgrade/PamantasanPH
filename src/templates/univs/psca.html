@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static/images/logos/website/logo.png">
+    <title>PamantasanPH</title>
+    <script src="{{ url_for('static', filename='styles/univs21.css') }}"></script>
+</head>
+
+<body>
+	<header class="header"> <!--navigation div-->
+        <div class="title">
+            <img src="static/images/logos/website/logo.png" alt="PamantasanPH" class="logo">
+            <p>Pamantasan<span>PH</span></p>
+        </div>
+        <nav> 
+            <ul>
+                <li><a id="home" href="{{ url_for('index') }}">Home</a></li>
+                <li><a id="univs" href="{{ url_for('universities') }}">Universities</a></li>
+                <li><a id="favs" href="{{ url_for('favorites') }}">Favorites</a></li> <!-- WILL FINALIZE -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Philippine State College of Aeronautics -->
+	<div class="container">
+		<h2>Philippine State College of Aeronautics</h2>
+		<p>Piccio Garden, Pasay, 1630 Metro Manila</p>
+		
+		<h4>Campuses</h4> 
+		<ul>
+			<li>Villamor Campus</li>
+			<li>Fernando Air Base Campus</li>
+			<li>Mactan Air Base Campus</li>
+			<li>Basa Air Base Campus</li>
+		</ul>
+		
+		<div class="status">
+			<i class="status-icon fa fa-circle" id="status-icon"></i>
+			<span id="status-text">CLOSED</span>
+		</div>
+
+		<h3>Admission Requirements</h3> <!-- Admission Requirements -->
+		<ol>
+			<li>
+				<h4>FOR GRADUATING SHS STUDENTS</h4>
+				<p>Bring the Photocopy of the following:</p>
+				<ul>
+					<li>Senior High School Card (Grade 11) and/or Recent Grading Period (Grade 12)</li>
+					<li>Certificate of Good Moral Character</li>
+					<li>2 pcs 1×1 latest colored picture</li>
+				</ul>
+			</li>
+			
+			<li>
+				<h4>FOR TRANSFEREES</h4>
+				<p>Bring the Photocopy of the following:</p>
+				<ul>
+					<li>Transcript of Records</li>
+					<li>Honorable Dismissal</li>
+					<li>Certificate of Good Moral Character</li>
+					<li>2 pcs 1×1 latest colored picture</li>
+				</ul>
+			</li>
+			
+			<li>
+				<h4>OTHER REQUIREMENTS</h4>
+				<ul>
+					<li>ISHIHARA Exam Results for InET Courses</li>
+				</ul>
+			</li>
+			
+			<li>
+				<h4>GRADUATE PROGRAMS</h4>
+				<ul>
+					<li>For Admission examination, the applicant must submit/comply with the following requirements</li>
+					<li>Certified Photocopy of High School Card of Last Grading Period (for Freshmen)</li>
+					<li>Certified Photocopy of Transcript of Records (for transferees)</li>
+					<li>Certified Photocopy of Certificate of Good Moral Character</li>
+					<li>1 piece 1×1 Latest Colored Picture</li>
+					<li>P300.00 Admission Test Fee</li>
+					<li>A General Weighted Average of 85% is required for BSAeE (Bachelor of Science in Aeronautical Engineering) and BSAT (Bachelor of Science in Air Transportation) applicants; and without any grade requirement for all other courses.</li>
+					<li>For transferees, A Weighted Average of 80% or above in the latest semester they have attended is required.</li>
+				</ul>
+			</li>
+		</ol>
+
+		<h3>University Specializations</h3> <!-- University Specializations -->
+		<ul>
+			<li>
+				<h4>Aeronautical Engineering Courses</h4>
+				<ul>
+					<li>BS in Aeronautical Engineering.</li>
+					<li>BS in Air Transportation Major in Advance Flying.</li>
+					<li>BS in Aircraft Maintenance Technology.</li>
+					<li>BS in Aviation Electronics Technology.</li>
+					<li>Associate in Aircraft Maintenance Technology.</li>
+					<li>Associate in Aviation Electronics Technology.</li>
+				</ul>
+			</li>
+		</ul>
+
+        <h3>University Courses</h3> <!-- University Courses -->
+		<ul>
+			<li>
+				<h4>Villamor Campus</h4> 
+				<ul>
+					<li><strong>Institute of Engineering and Technology</strong>
+						<ul>
+							<li>BS in Aeronautical Engineering</li>
+							<li>BS in Air Transportation
+								<p>Major in:</p>
+								<ul>
+									<li>Advanced Flying</li>
+								</ul>
+							</li>
+							<li>BS in Aircraft Maintenance Technology</li>
+							<li>BS in Aviation Electronics Technology</li>
+							<li>Associate in Aircraft Maintenance Technology</li>
+							<li>Associate in Aviation Electronics Technology</li>
+						</ul>
+					</li>
+
+					<li><strong>Institute of Liberal Arts and Sciences</strong>
+						<ul>
+							<li>BS in Aviation Communication
+								<p>Major in:</p>
+								<ul>
+									<li>Flight Operations</li>
+								</ul>
+							</li>
+							<li>BS in Aviation Tourism
+								<p>Major in:</p>
+								<ul>
+									<li>Travel Management</li>
+								</ul>
+							</li>
+							<li>BS in Aviation Logistics</li>
+							<li>BS in Aviation Safety and Security Management</li>
+						</ul>
+					</li>
+
+					<li><strong>Institute of Computer Studies</strong>
+						<ul>
+							<li>BS in Aviation Information Technology</li>
+							<li>BS in Aviation Information System</li>
+						</ul>
+					</li>
+
+					<li><strong>Institute of Graduate Studies</strong>
+						<ul>
+							<li>Master of Education in Aeronautical Management</li>
+							<li>Master in Public Administration Major in Government and Airport Administration</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+
+			<li>
+				<h4>Fernando Air Base Campus</h4>
+				<ul>
+					<li><strong>Institute of Engineering and Technology</strong>
+						<ul>
+							<li>Associate in Aircraft Maintenance Technology</li>
+							<li>Associate in Aviation Electronics Technology</li>
+							<li>BS in Aircraft Maintenance Technology</li>
+							<li>BS in Aviation Electronics Technology</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			
+			<li>
+				<h4>Mactan Air Base Campus</h4>
+				<ul>
+					<li><strong>Institute of Engineering and Technology</strong>
+						<ul>
+							<li>Associate in Aircraft Maintenance Technology</li>
+							<li>Associate in Aviation Electronics Technology</li>
+							<li>BS in Aircraft Maintenance Technology</li>
+							<li>BS in Aviation Electronics Technology</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			
+			<li>
+				<h4>Basa Air Base Campus</h4>
+				<ul>
+					<li><strong>Institute of Engineering and Technology</strong>
+						<ul>
+							<li>Associate in Aircraft Maintenance Technology</li>
+							<li>Associate in Aviation Electronics Technology</li>
+							<li>BS in Aircraft Maintenance Technology</li>
+							<li>BS in Aviation Electronics Technology</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+        
+		<h3>Application Process</h3> <!-- Application Process --> 
+		<ol>
+			<li>Accomplish the online application form.</li>
+			<li>Prepare and scan all required documents.</li>
+			<li>Submit the accomplished application form and scanned documents online.</li>
+			<li>Wait for the email notification for the schedule of the admission test and interview.</li>
+			<li>Take the admission test and interview.</li>
+			<li>Wait for the admission decision.</li>
+		</ol>
+		
+		<h3>Step by Step Application Process</h3>  
+		<ul>
+			<li>
+				<h4>Step 1: Submission of Admission Requirements</h4>
+				<p><strong>Freshmen</strong></p>  
+				<ul>
+					<li>Clear copy (jpeg/pdf) of the following documents (to be uploaded in the ISMS <a href="https://philsca.pinnacle.com.ph/aims">link</a>):
+						<ul>
+							<li>Senior High School card (Grade 11 & 1st Semester of Grade 12)</li>
+							<li>Certificate of Good Moral Character</li>
+							<li>1×1 Latest colored picture in white background</li>
+						</ul>
+					</li>
+				</ul>
+
+				<p><strong>Transferees</strong></p>  
+				<ul>
+					<li>Clear copy (jpeg/pdf) of the following documents (to be uploaded in the ISMS):
+						<ul>
+							<li>Transcript of Records (for evaluation purposes subject to existing policy on validation and accreditation of courses)</li>
+							<li>Honorable Dismissal</li>
+							<li>Certificate of Good Moral Character</li>
+							<li>1×1 Latest colored picture in white background</li>
+						</ul>
+					</li>
+				</ul>
+
+				<p><strong>Reminder:</strong> An official list of qualified applicants for interview will be released. A notice for an interview will be sent to the applicant's email.</p> 
+			</li>
+
+			<li>
+				<h4>Step 2: Interview Additional Requirements</h4>
+				<p>During the interview, the following additional requirements must be submitted (to be uploaded in the ISMS) by applicants in the following programs:</p>
+				<ul>
+					<li>BS Air Transportation</li>
+					<li>BS Aeronautical Engineering</li>
+					<li>BS Aircraft Maintenance Technology</li>
+					<li>BS Aviation Electronics Technology</li>
+					<li>BS Aviation Communication major in Flight Operation</li>
+				</ul>
+				<p>Additional requirements:</p>
+				<ul>
+					<li>An Ishihara Test (Negative for Colorblindness) from any DOH-Accredited Clinic or Hospital.</li>
+					<li>Neuro-psychological Test result from any DOH Accredited Clinic or Hospital (with diagnosis) for applicants in the BS Air Transportation Program.</li>
+				</ul>
+				<p><strong>Reminder:</strong> A notice of Acceptance will be sent through e-mail to successful applicants.</p>
+			</li>
+
+			<li>
+				<h4>Step 3: Enrollment</h4>
+			</li>
+		</ul>
+	
+		<h3>Contact Information</h3> <!-- Contact Information -->  
+		<ul>
+			<li>Email: <a href="mailto:opres.philsca@yahoo.com.ph">opres.philsca@yahoo.com.ph</a></li>
+			<li>Villamor Campus - Contact No.: 0960-562-9180
+				<ul>
+					<li>Email: <a href="mailto:philscaadmission.villamor@gmail.com">philscaadmission.villamor@gmail.com</a></li>
+				</ul>
+			</li>
+			<li>FAB Campus - Contact No.: 0997-267-1791
+				<ul>
+					<li>Email: <a href="mailto:osaphilscafab@gmail.com">osaphilscafab@gmail.com</a></li>
+				</ul>
+			</li>
+			<li>Mactan & Medellin Campus - Contact No.: 0995-912-5834
+				<ul>
+					<li>Email: <a href="mailto:philscamactan.osa@gmail.com">philscamactan.osa@gmail.com</a></li>
+				</ul>
+			</li>
+			<li>Website - <a href="https://www.philsca.edu.ph/">https://www.philsca.edu.ph/</a></li>
+			<li>BASA Campus - Contact No.: 0968-551-6451
+				<ul>
+					<li>Email: <a href="mailto:admission.bab@philsca.edu.ph">admission.bab@philsca.edu.ph</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+    <footer> <!--footer div-->
+        <div class="footerBoxes">
+            <div class="footerBox">
+                <h3>Privacy Policy</h3> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="footerBox"> 
+                <h3>Terms of Service</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="footerBox"> 
+                <h3>Help and Support</h3> 
+                <div>
+                    <a href="https://www.facebook.com/"><img src="images\social\facebook.png" target="_blank" class="social-links" alt="Facebook"></a>
+                    <a href=""><img src="" target="_blank" class="social-links" alt="Email"></a> 
+                    <a href="https://www.linkedin.com/"><img src="images\social\linkedin.png" target="_blank" class="social-links" alt="LinkedIn"></a>
+                </div>
+                
+                <div class="newsletter"> <!--newsletter--> 
+                    <h3>Stay Updated!</h3>
+                    <p>Subscribe to our newsletter to receive updates and FAQs about PamantasanPH.</p>
+                    <form action="/newsletter" method="POST">
+                        <label for="email">Enter your email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <hr class="splitter"> 
+        <p class="copy-right"> &copy; 2024 PamantasanPH, All rights reserved</p> <!--copy-right-->
+    </footer>
+
+    <!-- <script src="univs.js" defer></script> -->
+</body>
+</html>
