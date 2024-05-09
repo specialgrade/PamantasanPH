@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static/images/logos/website/logo.png">
+    <title>PamantasanPH</title>
+    <script src="{{ url_for('static', filename='styles/univs21.css') }}"></script>
+</head>
+
+<body>
+	<header class="header"> <!--navigation div-->
+        <div class="title">
+            <img src="static/images/logos/website/logo.png" alt="PamantasanPH" class="logo">
+            <p>Pamantasan<span>PH</span></p>
+        </div>
+        <nav> 
+            <ul>
+                <li><a id="home" href="{{ url_for('index') }}">Home</a></li>
+                <li><a id="univs" href="{{ url_for('universities') }}">Universities</a></li>
+                <li><a id="favs" href="{{ url_for('favorites') }}">Favorites</a></li> <!-- WILL FINALIZE -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Quezon City University -->
+	<div class="container">
+		<h2>Quezon City University</h2>
+		<p>Address - 673 Quirino Highway, San Bartolome, Novaliches, Quezon City</p>
+		<div class="status">
+			<i class="status-icon fa fa-circle" id="status-icon"></i>
+			<span id="status-text">NOT YET OPENED</span>
+		</div>
+
+		<h3>Admission Requirements</h3> <!-- Admission Requirements -->
+		<h4>DOCUMENTARY REQUIREMENTS</h4>
+		<h5>For Examination:</h5>
+		  <ol>
+		  	<li>Apply online thru Google Form</li>
+		  	<li>Need to fill out the QCU Admission Application Form</li>
+		  </ol>
+
+		<h5>FOR FRESHMEN</h5>
+		  <ol>
+			<li>Printed (back to back on one single sheet of paper) - Fully Accomplished QCU Admission Application Form with 2x2 colored picture white background with name tag and student’s signature at the back on the space below the form. (2 sets)</li>
+			<li>Original SF9 (Certified True Copy of Grade 11 & Original Grade 12) Form 138- High School Report Card | Alternative Learning System Certificate of Rating if ALS passer</li>
+			<li>Original PSA Birth Certificate</li>
+			<li>Original Certificate of Good Moral Character</li>
+			<li>Original – Recent Brgy. Certificate of Residency</li>
+			<li>Two(2) 2x2 colored pictures (White Background with Name Tag)</li>
+			<li>Photocopy Senior High School / High School / ALS Diploma (present original)</li>
+			<li>Medical Clearance – Issued by the Medical and Dental Services</li>
+			<li>Additional Requirements for the following Applicants:
+			  <ul>
+				<li>If with discrepancy between PSA Birth Certificate and School Record – Affidavit of the Same Person</li>
+				<li>If currently employed - Original Latest Certificate of Employment</li>
+				<li>If Married Female Student - Original Marriage Certificate</li>
+				<li>Applicants from schools with non-numerical (Pass/Fail) grades- Certificate of Non-issuance of Numerical Grades (Issued by the School Registrar)</li>
+			  </ul>
+			</li>
+			<li>In cases where the student-applicant cannot reasonably secure his/her school credentials for reasons beyond his/her control, such as: Closure of the school last attended and Damage of documents due to fire or natural calamities - Certificate of eligibility for admission to college from the Commission on Higher Education (CHED)</li>
+			<li>Applicants who stopped for 1 Yr or more - Affidavit of Non-Enrollment from other Universities</li>
+		  </ol>
+
+		<h5>FOR TRANSFEREES</h5>
+		  <ol>
+			<li>Printed (back to back on one single sheet of paper) Fully Accomplished QCU Admission Application Form with 2x2 colored picture white background with name tag and student’s signature at the back on the space below the form. (2 sets)</li>
+			<li>Transcript of Records (For Evaluation Purposes) with General Weighted Average (GWA) of the last semester attended.</li>
+			<li>Original PSA Birth Certificate</li>
+			<li>Original Certificate of Good Moral Character</li>
+			<li>Original – Recent Brgy. Certificate of Residency</li>
+			<li>Two (2) 2x2 pictures (White Background with Name Tag).</li>
+			<li>Original Certificate of Transfer Credentials (CTC)</li>
+			<li>Medical Clearance – Issued by the Medical and Dental Services</li>
+			<li>Additional Requirements for the following Applicants:
+			  <ul>
+				<li>For Accreditation of Subjects during enrollment period – Subject Course Description of all passed subjects, TOR Copy for QCU and NSTP 2 Serial Number (Secure request letter from QCU Admissions Office)</li>
+			  </ul>
+			</li>
+			<li>If with discrepancy between PSA Birth Certificate and School Record – Affidavit of the Same Person</li>
+			<li>If currently employed - Original Latest Certificate of Employment</li>
+			<li>If Married Female Student - Original Marriage Certificate</li>
+			<li>Applicants from schools with non-numerical (Pass/Fail) grades- Certificate of Non-issuance of Numerical Grades (Issued by the School Registrar)</li>
+			<li>In cases where the student-applicant cannot reasonably secure his/her school credentials for reasons beyond his/her control, such as: Closure of the school last attended and Damage of documents due to fire or natural calamities - Certificate of eligibility for admission to college from the Commission on Higher Education (CHED)</li>
+			<li>Applicants who stopped for 1 Yr. or more - Affidavit of Non-Enrollment from other Universities</li>
+		  </ol>
+		
+		<h3>University Specializations</h3> <!-- University Specializations -->
+		<ul>
+			<li>Business Administration</li>
+		</ul>
+
+        <h3>University Courses</h3> <!-- University Courses -->
+		<h4>UNDERGRADUATE PROGRAMS</h4>
+		<ul>
+		  <li><strong>College Of Business And Accountancy</strong>
+			<ul>
+			  <li>Bachelor Of Science In Accountancy (BSA)</li>
+			  <li>Bachelor Of Science In Entrepreneurship (BS Entrep)</li>
+			</ul>
+		  </li>
+
+		  <li><strong>College Of Education</strong>
+			<ul>
+			  <li>Bachelor Of Early Childhood Education (BECEd)</li>
+			</ul>
+		  </li>
+
+		  <li><strong>College Of Engineering</strong>
+			<ul>
+			  <li>Bachelor Of Science In Industrial Engineering (IE)</li>
+			  <li>Electronics Engineering (BSECE)</li>
+			</ul>
+		  </li>
+
+		  <li><strong>College Of Computer Studies</strong>
+			<ul>
+			  <li>Bachelor Of Science In Information Technology</li>
+			</ul>
+		  </li>
+		</ul>
+
+        <h3>Application Process</h3> <!-- Application Process -->
+		<h4>Freshmen and Transfer Applicants</h4>
+		<p>(Second-year or Third-year students only) should follow these steps:</p> 
+		<ol>
+		  <li>Create Gmail account with this format: lastname.firstname.middlename@gmail.com or lastname.firstname.middlename1@gmail.com
+			<p>NOTE: yahoo mail and deped.qc emails are not accepted. Follow email format for easy identification of the applicant.</p>
+		  </li>
+		  <li>Download and Fill out QCU Student Application form: <a href="https://drive.google.com/…/1A9ntILxa5lSOOmAFVMT…/view…">https://drive.google.com/…/1A9ntILxa5lSOOmAFVMT…/view…</a>  
+			<p>Register and Upload Form here: <a href="https://tinyurl.com/QCUCAT-2024-1ST-SEM2 ">https://tinyurl.com/QCUCAT-2024-1ST-SEM2 </a></p>
+		  </li>
+		</ol>
+
+		<h3>Contact Information</h3> <!-- Contact Information -->
+		<ul>
+			<li>Email: <a href="admission@qcu.edu.ph">admission@qcu.edu.ph</a></li>
+			<li>Telephone: 8681-9135 / 8806-3470 / 8936-8050</li>
+			<li>Website: <a href="https://qcu.edu.ph">https://qcu.edu.ph</a></li>
+			<li>University Announcement: <a href="https://www.facebook.com/qcu1994">https://www.facebook.com/qcu1994</a></li>
+		</ul>
+	</div>
+
+	<footer> <!--footer div-->
+        <div class="footerBoxes">
+            <div class="footerBox">
+                <h3>Privacy Policy</h3> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="footerBox"> 
+                <h3>Terms of Service</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="footerBox"> 
+                <h3>Help and Support</h3> 
+                <div>
+                    <a href="https://www.facebook.com/"><img src="images\social\facebook.png" target="_blank" class="social-links" alt="Facebook"></a>
+                    <a href=""><img src="" target="_blank" class="social-links" alt="Email"></a> 
+                    <a href="https://www.linkedin.com/"><img src="images\social\linkedin.png" target="_blank" class="social-links" alt="LinkedIn"></a>
+                </div>
+                
+                <div class="newsletter"> <!--newsletter--> 
+                    <h3>Stay Updated!</h3>
+                    <p>Subscribe to our newsletter to receive updates and FAQs about PamantasanPH.</p>
+                    <form action="/newsletter" method="POST">
+                        <label for="email">Enter your email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <hr class="splitter"> 
+        <p class="copy-right"> &copy; 2024 PamantasanPH, All rights reserved</p> <!--copy-right-->
+    </footer>
+
+	<!-- <script src="univs.js" defer></script> -->
+</body>
+</html>
