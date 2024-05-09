@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static/images/logos/website/logo.png">
+    <title>PamantasanPH</title>
+    <script src="{{ url_for('static', filename='styles/univs21.css') }}"></script>
+</head>
+
+<body>
+	<header class="header"> <!--navigation div-->
+        <div class="title">
+            <img src="static/images/logos/website/logo.png" alt="PamantasanPH" class="logo">
+            <p>Pamantasan<span>PH</span></p>
+        </div>
+        <nav> 
+            <ul>
+                <li><a id="home" href="{{ url_for('index') }}">Home</a></li>
+                <li><a id="univs" href="{{ url_for('universities') }}">Universities</a></li>
+                <li><a id="favs" href="{{ url_for('favorites') }}">Favorites</a></li> <!-- WILL FINALIZE -->
+            </ul>
+        </nav>
+    </header>
+
+   <!-- University of Makati -->
+	<div class="container">
+		<h2>University of Makati</h2>
+		<p>Address - University of Makati, Dr Jose P. Rizal Ext, Taguig, Metro Manila</p>
+		<div class="status">
+			<i class="status-icon fa fa-circle" id="status-icon"></i>
+			<span id="status-text">CLOSED</span>
+		</div>
+
+		<h3>Admission Requirements</h3> <!-- Admission Requirements --> <!-- WILL FINALIZE -->
+		<p>All the admission information stated in this page may change for the upcoming Academic Year 2024-2025 admissions and may change anytime. Please bookmark and refresh this page from time to time for updates.</p>
+		
+		<h3>University Specializations</h3> <!-- University Specializations -->
+		<ul>
+			<li>Allied Health Students (Radiologic Technology and Nursing Students)</li>
+		</ul>
+
+        <h3>University Courses</h3> <!-- University Courses -->
+		<h4>UNDERGRADUATE PROGRAMS</h4>
+		<ul>
+		  <li>Bachelor of Arts in Political Science 
+			<p>Major in:</p>
+			<ul>
+				<li>Local Government Administration</li>
+			</ul>
+		  </li>
+		  <li>Bachelor in Automotive Technology</li>
+		  <li>Bachelor in Industrial Facilities Technology Management</li>
+		  <li>Bachelor of Science in Business Administration
+			<p>Major in:</p>
+			<ul>
+				<li>Human Resource Development Management</li>
+			</ul>
+		  </li>
+		  <li>Bachelor of Science in Entrepreneurship</li>
+		</ul>
+
+		<h4>CERTIFICATE PROGRAMS</h4>
+		<ul>
+		  <li>Certificate in Barangay Governance</li>
+		  <li>Certificate in Katarungang Pambarangay and Alternative Dispute Resolution</li>
+		</ul>
+
+		<h4>DIPLOMA PROGRAMS</h4>
+		<ul>
+		  <li>Diploma in Development Management and Governance</li>
+		</ul>
+
+		<h4>GRADUATE PROGRAMS</h4>
+		<h5>Master's Degree Programs</h5>
+		<ul>
+		  <li>Master of Arts in Education
+			<p>Major in:</p>
+			<ul>
+			  <li>Administration and Supervision</li>
+			  <li>Guidance and Counselling</li>
+			</ul>
+		  </li>
+		  <li>Master of Arts in Innovative Education
+			<p>Major in:</p>
+			<ul>
+			  <li>Biology</li>
+			  <li>Business Education</li>
+			  <li>Chemistry</li>
+			  <li>Computer</li>
+			  <li>Filipino</li>
+			  <li>General Science</li>
+			  <li>Physics</li>
+			  <li>Social Science</li>
+			  <li>Special Education</li>
+			</ul>
+		  </li>
+		  <li>Master of Arts in Special Education
+			<p>Major in:</p>
+			<ul>
+			  <li>Autism and Mental Retardism</li>
+			  <li>Early Childhood Education</li>
+			</ul>
+		  </li>
+		  <li>Master of Arts in Nursing</li>
+		  <li>Master in Business Administration
+			<p>Major in:</p>
+			<ul>
+			  <li>Building Property Management</li>
+			  <li>Entrepreneurship</li>
+			  <li>Healthcare Management</li>
+			</ul>
+		  </li>
+		  <li>Master in Development Management and Governance</li>
+		  <li>Master in Public Administration</li>
+		  <li>Master in Public Administration 
+			<p>Major in:</p>
+			<ul>
+				<li>Local Governance</li>
+			</ul>
+		  </li>
+		  <li>Master of Science in Radiologic Technology</li>
+		</ul>
+
+		<h5>DOCTORAL PROGRAMS</h5>
+		<ul>
+		  <li>Doctor of Education major in Educational Management</li>
+		  <li>Doctor of Philosophy in Special Education</li>
+		  <li>Doctor of Philosophy in Leadership
+			<ul>
+			  <li>Business Track</li>
+			  <li>Education Track</li>
+			  <li>Public Management Track</li>
+			</ul>
+		  </li>
+		  <li>Doctor of Public Administration</li>
+		  <li>Executive Doctorate in Leadership
+			<ul>
+			  <li>Business Track</li>
+			  <li>Education Track</li>
+			  <li>Public Management Track</li>
+			</ul>
+		  </li>
+		</ul>
+
+        <h3>Application Process</h3> <!-- Application Process -->
+		<h4>Freshmen and Transfer Applicants</h4>
+		<p>(Second-year or Third-year students only) should follow these steps:</p> 
+		<ol>
+		  <li>Register online through <a href="https://umak.edu.ph/olca/registration/new">https://umak.edu.ph/olca/registration/new</a> (for Freshmen) or <a href="https://umak.edu.ph/olca/registration/new/transferee">https://umak.edu.ph/olca/registration/new/transferee</a> (for Transferees & Second Coursers)
+			<p>NOTE: Online Application for NEW FRESHMEN is on February 20, 2024 to March 26, 2024, AND TRANSFEREES AND SECOND COURSERS IS ON APRIL 1-7, 2024</p>
+			<p>LINK: <a href="https://drive.google.com/file/d/1tPWLarISDiLQzH1TOaKkpWrxu-iBhAnh/view?usp=sharing">College Program Requirements for AY 2024-2025</a></p>
+		  </li>
+		  <li>Answer the captcha and submit the application form.</li>
+		  <li>Open the email address you registered in the application form and check for a verification email. Click the “verify” button.</li>
+		  <li>Another email will be sent to you containing your pre-filled application form, list of requirements, and the date when you will submit your admission requirements.</li>
+		  <li>Bring the COMPLETE and CLEAR copies (original and photocopy) of the requirements at the Center for Admission and Scholarship.</li>
+		  <li>Testing Fee of Php 500 is to be paid at the University of Makati cooperative after evaluation of the admission requirements.</li>
+		</ol>
+
+		<h3>Contact Information</h3> <!-- Contact Information -->
+		<ul>
+			<li>Email: <a href="info@umak.edu.ph">info@umak.edu.ph</a></li>
+			<li>Telephone: (02) 8888-20675</li>
+			<li>Website: <a href="https://www.umak.edu.ph/">https://www.umak.edu.ph/</a></li>
+			<li>University Announcement: <a href="https://www.facebook.com/UMakPH?mibextid=ZbWKwL">https://www.facebook.com/UMakPH?mibextid=ZbWKwL</a></li>
+		</ul>
+	</div>
+
+	<footer> <!--footer div-->
+        <div class="footerBoxes">
+            <div class="footerBox">
+                <h3>Privacy Policy</h3> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="footerBox"> 
+                <h3>Terms of Service</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="footerBox"> 
+                <h3>Help and Support</h3> 
+                <div>
+                    <a href="https://www.facebook.com/"><img src="images\social\facebook.png" target="_blank" class="social-links" alt="Facebook"></a>
+                    <a href=""><img src="" target="_blank" class="social-links" alt="Email"></a> 
+                    <a href="https://www.linkedin.com/"><img src="images\social\linkedin.png" target="_blank" class="social-links" alt="LinkedIn"></a>
+                </div>
+                
+                <div class="newsletter"> <!--newsletter--> 
+                    <h3>Stay Updated!</h3>
+                    <p>Subscribe to our newsletter to receive updates and FAQs about PamantasanPH.</p>
+                    <form action="/newsletter" method="POST">
+                        <label for="email">Enter your email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <hr class="splitter"> 
+        <p class="copy-right"> &copy; 2024 PamantasanPH, All rights reserved</p> <!--copy-right-->
+    </footer>
+
+	<!-- <script src="univs.js" defer></script> -->
+</body>
+</html>

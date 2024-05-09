@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static/images/logos/website/logo.png">
+    <title>PamantasanPH</title>
+    <script src="{{ url_for('static', filename='styles/favs.css') }}"></script>
+</head>
+
+<body>
+	<header class="header"> <!--navigation div-->
+        <div class="title">
+            <img src="static/images/logos/website/logo.png" alt="PamantasanPH" class="logo">
+            <p>Pamantasan<span>PH</span></p>
+        </div>
+        <nav> 
+            <ul id="navigation">
+                <li><a id="home" href="{{ url_for('index') }}">Home</a></li>
+                <li><a id="univs" href="{{ url_for('universities')}}">Universities</a></li>
+                <li><a id="favs" href="{{ url_for('favorites') }}">Favorites</a></li> <!-- WILL FINALIZE -->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="favs">
+        <!-- WILL FINALIZE -->
+    </div>
+
+	<footer> <!--footer div-->
+        <div class="footerBoxes">
+            <div class="footerBox">
+                <h3>Privacy Policy</h3> 
+                <p>PamantasanPH ensures stirct confidentiality of the user's privacy, only collecting necessary information to provide a consistent user experience. The user's privacy is protected and for reassurance, we, as the creators will not share without the consent of the user.</p>
+            </div>
+            <div class="footerBox"> 
+                <h3>Terms of Service</h3>
+                <p>By agreeing to use PamantasanPH for educational and lawful means, shall refrain from unathorized use or modification of content as PamantasanPH reserves its rights to modify content indefinitely. Other things like review session and other activities ultimately depends on the user.</p>
+            </div>
+            <div class="footerBox"> 
+                <h3>Help and Support</h3> 
+                <div>
+                    <a href="https://www.facebook.com/profile.php?id=61558938243853&mibextid=ZbWKwL"><img src="images\social\facebook.png" target="_blank" class="social-links" alt="Facebook"></a>
+                    <a href=""><img src="" target="_blank" class="social-links" alt="Email"></a> <!-- WILL FINALIZE -->
+                    <a href="https://www.linkedin.com/in/pamantasan-ph-1b2045307/"><img src="images\social\linkedin.png" target="_blank" class="social-links" alt="LinkedIn"></a>
+                </div>
+                
+                <<div class="newsletter"> <!--newsletter--> <!-- WILL FINALIZE, style -->
+                    <h2>Subscribe to our Newsletter!</h2>
+                    <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                    <form action="/newsletter" method="POST">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter a valid email address" required>
+                        <br>
+                        <button type="submit" style="background-color: rgb(154, 40, 9); color: rgb(255, 255, 255); border-radius:4px; margin-block-start: 10px">Subscribe</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <hr class="splitter"> 
+        <p class="copy-right"> &copy; 2024 PamantasanPH, All rights reserved</p> <!--copy-right-->
+    </footer>
+
+    <!-- <script>
+        window.onload = function() {
+            var navigation = document.getElementById("navigation");
+             var links = navigation.getElementsByTagName("a");
+            var currentPage = window.location.href;
+    
+            for (var i = 0; i < links.length; i++) {
+                var href = links[i].getAttribute("href");
+
+                if (currentPage.indexOf(href) !== -1) {
+                    links[i].classList.add("active"); 
+                    break; 
+                }
+            }
+        };
+
+        function setActive(element) {
+            var navigation = document.getElementById("navigation");
+            var links = navigation.getElementsByTagName("a");
+
+            for (var i = 0; i < links.length; i++) {
+                links[i].classList.remove("active");
+            }
+
+            element.classList.add("active");
+        }
+    </script> -->
+    <script src="{{ url_for('static', filename='js/favs.js') }}"></script>
+</body>
+</html>
