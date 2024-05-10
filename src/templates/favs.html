@@ -22,63 +22,18 @@
             <ul id="navigation">
                 <li><a id="home" href="index.html">Home</a></li>
                 <li><a id="univs" href="univs.html">Universities</a></li>
-                <li><a id="favs" href="favs.html">Favorites</a></li>
+                <li><a id="favs" href="favs.html">Bookmarks</a></li>
             </ul>
         </nav>
     </header>
 
-    <h1>My Favorites</h1>
-    <hr class="list">
-    <div class="favs">
+    <div class="heading-container">
+        <h1 class="dynamic-heading">My Bookmarks</h1>
+        <p>Here are Your Bookmarked Universities</p>
+    </div>
+   
+    <div class="favs" id="favsContainer">
         <!-- here goes the appended container once it was bookmarked -->
-        <!-- sample appended container -->
-        <div class="bg-container">  
-            <div class="unbookmark-icon">
-                <i class="fas fa-bookmark"></i>
-            </div>
-            <div class="bg-img">  
-                <img src="../static/images/logos/bg_img/cmu-standard-scale-2_00x-gigapixel.jpg" alt="City of Malabon University">  
-                <div class="overlay">
-                    <p><a href="../templates/univs/cmu.html">City of Malabon University</a></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="bg-container">
-            <div class="unbookmark-icon">
-                <i class="fas fa-bookmark"></i>
-            </div>
-            <div class="bg-img">  
-                <img src="../static/images/logos/bg_img/dr.fil-gigapixel-standard-height-1080px.jpg" alt="Dr. Filemon C. Aguilar Memorial College of Las Pinas">  
-                <div class="overlay">
-                    <p><a href="../templates/univs/dr.fil.html">Dr. Filemon C. Aguilar Memorial College of Las Pinas</a></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="bg-container">  
-            <div class="unbookmark-icon">
-                <i class="fas fa-bookmark"></i>
-            </div>
-            <div class="bg-img">  
-                <img src="../static/images/logos/bg_img/earist-gigapixel-standard-height-1080px.jpg" alt="Eulogio "Amang" Rodriguez Institute of Science & Technology">  
-                <div class="overlay">
-                    <p><a href="../templates/univs/earist.html">Eulogio "Amang" Rodriguez Institute of Science & Technology</a></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="bg-container">  
-            <div class="unbookmark-icon">
-                <i class="fas fa-bookmark"></i>
-            </div>
-            <div class="bg-img"> 
-                <img src="../static/images/logos/bg_img/mpc-gigapixel-standard-height-1080px.jpg" alt="Marikina Polytechnic College"> 
-                <div class="overlay">
-                    <p><a href="../templates/univs/mpc.html">Marikina Polytechnic College</a></p>
-                </div>
-            </div>
-        </div>
     </div>
 
 	<footer> <!--footer div-->
@@ -93,6 +48,7 @@
             </div>
             <div class="footerBox"> 
                 <h3>Help and Support</h3> 
+                <p>Connect with us today and be a part of our growing community!</p>
                 <div> 
                     <a href="https://www.facebook.com/profile.php?id=61558938243853&mibextid=ZbWKwL" target="_blank" class="social-links" aria-label="Facebook" rel="noopener"><i class="fab fa-facebook-square"></i></a>
                     <a href="mailto:pamantasanph@gmail.com" target="_blank" class="social-links" aria-label="Email" rel="noopener"><i class="fas fa-envelope"></i></a>
@@ -104,6 +60,6 @@
         <p class="copy-right"> &copy; 2024 PamantasanPH, All rights reserved</p> <!--copy-right-->
     </footer>
 
-    <!-- <script src="{{ url_for('static', filename='js/favs.js') }}"></script> -->
+    <script src="../static/js/forfavs.js"></script>
 </body>
 </html>
