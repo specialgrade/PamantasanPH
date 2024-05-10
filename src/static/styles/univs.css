@@ -116,6 +116,30 @@ nav a:hover {
     text-decoration: none;
 }
 
+@media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .title {
+      margin-bottom: 1rem;
+    }
+  
+    nav {
+      margin-top: 1rem;
+    }
+  
+    nav ul {
+      flex-direction: column;
+    }
+  
+    nav li {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  }
+  
 /* Heading styles */
 .heading-container {
     padding: 20px;  
