@@ -24,7 +24,7 @@ html, body {
 }
 
 body {
-    line-height: 1.6;
+  line-height: 1.6;
 }
 
 /* Header and navigation styling */
@@ -139,7 +139,7 @@ nav a:hover {
   }
 }
 
-/* Slideshow styling */
+/* Slideshow styling, WILL FINALIZE */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -167,6 +167,12 @@ nav a:hover {
   text-align: center;
   height: 100%;
   position: relative;
+}
+
+.slides-img {
+  width: 100vw; 
+  height: 100vh; 
+  object-fit: cover; 
 }
 
 .slides h1,
@@ -330,6 +336,40 @@ nav a:hover {
 
 .search-button:hover {
   background-color: #5c2020;
+}
+
+result-box {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: none;
+  z-index: -1;
+  padding-top: 20px;
+}
+
+.result-item {
+  margin-left: 50px;
+  margin-bottom: 1px;
+  color: var(--gray);
+}
+
+result-item:hover {
+  color: #0000FF;
+  text-decoration: underline;
+}
+
+.result-item a {
+  color: var(--gray);
+}
+
+.result-item a:hover {
+  color: #0000FF;
+  text-decoration: underline;
 }
 
 /* Newsletter styling */

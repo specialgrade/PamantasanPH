@@ -27,19 +27,22 @@
         </nav>
     </header>
 
-    <section> <!--default 'page' div--> <!--  WILL FINALIZE -->
+    <section> <!--default 'page' div--> 
         <div class="container">
-            <div class="slides"> <!-- content for the first slide -->
+            <div class="slides"> 
+                <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\scratch\assets\gui\sample.bg.jpg" class="slides-img" alt="Welcome to PamanatasanPH">
                 <h1>Discover Universities in Metro!</h1>
-                <p>Explore a myriad of educational opportunities in the bustling metropolis. From renowned institutions to hidden gems, uncover the perfect university to fuel your academic journey and future aspirations.</p> 
+                <p>Explore a myriad of educational opportunities in the bustling metropolis. From renowned institutions to hidden gems, uncover the perfect university to fuel your academic journey and future aspirations.</p>
             </div>   
     
             <div class="slides"> <!-- content for the second slide -->
+                <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\scratch\assets\gui\sample.bg.jpg" alt="About">
                 <h1>About</h1>
                 <p>PamanatasanPH commits to simplicity and convenience, this streamlines the search for universities within Manila, offering relevant details and a user-friendly experience for students, educators, parents or guardians, and/or officials.</p>
             </div>
             
             <div class="slides"> <!-- content for the third slide -->
+                <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\scratch\assets\gui\sample.bg.jpg" alt="Missiona and Vision">
                 <div class="column">
                     <h3 class="text-with-border">Mission</h3>
                     <p>PamanatasanPH guides its users by offering information about universities around Manila, fostering personal growth and easing their advancements to educational and professional success.</p>
@@ -64,9 +67,9 @@
                 <input type="text" id="search-input" class="search-input" placeholder="Search here">
                 <button id="search-button" class="search-button">Search</button>
             </div>
-            <div class="result-box"></div>
+            <div id="searchResults" class="result-box"></div>
         </div>
-    </main>
+    </main>    
 
     <div class="newsletter-container">
         <div class="clipart">
@@ -111,6 +114,6 @@
         <p class="copy-right"> &copy; 2024 PamantasanPH, All rights reserved</p> <!--copy-right-->
     </footer>
     
-    <!-- <script src="{{ url_for('static', filename='js/prototype.js') }}"></script> -->
+    <script src="../static/js/main.js"></script>
 </body>
 </html>
