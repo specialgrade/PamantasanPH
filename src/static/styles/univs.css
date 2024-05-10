@@ -9,6 +9,7 @@
     --dark-blue: #092334; /* secondary color */
     --red: #FF0000; /* accent color_1 */
     --green: #00FF00; /* accent color_2 */
+    --gray: #B2BEB5; /* accent color_3 */
     --box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* box shadow */
 }
 
@@ -39,7 +40,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .logo {
@@ -170,8 +171,9 @@ h1 {
     cursor: pointer;
 }
 
-.bookmark-icon:hover {
+.bookmark-icon:hover i {
     transform: scale(1.2) translateY(-2px);
+    color: var(--maroon);
 }
 
 /* Background image styling */
