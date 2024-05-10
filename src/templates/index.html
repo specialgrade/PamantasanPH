@@ -7,7 +7,9 @@
     <link rel="icon" href="../static/images/logos/website/logo.png">
     <title>PamantasanPH</title>
     <link rel="stylesheet" type="text/css" href="../static/styles/prototype.css"> <!-- WILL FINALIZE -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -18,14 +20,14 @@
         </div>
         <nav> 
             <ul id="navigation"> <!-- WILL FINALIZE -->
-                <li><a id="home1" href="index.html">Home</a></li>
-                <li><a id="univs1" href="univs.html">Universities</a></li>
+                <li><a id="home" href="index.html">Home</a></li>
+                <li><a id="univs" href="univs.html">Universities</a></li>
                 <li><a id="favs" href="favs.html">Favorites</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home"> <!--default 'page' div--> <!--  WILL FINALIZE -->
+    <section id="home1"> <!--default 'page' div--> <!--  WILL FINALIZE -->
         <div class="container">
             <div class="slides"> <!-- content for the first slide -->
                 <h1>Discover Universities in Metro!</h1>
@@ -53,7 +55,7 @@
         </div>
     </section>
 
-    <main id="univs" class="search-bar"> <!--search bar div--> <!--  WILL FINALIZE -->
+    <main id="univs1" class="search-bar"> <!--search bar div--> <!--  WILL FINALIZE -->
         <div class="search">
             <div class="search-container">
                 <label for="search-input" class="search-icon">
@@ -66,16 +68,22 @@
         </div>
     </main>
 
-    <div class="newsletter"> <!--newsletter--> <!-- WILL FINALIZE, style -->
-        <h2>Subscribe to our Newsletter!</h2>
-        <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
-        <form action="/newsletter" method="POST">
+    <div class="newsletter-container">
+        <div class="clipart">
+          <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\scratch\assets\gui\clipart_proto1.png" alt="Clipart">
+        </div>
+        <div class="newsletter">
+          <h2>Subscribe to our Newsletter!</h2>
+          <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+          <form action="/newsletter" method="POST">
             <label for="email">Email</label>
             <input type="email" id="email" name="email" placeholder="Enter a valid email address" required>
-            <br>
-            <button type="submit" style="background-color: rgb(154, 40, 9); color: rgb(255, 255, 255); border-radius:4px; margin-block-start: 10px">Subscribe</button>
-        </form>
-    </div>
+            <button type="submit" class="btn-subscribe">
+              <i class="fa-solid fa-paper-plane"></i> Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
 
     <footer> <!--footer div-->
         <div class="footerBoxes">
@@ -91,7 +99,7 @@
 
             <div class="footerBox"> 
                 <h3>Help and Support</h3> 
-                <div> <!-- WILL FINALIZE -->
+                <div>
                     <a href="https://www.facebook.com/profile.php?id=61558938243853&mibextid=ZbWKwL" target="_blank" class="social-links" aria-label="Facebook" rel="noopener"><i class="fab fa-facebook-square"></i></a>
                     <a href="mailto:pamantasanph@gmail.com" target="_blank" class="social-links" aria-label="Email" rel="noopener"><i class="fas fa-envelope"></i></a>
                     <a href="https://www.linkedin.com/in/pamantasan-ph-1b2045307/" target="_blank" class="social-links" aria-label="LinkedIn" rel="noopener"><i class="fab fa-linkedin"></i></a>
@@ -102,7 +110,6 @@
         <p class="copy-right"> &copy; 2024 PamantasanPH, All rights reserved</p> <!--copy-right-->
     </footer>
     
-    <!-- <script src="C:\Users\Jane\Documents\GitHub\PamantasanPH\code1\js\prototype.js" defer></script> -->
-    <script src="{{ url_for('static', filename='js/prototype.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='js/prototype.js') }}"></script> -->
 </body>
 </html>
