@@ -12,15 +12,13 @@
     --box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* box shadow */
 }
 
-/* Reset default browser styling */
-*,
-*::after,
-*::before {
-    padding: 0;
+/* Body styling */
+html, body {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif; 
-    font-family: 'Inter', sans-serif; 
+    font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -67,6 +65,7 @@ body {
     font-weight: bold;
     color: var(--maroon);  
     margin-left: 10px;
+    font-family: 'Raleway', sans-serif;
 }
 
 .title span {
@@ -86,7 +85,7 @@ nav ul {
 }
 
 nav li {
-    margin-right: 2rem;
+    margin-right: 3rem;
 }
 
 nav a {
@@ -97,6 +96,7 @@ nav a {
     text-decoration: none;
     border-radius: 5px;
     transition: all 0.3s ease;
+    font-family: 'Raleway', sans-serif;
 }
 
 nav a:hover {
@@ -118,8 +118,8 @@ nav a:hover {
 /* Title styling */
 h1 {
     text-align: center; 
-    margin-top: 90px; 
-    padding-bottom: 20px; 
+    margin-top: 100px; 
+    padding-bottom: 5px; 
     font-family: 'Raleway', sans-serif;
     font-style: italic;
     font-size: 3rem; 
@@ -136,7 +136,8 @@ h1 {
     margin: 0 auto;  
     border: none; 
     border-top: 2px solid var(--maroon);  
-    margin-bottom: 60px;  
+    margin-top: 5px;
+    margin-bottom: 30px;  
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -156,17 +157,21 @@ h1 {
     position: absolute;
     top: 10px;
     right: 10px;
-    transition: transform 0.3s;
+    width: 30px;
+    height: 30px;
+    cursor: pointer; 
+    z-index: 999; 
+    transition: transform 0.3s ease;
 }
 
 .bookmark-icon i {
     font-size: 24px;
-    color: var(--white);
+    color: var(--pale-gray);
     cursor: pointer;
 }
 
 .bookmark-icon:hover {
-    transform: scale(1.2) translateY(-5px);
+    transform: scale(1.2) translateY(-2px);
 }
 
 /* Background image styling */
@@ -259,12 +264,14 @@ footer {
     font-size: 1rem;
     font-weight: bold;
     margin-bottom: 10px;
+    font-family: 'Raleway', sans-serif; 
 }
 
 .footerBox p {
     font-size: 0.65rem;
     text-align: justify;
     margin-bottom: 10px;
+    font-family: 'Inter', sans-serif; 
 }
 
 .social-links {
@@ -292,6 +299,7 @@ footer {
     text-align: right;
     margin-bottom: 0.8rem;
     width: 95%;
+    font-family: 'Inter', sans-serif; 
 }
 
 @media (max-width: 768px) {
