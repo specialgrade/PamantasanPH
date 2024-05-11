@@ -78,7 +78,7 @@ function displayResults(results) {
   searchResultsElement.innerHTML = "";
 
   if (results.length === 0) {
-    searchResultsElement.innerHTML = "<p>No results found</p>";
+    searchResultsElement.innerHTML = "<p class='no-results'>No results found</p>";
   } else {
     results.forEach(result => {
       const resultItem = document.createElement("div");

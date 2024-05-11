@@ -356,7 +356,7 @@ result-box {
   margin-left: 50px;
   margin-bottom: -10px;
   margin-top: 25px;
-  color: var(--gray);
+  color: var(--dark-blue);
 }
 
 .result-item:hover {
@@ -365,13 +365,12 @@ result-box {
   text-decoration-style: solid;
 }
 
-.result-item a {
-  color: var(--gray);
-}
-
-.result-item a:hover {
-  color: #0000FF;
-  text-decoration: underline;
+.no-results {
+  margin-left: 50px;
+  margin-bottom: -10px;
+  margin-top: 25px;
+  color: var(--dark-blue);
+  padding-bottom: 25px;
 }
 
 /* Newsletter styling */
