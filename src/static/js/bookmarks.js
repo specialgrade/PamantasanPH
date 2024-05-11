@@ -9,18 +9,18 @@ document.addEventListener("DOMContentLoaded", function() {
             var div = document.createElement('div');
             div.innerHTML = content;
 
-            var unbookmarkButton = document.createElement('button');
-            unbookmarkButton.textContent = 'Remove';
-            unbookmarkButton.classList.add('unbookmark-icon');
-            div.appendChild(unbookmarkButton);
+            var bookmarkIcon = div.querySelector('.bookmark-icon');  
+            bookmarkIcon.addEventListener('click', function() {
+                 
+                var confirmation = confirm("Click 'OK' to Remove from Bookmarks.");
+                if (confirmation) {
+                    favsContainer.removeChild(div);
 
-            unbookmarkButton.addEventListener('click', function() {
-                favsContainer.removeChild(div);
-
-                var index = bookmarkedContent.indexOf(content);
-                if (index !== -1) {
-                    bookmarkedContent.splice(index, 1);
-                    localStorage.setItem('bookmarkedContent', JSON.stringify(bookmarkedContent));
+                    var index = bookmarkedContent.indexOf(content);
+                    if (index !== -1) {
+                        bookmarkedContent.splice(index, 1);
+                        localStorage.setItem('bookmarkedContent', JSON.stringify(bookmarkedContent));
+                    }
                 }
             });
 
