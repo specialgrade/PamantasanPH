@@ -14,7 +14,7 @@
 }
 
 /* Body styling */
-html, body {
+html, body { 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -199,22 +199,26 @@ h1 {
     text-align: center;
 }
 
-/* Unbookmark styling */
-.unbookmark-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    margin-right: 20px;
-    z-index: 999;
-    border-radius: 5px;
-    color: var(--white);
-    background-color: var(--maroon);
-    transition: transform 0.3s ease;
+/* Bookmark styling */
+.bookmark-icon {
+  position: absolute;
+  top: 25px;
+  right: 45px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer; 
+  z-index: 999; 
+  transition: transform 0.3s ease;
 }
 
-.unbookmark-icon:hover {
-  background-color: #5c2020;  
+.bookmark-icon i {
+  font-size: 24px;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.bookmark-icon:hover i {
+  color: var(--gray);
 }
 
 /* Background image styling */
