@@ -9,22 +9,22 @@
     --dark-blue: #092334; /* secondary color */
     --red: #FF0000; /* accent color_1 */
     --green: #00FF00; /* accent color_2 */
+    --gray: #B2BEB5; /* accent color_3 */
     --box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* box shadow */
 }
 
-/* Reset default browser styling */
-*,
-*::after,
-*::before {
-    padding: 0;
+/* Body styling */
+html, body {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif; 
-    font-family: 'Inter', sans-serif; 
+    font-family: 'Inter', sans-serif;
 }
 
 body {
-    background-color: #FBEEEE;
+    background-color: var(--pale-gray);
+    line-height: 1.6;
 }
 
 /* Header and navigation styling */
@@ -40,7 +40,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .logo {
@@ -66,6 +66,7 @@ body {
     font-weight: bold;
     color: var(--maroon);  
     margin-left: 10px;
+    font-family: 'Raleway', sans-serif;
 }
 
 .title span {
@@ -85,7 +86,7 @@ nav ul {
 }
 
 nav li {
-    margin-right: 2rem;
+    margin-right: 3rem;
 }
 
 nav a {
@@ -96,6 +97,7 @@ nav a {
     text-decoration: none;
     border-radius: 5px;
     transition: all 0.3s ease;
+    font-family: 'Raleway', sans-serif;
 }
 
 nav a:hover {
@@ -114,93 +116,159 @@ nav a:hover {
     text-decoration: none;
 }
 
-/* Title styling */
-h1 {
-    text-align: center; 
-    margin-top: 100px;
-    padding-bottom: 5px; 
-    font-family: 'Raleway';
-    font-style: italic;
-    color: var(--dark-blue);
+@media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .title {
+      margin-bottom: 1rem;
+    }
+  
+    nav {
+      margin-top: 1rem;
+    }
+  
+    nav ul {
+      flex-direction: column;
+    }
+  
+    nav li {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
   }
   
-  .list {
-    width: 80%;
-    margin: 20px auto; 
-    border: 1px solid var(--dark-blue);
+/* Heading styles */
+.heading-container {
+    padding: 20px;  
+    height: auto;  
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+  }
+  
+  .dynamic-heading {
+    font-size: 3rem;
+    color: var(--dark-blue);
+    margin-bottom: 5px;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  h1 {
+    text-align: center; 
+    margin-top: 100px; 
+    padding-bottom: 5px; 
+  }
+  
+  .heading-container p {
+    text-align: center; 
+    padding-bottom: 5px; 
+    font-size: 1rem;
+    color: var(--dark-blue);
+    margin-bottom: 5px;
+    font-family: 'Inter', sans-serif;
   }
 
 /* University container styling */
 .bg-container {
-    width: 80%;  
-    max-width: 80%;  
-    margin: 20px auto;  
+    width: 80%;
+    max-width: 980px; 
+    margin: 20px auto;
+    border-radius: 15px;
     overflow: hidden;
-    border-radius: 15px;  
-    height: 50%;  
-    position: relative; 
-    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Bookmark styling */
+.bookmark-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer; 
+    z-index: 999; 
+    transition: transform 0.3s ease;
+}
+
+.bookmark-icon i {
+    font-size: 24px;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.bookmark-icon:hover i {
+    color: var(--gray);
 }
 
 /* Background image styling */
 .bg-img {
     position: relative;
-    height: 50%;  
+    height: 200px; 
+    overflow: hidden; 
 }
 
 .bg-img img {
     width: 100%;
-    height: 100%; 
+    height: 100%;
+    object-fit: cover; 
     transition: transform 0.5s ease;
 }
 
 .bg-img:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05); 
 }
 
+/* Overlay styling */
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px;  
+    height: 100%;  
+    padding: 20px;  
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.4);  
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));  
     color: var(--white);
-    transition: background-color 0.3s;  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;  
+    opacity: 0;  
+    transition: opacity 0.3s;  
 }
 
-.overlay:hover {
-    background-color: rgba(0, 0, 0, 0.7); 
+.bg-container:hover .overlay {
+    opacity: 1;  
 }
 
 .overlay p {
     margin: 0;
     cursor: pointer;
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;  
     color: var(--white);
 }
 
 .overlay:hover p {
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
 /* Link styling */
 .bg-container a {
-    display: block;
-    color: var(--white); 
+    color: var(--white);
     text-decoration: none;
 }
 
 .bg-container a:hover {
     text-decoration: underline;
-    cursor: pointer;
 }
 
-/* Footer styling */ /* WILL FINALIZE */
+/* Footer styling */ 
 footer { 
     background-color: var(--maroon);  
-    color: var(--pale-gray);  
+    color: var(--white);  
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -218,51 +286,48 @@ footer {
     flex: 1 1 calc(30% - 40px);
     margin-top: 5px;
     padding: 20px;
+    min-width: 250px; 
 }
 
 .footerBox h3 {
     font-size: 1rem;
     font-weight: bold;
     margin-bottom: 10px;
+    font-family: 'Raleway', sans-serif; 
 }
 
 .footerBox p {
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     text-align: justify;
     margin-bottom: 10px;
+    font-family: 'Inter', sans-serif; 
 }
 
 .social-links {
-    align-items: center;
-    margin-bottom: 10px;
+    color: var(--white); 
+    transition: transform 0.3s, font-size 0.3s; 
+    display: inline-block; 
+    margin: 0 10px; 
+    font-size: 24px; 
 }
 
-.social-links a {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.social-links img {
-    width: 32px;
-    height: 32px;
-}
-
-.newsletter { /* WILL FINALIZE */
-    /* Insert properties */
+.social-links:hover {
+    transform: scale(1.2) translateY(-5px); 
 }
 
 .splitter {
     width: 95%;
     height: 1px;
-    background-color: var(--pale-gray);  
+    border: 1px solid var(--white);  
     margin: 10px 0;
 }
-
+  
 .copy-right {
-    font-size: 0.6rem;
-    text-align: right;
+    font-size: 0.65rem;
+    text-align: center;
     margin-bottom: 0.8rem;
     width: 95%;
+    font-family: 'Inter', sans-serif; 
 }
 
 @media (max-width: 768px) {
