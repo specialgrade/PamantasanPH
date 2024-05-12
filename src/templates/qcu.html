@@ -34,9 +34,8 @@
                     <button class="dropbtn">Requirements</button>
 					<i class="fa fa-caret-down"></i>
                     <div class="dropdown-content">
+						<a href="#exam">ForExamination</a>
                         <a href="#shs">For SHS</a>
-                        <a href="#grads">For Graduates</a>
-                        <a href="#als">ALS Passers</a>
 						<a href="#transferees">For Transferees</a>
                     </div>
                 </li>
@@ -52,7 +51,7 @@
                     <button class="dropbtn">Application</button>
 					<i class="fa fa-caret-down"></i>
                     <div class="dropdown-content">
-                        <a href="#application">Undergraduate Programs</a>
+                        <a href="#application">General</a>
                     </div>
                 </li>
 				<li class="dropdown">
@@ -64,22 +63,23 @@
 
     <!-- Quezon City University -->
 	<div class="container">
-		<h2>Quezon City University</h2>
-		<p>Address - 673 Quirino Highway, San Bartolome, Novaliches, Quezon City</p>
+		<img src="../static/images/logos/universities/QCULogo.png" alt="Quezon City University" class="univ-logo">
+		<h1>Quezon City University</h1>
+		<h2 class="address">Address - 673 Quirino Highway, San Bartolome, Novaliches, Quezon City</h2>
 		<div class="status">
 			<i class="status-icon fa fa-circle" id="status-icon"></i>
-			<span id="status-text">NOT YET OPENED</span>
+			<span class="close" id="status-text">NOT YET OPENED</span>
 		</div>
 
-		<h3>Admission Requirements</h3> <!-- Admission Requirements -->
+		<h3 class="heading3">Admission Requirements</h3> <!-- Admission Requirements -->
 		<h4>DOCUMENTARY REQUIREMENTS</h4>
-		<h5>For Examination:</h5>
+		<h5 id="exam">For Examination:</h5>
 		  <ol>
 		  	<li>Apply online thru Google Form</li>
 		  	<li>Need to fill out the QCU Admission Application Form</li>
 		  </ol>
 
-		<h5>FOR FRESHMEN</h5>
+		<h5 id="shs">FOR FRESHMEN</h5>
 		  <ol>
 			<li>Printed (back to back on one single sheet of paper) - Fully Accomplished QCU Admission Application Form with 2x2 colored picture white background with name tag and student’s signature at the back on the space below the form. (2 sets)</li>
 			<li>Original SF9 (Certified True Copy of Grade 11 & Original Grade 12) Form 138- High School Report Card | Alternative Learning System Certificate of Rating if ALS passer</li>
@@ -101,7 +101,7 @@
 			<li>Applicants who stopped for 1 Yr or more - Affidavit of Non-Enrollment from other Universities</li>
 		  </ol>
 
-		<h5>FOR TRANSFEREES</h5>
+		<h5 id="transferees">FOR TRANSFEREES</h5>
 		  <ol>
 			<li>Printed (back to back on one single sheet of paper) Fully Accomplished QCU Admission Application Form with 2x2 colored picture white background with name tag and student’s signature at the back on the space below the form. (2 sets)</li>
 			<li>Transcript of Records (For Evaluation Purposes) with General Weighted Average (GWA) of the last semester attended.</li>
@@ -124,13 +124,13 @@
 			<li>Applicants who stopped for 1 Yr. or more - Affidavit of Non-Enrollment from other Universities</li>
 		  </ol>
 		
-		<h3>University Specializations</h3> <!-- University Specializations -->
+		<h3 id="special" class="heading3">University Specializations</h3> <!-- University Specializations -->
 		<ul>
 			<li>Business Administration</li>
 		</ul>
 
-        <h3>University Courses</h3> <!-- University Courses -->
-		<h4>UNDERGRADUATE PROGRAMS</h4>
+        <h3 class="heading3">University Courses>University Courses</h3> <!-- University Courses -->
+		<h4 id="undergrad">UNDERGRADUATE PROGRAMS</h4>
 		<ul>
 		  <li><strong>College Of Business And Accountancy</strong>
 			<ul>
@@ -159,7 +159,7 @@
 		  </li>
 		</ul>
 
-        <h3>Application Process</h3> <!-- Application Process -->
+        <h3 id="application" class="heading3">Application Process</h3> <!-- Application Process -->
 		<h4>Freshmen and Transfer Applicants</h4>
 		<p>(Second-year or Third-year students only) should follow these steps:</p> 
 		<ol>
@@ -171,7 +171,7 @@
 		  </li>
 		</ol>
 
-		<h3>Contact Information</h3> <!-- Contact Information -->
+		<h3 id="contacts" class="heading3">Contact Information</h3> <!-- Contact Information -->
 		<ul>
 			<li>Email: <a href="admission@qcu.edu.ph">admission@qcu.edu.ph</a></li>
 			<li>Telephone: 8681-9135 / 8806-3470 / 8936-8050</li>

@@ -30,14 +30,39 @@
 	<div  id="navbar" class="heading-container">
         <nav>
             <ul>
+				<li class="dropdown">
+                    <button class="dropbtn">Branches</button>
+					<i class="fa fa-caret-down"></i>
+                    <div class="dropdown-content">
+						<a href="#openuni">Open University</a>
+                        <a href="#main">Sta. Mesa</a>
+                        <a href="#taguig">Taguig City</a>
+                        <a href="#quezon">Quezon City</a>
+                        <a href="#sj">San Juan City</a>
+						<a href="#paran">Parañaque</a>
+						<a href="#bataan">Bataan</a>
+                        <a href="#stam">Sta. Maria Bulacan</a>
+                        <a href="#pulilan">Pulilan, Bulacan</a>
+						<a href="#cabiao">Cabiao, Nueva Ecija</a>
+						<a href="#lopez">Lopez, Quezon</a>
+                        <a href="#mulanay">Mulanay, Quezon</a>
+                        <a href="#unisan">Unisan, Quezon</a>
+						<a href="#ragay">Ragay, Camarines Sur</a>
+						<a href="#stom">Sto. Tomas, Batangas</a>
+                        <a href="#mara">Maragondon, Cavite</a>
+                        <a href="#calauan">Calauan, Laguna</a>
+						<a href="#starosa">Sta. Rosa, Laguna</a>
+						<a href="#sanpedro">San Pedro, Laguna</a>
+						<a href="#binan">Biñan, Laguna</a>
+						<a href="#sablayan">Sablayan, Occidental Mindoro</a>
+						<a href="#bansud">Bansud, Occidental Mindoro</a>
+                    </div>
+                </li>
                 <li class="dropdown">
                     <button class="dropbtn">Requirements</button>
 					<i class="fa fa-caret-down"></i>
                     <div class="dropdown-content">
-                        <a href="#shs">For SHS</a>
-                        <a href="#grads">For Graduates</a>
-                        <a href="#als">ALS Passers</a>
-						<a href="#transferees">For Transferees</a>
+                        <a href="#gen">General</a>
                     </div>
                 </li>
                 <li class="dropdown">
@@ -46,13 +71,15 @@
                     <div class="dropdown-content">
 						<a href="#special">Specializations</a>
                         <a href="#undergrad">Undergraduate Programs</a>
+						<a href="#doctoral">Doctoral Programs</a>
+						<a href="#masters">Master Programs</a>
                     </div>
                 </li>
 				<li class="dropdown">
                     <button class="dropbtn">Application</button>
 					<i class="fa fa-caret-down"></i>
                     <div class="dropdown-content">
-                        <a href="#application">Undergraduate Programs</a>
+                        <a href="#application">General</a>
                     </div>
                 </li>
 				<li class="dropdown">
@@ -64,37 +91,15 @@
 
      <!-- Polytechnic University of the Philippines -->
 	<div class="container">
-		<h2>Polytechnic University of the Philippines</h2>
-		<p>1016 Anonas, Sta. Mesa, Maynila, Kalakhang Maynila</p>
-		<h4>Branches</h4>
-		<ul>
-			<li>Taguig City</li>
-			<li>Quezon City</li>
-			<li>San Juan City</li>
-			<li>Parañaque</li>
-			<li>Bataan</li>
-			<li>Sta. Maria Bulacan</li>
-			<li>Pulilan, Bulacan</li>
-			<li>Cabiao, Nueva Ecija</li>
-			<li>Lopez, Quezon</li>
-			<li>Mulanay, Quezon</li>
-			<li>Unisan, Quezon</li>
-			<li>Ragay, Camarines Sur</li>
-			<li>Sto. Tomas, Batangas</li>
-			<li>Maragondon, Cavite</li>
-			<li>Calauan, Laguna</li>
-			<li>Sta. Rosa, Laguna</li>
-			<li>San Pedro, Laguna</li>
-			<li>Biñan, Laguna</li>
-			<li>Sablayan, Occidental Mindoro</li>
-			<li>Bansud, Occidental Mindoro</li>
-		</ul>
-		
+		<img src="../static/images/logos/universities/PUPLogo.png" alt="Polytechnic University of the Philippines" class="univ-logo">
+		<h1>Polytechnic University of the Philippines</h1>
+		<h2 class="address">1016 Anonas, Sta. Mesa, Maynila, Kalakhang Maynila</h2>
 		<div class="status">
 			<i class="status-icon fa fa-circle" id="status-icon"></i>
-			<span id="status-text">NOT YET OPENED</span>
+			<span class="close" id="status-text">NOT YET OPENED</span>
 		</div>
-		<h3>Admission Requirements</h3> <!-- Admission Requirements -->
+
+		<h3 id="gen" class="heading3">Admission Requirements</h3> <!-- Admission Requirements -->
 		<ol>
 			<li>Passed PUP College Entrance Exam Test (PUPCET)</li>
 			<li>Confirmation Requirements</li>
@@ -106,7 +111,7 @@
 			<li>NSO authenticated copy of Birth Certificate/ Certificate of Live Birth</li>
 		</ol>
 
-		<h3>University Specializations</h3> <!-- University Specializations -->
+		<h3 id="special" class="heading3">University Specializations</h3> <!-- University Specializations -->
 		<ul>
 			<li>Education</li>
 			<li>Information Technology</li>
@@ -114,12 +119,12 @@
 			<li>Marketing</li>
 		</ul>
 
-        <h3>University Courses</h3> <!-- University Courses --> 
+        <h3 class="heading3">University Courses</h3> <!-- University Courses --> 
 		<ul>
 			<li>
-			  <h4>UNDERGRADUATE PROGRAMS</h4>
+			  <h4 id="undergrad">UNDERGRADUATE PROGRAMS</h4>
 			  <ul>
-				<li>Open Uni
+				<li id="openuni">Open Uni
 				  <ul>
 					<li>Doctor in Business Administration (DBA)</li>
 					<li>Doctor in Engineering Management (D.Eng)</li>
@@ -142,7 +147,7 @@
 				  </ul>
 				</li>
 
-				<li>Main
+				<li id="main">Main
 				  <ul>
 					<li>Diploma in Civil Engineering Technology (DCvET)</li>
 					<li>Diploma in Computer Engineering Technology (DCET)</li>
@@ -229,7 +234,7 @@
 			</li>
 
 			<li>
-				<h4>DOCTORAL PROGRAMS</h4>
+				<h4 id="doctoral">DOCTORAL PROGRAMS</h4>
 				<ul>
 					<li>Doctor of Philosophy in Communication (PhD Com)</li>
 					<li>Doctor of Philosophy in Economics (PhD Econ)</li>
@@ -246,7 +251,7 @@
 			</li>
 
 			<li>
-				<h4>MASTER PROGRAMS</h4>
+				<h4 id="masters">MASTER PROGRAMS</h4>
 				<ul>
 					<li>Master in Applied Statistics (MAS)
 						<p>Specializations:</p>
@@ -440,21 +445,21 @@
 					</ul>
 				</li>
 
-				<li><strong>Pulilan, Bulacan (Campus)</strong>
+				<li id="pulilan"><strong>Pulilan, Bulacan (Campus)</strong>
 					<ul>
 						<li>Bachelor of Science in Entrepreneurship (BSENTREP)</li>
 						<li>Bachelor of Public Administration major in Public Financial Management (BPAPFM)</li>
 					</ul>
 				</li>
 			
-				<li><strong>Cabiao, Nueva Ecija (Campus)</strong>
+				<li id="cabiao"><strong>Cabiao, Nueva Ecija (Campus)</strong>
 					<ul>
 						<li>Bachelor in Elementary Education (BEED)</li>
 						<li>Bachelor of Science in Business Administration major in Marketing Management (BSBA-MM)</li>
 					</ul>
 				</li>
 			
-				<li><strong>South Luzon, Lopez, Quezon (Branch)</strong>
+				<li id="lopez"><strong>South Luzon, Lopez, Quezon (Branch)</strong>
 					<ul>
 						<li>Bachelor of Public Administration (BPA)</li>
 						<li>Bachelor of Science in Accountancy (BSA)</li>
@@ -484,7 +489,7 @@
 					</ul>
 				</li>
 			
-				<li><strong>Sablayan, Occidental Mindoro (Branch)</strong>
+				<li id="sablayan"><strong>Sablayan, Occidental Mindoro (Branch)</strong>
 					<ul>
 						<li>Master in Educational Management (MEM, Open University System)</li>
 						<li>Master in Public Administration (MPA, Open University System)</li>
@@ -495,7 +500,7 @@
 					</ul>
 				</li>
 			
-				<li><strong>Biñan, Laguna (Campus)</strong>
+				<li id="binan"><strong>Biñan, Laguna (Campus)</strong>
 					<ul>
 						<li>Bachelor in Elementary Education (BEED)</li>
 						<li>Bachelor of Science in Accountancy (BSA)</li>
@@ -510,7 +515,7 @@
 					</ul>
 				</li>
 			
-				<li><strong>San Pedro, Laguna (Campus)</strong>
+				<li id="sanpedro"><strong>San Pedro, Laguna (Campus)</strong>
 					<ul>
 						<li>Bachelor of Science in Accountancy (BSA)</li>
 						<li>Bachelor of Science in Business Administration major in Human Resource Management (BSBA-HRM)</li>
@@ -522,7 +527,7 @@
 					</ul>
 				</li>
 			
-				<li><strong>Sta. Rosa, Laguna (Campus)</strong>
+				<li id="starosa"><strong>Sta. Rosa, Laguna (Campus)</strong>
 					<ul>
 						<li>Bachelor of Business Technology and Livelihood Education (BBTLE)</li>
 						<li>Bachelor of Science in Accountancy (BSA)</li>
@@ -538,7 +543,7 @@
 					</ul>
 				</li>
 			
-				<li><strong>Calauan, Laguna (Campus)</strong>
+				<li id="calauan"><strong>Calauan, Laguna (Campus)</strong>
 					<ul>
 						<li>Bachelor of Business Technology and Livelihood Education major in Home Economics (BBTLEDHE-CL)</li>
 						<li>Bachelor of Science in Entrepreneurship (BSENTREP-UN)</li>
@@ -547,7 +552,7 @@
 				</li>
 		  </ul>
 
-        <h3>Application Process</h3> <!-- Application Process -->
+        <h3 id="application" class="heading3">Application Process</h3> <!-- Application Process -->
 		<ol>
 			<li>Go to the PUP iApply for PUPCET page (<a href="https://www.pup.edu.ph/iapply/pupcet">https://www.pup.edu.ph/iapply/pupcet</a>) and read the information provided</li>
 			<li>Click Apply Now. This will take you to PUP iApply</li>
@@ -595,7 +600,7 @@
 			</li>
 		</ol>
 
-		<h3>Contact Information</h3> <!-- Contact Information -->
+		<h3 id="contacts" class="heading3">Contact Information</h3> <!-- Contact Information -->
 		<ul>
 			<li>Email: <a href="mailto:emo@pup.edu.ph">emo@pup.edu.ph</a></li>
 			<li>Telephone: (+632) 5335-1787 or 5335-1777 local 176</li>
