@@ -308,7 +308,7 @@ nav a:hover {
   color: var(--white); 
   cursor: pointer;
   padding: 10px;
-  background-color: #722828;
+  background-color: var(--maroon);
 }
 
 .search-input {
