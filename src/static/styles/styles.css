@@ -139,43 +139,44 @@ nav a:hover {
   }
 }
 
-/* Slideshow styling, WILL FINALIZE */
+/* Slideshow styling */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
-}
-
-.slides {
-  flex: 1;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.slides.active {
-  opacity: 1;
-}
-
-.slides {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.slides {
+  flex: 0 0 100%; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  transition: transform 0.5s ease;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.slides img {
+  width: 100%; 
   height: 100%;
-  position: relative;
 }
 
-.slides-img {
-  width: 100vw; 
-  height: 100vh; 
-  object-fit: cover; 
+.slides:nth-child(1) {
+  background-color: lightblue;
+  color: white;
 }
 
-.slides h1,
+.slides:nth-child(2) {
+  background-color: lightgreen;
+  color: black;
+}
+
+.slides:nth-child(3) {
+  background-color: lightcoral;
+  color: white;
+}
+
+.slides h1, 
 .slides p {
   position: absolute;
   top: 50%;
