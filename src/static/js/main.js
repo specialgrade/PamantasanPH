@@ -5,31 +5,33 @@ const next = document.querySelector('.next');
 let currentSlide = 0;
 
 function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.remove('active');
-    if (i === index) {
-      slide.classList.add('active');
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        slide.style.display = "block"; 
+      } else {
+        slide.style.display = "none";
+      }
+    });
+  }
+  
+  prev.addEventListener('click', () => {
+    currentSlide--;
+    if (currentSlide < 0) {
+      currentSlide = slides.length - 1;
     }
+    showSlide(currentSlide);
   });
-}
-
-prev.addEventListener('click', () => {
-  currentSlide--;
-  if (currentSlide < 0) {
-    currentSlide = slides.length - 1;
-  }
+  
+  next.addEventListener('click', () => {
+    currentSlide++;
+    if (currentSlide >= slides.length) {
+      currentSlide = 0;
+    }
+    showSlide(currentSlide);
+  });
+  
   showSlide(currentSlide);
-});
 
-next.addEventListener('click', () => {
-  currentSlide++;
-  if (currentSlide >= slides.length) {
-    currentSlide = 0;
-  }
-  showSlide(currentSlide);
-});
-
-showSlide(currentSlide);
 
 
 //Searchbar function
