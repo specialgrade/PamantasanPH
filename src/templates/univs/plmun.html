@@ -2,26 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="static/images/logos/website/logo.png">
+    <link rel="icon" href="../static/images/logos/website/logo.png">
     <title>PamantasanPH</title>
-    <script src="{{ url_for('static', filename='styles/univs21.css') }}"></script>
+    <link rel="stylesheet" type="text/css" href="../static/styles/univs21.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
 	<header class="header"> <!--navigation div-->
         <div class="title">
-            <img src="static/images/logos/website/logo.png" alt="PamantasanPH" class="logo">
+            <img src="../static/images/logos/website/logo.png" alt="PamantasanPH" class="logo">
             <p>Pamantasan<span>PH</span></p>
         </div>
         <nav> 
-            <ul>
-                <li><a id="home" href="{{ url_for('index') }}">Home</a></li>
-                <li><a id="univs" href="{{ url_for('universities') }}">Universities</a></li>
-                <li><a id="favs" href="{{ url_for('favorites') }}">Favorites</a></li> <!-- WILL FINALIZE -->
+            <ul id="navigation">
+                <li><a id="home" href="index.html">Home</a></li>
+                <li><a id="univs" href="univs.html">Universities</a></li>
+                <li><a id="favs" href="bookmarks.html">Bookmarks</a></li>
             </ul>
         </nav>
     </header>
+
+	<div  id="navbar" class="heading-container">
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <button class="dropbtn">Requirements</button>
+					<i class="fa fa-caret-down"></i>
+                    <div class="dropdown-content">
+                        <a href="#shs">For SHS</a>
+                        <a href="#grads">For Graduates</a>
+                        <a href="#als">ALS Passers</a>
+						<a href="#transferees">For Transferees</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">Courses</button>
+					<i class="fa fa-caret-down"></i>
+                    <div class="dropdown-content">
+						<a href="#special">Specializations</a>
+                        <a href="#undergrad">Undergraduate Programs</a>
+                    </div>
+                </li>
+				<li class="dropdown">
+                    <button class="dropbtn">Application</button>
+					<i class="fa fa-caret-down"></i>
+                    <div class="dropdown-content">
+                        <a href="#application">Undergraduate Programs</a>
+                    </div>
+                </li>
+				<li class="dropdown">
+                    <a href="#contacts" class="dropbtn">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
     
      <!-- Pamantasan ng Lungsod ng Muntinlupa -->
 	 <div class="container">
@@ -193,7 +232,6 @@
 		<h3>Contact Information</h3> <!-- Contact Information -->
 		<ul>
 			<li>Email: <a href="plmuncomm@plmun.edu.ph">plmuncomm@plmun.edu.ph</a></li>
-			<!-- <li>Telephone:</li> WILL FINALIZE --> 
 			<li>Website: <a href="https://www.plmun.edu.ph/index.php">https://www.plmun.edu.ph/index.php/</a></li>
 			<li>University Announcement: <a href="https://www.facebook.com/plmunofficial">https://www.facebook.com/plmunofficial</a></li>
 		</ul>
@@ -203,28 +241,21 @@
         <div class="footerBoxes">
             <div class="footerBox">
                 <h3>Privacy Policy</h3> 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>PamantasanPH ensures strict confidentiality of the user's privacy, only collecting necessary information to provide a consistent user experience. The user's privacy is protected and for reassurance, we, as the creators will not share without the consent of the user.</p>
             </div>
+
             <div class="footerBox"> 
                 <h3>Terms of Service</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>By agreeing to use PamantasanPH for educational and lawful means, shall refrain from unathorized use or modification of content as PamantasanPH reserves its rights to modify content indefinitely. Other things like review session and other activities ultimately depends on the user.</p>
             </div>
+
             <div class="footerBox"> 
                 <h3>Help and Support</h3> 
+                <p>Connect with us today and be a part of our growing community!</p>
                 <div>
-                    <a href="https://www.facebook.com/"><img src="images\social\facebook.png" target="_blank" class="social-links" alt="Facebook"></a>
-                    <a href=""><img src="" target="_blank" class="social-links" alt="Email"></a> 
-                    <a href="https://www.linkedin.com/"><img src="images\social\linkedin.png" target="_blank" class="social-links" alt="LinkedIn"></a>
-                </div>
-                
-                <div class="newsletter"> <!--newsletter--> 
-                    <h3>Stay Updated!</h3>
-                    <p>Subscribe to our newsletter to receive updates and FAQs about PamantasanPH.</p>
-                    <form action="/newsletter" method="POST">
-                        <label for="email">Enter your email:</label>
-                        <input type="email" id="email" name="email" placeholder="Your email address" required>
-                        <button type="submit">Subscribe</button>
-                    </form>
+                    <a href="https://www.facebook.com/profile.php?id=61558938243853&mibextid=ZbWKwL" target="_blank" class="social-links" aria-label="Facebook" rel="noopener"><i class="fab fa-facebook-square"></i></a>
+                    <a href="mailto:pamantasanph@gmail.com" target="_blank" class="social-links" aria-label="Email" rel="noopener"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/pamantasan-ph-1b2045307/" target="_blank" class="social-links" aria-label="LinkedIn" rel="noopener"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
@@ -232,6 +263,6 @@
         <p class="copy-right"> &copy; 2024 PamantasanPH, All rights reserved</p> <!--copy-right-->
     </footer>
 
-    <!-- <script src="univs.js" defer></script> -->
+    <script src="forunivs21.js" defer></script>
 </body>
 </html>
