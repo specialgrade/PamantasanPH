@@ -28,6 +28,14 @@
     </header>
 
     <section> <!--default 'page' div--> 
+        {% for message in get_flashed_messages() %}
+
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            
+        {% endfor %}
         <div class="container">
             <div class="slides"> 
                 <img src="../static/images/logos/website/slide1.jpg" class="slides-img" alt="Welcome to PamanatasanPH">
