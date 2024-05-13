@@ -36,6 +36,20 @@ function showSlide(index) {
 
 //Searchbar function
 const items = [
+  "City of Malabon University",
+  "Dr. Filemon C. Aguilar Memorial College of Las Pinas",
+  "Eulogio Amang Rodriguez Institute of Science & Technology",
+  "Marikina Polytechnic College",
+  "Navotas Polytechnic College",
+  "Paranaque City College",
+  "Polytechnic College of the City of Meycauayan",
+  "Pamantasan ng Lungsod ng Maynila",
+  "Pamantasan ng Lungsod ng Marikina",
+  "Pamantasan ng Lungsod ng Muntinlupa",
+  "Pamantasan ng Lungsod ng Pasig",
+  "Pamantasan ng Valenzuela",
+  "Philippine Normal University Manila",
+  "Philippine State College of Aeronautics",
   "Polytechnic University of the Philippines",
   "Taguig City University",
   "Technological University of the Philippines",
@@ -46,13 +60,27 @@ const items = [
 ];
 
 const itemToHtmlFileMap = {
-  "Polytechnic University of the Philippines": "src/templates/univs/pup.html",
-  "Taguig City University": "Taguig City University.html",
-  "Technological University of the Philippines": "Technological University of the Philippines.html",
-  "Universidad de Manila": "Universidad de Manila.html",
-  "Universidad de Makati": "Universidad de Makati.html",
-  "University of the Philippines": "University of the Philippines.html",
-  "Quezon City University": "Quezon City University.html"
+  "City of Malabon University": "/home/universities/city-of-malabon-university",
+  "Dr. Filemon C. Aguilar Memorial College of Las Pinas": "/home/universities/dr-filemon-c-aguilar-memorial-college-of-las-pinas",
+  "Eulogio Amang Rodriguez Institute of Science & Technology": "/home/universities/eulogio-amang-rodriguez-institute-of-science-&-technology",
+  "Marikina Polytechnic College": "/home/universities/marikina-polytechnic-college",
+  "Navotas Polytechnic College": "/home/universities/navotas-polytechnic-college",
+  "Paranaque City College":"/home/universities/paranaque-city-college",
+  "Polytechnic College of the City of Meycauayan": "/home/universities/polytechnic-college-of-the-city-of Meycauayan",
+  "Pamantasan ng Lungsod ng Maynila": "/home/universities/pamantasan-ng-lungsod-ng-maynila",
+  "Pamantasan ng Lungsod ng Marikina": "/home/universities/pamantasan-ng-lungsod-ng-marikina",
+  "Pamantasan ng Lungsod ng Muntinlupa": "/home/universities/pamantasan-ng-lungsod-ng-muntinlupa",
+  "Pamantasan ng Lungsod ng Pasig": "/home/universities/pamantasan-ng-lungsod-ng-pasig",
+  "Pamantasan ng Valenzuela": "/home/universities/pamantasan-ng-lungsod-ng-valenzuela",
+  "Philippine Normal University Manila": "/home/universities/philippine-national-university" ,
+  "Philippine State College of Aeronautics": "/home/universities/philippine-state-college-of-aeronautics",
+  "Polytechnic University of the Philippines": "/home/universities/polytechnic-university-of-the-philippines",
+  "Quezon City University": "/home/universities/quezon-city-university",
+  "Taguig City University": "/home/universities/taguig-city-university",
+  "Technological University of the Philippines": "/home/universities/technological-university-of-the-philippines",
+  "Universidad de Manila": "/home/universities/universidad-de-manila",
+  "Universidad de Makati": "/home/universities/university-of-makati",
+  "University of the Philippines": "/home/universities/university-of-the-philippines",
 };
 
 document.addEventListener("DOMContentLoaded", function() {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{ url_for('static', filename='images/logos/website/logo.png') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/logos/website/logosample.png') }}">
     <title>PamantasanPH</title>
     <link rel="stylesheet" type="text/css" href="../static/styles/styles.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
@@ -15,7 +15,7 @@
 <body>
     <header class="header"> <!--navigation div-->
         <div class="title">
-            <img src="{{ url_for('static', filename='images/logos/website/logo.png') }}" alt="PamantasanPH" class="logo">
+            <img src="{{ url_for('static', filename='images/logos/website/logosample.png') }}" alt="PamantasanPH" class="logo">
             <p>Pamantasan<span>PH</span></p>
         </div>
         <nav> 
@@ -76,7 +76,7 @@
 
     <div class="newsletter-container">
         <div class="clipart">
-          <img src="../scratch/assets/gui/clipart_proto1.png" alt="Clipart">
+          <img src="{{ url_for('static', filename='images/logos/website/clipartsample.png') }}" alt="Clipart">
         </div>
         <div class="newsletter">
           <h2>Subscribe to our Newsletter!</h2>
