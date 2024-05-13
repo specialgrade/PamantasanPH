@@ -54,7 +54,7 @@ def init_app(app):
     def Dr_Fil():
         return render_template('dr.fil.html')
     
-    @app.route('/home/universities/eulogio-"amang"-rodriguez-institute-of-science-&-technology', methods=['GET', 'POST'])
+    @app.route('/home/universities/eulogio-amang-rodriguez-institute-of-science-&-technology', methods=['GET', 'POST'])
     def Earist():
         return render_template('earist.html')    
     
