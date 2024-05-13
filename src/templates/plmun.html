@@ -34,10 +34,7 @@
                     <button class="dropbtn">Requirements</button>
 					<i class="fa fa-caret-down"></i>
                     <div class="dropdown-content">
-                        <a href="#shs">For SHS</a>
-                        <a href="#grads">For Graduates</a>
-                        <a href="#als">ALS Passers</a>
-						<a href="#transferees">For Transferees</a>
+                        <a href="#docu">Documentary Requirements</a>
                     </div>
                 </li>
                 <li class="dropdown">
@@ -46,6 +43,7 @@
                     <div class="dropdown-content">
 						<a href="#special">Specializations</a>
                         <a href="#undergrad">Undergraduate Programs</a>
+						<a href="#grad">Graduate Programs</a>
                     </div>
                 </li>
 				<li class="dropdown">
@@ -53,6 +51,10 @@
 					<i class="fa fa-caret-down"></i>
                     <div class="dropdown-content">
                         <a href="#application">Undergraduate Programs</a>
+						<a href="#residents">For Freshmen of Public and Private High Schools of Muntinlupa</a>
+						<a href="#non-residents">For Non-Muntinlupa Residents</a>
+						<a href="#returnees">For Returnee Students</a>
+						<a href="#foreign">For Foreign Students</a>
                     </div>
                 </li>
 				<li class="dropdown">
@@ -64,15 +66,16 @@
     
      <!-- Pamantasan ng Lungsod ng Muntinlupa -->
 	 <div class="container">
-		<h2>Pamantasan ng Lungsod ng Muntinlupa</h2>
-		<p>Address- University Road NBP Reservation Brgy. Poblacion, City of Muntinlupa. Philippines, 1776</p>
+		<img src="../static/images/logos/universities/PLMUNLogo.png" alt="Pamantasan ng Lungsod ng Muntinlupa" class="univ-logo">
+		<h1>Pamantasan ng Lungsod ng Muntinlupa</h1>
+		<h2 class="address">University Road NBP Reservation Brgy. Poblacion, City of Muntinlupa. Philippines, 1776</h2>
 		<div class="status">
 			<i class="status-icon fa fa-circle" id="status-icon"></i>
-			<span id="status-text">NOT YET OPENED</span>
+			<span class="close" id="status-text">NOT YET OPENED</span>
 		</div>
 
-		<h3>Admission Requirements</h3> <!-- Admission Requirements -->  
-		<h4>DOCUMENTARY REQUIREMENTS</h4>
+		<h3 class="heading3">Admission Requirements</h3> <!-- Admission Requirements -->  
+		<h4 id="docu">DOCUMENTARY REQUIREMENTS</h4>
 		  <ol>
 			<li>Certificate of Good Moral Character</li>
 			<li>Form 138 (Incoming Freshmen Students) Official Transcript of Records (For Transferees)</li>
@@ -85,13 +88,13 @@
 			<li>1 Long Brown Envelope with Plastic</li>
 		  </ol>
 
-		<h3>University Specializations</h3> <!-- University Specializations -->
+		<h3 id="special" class="heading3">University Specializations</h3> <!-- University Specializations -->
 		<ul>
 			<li>College of Medicine</li>
 		</ul>
 
-        <h3>University Courses</h3> <!-- University Courses -->
-		<h4>UNDERGRADUATE PROGRAMS</h4>
+        <h3 class="heading3">University Courses</h3> <!-- University Courses -->
+		<h4 id="undergrad">UNDERGRADUATE PROGRAMS</h4>
 		<ul>
 		  <li><strong>College of Arts and Sciences (CAS)</strong>
 			<ul>
@@ -152,7 +155,7 @@
 		  </li>
         </ul>
 
-		<h4>GRADUATE PROGRAMS</h4>
+		<h4 id="grad">GRADUATE PROGRAMS</h4>
 		<ul>
 			<li>Master in Business Administration</li>
 			<li>Master of Arts in Education
@@ -167,8 +170,8 @@
 			  <li>Master of Science in Criminology</li>
 		</ul>
 		  
-        <h3>Application Process</h3> <!-- Application Process -->
-		<h4>Admission Requirements and Procedures for Freshmen of Public and Private High Schools of Muntinlupa</h4>
+        <h3 id="application" class="heading3">Application Process</h3> <!-- Application Process -->
+		<h4 id="residents">Admission Requirements and Procedures for Freshmen of Public and Private High Schools of Muntinlupa</h4>
 		<ol>
 		  <li>Submit to OUR (Office of the Registrar the following):
 			<ul>
@@ -189,7 +192,7 @@
 		  <li>After the college interview, the accepted applicants must return the CRF to the Guidance Division and get the enrollment requirements and schedule.</li>
 		</ol>
 
-		<h4>Admission Requirements and Procedures for Non-Muntinlupa Residents</h4>
+		<h4 id="non-residents">Admission Requirements and Procedures for Non-Muntinlupa Residents</h4>
 		<ol>
 		  <li>Submit to OUR (Office of the Registrar the following):
 			<ul>
@@ -210,7 +213,7 @@
 		  <li>After the college interview, the accepted applicants must return the CRF to the Guidance Division and get the enrollment requirements and schedule.</li>
 		</ol>
 
-		<h4>Admission Procedures for Returnee Students</h4>
+		<h4 id="returnees">Admission Procedures for Returnee Students</h4>
 		<ol>
 		  <li>Secure clearance form from OUR.</li>
 		  <li>Report to your college for advising and encoding of subjects.</li>
@@ -219,7 +222,7 @@
 		  <li>Photocopy of NSO Marriage Contract (if recently married).</li>
 		</ol>
 
-		<h4>Admission Procedures for Foreign Students</h4>
+		<h4 id="foreign">Admission Procedures for Foreign Students</h4>
 		<ol>
 		  <li>Foreign students shall be admitted to PLMun subject to existing regulations of the Commission on HigherEducation (CHED). Other requirements are:</li>
 		  <li>Student Visa (9-F Visa)</li>
@@ -229,7 +232,7 @@
 		  <li>Authenticated Birth Certificate (original and photocopy).</li>
 		</ol>
 
-		<h3>Contact Information</h3> <!-- Contact Information -->
+		<h3 id="contacts" class="heading3">Contact Information</h3> <!-- Contact Information -->
 		<ul>
 			<li>Email: <a href="plmuncomm@plmun.edu.ph">plmuncomm@plmun.edu.ph</a></li>
 			<li>Website: <a href="https://www.plmun.edu.ph/index.php">https://www.plmun.edu.ph/index.php/</a></li>
