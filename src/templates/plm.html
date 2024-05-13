@@ -34,6 +34,7 @@
                     <button class="dropbtn">Requirements</button>
 					<i class="fa fa-caret-down"></i>
                     <div class="dropdown-content">
+						<a href="#quali">Qualifications</a>
 						<a href="#docu">Documentary Requirements</a>
                     </div>
                 </li>
@@ -43,8 +44,8 @@
                     <div class="dropdown-content">
 						<a href="#special">Specializations</a>
                         <a href="#undergrad">Undergraduate Programs</a>
-						<a href="#grad">Graduate Programs</a>
 						<a href="#prof">Professional Schools</a>
+						<a href="#grad">Graduate Programs</a>
                     </div>
                 </li>
 				<li class="dropdown">
@@ -62,7 +63,7 @@
     </div>
 
      <!-- Pamantasan ng Lungsod ng Maynila -->
-	 <div class="container">
+	 <div id="quali" class="container">
 		<img src="{{ url_for('static', filename='images/logos/universities/PLMLogo.png') }}" alt="Pamantasan ng Lungsod ng Maynila" class="univ-logo">
 		<h1>Pamantasan ng Lungsod ng Maynila</h1>
 		<h2 class="address">744 Gen. Luna corner Muralla St., Intramuros, Manila, Philippines 1002</h2>
@@ -73,7 +74,7 @@
 
 		<h3 class="heading3">Admission Requirements</h3> <!-- Admission Requirements -->
 
-		<h3>Qualifications</h3>  
+		<h3 id="docu" class="heading3">Qualifications</h3>  
 		<p>The student-applicant may apply provided that they comply with any of the following basic qualifications:</p>
 		  <ol>
 			<li>Senior High School (SHS) student who is currently enrolled in Grade 12 Department of Education (DepEd) accredited senior high school with a grade 11 general weighted average (GWA) of 80 or above.</li>
@@ -81,7 +82,7 @@
 			<li>The applicant completed Alternative Learning System (ALS) and passed the Accreditation & Equivalency (A&E) as recommended for tertiary education and has not taken any college or university units/programs during the application period. </li>
 		  </ol>
 
-		<h4 id="docu">DOCUMENTARY REQUIREMENTS</h4>  
+		<h4 id="special">DOCUMENTARY REQUIREMENTS</h4>  
 		<p>Applicants must be prepare the scanned copy (PDF) of the following:</p>
 		  <ol>
 			<li>PSA Birth Certificate</li>
@@ -89,13 +90,13 @@
 			<li>For Alternative Learning System (ALS) completers and Accreditation & Equivalency (A&E) Passers: Certificate of Completion</li>
 		  </ol>
 		
-		<h3 id="special" class="heading3">University Specializations</h3> <!-- University Specializations -->
+		<h3 id="undergrad" class="heading3">University Specializations</h3> <!-- University Specializations -->
 		<ul>
 			<li>Versatile excellence in varied fields.</li> 
 		</ul>
 
         <h3 class="heading3">University Courses</h3> <!-- University Courses -->
-		<h4 id="undergrad">UNDERGRADUATE PROGRAMS</h4>
+		<h4 id="prof">UNDERGRADUATE PROGRAMS</h4>
 		<ul>
 		  <li><strong>College Of Architecture And Urban Planning (CAUP)</strong>
 			<ul>
@@ -172,7 +173,7 @@
 		  </li> 
         </ul>
 
-		<h4 id="prof">PROFESSIONAL SCHOOLS</h4> 
+		<h4 id="grad">PROFESSIONAL SCHOOLS</h4> 
 		<ul>
 		  <li><strong>College Of Law (CL)</strong>
 			<ul>
@@ -186,7 +187,7 @@
 		  </li>
 		</ul>
 
-		<h4 id="grad">GRADUATE PROGRAMS</h4>
+		<h4 id="application">GRADUATE PROGRAMS</h4>
 		<ul>
 		  <li><strong>College Of Humanities, Arts And Social Sciences (CHASS)</strong>
 			<ul>
@@ -237,7 +238,7 @@
 		  </li>
 		</ul>
 
-        <h3 id="application" class="heading3">Application Process</h3> <!-- Application Process -->
+        <h3 id="contacts" class="heading3">Application Process</h3> <!-- Application Process -->
 		<ol>
 		  <li>Visit PLM Admission Portal <a href="http://web1.plm.edu.ph/crs/admission">http://web1.plm.edu.ph/crs/admission</a>.</li>
 		  <li>Fill-out Application Form.</li>
@@ -259,7 +260,7 @@
 		  </li>
 		</ol>
 
-		<h3 id="contacts" class="heading3">Contact Information</h3> <!-- Contact Information -->
+		<h3 class="heading3">Contact Information</h3> <!-- Contact Information -->
 		<ul>
 			<li>Email: <a href="registrar@plm.edu.ph">registrar@plm.edu.ph</a></li>
 			<li>Telephone: 09163410311</li>
