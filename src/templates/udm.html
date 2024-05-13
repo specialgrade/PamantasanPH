@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../static/images/logos/website/logo.png">
+    <link rel="icon" href="{{ url_for('static', filename='images/logos/website/logo.png') }}">
     <title>PamantasanPH</title>
-    <link rel="stylesheet" type="text/css" href="../static/styles/univs21.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/univs21.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,14 +15,14 @@
 <body>
 	<header class="header"> <!--navigation div-->
         <div class="title">
-            <img src="../static/images/logos/website/logo.png" alt="PamantasanPH" class="logo">
+            <img src="{{ url_for('static', filename='images/logos/website/logo.png') }}" alt="PamantasanPH" class="logo">
             <p>Pamantasan<span>PH</span></p>
         </div>
         <nav> 
             <ul id="navigation">
-                <li><a id="home" href="index.html">Home</a></li>
-                <li><a id="univs" href="univs.html">Universities</a></li>
-                <li><a id="favs" href="bookmarks.html">Bookmarks</a></li>
+                <li><a id="home" href="{{ url_for('home') }}">Home</a></li>
+                <li><a id="univs" href="{{ url_for('universities') }}">Universities</a></li>
+                <li><a id="favs" href="{{ url_for('bookmarks') }}">Bookmarks</a></li>
             </ul>
         </nav>
     </header>
@@ -62,7 +62,7 @@
 
     <!-- Universidad de Manila -->
 	<div class="container">
-		<img src="../static/images/logos/universities/UDMLogo.png" alt="Universidad de Manila" class="univ-logo">
+		<img src="{{ url_for('static', filename='images/logos/universities/UDMLogo.png') }}" alt="Universidad de Manila" class="univ-logo">
 		<h1>Universidad de Manila</h1>
 		<h2 class="address">Cecilia Muñoz-Palma cor. Antonio J. Villegas Streets, Manila, Philippines</h2>
 		<div class="status">
@@ -242,6 +242,6 @@
         <p class="copy-right"> &copy; 2024 PamantasanPH, All rights reserved</p> <!--copy-right-->
     </footer>
 
-    <script src="forunivs21.js" defer></script>
+    <script src="{{ url_for('static', filename='js/forunivs21.js') }}" defer></script>
 </body>
 </html>

@@ -139,69 +139,105 @@ nav a:hover {
   }
 }
 
-/* Slideshow styling */
+/* Slideshow styling, WILL FINALIZE */
 .container {
   display: flex;
-  overflow-x: hidden;
+  overflow: hidden; /* Remove overflow-x */
   width: 100%;
+  text-align: center;
+  max-height: 650px;
+  position: relative; /* Add position relative */
 }
 
+
 .slides {
-  flex: 0 0 100%; 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  transition: transform 0.5s ease;
-  box-sizing: border-box;
-  overflow: hidden;
+  flex: 1;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative; /* Add position relative */
 }
 
 .slides img {
-  width: 100%; 
-  height: 100%;
+  width: 100%;
+  height: auto;
+  max-height: 650px; /* Limit the image height */
 }
 
-.slides:nth-child(1) {
-  background-color: lightblue;
-  color: white;
-}
-
-.slides:nth-child(2) {
-  background-color: lightgreen;
-  color: black;
-}
-
-.slides:nth-child(3) {
-  background-color: lightcoral;
-  color: white;
-}
-
-.slides h1, 
-.slides p {
+.slides .text-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
-  text-align: center;
 }
 
 .slides h1 {
-  font-size: 48px;
+  font-size: 50px;
   font-weight: bold;
-  color: var(--maroon);
+  color: white;
   text-transform: uppercase;
-  margin-bottom: 20px;
-  text-align: left;
+  margin-bottom: 40px;
 }
 
 .slides p {
-  font-size: 18px;
+  font-size: 22px;
   color: var(--dark-blue);
-  text-align: left;
-  max-width: 500px;
-  margin-left: 100px;
+  max-width: 1000px;
+  margin-top: 10px;
+  color: white;
+  justify-content: center;
+  text-align: justify;
 }
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 36px;
+  color: var(--maroon);
+  cursor: pointer;
+  outline: none;
+}
+
+.prev {
+  left: 10px; /* Adjust the position */
+}
+
+.next {
+  right: 10px; /* Adjust the position */
+}
+
+.slides.slide3 .column {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slides.slide3 .column h3 {
+  margin-right: 20px; /* Add some spacing between "Mission" and "Vision" */
+  font-size: 50px;
+}
+
+.slides.slide3 .column p {
+  margin: 0;
+}
+
+.slides.slide3 .text-with-border {
+  border-bottom: 2px solid white;
+  padding-bottom: 10px;
+}
+
+
+
+
+  
+
+*/
 
 .prev {
   position: absolute;
@@ -257,7 +293,7 @@ nav a:hover {
   background-color: transparent;
   border: none;
   font-size: 36px;
-  color: var(--maroon); /* will modify */
+  color: white; /* will modify */
   cursor: pointer;
   outline: none;
   position: absolute;
@@ -308,7 +344,7 @@ nav a:hover {
   color: var(--white); 
   cursor: pointer;
   padding: 10px;
-  background-color: var(--maroon);
+  background-color: #722828;
 }
 
 .search-input {

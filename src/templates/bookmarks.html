@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../static/images/logos/website/logo.png">
+    <link rel="icon" href="{{ url_for('static', filename='images/logos/website/logo.png') }}">
     <title>PamantasanPH</title>
     <link rel="stylesheet" type="text/css" href="../static/styles/bookmarks.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
@@ -15,32 +15,45 @@
 <body>
 	<header class="header"> <!--navigation div-->
         <div class="title">
-            <img src="../static/images/logos/website/logo.png" alt="PamantasanPH" class="logo">
+            <img src="{{ url_for('static', filename='images/logos/website/logo.png') }}" alt="PamantasanPH" class="logo">
             <p>Pamantasan<span>PH</span></p>
         </div>
         <nav> 
             <ul id="navigation">
-                <li><a id="home" href="index.html">Home</a></li>
-                <li><a id="univs" href="univs.html">Universities</a></li>
-                <li><a id="favs" href="bookmarks.html">Bookmarks</a></li>
+                <li><a id="home" href="{{ url_for('home') }}">Home</a></li>
+                <li><a id="univs" href="{{ url_for('universities') }}">Universities</a></li>
+                <li><a id="favs" href="{{ url_for('bookmarks') }}">Favorites</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="heading-container">
-        <h1 class="dynamic-heading">My Bookmarks</h1>
+        <h1 class="dynamic-heading">My Favorites</h1>
         <p>Here are Your Bookmarked Universities</p>
     </div>
    
     <div class="favs" id="favsContainer">
-        <!-- here goes the appended container once it was bookmarked -->
+        <!-- Placeholder text will be displayed if there are no bookmarked containers -->
+        <p id="placeholderText">Add your bookmarks here</p>
     </div>
+    
+    <template id="bookmarkTemplate">
+        <!-- Bookmark content goes here -->
+        <div class="bookmark-container">
+            <p class="bookmark-content">Bookmark Content</p>
+            <!-- Unbookmark button goes here -->
+            <button class="unbookmark">Unbookmark</button>
+        </div>
+    </template>
+    
+    
+    
 
 	<footer> <!--footer div-->
         <div class="footerBoxes">
             <div class="footerBox">
                 <h3>Privacy Policy</h3> 
-                <p>PamantasanPH ensures strict confidentiality of the user's privacy, only collecting necessary information to provide a consistent user experience. The user's privacy is protected and for reassurance, we, as the creators will not share without the consent of the user.</p>
+                <p>PamantasanPH ensures stirct confidentiality of the user's privacy, only collecting necessary information to provide a consistent user experience. The user's privacy is protected and for reassurance, we, as the creators will not share without the consent of the user.</p>
             </div>
             <div class="footerBox"> 
                 <h3>Terms of Service</h3>
@@ -61,5 +74,6 @@
     </footer>
 
     <script src="../static/js/bookmarks.js"></script>
+    
 </body>
 </html>
