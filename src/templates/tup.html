@@ -35,10 +35,17 @@
 					<i class="fa fa-caret-down"></i>
                     <div class="dropdown-content">
                         <a href="#shs">For SHS</a>
-                        <a href="#grads">For Graduates</a>
-                        <a href="#als">ALS Passers</a>
-						<a href="#transferees">For Transferees</a>
-                    </div>
+                        <a href="#foreign">For Foreign Students</a>
+						<a href="#second">For Second Degree Takers</a>
+						<a href="#trans-in">For Transferees (Within the TUP System)</a>
+						<a href="#trans-out">For Transferees (From Other Schools)</a>
+						<a href="#COS">College of Sciences</a>
+						<a href="#CIE">College of Industrial Education</a>
+						<a href="#CLA">College of Liberal Arts</a>
+                        <a href="#CAF">College of Architecture and Fine Arts</a>
+					    <a href="#CIT">College of Industrial Technology</a>
+						<a href="#COE">College of Engineering</a>
+					</div>
                 </li>
                 <li class="dropdown">
                     <button class="dropbtn">Courses</button>
@@ -64,16 +71,17 @@
 
     <!-- Technological University of the Philippines -->
 	<div class="container">
-		<h2>Technological University of the Philippines</h2>
-		<p>Address - San Marcelino St, Ayala Blvd, Ermita, Manila, 1000</p>
+		<img src="../static/images/logos/universities/TUPLogo.png" alt="Technological University of the Philippines" class="univ-logo">
+		<h1>Technological University of the Philippines</h1>
+		<h2 class="address">San Marcelino St, Ayala Blvd, Ermita, Manila, 1000</h2>
 		<div class="status">
 			<i class="status-icon fa fa-circle" id="status-icon"></i>
 			<span id="status-text">OPEN</span>
 		</div>
 
-		<h3>Admission Requirements</h3> <!-- Admission Requirements -->
+		<h3 class="heading3">Admission Requirements</h3> <!-- Admission Requirements -->
 		<h4>GENERAL REQUIREMENTS</h4>
-		<h4>For Senior High School Graduates</h4>
+		<h4 id="shs">For Senior High School Graduates</h4>
 		  <ol>
 			<li>Passed the written TUP Scholastic and Technical Aptitude Test (TUPSTAT) and oral tests.</li>
 			<li>With Good Moral Character</li>
@@ -81,7 +89,7 @@
 			<li>Have met the prescribed admission requirements for the program/course applied for.</li>
 		  </ol>
 
-		<h4>For Transferees (Within the TUP System)</h4>
+		<h4 id="trans-in">For Transferees (Within the TUP System)</h4>
 		  <ol>
 			<li>Endorsement from the Admissions Office</li>
 			<li>With Good Scholastic Records</li>
@@ -89,7 +97,7 @@
 			<li>Certification of Available Slot from the Department</li>
 		  </ol>
 
-		<h4>For Transferees (From other schools)</h4>
+		<h4 id="trans-out">For Transferees (From other schools)</h4>
 		  <ol>
 			<li>Certificate of Transfer Credentials</li>
 			<li>With Good Scholastic Records (No Failing Grades)</li>
@@ -98,7 +106,7 @@
 			<li>Have met the prescribed admission requirements for the program/course applied for.</li>
 		  </ol>
 
-		<h4>For Foreign Students</h4>
+		<h4 id="foreign">For Foreign Students</h4>
 		  <ol>
 			<li>Meet the prescribed admission requirements for the program/course applied for.</li>
 			<li>Submission of necessary requirements for student visa conversion.
@@ -113,7 +121,7 @@
 			</li>
 		  </ol>
 
-		<h4>For Second Degree Takers</h4>
+		<h4 id="second">For Second Degree Takers</h4>
 		<p>Second Degree is allowed only for TUP graduates of Bachelor of Engineering Technology, Bachelor of Technical Teacher Education (BTTE) and Bachelor of Arts in Management Major Industrial Management (BAM-IM), if slot if available.</p>
 		<ul>
 			<li>Bachelor in Engineering Technology
@@ -139,7 +147,7 @@
 		</ul>
 
 		<h4>SPECIFIC REQUIREMENTS</h4>  
-		<h4>College of Science</h4>
+		<h4 id="COS">College of Science</h4>
 		<p>For the following courses:
 		<ul>
 		  <li>Bachelor of Science in Computer Science (BSCS)</li>
@@ -164,7 +172,7 @@
 			</li>
 		  </ol>
 
-		<h4>College of Industrial Education</h4>
+		<h4 id="CIE">College of Industrial Education</h4>
 		<p>For the following courses:
 		  <ul>
 			<li>Bachelor of Technical Teacher Education (BTTE)</li>
@@ -177,7 +185,7 @@
 		  <li>Open to all SHS graduates, with at least 80% GPA</li>
 		</ol>
 
-		<h4>College of Liberal Arts</h4>
+		<h4 id="CLA">College of Liberal Arts</h4>
 		<p>For the following courses:
 		  <ul>
 			<li>Bachelor of Science in Entrepreneurial Management</li>
@@ -191,7 +199,7 @@
 		  <li>With at least 80% in English</li>
 		</ol>
 
-		<h4>College of Architecture and Fine Arts</h4>
+		<h4 id="CAF">College of Architecture and Fine Arts</h4>
 		<p>For the following courses:
 		  <ul>
 			<li>Bachelor of Science in Architecture
@@ -216,7 +224,7 @@
 		  </ul>
 		</p>
 
-		<h4>College of Industrial Technology</h4>
+		<h4 id="CIT">College of Industrial Technology</h4>
 		<p>For the following courses:
 		  <ul>
 			<li>Bachelor of Technology
@@ -248,7 +256,7 @@
 		  </ul>
 		</p>
 
-		<h4>College of Engineering</h4>
+		<h4 id="COE">College of Engineering</h4>
 		<p>For the following courses:
 		  <ul>
 			<li>Bachelor of Science in Civil Engineering</li>
@@ -262,7 +270,7 @@
 		  <li>For other tracks: With at least 85% grade in Mathematics, Science and English and will take bridging programs embedded in the curriculum.</li>
 		</ol>
 
-		<h3>University Specializations</h3> <!-- University Specializations -->
+		<h3 id="special" class="heading3">University Specializations</h3> <!-- University Specializations -->
 		<ul>
 			<li>Engineering Courses
 				<ul>
@@ -283,8 +291,8 @@
 			  </li>
 		</ul>
 
-        <h3>University Courses</h3> <!-- University Courses -->
-		<h4>UNDERGRADUATE PROGRAMS</h4>
+        <h3 class="heading3">University Courses</h3> <!-- University Courses -->
+		<h4 id="undergrad">UNDERGRADUATE PROGRAMS</h4>
 		<ul>
 		  <li><strong>College of Industrial Technology (CIT)</strong>
 			<ul>
@@ -371,7 +379,7 @@
 		  </li>
 		</ul>
 
-        <h3>Application Process</h3> <!-- Application Process -->
+        <h3 id="application" class="heading3">Application Process</h3> <!-- Application Process -->
 		<ol>
 		  <li>Report to Office of Admissions
 			<p>Present the following documents:
@@ -400,7 +408,7 @@
 		  <li>Confirmation of Enrollment by the Registrar </li>
 		</ol>
 
-		<h3>Contact Information</h3> <!-- Contact Information -->
+		<h3 id="contacts" class="heading3">Contact Information</h3> <!-- Contact Information -->
 		<ul>
 			<li>Email: 
 				<ul>
