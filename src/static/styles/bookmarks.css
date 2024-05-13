@@ -14,7 +14,7 @@
 }
 
 /* Body styling */
-html, body { 
+html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -170,12 +170,6 @@ h1 {
   font-family: 'Inter', sans-serif;
 }
 
-.bookmarks-text {
-  font-size: 1rem;
-  color: var(--dark-blue);
-  font-family: 'Inter', sans-serif;
-}
-
 /* Favorites styling */
 .favs {
     display: grid;
@@ -190,7 +184,7 @@ h1 {
     background-color: var(--white);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
-  
+
 #favsContainer {
     position: relative;
     width: 100%;
@@ -203,30 +197,29 @@ h1 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
 }
 
-/* Bookmark styling */
-.bookmark-icon {
-  position: absolute;
-  top: 25px;
-  right: 45px;
-  width: 30px;
-  height: 30px;
-  cursor: pointer; 
-  z-index: 999; 
-  transition: transform 0.3s ease;
+.bookmark-container {
+    position: relative;
 }
 
-.bookmark-icon i {
-  font-size: 24px;
-  color: var(--white);
-  cursor: pointer;
+.bookmark-content {
+    margin-right: 40px; /* Adjust this value as needed */
 }
 
-.bookmark-icon:hover i {
-  color: var(--gray);
+.unbookmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--white);
+    background-color: var(--maroon);
+    transition: transform 0.3s ease;
+    z-index: 1;
 }
+
+
 
 /* Background image styling */
 .bg-img {

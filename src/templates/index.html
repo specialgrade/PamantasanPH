@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../static/images/logos/website/logo.png">
+    <link rel="icon" href="{{ url_for('static', filename='images/logos/website/logo.png') }}">
     <title>PamantasanPH</title>
     <link rel="stylesheet" type="text/css" href="../static/styles/styles.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
@@ -15,56 +15,51 @@
 <body>
     <header class="header"> <!--navigation div-->
         <div class="title">
-            <img src="../static/images/logos/website/logo.png" alt="PamantasanPH" class="logo">
+            <img src="{{ url_for('static', filename='images/logos/website/logo.png') }}" alt="PamantasanPH" class="logo">
             <p>Pamantasan<span>PH</span></p>
         </div>
         <nav> 
             <ul id="navigation">
-                <li><a id="home" href="index.html">Home</a></li>
-                <li><a id="univs" href="univs.html">Universities</a></li>
-                <li><a id="favs" href="bookmarks.html">Bookmarks</a></li>
+                <li><a id="home" href="{{ url_for('home') }}">Home</a></li>
+                <li><a id="univs" href="{{ url_for('universities') }}">Universities</a></li>
+                <li><a id="favs" href="{{ url_for('bookmarks') }}">Bookmarks</a></li>
             </ul>
         </nav>
     </header>
 
-    <section> <!--default 'page' div--> 
-        {% for message in get_flashed_messages() %}
-
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                {{ message }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            
-        {% endfor %}
+    <section>
         <div class="container">
-            <div class="slides"> 
+            <div class="slides slide1">
                 <img src="../static/images/logos/website/slide1.jpg" class="slides-img" alt="Welcome to PamanatasanPH">
-                <h1>Discover Universities in Metro!</h1>
-                <p>Explore a myriad of educational opportunities in the bustling metropolis. From renowned institutions to hidden gems, uncover the perfect university to fuel your academic journey and future aspirations.</p>
-            </div>   
-    
-            <div class="slides"> <!-- content for the second slide -->
-                <img src="../static/images/logos/website/slide2.jpg" alt="About">
-                <h1>About</h1>
-                <p>PamanatasanPH commits to simplicity and convenience, this streamlines the search for universities within Manila, offering relevant details and a user-friendly experience for students, educators, parents or guardians, and/or officials.</p>
+                <div class="text-content">
+                    <h1>Discover Universities in Metro!</h1>
+                    <p>Explore a myriad of educational opportunities in the bustling metropolis. From renowned institutions to hidden gems, uncover the perfect university to fuel your academic journey and future aspirations.</p>
+                </div>
             </div>
-            
-            <div class="slides"> <!-- content for the third slide -->
-                <img src="../static/images/logos/website/slide3.jpg" alt="Missiona and Vision">
+    
+            <div class="slides slide2">
+                <img src="../static/images/logos/website/slide2.jpg" alt="About">
+                <div class="text-content">
+                    <h1>About</h1>
+                    <p>PamantasanPH commits to simplicity and convenience, streamlining the search for universities within Manila, offering relevant details and a user-friendly experience for students, educators, parents or guardians, and/or officials.</p>
+                </div>
+            </div>
+    
+            <div class="slides slide3">
+                <img src="../static/images/logos/website/slide3.jpg" alt="Mission and Vision">
                 <div class="column">
                     <h3 class="text-with-border">Mission</h3>
-                    <p>PamanatasanPH guides its users by offering information about universities around Manila, fostering personal growth and easing their advancements to educational and professional success.</p>
-                </div>
-                <div class="column">
+                    <p>PamantasanPH guides its users by offering information about universities around Manila, fostering personal growth and easing their advancements to educational and professional success.</p>
                     <h3 class="text-with-border">Vision</h3>
-                    <p>PamanatasanPH aims to become a proper and go-to platform for comprehensive university information, enhancing user experience or convenience in general.</p>
+                    <p>PamantasanPH aims to become a proper and go-to platform for comprehensive university information, enhancing user experience or convenience in general.</p>
                 </div>
-            </div> 
-        
-            <button class="prev" onclick="plusSlides(-1)">&#10094;</button>  <!-- swipe buttons -->
+            </div>
+    
+            <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
             <button class="next" onclick="plusSlides(1)">&#10095;</button>
         </div>
     </section>
+    
 
     <main class="search-bar"> <!--search bar div--> 
         <div class="search">
@@ -81,7 +76,7 @@
 
     <div class="newsletter-container">
         <div class="clipart">
-          <img src="C:\Users\Jane\Documents\GitHub\PamantasanPH\scratch\assets\gui\clipart_proto1.png" alt="Clipart">
+          <img src="../scratch/assets/gui/clipart_proto1.png" alt="Clipart">
         </div>
         <div class="newsletter">
           <h2>Subscribe to our Newsletter!</h2>
@@ -100,7 +95,7 @@
         <div class="footerBoxes">
             <div class="footerBox">
                 <h3>Privacy Policy</h3> 
-                <p>PamantasanPH ensures strict confidentiality of the user's privacy, only collecting necessary information to provide a consistent user experience. The user's privacy is protected and for reassurance, we, as the creators will not share without the consent of the user.</p>
+                <p>PamantasanPH ensures stirct confidentiality of the user's privacy, only collecting necessary information to provide a consistent user experience. The user's privacy is protected and for reassurance, we, as the creators will not share without the consent of the user.</p>
             </div>
 
             <div class="footerBox"> 
