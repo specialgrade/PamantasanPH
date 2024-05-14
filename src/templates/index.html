@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{ url_for('static', filename='images/logos/website/logosample.png') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}">
     <title>PamantasanPH</title>
-    <link rel="stylesheet" type="text/css" href="../static/styles/styles.css"> 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/styles.css') }}"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,7 +15,7 @@
 <body>
     <header class="header"> <!--navigation div-->
         <div class="title">
-            <img src="{{ url_for('static', filename='images/logos/website/logosample.png') }}" alt="PamantasanPH" class="logo">
+            <img src="{{ url_for('static', filename='images/logos/website/finallogo.png') }}" alt="PamantasanPH" class="logo">
             <p>Pamantasan<span>PH</span></p>
         </div>
         <nav> 
@@ -37,7 +37,7 @@
         {% endfor %}
         <div class="container">
             <div class="slides slide1">
-                <img src="../static/images/logos/website/slide1.jpg" class="slides-img" alt="Welcome to PamanatasanPH">
+                <img src="{{ url_for('static', filename='images/logos/website/slide1.jpg') }}" class="slides-img" alt="Welcome to PamanatasanPH">
                 <div class="text-content">
                     <h1>Discover Universities in Metro!</h1>
                     <p>Explore a myriad of educational opportunities in the bustling metropolis. From renowned institutions to hidden gems, uncover the perfect university to fuel your academic journey and future aspirations.</p>
@@ -45,7 +45,7 @@
             </div>
     
             <div class="slides slide2">
-                <img src="../static/images/logos/website/slide2.jpg" alt="About">
+                <img src="{{ url_for('static', filename='images/logos/website/slide2.jpg') }}" alt="About">
                 <div class="text-content">
                     <h1>About</h1>
                     <p>PamantasanPH commits to simplicity and convenience, streamlining the search for universities within Manila, offering relevant details and a user-friendly experience for students, educators, parents or guardians, and/or officials.</p>
@@ -53,7 +53,7 @@
             </div>
     
             <div class="slides slide3">
-                <img src="../static/images/logos/website/slide3.jpg" alt="Mission and Vision">
+                <img src="{{ url_for('static', filename='images/logos/website/slide3.jpg') }}" alt="Mission and Vision">
                 <div class="column">
                     <h3 class="text-with-border">Mission</h3>
                     <p>PamantasanPH guides its users by offering information about universities around Manila, fostering personal growth and easing their advancements to educational and professional success.</p>
@@ -124,6 +124,6 @@
         <p class="copy-right"> &copy; 2024 PamantasanPH, All rights reserved</p> <!--copy-right-->
     </footer>
     
-    <script src="../static/js/main.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
