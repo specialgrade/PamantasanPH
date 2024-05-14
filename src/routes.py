@@ -35,7 +35,7 @@ def init_app(app):
             db.session.add(new_recipient)
             db.session.commit()
 
-            msg = Message('DEAR SUBSCRIBERS,', sender='pamantasanph@gmail.com', recipients=[recipient])
+            msg = Message('DEAR SUBSCRIBERS,', sender='@gmail.com', recipients=[recipient])
             msg.body = '''Are you looking for universities that prioritize your growth and success? Look no further than Pamantasan PH! 
             
     Thank you for choosing Pamantasan PH as your trusted partner in discovering educational institutions that offer programs tailored to your interests and career goals. We're excited to continue this journey with you and can't wait to reveal the exciting updates that lie ahead!
