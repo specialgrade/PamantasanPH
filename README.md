@@ -13,4 +13,4 @@ This repository contains the code and assets for the application project of Grou
 
 ## 📱User Interface
 **WEBSITE DESIGN:**
-<img src="../PamantasanPH/scratch/assets/gui/gui.png">
+<img src="scratch/assets/gui/gui.png">
