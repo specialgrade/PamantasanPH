@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}">
     <title>PamantasanPH</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/bookmarks.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/team.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -29,23 +29,75 @@
     </header>
 
     <div class="heading-container">
-        <h1 class="dynamic-heading">My Favorites</h1>
-        <p>Here are Your Bookmarked Universities</p>
+        <h1 class="dynamic-heading">Innovat3rs</h1>
+        <p>Meet the team behind PamantasanPH!</p>
     </div>
-   
-    <div class="favs" id="favsContainer">
-        <!-- Placeholder text will be displayed if there are no bookmarked containers -->
-        <p id="placeholderText">Add your bookmarks here</p>
+    <div class="developers-container">
+        <div class="developer">
+            <img src="../static/images/members/delacruz.JPG" alt="Developer 1">
+            <div>
+                <h2>Alyssa Marie Dela Cruz</h2>
+                <p>Project Manager, Frontend Developer, UI/UX Designer</p>
+            </div>
+        </div>
+        <div class="developer">
+            <img src="../static/images/members/delavega.png" alt="Developer 2">
+            <div>
+                <h2>Bianca Isabelle Dela Vega</h2>
+                <p>Technical Designer, UI/UX Designer</p>
+            </div>
+        </div>
+        <div class="developer">
+            <img src="../static/images/members/segura.png" alt="Developer 3">
+            <div>
+                <h2>Odracir Rod Ivan Segura</h2>
+                <p>Frontend Developer</p>
+            </div>
+        </div>
+        <div class="developer">
+            <img src="../static/images/members/simara.jpg" alt="Developer 4">
+            <div>
+                <h2>Daniella Simara</h2>
+                <p>Backend Developer</p>
+            </div>
+        </div>
+        <div class="developer">
+            <img src="../static/images/members/natada.png" alt="Developer 5">
+            <div>
+                <h2>Christopher Natada</h2>
+                <p>Business Analyst, Frontend Developer</p>
+            </div>
+        </div>
+        <div class="developer">
+            <img src="../static/images/members/rico.png" alt="Developer 6">
+            <div>
+                <h2>Jenascia Rico</h2>
+                <p>Business Analyst, Frontend Developer</p>
+            </div>
+        </div>
+        <div class="developer">
+            <img src="../static/images/members/calot.png" alt="Developer 7">
+            <div>
+                <h2>Patrick Fran Calot</h2>
+                <p>System Analyst</p>
+            </div>
+        </div>
+        <div class="developer">
+            <img src="../static/images/members/deguzman.png" alt="Developer 8">
+            <div>
+                <h2>John Reynald De Guzman</h2>
+                <p>Technical Writer, Creatives</p>
+            </div>
+        </div>
+        <div class="developer">
+            <img src="../static/images/members/lopez.png" alt="Developer 8">
+            <div>
+                <h2>Angel Grace Lopez</h2>
+                <p>Technical Writer, UI/UX Designer</p>
+            </div>
+        </div>
     </div>
     
-    <template id="bookmarkTemplate">
-        <!-- Bookmark content goes here -->
-        <div class="bookmark-container">
-            <p class="bookmark-content">Bookmark Content</p>
-            <!-- Unbookmark button goes here -->
-            <button class="unbookmark">Unbookmark</button>
-        </div>
-    </template>
 
 	<footer> <!--footer div-->
         <div class="footerBoxes">
@@ -70,8 +122,6 @@
         <hr class="splitter"> 
         <p class="copy-right"> &copy; 2024 PamantasanPH, All rights reserved</p> <!--copy-right-->
     </footer>
-
-    <script src="{{ url_for('static', filename='js/bookmarks.js') }}"></script>
     
 </body>
 </html>

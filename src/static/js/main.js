@@ -1,4 +1,4 @@
-// Slideshow function
+// Slideshow  
 const slides = document.querySelectorAll('.slides');
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
@@ -34,7 +34,7 @@ function showSlide(index) {
 
 
 
-//Searchbar function
+//Searchbar  
 const items = [
   "City of Malabon University",
   "Dr. Filemon C. Aguilar Memorial College of Las Pinas",
