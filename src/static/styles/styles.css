@@ -306,7 +306,7 @@ nav a:hover {
 
 .prev:hover,
 .next:hover {
-  color: var(--dark-blue); 
+  color: var(--pale-gray); 
   animation: arrowAnimation 0.5s ease;  
 }
 
