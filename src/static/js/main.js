@@ -133,11 +133,10 @@ function displayResults(results) {
 
 document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('newsletter-form').addEventListener('submit', function (event) {
-      event.preventDefault(); // Prevent default form submission
+      event.preventDefault(); 
 
       var email = document.getElementById('email').value;
 
-      // Make an AJAX request to your server to check if the email exists in the database
       var xhr = new XMLHttpRequest();
       xhr.open('POST', '/check_email', true);
       xhr.setRequestHeader('Content-Type', 'application/json');
@@ -148,8 +147,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   alert("You've already subscribed!");
               } else {
                   alert("Subscribed successfully!");
-                  // Here, you can submit the form or perform other actions
-                  document.getElementById('newsletter-form').submit(); // Submit the form after successful validation
+                  document.getElementById('newsletter-form').submit(); 
               }
           }
       };
