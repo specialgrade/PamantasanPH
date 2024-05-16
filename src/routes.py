@@ -1,4 +1,4 @@
-from flask import render_template, redirect, url_for, request, flash
+from flask import render_template, redirect, url_for, request, flash, jsonify
 from .app import db, mail
 from .models import Subscribe
 from flask import send_from_directory
@@ -41,17 +41,12 @@ def init_app(app):
 
             msg = Message('PamantasanPH Newsletter', sender='@gmail.com', recipients=[recipient])
             msg.body = '''Dear Subscribers,
-
-    Are you looking for universities that prioritize your growth and success? Look no further than Pamantasan PH! 
-            
-    Thank you for choosing Pamantasan PH as your trusted partner in discovering educational institutions that offer programs tailored to your interests and career goals. We're excited to continue this journey with you and can't wait to reveal the exciting updates that lie ahead!
-            
-    Here at Pamantasan PH, we understand the importance of providing a good and productive experience for our users. That's why we've been hard at work behind the scenes to ensure that every update and enhancement we introduce is designed with your needs in mind.
-            
-    Now, worry less because we got you!
-            
-    Warm Regards,
-    PAMANTASAN PH TEAM '''
+            Are you looking for universities that prioritize your growth and success? Look no further than Pamantasan PH! 
+            Thank you for choosing Pamantasan PH as your trusted partner in discovering educational institutions that offer programs tailored to your interests and career goals. We're excited to continue this journey with you and can't wait to reveal the exciting updates that lie ahead!
+            Here at Pamantasan PH, we understand the importance of providing a good and productive experience for our users. That's why we've been hard at work behind the scenes to ensure that every update and enhancement we introduce is designed with your needs in mind.
+            Now, worry less because we got you!
+            Warm Regards,
+            PAMANTASAN PH TEAM '''
             mail.send(msg)
             flash("Subscribed successfully!", 'success')
             return redirect(url_for('index'))
@@ -59,6 +54,13 @@ def init_app(app):
             db.session.rollback()
             flash("You have already subscribed!", 'danger')
             return redirect(url_for('index'))
+        
+    @app.route('/check_email', methods=['POST'])
+    def check_email():
+        email = request.json.get('email')
+        # Check if the email exists in your database
+        exists = db.session.query(Subscribe.query.filter_by(email=email).exists()).scalar()
+        return jsonify({'exists': exists})
         
     # routes for separate univs
     @app.route('/home/universities/city-of-malabon-university', methods=['GET', 'POST'])
