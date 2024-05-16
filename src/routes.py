@@ -26,6 +26,10 @@ def init_app(app):
     def bookmarks():
         return render_template('bookmarks.html')
     
+    @app.route('/home/team')
+    def team():
+        return render_template('team.html')
+    
     # route for sending email to the users
     @app.route('/newsletter', methods=['POST'])
     def newsletter():
@@ -35,8 +39,10 @@ def init_app(app):
             db.session.add(new_recipient)
             db.session.commit()
 
-            msg = Message('DEAR SUBSCRIBERS,', sender='@gmail.com', recipients=[recipient])
-            msg.body = '''Are you looking for universities that prioritize your growth and success? Look no further than Pamantasan PH! 
+            msg = Message('PamantasanPH Newsletter', sender='@gmail.com', recipients=[recipient])
+            msg.body = '''Dear Subscribers,
+
+    Are you looking for universities that prioritize your growth and success? Look no further than Pamantasan PH! 
             
     Thank you for choosing Pamantasan PH as your trusted partner in discovering educational institutions that offer programs tailored to your interests and career goals. We're excited to continue this journey with you and can't wait to reveal the exciting updates that lie ahead!
             
@@ -45,13 +51,13 @@ def init_app(app):
     Now, worry less because we got you!
             
     Warm Regards,
-    PAMANTASAN PH TEAM'''
+    PAMANTASAN PH TEAM '''
             mail.send(msg)
-            flash("Subscribed successfully!")
+            flash("Subscribed successfully!", 'success')
             return redirect(url_for('index'))
         except SQLAlchemyError as e:
             db.session.rollback()
-            flash("You have already subscribed!")
+            flash("You have already subscribed!", 'danger')
             return redirect(url_for('index'))
         
     # routes for separate univs
