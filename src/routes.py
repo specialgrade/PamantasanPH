@@ -4,6 +4,12 @@ from .models import Subscribe
 from flask import send_from_directory
 from flask_mail import Mail, Message
 from sqlalchemy.exc import SQLAlchemyError
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+email_sender = os.getenv('email')
 
 def init_app(app):
     
@@ -39,7 +45,7 @@ def init_app(app):
             db.session.add(new_recipient)
             db.session.commit()
 
-            msg = Message('PamantasanPH Newsletter', sender='@gmail.com', recipients=[recipient])
+            msg = Message('PamantasanPH Newsletter', sender=email_sender, recipients=[recipient])
             msg.body = '''Dear Subscribers,
     Are you looking for universities that prioritize your growth and success? Look no further than Pamantasan PH! 
     
