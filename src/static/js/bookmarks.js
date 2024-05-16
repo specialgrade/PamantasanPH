@@ -1,3 +1,4 @@
+// Unbookmark
 document.addEventListener("DOMContentLoaded", function() {
     var favsContainer = document.getElementById('favsContainer');
     var placeholderText = document.getElementById('placeholderText');
@@ -8,11 +9,11 @@ document.addEventListener("DOMContentLoaded", function() {
         bookmarkedContent.forEach(function(content) {
             var div = document.createElement('div');
             div.innerHTML = content;
-            div.classList.add('bookmark-container'); // Adding a class for styling
+            div.classList.add('bookmark-container');  
 
             var unbookmarkButton = document.createElement('button');
             unbookmarkButton.textContent = 'Unbookmark';
-            unbookmarkButton.classList.add('unbookmark', 'button-style'); // Adding a class for button styling
+            unbookmarkButton.classList.add('unbookmark', 'button-style');  
 
             unbookmarkButton.addEventListener('click', function() {
                 favsContainer.removeChild(div);

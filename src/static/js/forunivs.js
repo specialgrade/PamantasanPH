@@ -1,3 +1,4 @@
+// Bookmark
 document.addEventListener("DOMContentLoaded", function() {
     var bookmarkIcons = document.querySelectorAll(".bookmark-icon");
 
