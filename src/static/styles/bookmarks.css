@@ -204,7 +204,7 @@ h1 {
 }
 
 .bookmark-content {
-    margin-right: 40px; /* Adjust this value as needed */
+    margin-right: 40px;  
 }
 
 .unbookmark {
@@ -218,8 +218,6 @@ h1 {
     transition: transform 0.3s ease;
     z-index: 1;
 }
-
-
 
 /* Background image styling */
 .bg-img {

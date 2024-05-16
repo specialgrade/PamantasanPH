@@ -1,4 +1,4 @@
-// Navbar
+// Second Navbar
 document.querySelector('.dropdown').addEventListener('click', function() {
   document.querySelector('.navbar').classList.toggle('responsive');
 });
