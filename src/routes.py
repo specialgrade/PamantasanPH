@@ -58,7 +58,7 @@ def init_app(app):
     @app.route('/check_email', methods=['POST'])
     def check_email():
         email = request.json.get('email')
-        # Check if the email exists in your database
+        # Check if the email exists in the database
         exists = db.session.query(Subscribe.query.filter_by(email=email).exists()).scalar()
         return jsonify({'exists': exists})
         
