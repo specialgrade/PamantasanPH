@@ -1,4 +1,4 @@
-from .app import db
+from src.app import db
 
 class Subscribe(db.Model):
     id = db.Column(db.Integer, primary_key=True)
