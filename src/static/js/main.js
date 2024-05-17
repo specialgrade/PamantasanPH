@@ -137,6 +137,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
       var email = document.getElementById('email').value;
 
+      var emailPattern = /^[^\s@]+@gmail\.com$/;
+
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid email");
+            return;
+        }
+
       var xhr = new XMLHttpRequest();
       xhr.open('POST', '/check_email', true);
       xhr.setRequestHeader('Content-Type', 'application/json');

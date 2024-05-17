@@ -1,4 +1,4 @@
-from flask import render_template, redirect, url_for, request, flash, jsonify
+from flask import render_template, redirect, url_for, request, jsonify
 from src.app import db, mail
 from src.models import Subscribe
 from flask import send_from_directory
@@ -47,6 +47,7 @@ def init_app(app):
 
             msg = Message('PamantasanPH Newsletter', sender=email_sender, recipients=[recipient])
             msg.body = '''Dear Subscribers,
+
     Are you looking for universities that prioritize your growth and success? Look no further than Pamantasan PH! 
     
     Thank you for choosing Pamantasan PH as your trusted partner in discovering educational institutions that offer programs tailored to your interests and career goals. We're excited to continue this journey with you and can't wait to reveal the exciting updates that lie ahead!
@@ -58,11 +59,9 @@ def init_app(app):
     Warm Regards,
     PAMANTASANPH TEAM '''
             mail.send(msg)
-            flash("Subscribed successfully!", 'success')
             return redirect(url_for('index'))
         except SQLAlchemyError as e:
             db.session.rollback()
-            flash("You have already subscribed!", 'danger')
             return redirect(url_for('index'))
         
     @app.route('/check_email', methods=['POST'])
