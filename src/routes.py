@@ -1,6 +1,6 @@
 from flask import render_template, redirect, url_for, request, flash, jsonify
-from .app import db, mail
-from .models import Subscribe
+from src.app import db, mail
+from src.models import Subscribe
 from flask import send_from_directory
 from flask_mail import Mail, Message
 from sqlalchemy.exc import SQLAlchemyError
