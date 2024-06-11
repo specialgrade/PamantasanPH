@@ -13,10 +13,10 @@ mail = Mail()
 def create_app():
     app = Flask(__name__)
 
-    app.config['SECRET_KEY'] = 'PamantasanPH'
+    app.config['SECRET_KEY'] = ''
     # configuring the database
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
+    #app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     # configuring the mail
 
