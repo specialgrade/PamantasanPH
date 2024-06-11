@@ -2,7 +2,7 @@
 
 ## 🗂️ About the Repository
 
-This repository contains the code and assets for the application project of Group 3 from BSIT 1-5. The application project, **PamantasanPH**, serves as a search engine where the users (specifically aspiring university scholars) can easily navigate universities that offer free tuition.
+This repository contains the code and assets for the application project of Group 3, the Innovat3rs from BSIT 1-5. The web application, **PamantasanPH**, serves as a search engine where the users (specifically aspiring university scholars) can easily navigate universities that offer free education.
 
 ## 🖥️ Technology Used
 
@@ -13,4 +13,5 @@ This repository contains the code and assets for the application project of Grou
 
 ## 📱User Interface
 **WEBSITE DESIGN:**
-<img src="assets\gui\gui.png">
+=======
+<img src="scratch/assets/gui/gui.png">

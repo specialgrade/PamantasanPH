@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
 	<link rel="icon" href="../static/images/logos/website/logo.png">
     <title>PamantasanPH</title>
     <link rel="stylesheet" type="text/css" href="({{ url_for('static', filename = 'styles/univs.css') }})">
+=======
+    <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}">
+    <title>PamantasanPH</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/univs.css') }}">
+>>>>>>> 32009e5584ac9f93a7bc2c4ad3181539d5d9ffc9
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,7 +21,11 @@
 <body>
 	<header class="header"> <!--navigation div-->
         <div class="title">
+<<<<<<< HEAD
             <img src="../static/images/logos/website/logo.png" alt="PamantasanPH" class="logo">
+=======
+            <img src="{{ url_for('static', filename='images/logos/website/finallogo.png') }}" alt="PamantasanPH" class="logo">
+>>>>>>> 32009e5584ac9f93a7bc2c4ad3181539d5d9ffc9
             <p>Pamantasan<span>PH</span></p>
         </div>
         <nav> 
@@ -23,6 +33,10 @@
                 <li><a id="home" href="{{ url_for('home') }}">Home</a></li>
                 <li><a id="univs" href="{{ url_for('universities') }}">Universities</a></li>
                 <li><a id="favs" href="{{ url_for('bookmarks') }}">Bookmarks</a></li>  
+<<<<<<< HEAD
+=======
+                <li><a id="team" href="{{ url_for('team') }}">Team</a></li>
+>>>>>>> 32009e5584ac9f93a7bc2c4ad3181539d5d9ffc9
             </ul>
         </nav>
     </header>
@@ -56,12 +70,21 @@
         </div>
     </div>
 
+<<<<<<< HEAD
 	<div class="bg-container">  
         <div class="bookmark-icon">
             <i class="fas fa-bookmark"></i>
         </div>
         <div class="bg-img">  
             <img src="../static/images/logos/bg_img/earist-gigapixel-standard-height-1080px.jpg" alt="Eulogio "Amang" Rodriguez Institute of Science & Technology">  
+=======
+	<div class="bg-container">
+        <div class="bookmark-icon">
+            <i class="fas fa-bookmark"></i>
+        </div> 
+        <div class="bg-img">  
+            <img src="../static/images/logos/bg_img/dr.fil-gigapixel-standard-height-1080px.jpg" alt="Dr. Filemon C. Aguilar Memorial College of Las Pinas">  
+>>>>>>> 32009e5584ac9f93a7bc2c4ad3181539d5d9ffc9
             <div class="overlay">
                 <p><a href="../templates/univs/earist.html">Eulogio "Amang" Rodriguez Institute of Science & Technology</a></p>
             </div>
@@ -71,7 +94,23 @@
 	<div class="bg-container">  
         <div class="bookmark-icon">
             <i class="fas fa-bookmark"></i>
+<<<<<<< HEAD
         </div>
+=======
+        </div>
+        <div class="bg-img">  
+            <img src="../static/images/logos/bg_img/earist-gigapixel-standard-height-1080px.jpg" alt="Eulogio "Amang" Rodriguez Institute of Science & Technology">  
+            <div class="overlay">
+                <p><a href="{{ url_for('Earist') }}">Eulogio "Amang" Rodriguez Institute of Science & Technology</a></p>
+            </div>
+        </div>
+    </div>
+
+	<div class="bg-container">  
+        <div class="bookmark-icon">
+            <i class="fas fa-bookmark"></i>
+        </div>
+>>>>>>> 32009e5584ac9f93a7bc2c4ad3181539d5d9ffc9
         <div class="bg-img"> 
             <img src="../static/images/logos/bg_img/mpc-gigapixel-standard-height-1080px.jpg" alt="Marikina Polytechnic College"> 
             <div class="overlay">
@@ -147,7 +186,11 @@
         <div class="bg-img">  
             <img src="../static/images/logos/bg_img/plv-gigapixel-standard-height-1080px.jpg" alt="Pamantasan ng Lungsod ng Valenzuela">  
             <div class="overlay">
+<<<<<<< HEAD
                 <p><a href="../templates/univs/plv.html">Pamantasan ng Lungsod ng Valenzuela</a></p>
+=======
+                <p><a href="{{ url_for('PLV') }}">Pamantasan ng Lungsod ng Valenzuela</a></p>
+>>>>>>> 32009e5584ac9f93a7bc2c4ad3181539d5d9ffc9
             </div>
         </div>
     </div>
@@ -288,7 +331,7 @@
         <div class="footerBoxes">
             <div class="footerBox">
                 <h3>Privacy Policy</h3> 
-                <p>PamantasanPH ensures stirct confidentiality of the user's privacy, only collecting necessary information to provide a consistent user experience. The user's privacy is protected and for reassurance, we, as the creators will not share without the consent of the user.</p>
+                <p>PamantasanPH ensures strict confidentiality of the user's privacy, only collecting necessary information to provide a consistent user experience. The user's privacy is protected and for reassurance, we, as the creators will not share without the consent of the user.</p>
             </div>
             <div class="footerBox"> 
                 <h3>Terms of Service</h3>
@@ -308,6 +351,10 @@
         <p class="copy-right"> &copy; 2024 PamantasanPH, All rights reserved</p> <!--copy-right-->
     </footer>
 
+<<<<<<< HEAD
     <script src="{{ url_for('static', filename = 'js/forunivs.js') }}"></script>
+=======
+	<script src="{{ url_for('static', filename='js/forunivs.js') }}"></script>
+>>>>>>> 32009e5584ac9f93a7bc2c4ad3181539d5d9ffc9
 </body>
 </html>

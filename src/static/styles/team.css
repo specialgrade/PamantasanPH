@@ -14,11 +14,7 @@
 }
 
 /* Body styling */
-<<<<<<< HEAD
-html, body { 
-=======
 html, body {
->>>>>>> 32009e5584ac9f93a7bc2c4ad3181539d5d9ffc9
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -109,17 +105,6 @@ nav a:hover {
     text-decoration: underline;
 } 
 
-/* Page indicator styling */
-#favs {
-    color: var(--dark-blue);
-    text-decoration: underline;
-}
-
-#favs:hover {
-    color: var(--maroon);
-    text-decoration: none;
-}
-
 @media (max-width: 768px) {
     .header {
       flex-direction: column;
@@ -142,6 +127,17 @@ nav a:hover {
       margin-right: 0;
       margin-bottom: 1rem;
     }
+}
+
+/* Page indicator styling */
+#team {
+  color: var(--dark-blue);
+  text-decoration: underline;
+}
+
+#team:hover {
+  color: var(--maroon);
+  text-decoration: none;
 }
 
 /* Heading styles */
@@ -174,132 +170,46 @@ h1 {
   font-family: 'Inter', sans-serif;
 }
 
-/* Favorites styling */
-.favs {
+/* Developer container styling */
+.developers-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
-    padding: 1rem;
-    max-width: 1000px;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    background-color: var(--white);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    grid-template-columns: repeat(3, 1fr);  
+    grid-gap: 20px;  
+    justify-content: center;  
+    margin: 20px;
 }
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> 32009e5584ac9f93a7bc2c4ad3181539d5d9ffc9
-#favsContainer {
-    position: relative;
-    width: 100%;
-    height: 100%; 
-    background-color: var(--white);
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+/* Developer styling */
+.developer {
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
 }
 
-<<<<<<< HEAD
-/* Bookmark styling */
-.bookmark-icon {
-  position: absolute;
-  top: 25px;
-  right: 45px;
-  width: 30px;
-  height: 30px;
-  cursor: pointer; 
-  z-index: 999; 
-  transition: transform 0.3s ease;
+.developer img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;  
+    margin-right: 20px;
 }
 
-.bookmark-icon i {
-  font-size: 24px;
-  color: var(--white);
-  cursor: pointer;
-}
-
-.bookmark-icon:hover i {
-  color: var(--gray);
-=======
-.bookmark-container {
-    position: relative;
-}
-
-.bookmark-content {
-    margin-right: 40px;  
-}
-
-.unbookmark {
-    position: absolute;
-    top: 0;
-    right: 0;
-    cursor: pointer;
-    border-radius: 5px;
-    color: var(--white);
-    background-color: var(--maroon);
-    transition: transform 0.3s ease;
-    z-index: 1;
->>>>>>> 32009e5584ac9f93a7bc2c4ad3181539d5d9ffc9
-}
-
-/* Background image styling */
-.bg-img {
-    position: relative;
-    height: 200px;
-    overflow: hidden;
-}
-  
-.bg-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    object-fit: cover;
-    margin-bottom: 1rem;
-    transition: transform 0.3s ease;
-}
-  
-.bg-img:hover img {
-    transform: scale(1.1);
-}
-
-.overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px; 
-    box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.6); 
-    color: var(--white);
-    transition: background-color 0.3s; 
-}
-
-.overlay:hover {
-    background-color: rgba(0, 0, 0, 0.8); 
-}
-
-.overlay p {
+.developer h2 {
     margin: 0;
+    padding: 0;
+    color: var(--dark-blue);
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+}
+
+.developer p {
+    margin: 0;
+    padding: 0;
+    color: var(--dark-blue);
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
-}
-
-.overlay p a {
-    color: var(--white); 
-    text-decoration: none; 
-}
-
-.overlay p a:hover {
-    text-decoration: underline;
+    font-size: 0.8rem;
 }
 
 /* Footer styling */ 
