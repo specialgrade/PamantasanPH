@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}"> -->
+    <title>PamantasanPH</title>
+    <!-- <link rel="stylesheet" type="text/css" href="stylesProto.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header> <!-- Navigation -->
+        <div class="container">
+            <div class="logo">
+                <!-- <img src="C:\Users\ALY\Documents\GitHub\PamantasanPH\src\static\images\logos\website\finallogo.png" alt="PamantasanPH Logo"> -->
+                <span>PamantasanPH</span>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-moon"></i>
+                <span>Username</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container"> <!-- Sidebar, NOT FINALIZE -->
+            <aside>
+                <div class="sidebar-item">
+                    <span>Create New List</span>
+                    <i class="fa-solid fa-circle-plus"></i>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Universities</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>Map</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-code-compare"></i>
+                    <span>Compare</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-users-rectangle"></i>
+                    <span>Team</span>
+                </div>
+                <div class="subscribe">
+                    <h3>Subscribe to our Newsletter!</h3>
+                    <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                    <input type="email" placeholder="Email">
+                    <button>Subscribe</button>
+                </div>
+                <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+            </aside>
+
+            <section> 
+                <div  id="navbar" class="heading-container"> <!-- Navigation -->
+                    <nav>
+                        <ul>
+                            <li class="dropdown">
+                                <button class="dropbtn">Requirements</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#gen">General</a>
+                                    <a href="#add">Additional
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Courses</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#special">Specializations</a>
+                                    <a href="#undergrad">Undergraduate Programs</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Application</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#application">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#contacts" class="dropbtn">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div> 
+                
+                <!-- University of Southern Mindanao -->
+                <div id="gen" class="container">
+                    <img src="{{ url_for('static', filename='images/logos/universities/USMLogo.png') }}" alt="University of Southern Mindanao" class="univ-logo">
+                    <h1>University of Southern Mindanao</h1>
+                    <h2 class="address">Bai Matabay Plang Avenue Poblacion, Kabacan Cotabato</h2>
+                    <div class="status">
+                        <i class="status-icon fa fa-circle" id="status-icon"></i>
+                        <span class="close" id="status-text">NOT YET OPENED</span>
+                    </div>
+            
+                    <h3 class="heading3">Admission Requirements</h3> <!-- Admission Requirements -->
+                    <h4 id="add">GENERAL REQUIREMENTS</h4>
+                    <ol>
+                        <li>Photocopy of Grade 12 Report of Grades (1st Semester)</li>
+                        <li>Original PSA Birth Certificate. If not yet available, download the Commitment Form HERE, fill it out, sign, and submit a scanned copy.</li>
+                        <li>Grade 12 Card</li>
+                        <li>Certificate of Good Moral Character</li>
+                    </ol>
+
+                    <h4>ADDITIONAL REQUIREMENTS</h4>
+                    <ul>
+                        <li>BS Midwifery, BS Nursing and BS Pharmacy
+                            <ol>
+                                <li>For Female: Hepatitis B Test Result, Chest X-Ray and Pregnancy Test</li>
+                                <li>For Male: Hepatitis B Test Result, and Chest X-Ray</li>
+                            </ol>
+                        </li>
+                        <li>BS Hospitality Management, BS Nutrition and Dietetics, and BS Food Technology
+                            <ol>
+                                <li id="special">Hepatitis B Test Result</li>
+                            </ol>
+                        </li>
+                    </ul>
+            
+                    <h3 id="undergrad" class="heading3">University Specializations</h3> <!-- University Specializations -->
+                    <ul>
+                        <li>Teacher Education</li>
+                        <li>Agriculture</li>
+                    </ul>
+            
+                    <h3 class="heading3">University Courses</h3> <!-- University Courses --> 
+                    <ul>
+                            <h4>UNDERGRADUATE PROGRAMS</h4>
+                            <li><strong>College of Agriculture</strong>
+                                <ul>
+                                    <li>BS Agriculture</li>
+                                    <li>BS Fisheries</li>
+                                    <li>BS Agricultural Technology</li>
+                                </ul>
+                            </li>
+
+                            <li><strong>College of Arts and Social Sciences</strong>
+                                <ul>
+                                    <li>AB Psychology</li>
+                                    <li>AB English Language</li>
+                                    <li>AB Political Science</li>
+                                    <li>AB Philosophy (Pre-Law)</li>
+                                    <li>BS Criminology</li>
+                                </ul>
+                            </li>
+
+                            <li><strong>College of Education</strong>
+                                <ul>
+                                    <li>Bachelor of Elementary Education</li>
+                                    <li>Bachelor of Secondary Education
+                                        <p>Major in:</p>
+                                        <ul>
+                                            <li>English</li>
+                                            <li>Filipino</li>
+                                            <li>Social Studies</li>
+                                            <li>Science</li>
+                                            <li>Mathematics</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li><strong>College of Engineering and Information Technology</strong>
+                                <ul>
+                                    <li>BS Agricultural and Biosystems Engineering</li>
+                                    <li>BS Civil Engineering</li>
+                                    <li>BS Computer Engineering</li>
+                                    <li>BS Computer Science</li>
+                                    <li>BS Electronics Engineering</li>
+                                    <li>BS Information Systems</li>
+                                    <li>Bachelor of Library & Information Science</li>
+                                </ul>
+                            </li>
+
+                            <li><strong>College of Human Ecology and Food Sciences</strong>
+                                <ul>
+                                    <li>BS Food Technology</li>
+                                    <li>BS Hospital Management</li>
+                                    <li>BS Nutrition and Dietetics</li>
+                                    <li>BS Tourism Management</li>
+                                </ul>
+                            </li>
+
+                            <li><strong>College of Industry and Technology</strong>
+                                <ul>
+                                    <li>Bachelor of Technical Vocational Teacher Education
+                                        <p>Major in:</p>
+                                        <ul>
+                                            <li>Automotive Technology</li>
+                                            <li>Drafting Technology</li>
+                                            <li>Electrical Technology</li>
+                                            <li>Electronics Technology</li>
+                                        </ul>
+                                    </li>
+                                    <li>BS Industrial Technology
+                                        <p>Major in:</p>
+                                        <ul>
+                                            <li>Architectural Drafting Technology</li>
+                                            <li>Automotive Technology</li>
+                                            <li>Electronics Technology</li>
+                                            <li>Electrical Technology</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li><strong>College of Health Sciences</strong>
+                                <ul>
+                                    <li>Bachelor of Science in Nursing</li>
+                                </ul>
+                            </li>
+
+                            <li><strong>College of Business, Development Economics and Management</strong>
+                                <ul>
+                                    <li>BS Accountancy</li>
+                                    <li>BS Management Accounting</li>
+                                    <li>BS Agribusiness</li>
+                                    <li>BS Agricultural Economics</li>
+                                    <li>BS Development Management</li>
+                                    <li>BS Business Administration</li>
+                                </ul>
+                            </li>
+
+                            <li><strong>Institute of Middle East and Asian Studies</strong>
+                                <ul>
+                                    <li>BS International Relations</li>
+                                    <li>Bachelor of Arts in Islamic Studies</li>
+                                </ul>
+                            </li>
+
+                            <li><strong>Institute of Physical Education and Recreation</strong>
+                                <ul>
+                                    <li>Bachelor of Physical Education</li>
+                                    <li>BS Exercise and Sports Sciences
+                                        <p>Major in:</p>
+                                        <ul>
+                                            <li>Fitness and Sports Coaching</li>
+                                            <li>Fitness and Sports Management</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li><strong>College of Science and Mathematics</strong>
+                                <ul>
+                                    <li>BS Chemistry</li>
+                                    <li>BS Biology</li>
+                                    <li>BS Development Communication</li>
+                                    <li>BS Applied Mathematics</li>
+                                </ul>
+                            </li>
+
+                            <li><strong>College of Veterinary Medicine</strong>
+                                <ul>
+                                    <li>Doctor of Veterinary Medicine</li>
+                                    <li id="application">BS Veterinary Technology</li>
+                                    <li>Veterinary Aide* (1 year)</li>
+                                </ul>
+                            </li>
+                
+            
+                    <h3 id="contacts" class="heading3">Application Process</h3> <!-- Application Process -->
+                    <ol>
+                        <li>Performance in the University of Southern Mindanao College Entrance Examination (USMCEE);</li>
+                        <li>Compliance with other requirements prescribed by the colleges concerned and/or the University.</li>
+                    </ol>
+            
+                    <h3 class="heading3">Contact Information</h3> <!-- Contact Information -->
+                    <ul>
+                        <li>Email: <a href="mailto:op@usm.edu.ph">op@usm.edu.ph</a></li>
+                        <li>Telephone: (064)5722138</li>
+                        <li>Website: <a href="https://www.usm.edu.ph">https://www.usm.edu.ph</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- <script src="scriptProto.js"></script> -->
+</body>
+</html>
