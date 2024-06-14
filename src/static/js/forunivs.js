@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 // Bookmark
+>>>>>>> 32009e5584ac9f93a7bc2c4ad3181539d5d9ffc9
 document.addEventListener("DOMContentLoaded", function() {
     var bookmarkIcons = document.querySelectorAll(".bookmark-icon");
 
@@ -25,4 +28,8 @@ document.addEventListener("DOMContentLoaded", function() {
             alert("Click 'OK' to Add to Bookmarks.");
         });
     });
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 32009e5584ac9f93a7bc2c4ad3181539d5d9ffc9
