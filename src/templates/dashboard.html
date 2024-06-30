@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="C:\Users\ALY\Downloads\PamantasanPH_LOGO.png">
+  <title>PamantasanPH</title>
+  <link rel="stylesheet" type="text/css" href="../static/styles/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header> <!-- Navigation -->
+    <div class="logo">
+      <img src="C:\Users\ALY\Downloads\PamantasanPH_LOGO.png" alt="PamantasanPH Logo">
+      <span>PamantasanPH</span>
+    </div>
+    <div class="search">
+      <input type="text" placeholder="Search">
+      <button>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+    <div class="user">
+        <i class="fa-solid fa-moon moon-icon"></i>
+        <div class="gradient-container">
+          <span>Username</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </div>
+  </header>
+
+  <main>
+    <aside> <!-- Sidebar -->
+      <div class="create-item">
+        <span>Create New List</span>
+        <i class="fa-solid fa-circle-plus"></i>
+      </div>
+      <div id="dashboard" class="sidebar-item">
+        <a href="dashboard.html">
+          <i class="fa-solid fa-box-archive"></i>
+          <span>Dashboard</span>
+        </a>
+      </div>
+      <div class="sidebar-item">
+        <a href="univs.html">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span>Universities</span>
+        </a>
+      </div>
+      <div class="sidebar-item">
+        <a href="map.html">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <span>Map</span>
+        </a>
+      </div>
+      <div class="sidebar-item">
+        <a href="compare.html">
+          <i class="fa-solid fa-code-compare"></i>
+          <span>Compare</span>
+        </a>
+      </div>
+      <div class="sidebar-item">
+        <a href="team.html">
+          <i class="fa-solid fa-users-rectangle"></i>
+          <span>Team</span>
+        </a>
+      </div>
+      <div class="subscribe">
+        <h3>Subscribe to our Newsletter!</h3>
+        <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+        <input type="email" placeholder="Email">
+        <button>Subscribe</button>
+      </div>
+      <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+    </aside>
+
+    <div class="main-content">
+      <div class="banner">
+        <h2>Hi, Username!</h2>
+        <p>Ready to Discover State Universities here in the Philippines?</p>
+        <img src="../static/images/logos/website/clipartsample.png" alt="PamantasanPH">
+      </div>
+
+      <div class="sections">
+        <div class="favs" id="favsContainer">
+          <h3>My Bookmarks</h3>
+          <!-- Placeholder text will be displayed if there are no bookmarked containers -->
+          <p id="placeholderText">Add your bookmarks here</p>
+        </div>
+        
+        <div class="section">
+          <h3>To do</h3>
+          <div class="progress">
+            <div class="progress-bar"></div>
+            <span class="progress-text">0%</span>
+          </div>
+          
+          <div class="tasks">
+            <div class="add-task">
+              <input type="text" placeholder="Add task here">
+              <button class="add-button">
+                <span class="icon">&#x270E;</span>
+                <span class="text">Add</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="calendar">
+            <!-- Calendar -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- <script src="dashboard.js"></script> -->
+</body>
+</html>
