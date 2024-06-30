@@ -1,0 +1,163 @@
+/* Imported font families */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Global styling variables */
+:root {
+  --maroon: #722828;  
+  --pale-gray: #FBEEEE;  
+  --white: #FFFFFF;  
+  --dark-blue: #092334;  
+  --red: #FF0000;  
+  --green: #00FF00;  
+  --gray: #B2BEB5;  
+  --box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);  
+}
+
+/* Body styling */
+body {
+  background: linear-gradient(to right, #192f3f, #94273a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 500px;
+}
+
+/* Clipart styling */
+img {
+  width: 250px;
+  height: 250px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Content styling */
+h1 {
+  color: var(--maroon);
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+
+p {
+  color: var(--dark-blue);
+  margin-bottom: 24px;
+  font-size: 18px;
+  font-weight: bold; 
+}
+
+.input-container {
+  background: linear-gradient(to right, #192f3f, #94273a);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.input-container i {
+  color: var(--white);
+  margin-right: 5px;
+}
+
+.input-container input {
+  background: transparent;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  color: var(--white);
+  font-family: 'Raleway', sans-serif;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 0 20px; 
+}
+
+.checkbox-row input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.checkbox-row label {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--dark-blue);
+  margin-right: 20px;
+}
+
+.checkbox-row a {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #337ab7;
+  text-decoration: underline;
+  margin-left: 175px;
+}
+
+.checkbox-row a:hover {
+  color: #23527c;
+}
+      
+.gradient-button {
+  background: linear-gradient(to right, #192f3f, #94273a);
+  color: var(--white);
+  padding: 15px 20px;  
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;  
+}
+
+.gradient-button:hover {
+  background: linear-gradient(to right, #7a1f2c, #94273a);
+}
+
+.social-icons {
+  margin-top: 20px;
+  display: flex;  
+  justify-content: center;  
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 15px;  
+  border: none;  
+  border-radius: 50%;  
+  background-color: var(--white);  
+  color: var(--dark-blue);
+  text-decoration: none;
+  transition: background-color 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-icons a:hover {
+  background-color: #eee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+.social-icons a i {
+  font-size: 24px;
+}
+
+.signup-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: var(--maroon);
+  text-decoration: underline;
+}

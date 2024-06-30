@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="C:\Users\ALY\Downloads\PamantasanPH_LOGO.png">
+    <title>PamantasanPH</title>
+    <link rel="stylesheet" type="text/css" href="../static/styles/verifyEmail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body> 
+    <div class="container">
+        <a href="login1.html" class="back-btn"> <!-- Back button -->
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        
+        <h1>Verify Your Email</h1> <!-- Header-->
+        <p class="sub-header">Please enter the 4 - Number Code Sent to <span id="user-email"></span>.</p> <!-- User's email will be displayed here -->
+
+        <form action="/verify-code" method="POST"> <!-- 4 Number Code -->
+            <input type="text" class="code-input" maxlength="1" name="digit1" required>
+            <input type="text" class="code-input" maxlength="1" name="digit2" required>
+            <input type="text" class="code-input" maxlength="1" name="digit3" required>
+            <input type="text" class="code-input" maxlength="1" name="digit4" required>
+        </form>
+
+        <div class="resend"> <!-- Code Resend Button -->
+            <p><a href="#">Resend Code</a></p>
+        </div>
+
+        <button type="submit" class="verify-btn">Verify</button> <!-- Verify Button-->
+    </div>
+
+    <!-- <script src="verifyEmail.js"></script> -->
+</body>
+</html>
