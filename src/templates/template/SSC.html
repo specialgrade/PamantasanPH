@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}"> -->
+    <title>PamantasanPH</title>
+    <!-- <link rel="stylesheet" type="text/css" href="stylesProto.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header> <!-- Navigation -->
+        <div class="container">
+            <div class="logo">
+                <!-- <img src="C:\Users\ALY\Documents\GitHub\PamantasanPH\src\static\images\logos\website\finallogo.png" alt="PamantasanPH Logo"> -->
+                <span>PamantasanPH</span>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-moon"></i>
+                <span>Username</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container"> <!-- Sidebar, NOT FINALIZE -->
+            <aside>
+                <div class="sidebar-item">
+                    <span>Create New List</span>
+                    <i class="fa-solid fa-circle-plus"></i>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Universities</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>Map</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-code-compare"></i>
+                    <span>Compare</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-users-rectangle"></i>
+                    <span>Team</span>
+                </div>
+                <div class="subscribe">
+                    <h3>Subscribe to our Newsletter!</h3>
+                    <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                    <input type="email" placeholder="Email">
+                    <button>Subscribe</button>
+                </div>
+                <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+            </aside>
+
+            <section> 
+                <div  id="navbar" class="heading-container"> <!-- Navigation -->
+                    <nav>
+                        <ul>
+                            <li class="dropdown">
+                                <button class="dropbtn">Requirements</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#gen">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Courses</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#special">Specializations</a>
+                                    <a href="#undergrad">Undergraduate Programs</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Application</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#application">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#contacts" class="dropbtn">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div> 
+                
+                <!-- Siquijor State College -->
+                <div id="gen" class="container">
+                    <img src="{{ url_for('static', filename='images/logos/universities/SSCLogo.png') }}" alt="Siquijor State College" class="univ-logo">
+                    <h1>Siquijor State College</h1>
+                    <h2 class="address">6HXR+J6M, Larena, Siquijor</h2>
+            
+                    <h3 id="special" class="heading3">Admission Requirements</h3> <!-- Admission Requirements -->
+                    <p>SSC online admission for SY 2024 - 2025 is soon to open. While waiting, please prepare the following:</p>
+                    <ul>
+                        <li>2x2 photo with white background</li>
+                        <li>Birth Certificate or any valid ID</li>
+                        <li>Certificate of Enrollment (For Junior High School, Senior High School, College applicants)</li>
+                        <li>Php 30 Transaction Receipt paid to the SSC Cashier (For JHS and SHS applicants only)</li>
+                        <li>TOR (For transferees only)</li>
+                    </ul>
+            
+                    <h3 id="undergrad" class="heading3">University Specializations</h3> <!-- University Specializations -->
+                    <p>Technology</p>
+            
+                    <h3 class="heading3">University Courses</h3>
+                    <ul>
+                        <h4>College of Criminal Justice Education</h4>
+                            <ul>
+                                <li>Bachelor of Science in Criminology</li>
+                            </ul>
+                        <h4>College of Arts and Sciences</h4>
+                            <ul>
+                                <li>Bachelor of Arts Major in English</li>
+                                <li>Bachelor of Arts Major Filipino</li>
+                                <li>Bachelor of Science Major in Developmental Communication</li>
+                                <li>Bachelor of Science Major in Mathematics</li>
+                                <li>Bachelor of Science Major in Political Science</li>
+                            </ul>
+                        <h4>College of Business and Management</h4>
+                            <ul>
+                                <li>Bachelor of Science in Business Administration</li>
+                                    <ul>
+                                        <li>Major in General Management</li>
+                                        <li>Major in Human Resource Management</li>
+                                        <li>Major in Marketing</li>
+                                    </ul>
+                                <li>Bachelor of Science in Hospitality Management</li>
+                                <li>Bachelor of Science in Tourism Management</li>
+                            </ul>
+                        <h4>College of Education</h4>
+                            <ul>
+                                <li>Bachelor of Elementary Education</li>
+                                <li>Bachelor of Secondary Education</li>
+                                    <ul>
+                                        <li>Major in English</li>
+                                        <li>Major in Mathematics</li>
+                                        <li>Major in Filipino</li>
+                                    </ul>
+                            </ul>
+                        <h4>College of Technology</h4>
+                            <ul>
+                                <li>Bachelor of Science in Industrial Technology</li>
+                                    <ul>
+                                        <li>Major in Electronics Technology</li>
+                                        <li>Major in Electrical Technology</li>
+                                        <li>Major in Mechanical Technology</li>
+                                        <li>Major in Automotive Technology</li>
+                                    </ul>
+                                <li>Bachelor of Science in Information Technology</li>
+                            </ul>
+                        <h4>Maritime Education Program</h4>
+                            <ul>
+                                <li>Bachelor of Science in Marine Transportation</li>
+                                <li>Bachelor of Science in Marine Engineering</li>
+                            </ul>
+                    </ul>
+            
+                    <h3 class="heading3">Application Process</h3> <!-- Application Process -->
+                    <p>SOON TO DISCLOSE</p>
+            
+                    <h3 class="heading3">Contact Information</h3> <!-- Contact Information -->
+                    <ul>
+                        <li>Email: <a href = "siquijorstatecollege@gmail.com">siquijorstatecollege@gmail.com</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- <script src="scriptProto.js"></script> -->
+</body>
+</html>
+
