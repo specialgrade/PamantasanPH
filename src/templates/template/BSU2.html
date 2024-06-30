@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}"> -->
+    <title>PamantasanPH</title>
+    <!-- <link rel="stylesheet" type="text/css" href="stylesProto.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header> <!-- Navigation -->
+        <div class="container">
+            <div class="logo">
+                <!-- <img src="C:\Users\ALY\Documents\GitHub\PamantasanPH\src\static\images\logos\website\finallogo.png" alt="PamantasanPH Logo"> -->
+                <span>PamantasanPH</span>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-moon"></i>
+                <span>Username</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container"> <!-- Sidebar, NOT FINALIZE -->
+            <aside>
+                <div class="sidebar-item">
+                    <span>Create New List</span>
+                    <i class="fa-solid fa-circle-plus"></i>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Universities</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>Map</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-code-compare"></i>
+                    <span>Compare</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-users-rectangle"></i>
+                    <span>Team</span>
+                </div>
+                <div class="subscribe">
+                    <h3>Subscribe to our Newsletter!</h3>
+                    <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                    <input type="email" placeholder="Email">
+                    <button>Subscribe</button>
+                </div>
+                <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+            </aside>
+
+            <section> 
+                <div  id="navbar" class="heading-container"> <!-- Navigation -->
+                    <nav>
+                        <ul>
+                            <li class="dropdown">
+                                <button class="dropbtn">Requirements</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#gen">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Courses</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#special">Specializations</a>
+                                    <a href="#undergrad">Undergraduate Programs</a>
+                                    <a href="#doctoral">Doctoral Programs</a>
+                                    <a href="#masters">Master Programs</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Application</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#application">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#contacts" class="dropbtn">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div> 
+                
+                <!-- Bulacan State University -->
+                <div id="gen" class="container">
+                    <img src="{{ url_for('static', C:\Users\bianc_d72o04d\Downloads\40811eyack.com.MAIL_xsbsxxypt8dh6!App\University of Northern Philippines.png') }}" alt="Bulacan State University" class="univ-logo">
+                    <h1>Bulacan State University</h1>
+                    <h2 class="address">Guinhawa, City of Malolos, Bulacan</h2>
+                    <div class="status">
+                        <i class="status-icon fa fa-circle" id="status-icon"></i>
+                        <span class="close" id="status-text">NOT YET OPENED</span>
+                    </div>
+            
+                    <h3 id="special" class="heading3">Admission Requirements</h3> <!-- Admission Requirements -->
+                    <ol>
+                        <li>APPLICATION REQUIREMENTS
+                            <li>Two (2) recent 2x2 ID pictures with white background. Computer generated pictures are not allowed.
+                                <li>One (1) photocopy and one (1) original copy of any of the following:
+                                    <li>Certificate of Grades or Transcript of Record.
+                                        <li>For College Freshmen: Grade 11 Certificate of Grades for First and Second Semeter
+                                            <li>GRADE REQUIREMENTS
+                                                <li>For courses with Board Examinations - 85% GPA or Higher
+                                                    <li>For Non-Board-Courses - 83% GPA or Higher
+                                                        <li>For Bachelor of Industrial Technology - GPA may be lower than 83% but with no failing grades.
+                            </li>
+                            
+                    </ol>
+            
+                    <h3 id="undergrad" class="heading3">University Specializations</h3> <!-- University Specializations -->
+                    <ul>
+                        <li id="openuni">NONE</li>
+                    </ul>
+            
+                    <h3 class="heading3">University Courses</h3> <!-- University Courses --> 
+                    <ul>
+                        <li>
+                          <h4>UNDERGRADUATE PROGRAMS</h4>
+                          <ul>
+                            <li>Open Uni
+                              <ul>
+                                <li>College of Architecture and Fine Arts (CAFA)
+                                    <li>Bachelor of Science in Architecture
+                                        <li>Bachelor of Landscape Architecture
+                                            <li>Bachelor of Fine Arts Major in Visual Communication
+                                            </ul>
+                                            <li>College of Arts and Letters (CAL)
+                                                <li>Bachelor of Arts in Broadcasting
+                                                    <li>Bachelor of Arts in Journalism
+                                                        <li>Bachelor of Performing Arts (Theater Track)
+                                                            <li>Batsilyer ng Sining sa Malikhaing Pagsulat
+                                </ul>
+                                <li>College of Business Administration (CBA)
+                                    <li>Bachelor of Science in Business Administration Major in Business Economics
+                                        <li>Bachelor of Science in Business Administration Major in Financial Management
+                                            <li>Bachelor of Science in Business Administration Major in Marketing Management
+                                                <li>Bachelor of Science in Entrepreneurship
+                                                    <li>Bachelor of Science in Accountancy
+                                </ul>
+                                <li>College of Criminal Justice Education (CCJE)
+                                    <li>Bachelor of Arts in Legal Management
+                                        <li>Bachelor of Science in Criminology
+                                </ul>
+                                <li>College of Hospitality and Tourism Management (CHTM)
+                                    <li>Bachelor of Science in Hospitality Management
+                                        <li>Bachelor of Science in Tourism Management
+                                </ul>
+                                <li>College of Information and Communications Technology (CICT)
+                                    <li>Bachelor of Science in Information Technology
+                                        <li>Bachelor of Library and Information Science
+                                            <li>Bachelor of Science in Information System
+                                </ul>
+                                <li>College of Industrial Technology (CIT)
+                                    <li>Bachelor of Industrial Technology with specialization in Automotive
+                                        <li>Bachelor of Industrial Technology with specialization in Computer
+                                            <li>Bachelor of Industrial Technology with specialization in Drafting
+                                                <li>Bachelor of Industrial Technology with specialization in Electrical
+                                                    <li>Bachelor of Industrial Technology with specialization in Electronics & Communication Technology
+                                                        <li>Bachelor of Industrial Technology with specialization in Electronics Technology
+                                                            <li>Bachelor of Industrial Technology with specialization in Food Processing Technology
+                                                                <li>Bachelor of Industrial Technology with specialization in Mechanical
+                                                                    <li>Bachelor of Industrial Technology with specialization in Heating, Ventilation, Air Conditioning and Refrigeration Technology (HVACR)
+                                                                        <li>Bachelor of Industrial Technology with specialization in Mechatronics Technology
+                                                                            <li>Bachelor of Industrial Technology with specialization in Welding Technology
+                                </ul>
+                                <li>College of Law (CLaw)
+                                    <li>Bachelor of Laws
+                                        <li>Juris Doctor
+                                </ul>
+                                <li>College of Nursing (CN)
+                                    <li>Bachelor of Science in Nursing
+                                </ul>
+                                <li>College of Engineering (COE)
+                                    <li>Bachelor of Science in Civil Engineering
+                                        <li>Bachelor of Science in Computer Engineering
+                                            <li>Bachelor of Science in Electrical Engineering
+                                                <li>Bachelor of Science in Electronics Engineering
+                                                    <li>Bachelor of Science in Industrial Engineering
+                                                        <li>Bachelor of Science in Manufacturing Engineering
+                                                            <li>Bachelor of Science in Mechanical Engineering
+                                                                <li>Bachelor of Science in Mechatronics Engineering
+                                </ul>
+                                <li>College of Education (COED)
+                                    <li>Bachelor of Elementary Education
+                                        <li>Bachelor of Early Childhood Education
+                                            <li>Bachelor of Secondary Education Major in English minor in Mandarin
+                                                <li>Bachelor of Secondary Education Major in Filipino
+                                                    <li>Bachelor of Secondary Education Major in Sciences
+                                                        <li>Bachelor of Secondary Education Major in Mathematics
+                                                            <li>Bachelor of Secondary Education Major in Social Studies
+                                                                <li>Bachelor of Secondary Education Major in Values Education
+                                                                    <li>Bachelor of Physical Education
+                                                                        <li>Bachelor of Technology and Livelihood Education Major in Industrial Arts
+                                                                            <li>Bachelor of Technology and Livelihood Education Major in Information and Communication Technology
+                                                                                <li>Bachelor of Technology and Livelihood Education Major in Home Economics
+                                </ul>
+                                <li>College of Science (CS)
+                                    <li>Bachelor of Science in Biology
+                                        <li>Bachelor of Science in Environmental Science
+                                            <li>Bachelor of Science in Food Technology
+                                                <li>Bachelor of Science in Math with Specialization in Computer Science
+                                                    <li>Bachelor of Science in Math with Specialization in Applied Statistics
+                                                        <li>Bachelor of Science in Math with Specialization in Business Applications
+                                </ul>
+                                <li>College of Sports, Exercise and Recreation (CSER)
+                                    <li>Bachelor of Science in Exercise and Sports Sciences with specialization in Fitness and Sports Coaching
+                                        <li>Bachelor of Science in Exercise and Sports Sciences with specialization in Fitness and Sports Management
+                                            <li>Certificate of Physical Education
+                                </ul>
+                                <li>College of Social Sciences and Philosophy (CSSP)
+                                    <li>Bachelor of Public Administration
+                                        <li>Bachelor of Science in Social Work
+                                            <li>Bachelor of Science in Psychology
+                                    </li>                                    
+                                </ul>
+                            </li>
+                      </ul>
+            
+                    <h3 class="heading3">Application Process</h3> <!-- Application Process -->
+                    <ol>
+
+                           <li> Carefully read the "General Guidelines on Online Application for Freshmen A.Y 2023 – 2024 ". Before you start
+                            <li>the application.
+                            <li>Access the BulSU Online Application thru this link: <a href= "https://bsu.priisms.online/padmission">https://bsu.priisms.online/padmission</a>
+                            <li>Select the Campus where you want to be admitted.
+                            <li>Enter/Tick your program/course preference (1st choice and 2nd choice) then click “NEXT”.
+                            <li>Reminder:
+                            <li>Programs with Board Program / Licensure Examination, an applicant must have a General Weighted Average
+                            <li>(GWA) of 90% or better in Grade 11
+                            <li>For Non-board programs, the required General Weighted Average (GWA) is 85% or better in Grade 11
+                            <li>Proceed to the "Personal Information" section and fill out all necessary details. Strictly review all your entered
+                            <li>information before submitting then Click “Next
+                            <li>Complete your “Educational Background” Click “Next” to proceed with the application
+                            <li>NOTE: If you belong to the Upper Percentage of Graduating class Click YES and select the percentage, Applicant
+                            <li>must provide a certificate of belonging to the upper percentage
+                            <li>Upload your 2 x 2 ID Photo in formal attire with plain white background with full name displayed.
+                            <li>Complete your profile by filling out the required data in "Family Information" and "Other Information”.
+                            <li>Reminder: Choose your date of appointment for the submission of the complete
+                            <li>required documents at the BulSU Admission and Orientation Office.
+                            <li>Upload the Required ADMISSION DOCUMENTS
+                            <li>A Certified True Copy (with school seal) of School Form 9 in Grade 11.
+                            <li>A Certified True Copy of Proof of Residency (Barangay Certificate)
+                            <li>A Certified True Copy of Certification / Membership Certification / Barangay-issued Certificate /
+                            <li>ID (if applicable) of the following:
+                            <li>Certification of belonging to the Upper Percentage of Graduating class
+                            <li>NOTE: The Certification must clearly indicate the ranking and total number of
+                            <li>Graduating class
+                            <li>Member of an Indigenous Cultural Community (ICC) / Indigenous People (IP)
+                            <li>Member of Pantawid Pamilya Pilipino Program (4Ps)
+                            <li>Student with Special Needs (SSN) and other types of disabilities
+                            <li>Graduate of Alternative Learning System (ALS) (Accreditation &amp;Equivalency
+                            <li>Assessment and Certification)
+                            <li>Child of Solo Parent (Solo parent ID)
+                            <li>Student with Exemplary Artistic and Athletic Ability (certification from the Schoo Head)
+                            <li>Carefully read the "Data Privacy Consent". After doing so, put a checkmark at the box found
+                            <li>after the Data Privacy Consent. This means that you have read and understood all other
+                            <li>statements, and then click Submit Application.
+                            <li>After successfully completing the Application, you will get your Pooling Number and you will receive a
+                            <li>notification in your Email Address. We encourage every applicant to take note or Screen Shot your
+                            <li>pooling number for future reference in your application status.
+                            <li>IMPORTANT NOTE: Successful Applicants must submit the complete hard copy of the required
+                            <li>documents on the exact date of their Appointment. A face-to-face Admission Assessment will be
+                            <li>administered by the Office of Admission. Kindly check your Email regularly and also check your inbox
+                            <li>and spam/junk folder.
+                            </li>                            
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+            
+                    <h3 class="heading3">Contact Information</h3> <!-- Contact Information -->
+                    <ul>
+                        <li>919-7800 
+                            <li><a href= "officeofthepresident@bulsu.edu.ph">officeofthepresident@bulsu.edu.ph</a>
+                            </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- <script src="scriptProto.js"></script> -->
+</body>
+</html>

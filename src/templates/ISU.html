@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}"> -->
+    <title>PamantasanPH</title>
+    <!-- <link rel="stylesheet" type="text/css" href="stylesProto.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header> <!-- Navigation -->
+        <div class="container">
+            <div class="logo">
+                <!-- <img src="C:\Users\ALY\Documents\GitHub\PamantasanPH\src\static\images\logos\website\finallogo.png" alt="PamantasanPH Logo"> -->
+                <span>PamantasanPH</span>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-moon"></i>
+                <span>Username</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container"> <!-- Sidebar, NOT FINALIZE -->
+            <aside>
+                <div class="sidebar-item">
+                    <span>Create New List</span>
+                    <i class="fa-solid fa-circle-plus"></i>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Universities</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>Map</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-code-compare"></i>
+                    <span>Compare</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-users-rectangle"></i>
+                    <span>Team</span>
+                </div>
+                <div class="subscribe">
+                    <h3>Subscribe to our Newsletter!</h3>
+                    <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                    <input type="email" placeholder="Email">
+                    <button>Subscribe</button>
+                </div>
+                <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+            </aside>
+
+            <section> 
+                <div  id="navbar" class="heading-container"> <!-- Navigation -->
+                    <nav>
+                        <ul>
+                            <li class="dropdown">
+                                <button class="dropbtn">Requirements</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#gen">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Courses</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#special">Specializations</a>
+                                    <a href="#undergrad">Undergraduate Programs</a>
+                                    <a href="#doctoral">Doctoral Programs</a>
+                                    <a href="#masters">Master Programs</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Application</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#application">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#contacts" class="dropbtn">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div> 
+                
+                <!-- Isabela State University -->
+                <div id="gen" class="container">
+                    <img src="{{ url_for('static', C:\Users\bianc_d72o04d\Downloads\40811eyack.com.MAIL_xsbsxxypt8dh6!App\Isabela State Univ..png') }}" alt="Isabela State University" class="univ-logo">
+                    <h1>Isabela State University</h1>
+                    <h2 class="address">Administration Building, San Fabian, Echague, Isabela 3309</h2>
+                    <div class="status">
+                        <i class="status-icon fa fa-circle" id="status-icon"></i>
+                        <span class="close" id="status-text">NOT YET OPENED</span>
+                    </div>
+            
+                    <h3 id="special" class="heading3">Admission Requirements</h3> <!-- Admission Requirements -->
+                    <ol>
+                        <li>Freshmen Requirements:
+                        <li>1. Report Card (Form 138)
+                        <li>2. Certificate of Good 
+                        <li>3. Moral Character
+                        <li>4. Photocopy of Diploma. Two (2) copies of 2×2 ID Picture with while background and name tag
+                        <li>5. Philippine Statistic Authority Authenticated copy of Birth Certificate
+                        <li>6. Other requirements prescribed by the College or Department, CHED, PRC as deemed necesssary
+                        <li>7. Long Brown Folder
+                            </li>
+                            
+                    </ol>
+            
+                    <h3 id="undergrad" class="heading3">University Specializations</h3> <!-- University Specializations -->
+                    <ul>
+                        <li id="openuni">NONE</li>
+                    </ul>
+            
+                    <h3 class="heading3">University Courses</h3> <!-- University Courses --> 
+                    <ul>
+                        <li>
+                          <h4>UNDERGRADUATE PROGRAMS</h4>
+                          <ul>
+                            <li>Open Uni
+                              <ul>
+                                <li>Bachelor of Science in Animal Husbandry
+                                <li>Bachelor of Science in Agriculture
+                                <li>Bachelor of Science in Agribusiness 
+                                <li>Bachelor of Science in Forestry
+                                <li>Bachelor of Science in Environmental Science
+                                <li>Bachelor of Science in Biology
+                                <li>Bachelor of Science in Mathematics
+                                <li>Bachelor of Early Childhood Education
+                                <li>Bachelor of Science in Chemistry
+                                <li>Bachelor of Science in Psychology
+                                <li>Bachelor of Arts in Communication
+                                <li>Bachelor of Arts in English Language Studies
+                                <li>Bachelor of Science in Business Administration
+                                <li>Bachelor in Public Administration
+                                <li>Bachelor of Science in Management Accounting
+                                <li>Bachelor of Science in Entrepreneurship
+                                <li>Bachelor of Science in Accountancy
+                                <li>Bachelor of Science in Hospitality Management
+                                <li>Bachelor of Science in Tourism Management
+                                <li>Bachelor of Science in Agricultural and Biosystems Engineering
+                                <li>Bachelor of Science in Civil Engineering
+                                <li>Bachelor of Elementary Education
+                                <li>Bachelor of Secondary Education
+                                <li>Bachelor of Physical Education
+                                <li>Bachelor of Technology and Livelihood Education
+                                <li>Bachelor of Science in Information Technology
+                                <li>Bachelor of Science in Information Systems
+                                <li>Bachelor of Science in Computer Science
+                                <li>Bachelor of Library and Information Science
+                                <li>Bachelor of Science in Fisheries and Aquatic Sciences
+                                <li>Bachelor of Science in Criminology
+                                <li>Bachelor of Science in Law Enforcement Administration
+                                <li>Bachelor of Science in Nursing
+                                    </li>                                    
+                                </ul>
+                            </li>
+                      </ul>
+            
+                    <h3 class="heading3">Application Process</h3> <!-- Application Process -->
+                    <ol>
+
+                           <li>APPLICATION PROCEDURES
+
+                            <li>Go to <a href= "https://isu-enrollment.online/">https://isu-enrollment.online/</a> online application and provide the following details:
+                        </ul>
+                        <li>Campus you want to enroll
+                            <li>Pre-entry Status
+                                <li>Level of Education to apply
+                        </ul>
+                        <li>Complete the online application form by keying the following basic informations:
+                        </ul>
+                        <li>Personal Information
+                            <li>Educational Background
+                                <li>Contact Information
+                        </ul>
+                        <li>Choose your prefered course
+                        </ul>
+                        <li>Note: Admission of students will be based on their General Weighted Average (GWA) in the SHS Card. For programs with licensure examinations, a GWA with at least 87% will be required.
+                        </ul>
+                        <li>Submit the required documents.
+                        </ul>
+                        <li>Note: In line with the general community quarantine implemented by the government, we suggest that you submit the initial requirements for evaluation and ranking. ID picture must have a plain background for clearer identification.
+                            <li>All original application documents must be submitted on a later date to be announced by the Office of the Registrar.
+                        </ul>
+                        <li>Data Privacy Notice By accomplishing the online application and submitting to the Office of Student Affairs Services, the applicant adheres to the commitment of Isabela State University (ISU) to protect the privacy of the personal information of applicants as required by the Data Privacy Act of 2012.
+                        </ul>
+                        <li>Submission of incomplete requirements will not be processed.
+                            <li>Falsification, misrepresentation, or withholding of information will automatically nullify application and enrollment in ISU.
+                                <li>CONFIRMATION OF YOUR APPLICATION
+                                    <li>As soon as you agree with the data privacy notice of the online admission, you will see a notification of successfully submitted your application for admission. You will be notified of your Reference # and a notification will be sent to your email.
+                        </ul>
+                        <li>Note: please check your email regularly and please remember or take a photo of your reference number for future use.
+                            </li>                            
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+            
+                    <h3 class="heading3">Contact Information</h3> <!-- Contact Information -->
+                    <ul>
+                        <li><a href= "mailto:president@isu.edu.ph">Email: president@isu.edu.ph</a></li>
+                        <li>Telephone No: (078) 305-9013
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- <script src="scriptProto.js"></script> -->
+</body>
+</html>
