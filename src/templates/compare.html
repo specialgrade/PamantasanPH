@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="../static/styles/compare.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
     <header> <!-- Navigation -->
         <div class="logo">
@@ -29,8 +28,7 @@
             </div>
         </div>
     </header>
-
-    <main class="main-content">
+    <div class="container">
         <aside> <!-- Sidebar -->
             <div class="create-item">
                 <span>Create New List</span>
@@ -75,29 +73,34 @@
             <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
         </aside>
 
-        <div class="comparison-container"> <!-- Comparison Content, WILL FINALIZE - ADD ALL SCHOOLS -->
-            <div class="comparison">
-                <div class="dropdown">
-                    <input type="text" placeholder="Enter University 1">
+        <main class="comparison-container"> <!-- Comparison Content -->
+            <div class="input-wrapper">
+                <div class="input-container">
+                    <input type="text" placeholder="Enter University 1" onfocus="showDropdown(this)" oninput="filterDropdown(this)">
+                    <i class="fa-solid fa-chevron-down dropdown-icon"></i>
                     <div class="dropdown-content">
-                        <a href="#">Pamantasan ng Lungsod ng Marikina</a>
-                        <a href="#">Pamantasan ng Lungsod ng Maynila</a>
-                        <a href="#">Pamantasan ng Lungsod ng Muntinlupa</a>
-                        <a href="#">Pamantasan ng Lungsod ng Valenzuela</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Pamantasan ng Lungsod ng Marikina</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Pamantasan ng Lungsod ng Maynila</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Pamantasan ng Lungsod ng Muntinlupa</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Pamantasan ng Lungsod ng Valenzuela</a>
                     </div>
                 </div>
-                <div class="separator"></div>
-                <div class="dropdown">
-                    <input type="text" placeholder="Enter University 2">
+                <div class="input-container">
+                    <input type="text" placeholder="Enter University 2" onfocus="showDropdown(this)" oninput="filterDropdown(this)">
+                    <i class="fa-solid fa-chevron-down dropdown-icon"></i>
                     <div class="dropdown-content">
-                        <a href="#">Pamantasan ng Lungsod ng Marikina</a>
-                        <a href="#">Pamantasan ng Lungsod ng Maynila</a>
-                        <a href="#">Pamantasan ng Lungsod ng Muntinlupa</a>
-                        <a href="#">Pamantasan ng Lungsod ng Valenzuela</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Pamantasan ng Lungsod ng Marikina</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Pamantasan ng Lungsod ng Maynila</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Pamantasan ng Lungsod ng Muntinlupa</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Pamantasan ng Lungsod ng Valenzuela</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
+            <div class="comparison-column" id="university-details-1"></div>
+            <div class="comparison-column" id="university-details-2"></div>
+        </main>
+    </div>
+    
+    <!-- <script src="../static/scripts/compare.js"></script> -->
 </body>
 </html>
