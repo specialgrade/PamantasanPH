@@ -1,4 +1,4 @@
-/* Imported font families */
+/*Imported font families */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Global styling variables */
@@ -20,7 +20,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: var(--white);
 }
 
@@ -155,6 +155,11 @@ aside h1 {
     color: var(--maroon) 
 }
 
+.fa-circle-plus:hover {
+    color: #94273a; 
+    transform: scale(1.2); 
+}
+
 .sidebar-item {
     display: flex;
     align-items: center;
@@ -186,7 +191,7 @@ aside h1 {
     color: var(--white);
 }
 
-#team span::after {
+#compare span::after {
     content: "";
     display: inline-block;
     width: 10px;
@@ -255,6 +260,7 @@ aside h1 {
     font-family: 'Inter', sans-serif;
 }
 
+/* Main content styling */
 .main-content {
     padding: 20px;
     margin-top: 80px;  
