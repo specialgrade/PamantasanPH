@@ -61,7 +61,7 @@
         </a>
       </div>
       <div class="sidebar-item">
-        <a href="team.html">
+        <a href="team2.html">
           <i class="fa-solid fa-users-rectangle"></i>
           <span>Team</span>
         </a>
@@ -99,21 +99,41 @@
           <div class="tasks">
             <div class="add-task">
               <input type="text" placeholder="Add task here">
-              <button class="add-button">
+              <button class="add-button" id="addTaskBtn">
                 <span class="icon">&#x270E;</span>
                 <span class="text">Add</span>
               </button>
             </div>
           </div>
-
-          <div class="calendar">
-            <!-- Calendar -->
-          </div>
         </div>
+        
+        <div class="calendar">
+          <div class="month">
+              <button class="prev-month">&lt;</button>
+              <span></span>
+              <button class="next-month">&gt;</button>
+          </div>
+          <div class="weekdays"></div>
+          <div class="days"></div>
+      </div>
+      
+      <div class="event-modal">
+          <div class="modal-header">
+              <h2>Add Event</h2>
+              <span class="close-modal">&times;</span>
+          </div>
+          <input type="text" id="event-name" placeholder="Event Name" required>
+          <input type="date" id="event-date" required>
+          <input type="time" id="event-time" required>
+          <textarea id="event-description" placeholder="Enter event description"></textarea>
+          <div class="modal-footer">
+              <button id="save-event-btn">Save Event</button>
+          </div>
+      </div>      
       </div>
     </div>
   </main>
 
-  <!-- <script src="dashboard.js"></script> -->
+  <!-- <script src="../static/scripts/dashboard.js"></script> -->
 </body>
 </html>
