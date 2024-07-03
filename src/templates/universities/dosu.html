@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}"> -->
+    <title>PamantasanPH</title>
+    <!-- <link rel="stylesheet" type="text/css" href="stylesProto.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .left-align {
+            text-align: left;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span>PamantasanPH</span>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-moon"></i>
+                <span>Username</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <aside>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-circle-plus"></i>
+                    <span>Create New List</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Universities</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>Map</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-code-compare"></i>
+                    <span>Compare</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-users-rectangle"></i>
+                    <span>Team</span>
+                </div>
+                <div class="subscribe">
+                    <h3>Subscribe to our Newsletter!</h3>
+                    <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                    <input type="email" placeholder="Email">
+                    <button>Subscribe</button>
+                </div>
+                <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+            </aside>
+
+            <section>
+                <div id="navbar" class="heading-container">
+                    <nav>
+                        <ul>
+                            <li class="dropdown">
+                                <button class="dropbtn">Requirements</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#gen">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Courses</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#undergrad">Undergraduate Programs</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Application</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#application">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#contacts" class="dropbtn">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="main-content">
+                    <div>
+                        <img src="{{ url_for('static', filename='images/logos/universities/DOSULogo.png') }}" alt="Davao Oriental State University" class="univ-logo">
+                        <h1>Davao Oriental State University</h1>
+                        <h2 class="address">City of Mati, Davao Oriental, Philippines</h2>
+                        <div class="status">
+                            <i class="status-icon fa fa-circle" id="status-icon"></i>
+                            <span class="close" id="status-text">NOT YET OPENED</span>
+                        </div>
+
+                        <div class="section">
+                            <h3 id="special" class="heading3">Admission Requirements</h3>
+                            <ul>
+                                <li class="sub-section-title">UNDERGRADUATE</li>
+                                <ul>
+                                    <li class="sub-section-title">INCOMING FIRST YEAR STUDENTS</li>
+                                    <ul>
+                                        <li>Admissions Profile Form</li>
+                                        <li>Form 138-A with original signature of the School Principal</li>
+                                        <li>Certificate of Good Moral Character</li>
+                                        <li>PSA-authenticated Birth Certificate</li>
+                                        <li>Certified Photocopy of Marriage Contract (for married women only)</li>
+                                        <li>PSA-authenticated Birth Certificate of Husband (for married women only)</li>
+                                        <li>5pcs. recent 2×2 ID picture</li>
+                                        <li>1 short brown envelope</li>
+                                        <li>1 long brown envelope</li>
+                                        <li>1 window envelope with mailing stamp</li>
+                                    </ul>
+                                    <li class="sub-section-title">RETURNING STUDENTS</li>
+                                    <ul>
+                                        <li>Admissions Profile Form</li>
+                                        <li>University Clearance</li>
+                                        <li>Report of Grades (ROG) for the last semester attended</li>
+                                        <li>1 window envelope with mailing stamp</li>
+                                    </ul>
+                                    <li class="sub-section-title">TRANSFEREES</li>
+                                    <ul>
+                                        <li>Admissions Profile Form</li>
+                                        <li>Informative Copy of the Transcript of Records (TOR)</li>
+                                        <li>Certificate of Transfer Credential or Honorable Dismissal</li>
+                                        <li>Certificate of Good Moral Character</li>
+                                        <li>PSA-authenticated Birth Certificate</li>
+                                        <li>5pcs. recent 2×2 ID picture</li>
+                                        <li>1 short brown envelope</li>
+                                        <li>1 long brown envelope</li>
+                                        <li>1 window envelope with mailing stamp</li>
+                                    </ul>
+                                </ul>
+                                <li class="sub-section-title">GRADUATE SCHOOL</li>
+                                <ul>
+                                    <li class="sub-section-title">MSES</li>
+                                    <ul>
+                                        <li>Bachelor’s Degree</li>
+                                        <li>Good moral / Academic record</li>
+                                        <li>Honorable Dismissal for non-DOCST graduates and transferees</li>
+                                        <li>Completed application & Admission forms</li>
+                                        <li>Photocopy of Transcript of Records (TOR)</li>
+                                        <li>Two (2) Recommendation Letter as reference (academic reference and employment reference)</li>
+                                        <li>NSO copy of birth certificate</li>
+                                        <li>Medical certificate</li>
+                                        <li>Two (2) copies of recent 2×2 ID picture</li>
+                                        <li>Two (2) copies of recent 1×1 ID picture</li>
+                                    </ul>
+                                </ul>
+                                <li class="sub-section-title">UNDERGRADUATE SCHOLARSHIPS</li>
+                                <ul>
+                                    <li class="sub-section-title">College Entrance Examination for Admission and Scholarship (CEEAS)</li>
+                                    <ul>
+                                        <li>Original copy of Form 138 with an average of 90% and above (Senior High School Report Card)</li>
+                                        <li>Certificate of Good Moral Character</li>
+                                        <li>Photocopy of the student's Birth Certificate</li>
+                                        <li>Photocopy of the student's Birth Certificate of Parents/Guardians</li>
+                                        <li>2 copies of latest 2x2 ID picture</li>
+                                        <li>Recommendation from the school Principal or Guidance Counselor</li>
+                                    </ul>
+                                </ul>
+                            </ul>
+
+                            <h3 id="application" class="heading3">Application Process</h3>
+                            <p class="left-align">The admission process for Davao Oriental State University involves the following steps:</p>
+                            <ul>
+                                <li>Complete the Admission Profile Form available at the Admissions Office or the university website.</li>
+                                <li>Submit all the required documents.</li>
+                                <li>Attend the scheduled interview and examination.</li>
+                                <li>Wait for the release of the admission results.</li>
+                            </ul>
+
+                            <h3 id="contacts" class="heading3">Contacts</h3>
+                            <p class="left-align">For more information, you can reach us at:</p>
+                            <ul>
+                                <li>Email: admissions@dosu.edu.ph</li>
+                                <li>Phone: (082) 123-4567</li>
+                                <li>Address: City of Mati, Davao Oriental, Philippines</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" integrity="sha512-8aI7Zw5S0B7gyG1DBeF54zD7FwX+2G3nTn4E3RtTDd0e5J2TkwExEO7ZUB5waAke+bzU9bMyw+F6xDBaFBlKvQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

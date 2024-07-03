@@ -7,7 +7,7 @@ from sqlalchemy.exc import SQLAlchemyError
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+#load_dotenv()
 
 email_sender = os.getenv('email')
 
@@ -16,7 +16,22 @@ def init_app(app):
     # routes to go to the home page
     @app.route('/', methods=['GET', 'POST'])
     def index():
-        return render_template('index.html')
+        return render_template('dashboard.html')
+    
+    # compare feature
+    @app.route('/dashboard/compare/', methods=['GET', 'POST'])
+    
+
+    # teams 
+    @app.route('/dashboard/teams/', methods=['GET', 'POST'])
+    def teams():
+        return render_template('teams.html')
+    
+
+
+
+
+    # =========================================================================================
     
     # when users click the home button, they will be redirected to the home page
     @app.route('/home', methods=['GET', 'POST'])

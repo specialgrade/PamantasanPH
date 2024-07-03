@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PamantasanPH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .left-align {
+            text-align: left;
+            margin-left: 20px; 
+        }
+    </style>
+</head>
+
+<body>
+    <header> 
+        <div class="container">
+            <div class="logo">
+                <span>PamantasanPH</span>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-moon"></i>
+                <span>Username</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside>
+            <div class="sidebar-item">
+                <span>Create New List</span>
+                <i class="fa-solid fa-circle-plus"></i>
+            </div>
+            <div class="sidebar-item">
+                <i class="fa-solid fa-box-archive"></i>
+                <span>Dashboard</span>
+            </div>
+            <div class="sidebar-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Universities</span>
+            </div>
+            <div class="sidebar-item">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <span>Map</span>
+            </div>
+            <div class="sidebar-item">
+                <i class="fa-solid fa-code-compare"></i>
+                <span>Compare</span>
+            </div>
+            <div class="sidebar-item">
+                <i class="fa-solid fa-users-rectangle"></i>
+                <span>Team</span>
+            </div>
+            <div class="subscribe">
+                <h3>Subscribe to our Newsletter!</h3>
+                <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                <input type="email" placeholder="Email">
+                <button>Subscribe</button>
+            </div>
+            <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+        </aside>
+
+        <main> 
+            <div id="navbar" class="heading-container">
+                <nav>
+                    <ul>
+                        <li class="dropdown">
+                            <button class="dropbtn">Requirements</button>
+                            <i class="fa-solid fa-chevron-down"></i>
+                            <div class="dropdown-content">
+                                <a href="#gen">General</a>
+                            </div>
+                        </li> 
+                        <li class="dropdown">
+                            <button class="dropbtn">Courses</button>
+                            <i class="fa-solid fa-chevron-down"></i>
+                            <div class="dropdown-content">
+                                <a href="#undergrad">Undergraduate Programs</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <button class="dropbtn">Application</button>
+                            <i class="fa-solid fa-chevron-down"></i>
+                            <div class="dropdown-content">
+                                <a href="#application">General</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#contacts" class="dropbtn">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div> 
+
+            <div class="main-content">
+                <div>
+                    <img src="{{ url_for('static', filename='images/logos/universities/DLSSCLogo.png') }}" alt="Davao del Sur State College-Main" class="univ-logo">
+                    <h1>Davao del Sur State College-Main</h1>
+                    <h2 class="address">Brgy. Matti, Digos City, Davao del Sur , Digos, Philippines</h2>
+                    <div class="status">
+                        <i class="status-icon fa fa-circle" id="status-icon"></i>
+                        <span class="close" id="status-text">NOT YET OPENED</span>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3 id="special" class="heading3">Admission Requirements</h3>
+                    <ul>
+                        <li class="sub-section-title">ADMISSION CREDENTIALS</li>
+                        <ul>
+                            <li class="sub-section-title">INCOMING FIRST-YEAR STUDENT</li>
+                            <ul>
+                                <li>Senior High School Report Card (Form 138) or its equivalent from the school last attended with the eligibility certificate indicated and signed by the authorized school official</li>
+                                <li>Certificate of Good Moral Character from the last school attended</li>
+                                <li>Birth Certificate authenticated by PSA (photocopy)</li>
+                                <li>DSSC Admission Test result</li>
+                                <li>Four (4) pieces of passport size picture with white background and name tag</li>
+                                <li>Three (3) copies of 2x2 colored ID picture</li>
+                                <li>Physical examination and medical clearance from DSSC medical doctor</li>
+                            </ul>
+                            <li class="sub-section-title">RETURNEE STUDENT</li>
+                            <ul>
+                                <li>Evaluation of grades signed by the respective Dean</li>
+                                <li>Four (4) copies of 2x2 colored ID picture</li>
+                                <li>Honorable dismissal/Transfer Credentials</li>
+                                <li>Medical Clearance from DSSC medical doctor</li>
+                            </ul>
+                            <li class="sub-section-title">TRANSFER STUDENT</li>
+                            <ul>
+                                <li>Evaluation of grades signed by the respective Dean</li>
+                                <li>Four (4) pieces of passport size picture with white background and name tag</li>
+                                <li>Three (3) copies of 2x2 colored ID picture</li>
+                                <li>Medical Clearance from DSSC medical doctor</li>
+                            </ul>
+                            <li class="sub-section-title">GRADUATE STUDENT</li>
+                            <ul>
+                                <li>Original or authenticated copy of Transcript of Records (TOR)</li>
+                                <li>Four (4) pieces of passport size picture with white background and name tag</li>
+                                <li>Three (3) copies of 2x2 colored ID picture</li>
+                                <li>Medical Clearance from DSSC medical doctor</li>
+                            </ul>
+                        </ul>
+                    </ul>
+
+                    <h3 id="gen" class="heading3">General Requirements</h3>
+                    <ul>
+                        <li>Original and Photocopy of Senior High School Card</li>
+                        <li>Original and Photocopy of NSO/PSA Birth Certificate</li>
+                        <li>Certificate of Good Moral Character</li>
+                        <li>4 pcs. of 2x2 recent colored photos</li>
+                        <li>2 pcs. of 1x1 ID photo</li>
+                        <li>Physical Exam Results</li>
+                        <li>Accomplished Application Form</li>
+                    </ul>
+
+                    <h3 id="undergrad" class="heading3">Undergraduate Programs</h3>
+                    <ul>
+                        <li>Bachelor of Science in Information Technology</li>
+                        <li>Bachelor of Science in Business Administration</li>
+                        <li>Bachelor of Science in Hospitality Management</li>
+                        <li>Bachelor of Science in Agriculture</li>
+                    </ul>
+
+                    <h3 id="contacts" class="heading3">Contact Information</h3>
+                    <ul>
+                        <li>Email: info@dssc.edu.ph</li>
+                        <li>Phone: +63 82 553 4567</li>
+                        <li>Address: Brgy. Matti, Digos City, Davao del Sur</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <!-- <script src="scriptProto.js"></script> -->
+    </div>
+</body>
+</html>
