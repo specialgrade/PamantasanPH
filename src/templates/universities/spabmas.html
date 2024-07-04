@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}"> -->
+    <title>PamantasanPH</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../static/styles/univsDetails2.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/univsDetails2.css') }}"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header> 
+        <div class="container">
+            <div class="logo">
+                <span>PamantasanPH</span>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-moon"></i>
+                <span>Username</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <aside>
+                <div class="sidebar-item">
+                    <span>Create New List</span>
+                    <i class="fa-solid fa-circle-plus"></i>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Universities</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>Map</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-code-compare"></i>
+                    <span>Compare</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-users-rectangle"></i>
+                    <span>Team</span>
+                </div>
+                <div class="subscribe">
+                    <h3>Subscribe to our Newsletter!</h3>
+                    <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                    <input type="email" placeholder="Email">
+                    <button>Subscribe</button>
+                </div>
+                <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+            </aside>
+            <section> 
+                <div id="navbar" class="heading-container">
+                    <nav>
+                        <ul>
+                            <li class="dropdown">
+                                <button class="dropbtn">Requirements</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#gen">General</a>
+                                </div>
+                            </li> 
+                            <li class="dropdown">
+                                <button class="dropbtn">Courses</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#undergrad">Undergraduate Programs</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Application</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#application">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#contacts" class="dropbtn">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="main-content">
+                    <div>
+                        <img src="{{ url_for('static', filename='images/logos/universities/SPABMASLogo.png') }}" alt="Southern Philippines Agriculture, Business, Marine and Aquatic School of Technology" class="univ-logo">
+                        <h1>Southern Philippines Agriculture, Business, Marine and Aquatic School of Technology</h1>
+                        <h2 class="address">Digos City, Davao del Sur, Philippines</h2>
+                        <div class="status">
+                            <i class="status-icon fa fa-circle" id="status-icon"></i>
+                            <span class="close" id="status-text">NOT YET OPENED</span>
+                        </div>
+                        <div class="section">
+                            <h3 id="special" class="heading3">Admission Requirements</h3>
+                            <ul>
+                                <li class="sub-section-title">FRESHMEN</li>
+                                <ul>
+                                    <li>Report Card (Form 137)</li>
+                                    <li>Birth Certificate (NSO Authenticated)</li>
+                                    <li>Good Moral Certificate</li>
+                                    <li>Four (4) 1×1 ID pictures</li>
+                                    <li>Medical Certificate</li>
+                                    <li>Entrance Examination Results</li>
+                                    <li>One (1) long brown folder</li>
+                                </ul>
+                                <li class="sub-section-title">TRANSFEREES</li>
+                                <ul>
+                                    <li>Certificate of transfer credential, preferably accompanied by an informative copy of the transcript of records</li>
+                                    <li>Good Moral Certificate from the previous school</li>
+                                    <li>Honorable Dismissal</li>
+                                    <li>Birth Certificate (NSO Authenticated)</li>
+                                    <li>Medical Certificate</li>
+                                    <li>Four (4) 1×1 ID pictures</li>
+                                    <li>Entrance Examination Results</li>
+                                    <li>One (1) long brown folder</li>
+                                </ul>
+                                <li class="sub-section-title">Returning Students (Returnees)</li>
+                                <ul>
+                                    <li>Shall be considered for readmission depending on their previous scholastic performance; must have complied with all other requirements for readmission.</li>
+                                </ul>
+                            </ul>
+                        </div>
+                        <div class="section">
+                            <h3 id="special" class="heading3">University Specializations</h3>
+                            <ul>
+                                <li>N/A</li>
+                            </ul>
+                        </div>
+                        <div class="section">
+                            <h3 id="special" class="heading3">University Courses</h3>
+                            <ul>
+                                <li class="sub-section-title">UNDERGRADUATE PROGRAMS</li>
+                                <ul>
+                                    <li>BSF Bachelor of Science in Fisheries</li>
+                                    <li>DFT Diploma in Fishery Technology</li>
+                                    <li>BSMB Bachelor of Science in Marine Biodiversity</li>
+                                    <li>BSES Bachelor of Science in Environmental Science</li>
+                                    <li>BSAB Bachelor of Science in Agribusiness</li>
+                                    <li>BAT Bachelor of Agricultural Technology</li>
+                                    <li>DAT Diploma in Agricultural Technology</li>
+                                    <li>BSA Bachelor of Science in Agriculture</li>
+                                    <li>BSABE Bachelor of Science in Agricultural and Biosystems Engineering</li>
+                                    <li>BSDC Bachelor in Development Communication</li>
+                                    <li>BSED Bachelor in Secondary Education - major in: Mathematics, Biological Science, Science</li>
+                                    <li>BSED Major in English</li>
+                                    <li>BEED Bachelor in Elementary Education</li>
+                                    <li>BTLED Bachelor in Technological Livelihood Education - major in: Agri-Fishery Arts, Home Economics</li>
+                                    <li>BPA Bachelor in Public Administration</li>
+                                    <li>BSIT Bachelor of Science in Information Technology</li>
+                                    <li>ACT Associate in Computer Technology</li>
+                                    <li>BSAIS Bachelor of Science in Accounting Information System</li>
+                                    <li>BSC Bachelor of Science in Criminology</li>
+                                    <li>BSSW Bachelor of Science in Social Work</li>
+                                    <li>BSOA Bachelor of Science in Office Administration</li>
+                                </ul>
+                                <li class="sub-section-title">GRADUATE STUDIES</li>
+                                <ul>
+                                    <li>MAEd-LT Master of Arts in Education</li>
+                                    <li>MAEd-MT Master of Arts in Education</li>
+                                    <li>MAEd-EM Master of Arts in Education</li>
+                                    <li>MAEd-ST Master of Arts in Education</li>
+                                    <li>MBA Master of Business Administration</li>
+                                    <li>PhD Development Administration Major in: Rural Development</li>
+                                </ul>
+                            </ul>
+                        </div>
+                        <div class="section">
+                            <h3 id="special" class="heading3">Application Process</h3>
+                            <ul>
+                                <li class="sub-section-title">I. ADMISSION PROCEDURE</li>
+                                <ul>
+                                    <li>Submit the requirements at the Registrar’s Office</li>
+                                    <li>Secure a copy of your School Identification Number (SIN)</li>
+                                    <li>Proceed to the Dean’s Office for evaluation of your credentials</li>
+                                    <li>Present your SIN to the Dean for admission and to be included in the list of examinees</li>
+                                    <li>Pay the application fee at the cashier and secure an official receipt</li>
+                                    <li>Submit the accomplished application form and official receipt at the Dean’s Office</li>
+                                    <li>Secure your permit to take the entrance examination at the Registrar’s Office</li>
+                                </ul>
+                                <li class="sub-section-title">II. ONLINE APPLICATION PROCEDURE</li>
+                                <ul>
+                                    <li>Sign-up and fill out the application form</li>
+                                    <li>Upload the necessary documents in PDF format (except for ID picture)</li>
+                                    <li>Check your application status and schedule for the online examination</li>
+                                    <li>Take the online entrance examination</li>
+                                    <li>Wait for the results and further instructions through email</li>
+                                </ul>
+                            </ul>
+                        </div>
+                        <div class="section">
+                            <h3 id="special" class="heading3">Contacts</h3>
+                            <ul>
+                                <li><i class="fa fa-phone" aria-hidden="true"></i> (082) 553-2364</li>
+                                <li><i class="fa fa-envelope" aria-hidden="true"></i> registrar@spabmas.edu.ph</li>
+                                <li><i class="fa fa-map-marker" aria-hidden="true"></i> Digos City, Davao del Sur, Philippines</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- <script src="{{ url_for('static', filename='js/script.js') }}"></script> -->
+</body>
+</html>

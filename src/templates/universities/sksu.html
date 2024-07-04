@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}"> -->
+    <title>PamantasanPH</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../static/styles/univsDetails2.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/univsDetails2.css') }}"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header> 
+        <div class="container">
+            <div class="logo">
+                <span>PamantasanPH</span>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-moon"></i>
+                <span>Username</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <aside>
+                <div class="sidebar-item">
+                    <span>Create New List</span>
+                    <i class="fa-solid fa-circle-plus"></i>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Universities</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>Map</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-code-compare"></i>
+                    <span>Compare</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-users-rectangle"></i>
+                    <span>Team</span>
+                </div>
+                <div class="subscribe">
+                    <h3>Subscribe to our Newsletter!</h3>
+                    <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                    <input type="email" placeholder="Email">
+                    <button>Subscribe</button>
+                </div>
+                <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+            </aside>
+
+            <section> 
+                <div id="navbar" class="heading-container">
+                    <nav>
+                        <ul>
+                            <li class="dropdown">
+                                <button class="dropbtn">Requirements</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#gen">General</a>
+                                </div>
+                            </li> 
+                            <li class="dropdown">
+                                <button class="dropbtn">Courses</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#undergrad">Undergraduate Programs</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Application</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#application">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#contacts" class="dropbtn">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div> 
+
+    <div class="main-content">
+            <div>
+                <img src="{{ url_for('static', filename='images/logos/universities/SKSULogo.png') }}" alt="Sultan Kudarat State University" class="univ-logo">
+                <h1>Sultan Kudarat State University</h1>
+                <h2 class="address">EJC Montilla, 9800, Province of Sultan Kudarat, Philippines</h2>
+                <div class="status">
+                    <i class="status-icon fa fa-circle" id="status-icon"></i>
+                    <span class="close" id="status-text">CLOSED</span>
+                </div>
+
+                <div class="section">
+                    <h3 id="special" class="heading3">Admission Requirements</h3>
+                    <ul>
+                        <li class="sub-section-title">INCOMING FRESHMEN:</li>
+                        <ul>
+                            <li>High School Card</li>
+                            <li>Certificate of Good Moral Character</li>
+                            <li>Authenticated Copy of Birth Certificate (PSA)</li>
+                            <li>Medical Certificate</li>
+                            <li>HEPA B Result (for BS Nursing, MedTech and Diploma in Midwifery)</li>
+                            <li>Certificate of Residence from Brgy. Chairman</li>
+                            <li>2 pcs. 2x2 ID Picture (white background)</li>
+                            <li>Result of Admission Test</li>
+                            <li>Standardized Aptitude Test/College Qualifying Test Result</li>
+                            <li>Result of Interview</li>
+                            <li>2 pcs long brown envelopes</li>
+                        </ul>
+                        <li class="sub-section-title">TRANSFEREE:</li>
+                        <ul>
+                            <li>Certificate of transfer Credential (Honorable Dismissal)</li>
+                            <li>Transcript of Records (TOR) for reference</li>
+                            <li>Certificate of Good Moral Character</li>
+                            <li>Authenticated Copy of Birth Certificate (PSA)</li>
+                            <li>Medical Certificate</li>
+                            <li>HEPA B Result (for BS Nursing, MedTech and Diploma in Midwifery)</li>
+                            <li>Certificate of Residence from Brgy. Chairman</li>
+                            <li>Parent's Income Tax Return (ITR)</li>
+                            <li>2 pcs. 2x2 ID Picture (white background)</li>
+                            <li>Result of Admission test</li>
+                            <li>Result of Interview</li>
+                            <li>GPA of 85% and above for those seeking admission in courses which require licensure examination (with no failing grade)</li>
+                            <li>2 pcs long brown envelopes</li>
+                        </ul>
+                        <li class="sub-section-title">FOREIGN STUDENTS:</li>
+                        <ul>
+                            <li>Standardized Aptitude Test/College Qualifying Test Result</li>
+                            <li>Certificate of Completion of a Secondary Curriculum</li>
+                            <li>Original Transcript of Records</li>
+                            <li>Personal Data with 2x2 ID Picture</li>
+                            <li>Affidavit of Support</li>
+                            <li>Alien Certificate of Registration</li>
+                            <li>Result of TOEFL (for non-native speaker of English)</li>
+                            <li>Medical Certificate</li>
+                            <li>Visa</li>
+                            <li>Certificate of Drug Test with negative result</li>
+                            <li>2 pcs long brown envelopes</li>
+                        </ul>
+                        <li class="sub-section-title">OLD RETURNING STUDENT:</li>
+                        <ul>
+                            <li>Renewal of Registration of a student is dependent on his previous records.</li>
+                            <li>Re-admission upon presentation of a leave of Absence duly signed and after validation of records by the University Registrar.</li>
+                            <li>A returning student who exceeds the allowable number of residency with the University shall be considered new student provided he/she opts to enroll in another curricular program.</li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3 id="special" class="heading3">University Specializations</h3>
+                    <ul>
+                        <li>N/A</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3 id="special" class="heading3">University Courses</h3>
+                    <ul>
+                        <li class="sub-section-title">DEGREE PROGRAMS</li>
+                        <li class="sub-section-title">GRADUATE PROGRAMS:</li>
+                        <ul>
+                            <li>Doctor of Philosophy in Educational Management and Leadership (EdD-EML)</li>
+                            <li>Doctor of Philosophy in Institutional Development and Management - major in: Public Management (PhD IDM-PM)</li>
+                            <li>Doctor of Philosophy in Agricultural Science (PhD Agricultural Science)</li>
+                            <li>Master in Public Management (MPM)</li>
+                            <li>Master in Agricultural Science and Technology (MAST)</li>
+                            <li>Master of Arts in Educational Management (MaEd-EM)</li>
+                            <li>Master of Arts in Teaching - major in: Science</li>
+                            <li>Master of Arts in Teaching - major in: Mathematics</li>
+                            <li>Master of Arts in Teaching - major in: English</li>
+                            <li>Master of Arts in Teaching - major in: Filipino</li>
+                            <li>Master of Arts in Teaching - major in: Social Science</li>
+                            <li>Master of Arts in Teaching - major in: Livelihood and Technology Education</li>
+                            <li>Master in Information Technology</li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3 id="special" class="heading3">Application Process</h3>
+                    <ul>
+                        <li class="sub-section-title">NEW/BEGINNING FRESHMEN STUDENT:</li>
+                        <ul>
+                            <li>Accepted regardless of age, nationality, religion, and political affiliations.</li>
+                            <li>Must have graduated from a recognized secondary school in the K-12 program.</li>
+                            <li>Must not have enrolled in any academic college subject/s prior to their enrollment as beginning freshmen otherwise they shall be classified as transferees.</li>
+                            <li>Not accepted during the Second Semester or during the Summer Term.</li>
+                            <li>Students enrolled in vocational courses or those not leading to a degree program shall be classified as beginning freshmen.</li>
+                            <li>Must comply with all the other prescribed admission requirements of the University.</li>
+                            <li>Must pledge to abide by and comply with all the rules and regulations of the University.</li>
+                        </ul>
+                        <li class="sub-section-title">TRANSFEREES:</li>
+                        <ul>
+                            <li>Must submit an official Transcript of Records during enrollment (TOR).</li>
+                            <li>Must have no failing grade and must have a GPA of 2.0 or higher.</li>
+                            <li>Transferees who seek enrollment in any academic program requiring licensure examination must not have a failing grade in any academic and non-academic subjects.</li>
+                            <li>Only Students who have enrolled in any course leading to a degree program shall be admitted as transferees.</li>
+                            <li>Admission shall be on probation basis during the first term of stay in the University based on the performance and behavior of the student.</li>
+                            <li>Transferees from SUC institutions shall be admitted and treated as regular students in accordance with the existing policies of the University.</li>
+                            <li>Qualified transferees may be admitted to fill-up the quota of the course applied for in accordance to the existing policies.</li>
+                        </ul>
+                        <li class="sub-section-title">FOREIGN STUDENTS:</li>
+                        <ul>
+                            <li>Must submit an official Transcript of Records during enrollment (TOR).</li>
+                            <li>Must have no failing grade and must have a GPA of 2.0 or higher.</li>
+                            <li>Transferees who seek enrollment in any academic program requiring licensure examination must not have a failing grade in any academic and non-academic subjects.</li>
+                            <li>Only Students who have enrolled in any course leading to a degree program shall be admitted as transferees.</li>
+                            <li>Admission shall be on probation basis during the first term of stay in the University based on the performance and behavior of the student.</li>
+                            <li>Transferees from SUC institutions shall be admitted and treated as regular students in accordance with the existing policies of the University.</li>
+                            <li>Qualified transferees may be admitted to fill-up the quota of the course applied for in accordance to the existing policies.</li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3 id="special" class="heading3">Contacts</h3>
+                    <ul>
+                        <li>Email Address(es): <a href="mailto:info@sksu.edu.ph">info@sksu.edu.ph</a>, <a href="mailto:ict@sksu.edu.ph">ict@sksu.edu.ph</a></li>
+                        <li>Phone Numbers:</li>
+                        <ul>
+                            <li>(064) 200 7336</li>
+                            <li>(064) 200 4264</li>
+                        </ul>
+                        <li>Website(s):</li>
+                        <ul>
+                            <li><a href="https://sksu.edu.ph/">https://sksu.edu.ph/</a></li>
+                            <li><a href="https://www.facebook.com/SKSUfbofficial/">https://www.facebook.com/SKSUfbofficial/</a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- <script src="scriptProto.js"></script> -->
+</body>
+</html>

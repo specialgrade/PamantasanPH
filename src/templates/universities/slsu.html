@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}"> -->
+    <title>PamantasanPH</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../static/styles/univsDetails2.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/univsDetails2.css') }}"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header> <!-- Navigation -->
+        <div class="container">
+            <div class="logo">
+                <!-- <img src="C:\Users\ALY\Documents\GitHub\PamantasanPH\src\static\images\logos\website\finallogo.png" alt="PamantasanPH Logo"> -->
+                <span>PamantasanPH</span>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-moon"></i>
+                <span>Username</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container"> <!-- Sidebar, NOT FINALIZE -->
+            <aside>
+                <div class="sidebar-item">
+                    <span>Create New List</span>
+                    <i class="fa-solid fa-circle-plus"></i>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Universities</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>Map</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-code-compare"></i>
+                    <span>Compare</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-users-rectangle"></i>
+                    <span>Team</span>
+                </div>
+                <div class="subscribe">
+                    <h3>Subscribe to our Newsletter!</h3>
+                    <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                    <input type="email" placeholder="Email">
+                    <button>Subscribe</button>
+                </div>
+                <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+            </aside>
+
+            <section> 
+                <div  id="navbar" class="heading-container"> <!-- Navigation -->
+                    <nav>
+                        <ul>
+                            <li class="dropdown">
+                                <button class="dropbtn">Requirements</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#gen">General</a>
+                                </div>
+                            </li> 
+                            <li class="dropdown">
+                                <button class="dropbtn">Courses</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#undergrad">Undergraduate Programs</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Application</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#application">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#contacts" class="dropbtn">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div> 
+                
+                <!-- Southern Luzon State University -->
+                <div id="gen" class="container">
+                    <img src="{{ url_for('static', filename='images/logos/universities/SLSULogo.png') }}" alt="Southern Luzon State University" class="univ-logo">
+                    <h1>Southern Luzon State University</h1>
+                    <h2 class="address">Lucban - Tayabas Rd, Lucban, 4328 Quezon</h2>
+                    <div class="status">
+                        <i class="status-icon fa fa-circle" id="status-icon"></i>
+                        <span class="close" id="status-text">NOT YET OPENED</span>
+                    </div>
+            
+                    <h3 id="special" class="heading3">Admission Requirements</h3> <!-- Admission Requirements -->
+                    <ol>
+                        <li>Duly accomplished College Application Form</li>
+                        <li>Clear copy of Academic Records</li>
+                        <p>For Grade 12 students expected to graduate at the end of the Academic Year:
+                            Grade 11 Report Card duly signed by the principal and class adviser
+                            </p>
+                        <p>For Grade 12 students expected to graduate at the end of the Academic Year:
+                            Grade 11 Report Card duly signed by the principal and class adviser
+                            </p>
+                        <p>For Transferees and returnees:
+                            Transcript of Records (TOR)/ Copy of Grades with GWA. They must have a GWA of 2.25 (83%) or better, without INC and/or failing grades.
+                            </p>
+                        <li>Updated Certificate of income for BOTH parent(s)/ guardian(s)</li>
+                        <p>For 4P’s members:
+                            Certification from MSWD/DSWD indicating the Household Number and name of beneficiary.
+                            </p>
+                        <p>For Indigenous People Member (“Mga Katutubo”):
+                            Certification from the IP Chieftain
+                            </p>
+                        <p>Enhanced Comprehensive Local Integration Program (E-CLIP) Beneficiary/ Payapa at Masaganang Pamayanan-Peaceful and Resilient Communities (PAMANA) Beneficiaries: Certification from DILG/ Office of the Presidential Adviser on the Peace Process (OPAPP)</p>
+                        <p>Parents as business owners:
+                            BIR Form 1701A-2022
+                            </p>
+                        <p>Parents employed in Government or Other Agencies:
+                            BIR Form 2316-2022; and/or
+                            Certification from the Human Resources indicating its salary and other compensation related details
+                            </p>
+                        <p>Parents working abroad:
+                            Overseas employment contract
+                            </p>
+                        <p>With Deceased parents:
+                            Death Certificate
+                            </p>
+                        <p>For Solo/Single Parent:
+                            Solo Parent Certificate from MSWD/DSWD; and/or
+                            Notarized Sworn Statement indicating their current status (single, solo-parent, separated, etc.) and the amount and source of income.
+                            </p>
+                        <p>Not classified from a-h (Unemployed, Housewife/ Househusband, no- fixed income, guardianship, self-supporting):
+                            Notarized Sworn Statement (indicating the name of Parents/Guardian Source and amount of income)
+                            </p>
+                        <li>Certificate of Residency issued by the Barangay</li>
+                        <li>2×2 picture with nametag and white background (4pcs)</li>
+                        <li>Long white Folder (2)</li>
+                        <li>Additional Requirements for Athletes and/or Culture and Arts Delegates:
+                            Certification from the current school, signed by the principal & coach or; Certification from the municipality or any institution (Private or Public) that he/she is one of the official candidates (indicate to which specific sports or culture and art activities belonged and the highest level reached; example: Regional, National, International, etc.)
+                            APPLICATION REQUIREMENTS SHOULD BE SUBMITTED TO THE CAMPUS OF YOUR FIRST CHOICE.
+                            </li>
+                        <p>Note: During the college application period, the Student Admission Office will accommodate limited number of applicants per day for the MAIN CAMPUS (Lucban, Quezon) from MONDAY – SUNDAY; 8:00am to 5:00 pm (except holidays).
+                            <strong>Weekdays (Mon-Fri): 120 applicants/day</strong>
+                            <strong>Weekends (Sat-Sun): 200 applicants/day</strong>
+                            SATELLITE CAMPUSES are open from <strong>MONDAY-FRIDAY (except Holidays); 8:00 am to 5:00pm.</strong>
+                            </p>
+                        <p>Also, NO FEES will be collected for the purpose of application and examination.</p>
+                    </ol>
+
+                    <h3 class="heading3">University Courses</h3> <!-- University Courses --> 
+                    <ul>
+                        
+                          <h4>UNDERGRADUATE PROGRAMS</h4>
+                            <li><strong>Teacher Education</strong>
+                              <ul>
+                                <li>Bachelor of Elementary Education</li>
+                                <p>Major in: </p>
+                                    <ul>
+                                    <li>Early Childhood Education</li>
+                                    <li>General Education</li>
+                                    <li>Special Education</li>
+                                    </ul>
+                                <li>Bachelor in Physical Education</li>
+                                <li>Bachelor of Secondary Education</li>
+                                <p>Major in: </p>
+                                    <ul>
+                                    <li>English</li>
+                                    <li>Filipino</li>
+                                    <li>Mathematics</li>
+                                    <li>Music, Arts, Physical Education and Health</li>
+                                    <li>Physical Science</li>
+                                    <li>Technology and Livelihood Education</li>
+                                    </ul>
+                                <li>Bachelor in Physical Education major in Sports Wellness and Management </li>
+                                </ul>
+                            </li>
+                            </li>
+                                <li><strong>Professional & Technical Courses</strong>
+                                    <ul>
+                                        <li>BS in Industrial Technology</li>
+                                        <p>Major in:</p>
+                                            <ul>
+                                                <li>Automotive Technology</li>
+                                                <li>Computer Technology</li>
+                                                <li>Electrical Technology </li>
+                                                <li>Electronics Technology</li>
+                                                <li>Food Technology</li>
+                                                <li>Industrial Design Technology</li>
+                                                <li>Mechanical Technology</li>
+                                            </ul>
+                                    </ul>
+                                </li>
+                            </li>
+                            <li><strong>Agriculture</strong>
+                                <ul>
+                                <li>BS Nursing</li>
+                                <li>BS Nutrition & Dietetics</li>
+                                <li>Diploma in Midwifery (2 years)</li>
+                                </ul>
+                            </li>
+    
+                            <li><strong>Business</strong>
+                                <ul>
+                                <li>BS in Accountancy</li>
+                                <li>BS in Business Administration</li>
+                                    <p>Major in: </p>
+                                    <ul>
+                                        <li>Financial Management</li>
+                                        <li>Human Resource Development Management</li>
+                                        <li>Marketing Management</li>
+                                    </ul>
+                                </ul>
+                            </li>
+
+                            <li><strong>Engineering</strong>
+                                    <ul>
+                                        <li>BS in Civil Engineering</li>
+                                        <li>BS in Computer Engineering</li>
+                                        <li>BS in Electrical Engineering</li>
+                                        <li>BS in Electronics and Communications Engineering</li>
+                                        <li>BS in Industrial Engineering</li>
+                                        <li>BS in Mechanical Engineering</li>
+                                    </ul>
+                            <li><strong>Science</strong>
+                                <ul>
+                                    <li>BS in Biology</li>
+                                    <li>BS in Environmental Science</li>
+                                    <li>BS in Mathematics</li>
+                                </ul>
+                            </li>
+                            <li><strong>Medical & Healthcare</strong>
+                                <ul>
+                                    <li>BS in Nursing</li>
+                                </ul>
+                            </li>
+                            <li><strong>Humanities</strong>
+                                <ul>
+                                    <li>AB in History</li>
+                                </ul>
+                            </li>
+                            <li><strong>Arts & Designs</strong>
+                                <ul>
+                                    <li>BS in Industrial Technology major in Industrial Design Technology</li>
+                                </ul>
+                            </li>
+                            <li><strong>Communication & Information Science</strong>
+                                <ul>
+                                    <li>AB in Communication</li>
+                                </ul>
+                            </li>
+                            <li><strong>IT, Computer Science & Programming</strong>
+                                <ul>
+                                    <li>BS in Computer Engineering</li>
+                                </ul>
+                            </li>
+                            <li><strong>Social Science</strong>
+                                <ul>
+                                    <li>AB in Psychology</li>
+                                </ul>
+                            </li>
+                            <li><strong>Tourism, Hospitality & Culinary</strong>
+                                <ul>
+                                    <li>BS in Hotel and Restaurant Management</li>
+                                </ul>
+                            </li>
+                            
+                    </ul>
+            
+                    <h3 class="heading3">Application Process</h3> <!-- Application Process -->
+                    <ol>
+                        <p> IN-PERSON ENROLLMENT PROCEDURE FOR COLLEGE STUDENTS </p>
+                        <li>Proceed to your respective colleges for subject advising of Department Chairperson</li>
+                        <li>Proceed to Office of the Student Affairs and Services (Scholarship Unit) and fill-up scholarship application</li>
+                        <li>Proceed to your college's designated registration area for printing of registration form</li>
+                        <li>Check if all the subjects adviseda is printed in the registration form</li>
+                        <li>Read the "Student's Pledge" and sign the registration form</li>
+                        <li>Proceed to the Dean's Office for the signature on your registration form</li>
+                        <li>Proceed to Office of the University Registrar to secure "ENROLLED" stamp on the printed registration form</li>
+                        <li>Proceed to Office of the University Registrar to secure "ENROLLED" stamp on the printed registration form</li>
+                        
+                    </ol>
+            
+                    <h3 class="heading3">Contact Information</h3> <!-- Contact Information -->
+                    <ul>
+                        <li>Email: <a href = "https://www.slsu.edu.ph/">https://www.slsu.edu.ph/</a></li>
+                        <li>Telephone Number: (042) 540-4763 </li>
+                        <li>University Announcement: <a href="https://www.facebook.com/slsuMain">https://www.facebook.com/slsuMain</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- <script src="scriptProto.js"></script> -->
+</body>
+</html>

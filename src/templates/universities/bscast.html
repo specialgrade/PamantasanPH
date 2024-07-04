@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}"> -->
+    <title>PamantasanPH</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../static/styles/univsDetails2.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/univsDetails2.css') }}"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header> <!-- Navigation -->
+        <div class="container">
+            <div class="logo">
+                <!-- <img src="C:\Users\ALY\Documents\GitHub\PamantasanPH\src\static\images\logos\website\finallogo.png" alt="PamantasanPH Logo"> -->
+                <span>PamantasanPH</span>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-moon"></i>
+                <span>Username</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container"> <!-- Sidebar, NOT FINALIZE -->
+            <aside>
+                <div class="sidebar-item">
+                    <span>Create New List</span>
+                    <i class="fa-solid fa-circle-plus"></i>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Universities</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>Map</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-code-compare"></i>
+                    <span>Compare</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-users-rectangle"></i>
+                    <span>Team</span>
+                </div>
+                <div class="subscribe">
+                    <h3>Subscribe to our Newsletter!</h3>
+                    <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                    <input type="email" placeholder="Email">
+                    <button>Subscribe</button>
+                </div>
+                <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+            </aside>
+
+            <section> 
+                <div id="navbar" class="heading-container"> <!-- Navigation -->
+                    <nav>
+                        <ul>
+                            <li class="dropdown">
+                                <button class="dropbtn">Requirements</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#gen">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Courses</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#special">Specializations</a>
+                                    <a href="#undergrad">Undergraduate Programs</a>
+                                    <a href="#doctoral">Doctoral Programs</a>
+                                    <a href="#masters">Master Programs</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Application</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#application">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#contacts" class="dropbtn">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div> 
+                
+                <!-- Bicol State College of Applied Sciences and Technology -->
+                <div id="gen" class="container">
+                    <img src="{{ url_for('static', filename='images/logos/universities/BSCASTLogo.png') }}" alt="Bicol State College of Applied Sciences and Technology" class="univ-logo">
+                    <h1>Bicol State College of Applied Sciences and Technology</h1>
+                    <h2 class="address">BISCAST 98, Peñafrancia Ave, Naga, Camarines Sur</h2>
+                    <div class="status">
+                        <i class="status-icon fa fa-circle" id="status-icon"></i>
+                        <span class="close" id="status-text">CLOSED</span>
+                    </div>
+            
+                    <h3 id="special" class="heading3">Admission Requirements</h3> <!-- Admission Requirements -->
+                    <ol>
+                        <li>Notice of Admission</li>
+                        <li>Medical Certificate</li>
+                        <li>Two copies of latest 2x2 recent photo</li>
+                        <li>Certificate of Good Moral Character from school last attended</li>
+                        <li>NSO certified Birth Certificate (Only for courses requiring PRC)</li>
+                        <li>Secondary-Original Form 138 - A</li>
+                        <li>College Freshmen - Original Form 137 and Form 138</li>
+                    </ol>
+            
+                    <h3 id="undergrad" class="heading3">University Specializations</h3> <!-- University Specializations -->
+                    <ul>
+                        <li id="openuni">Applied Sciences and Technology</li>
+                    </ul>
+            
+                    <h3 class="heading3">University Courses</h3> <!-- University Courses --> 
+                    <ul>
+                        <li>
+                          <h4>UNDERGRADUATE PROGRAMS</h4>
+                          <ul>
+                            <li><b>College of Engineering</b>
+                              <ul>
+                                <li>Bachelor of Science in Electronics Engineering</li>
+                                <li>Bachelor of Science in Electrical Engineering</li>
+                                <li>Bachelor of Science in Mechanical Engineering</li>
+                                <li>Bachelor of Science in Civil Engineering</li>
+                              </ul>
+                            </li>
+            
+                            <li><b>College of Architecture</b>
+                              <ul>
+                                <li>Bachelor of Science in Architecture</li>
+                              </ul>
+                            </li>
+                    
+                            <li><b>College of Education</b>
+                                <ul>
+                                  <li>Bachelor of Elementary Education</li>
+                                  <li>Bachelor of Secondary Education</li>
+                                  <li>Bachelor of Technology and Livelihood Education major in Economics</li>
+                                  <li>Bachelor of Technical-Vocational Teacher Education</li>
+                                </ul>
+                            </li>
+
+                            <li><b>College of Trades and Technology</b>
+                                <ul>
+                                  <li>Bachelor in Engineering Technology</li>
+                                    <p>Major in:</p>
+                                    <ul>
+                                        <li>Electrical</li>
+                                        <li>Electronics</li>
+                                        <li>Construction</li>
+                                        <li>Mechanical</li>
+                                        <li>Automotive</li>
+                                    </ul>
+                                  <li>Bachelor in Drafting Technology</li>
+                                  <li>Bachelor in Industrial Technology</li>
+                                    <p>Major in:</p>
+                                    <ul>
+                                        <li>Food Trades</li>
+                                        <li>Garments Technology</li>
+                                    </ul>
+                                </ul>
+                            </li>
+
+                            <li><b>College of Arts and Sciences</b>
+                                <ul>
+                                  <li>Bachelor of Science in Entertainment and Multimedia Computing</li>
+                                  <li>Bachelor in Science in Exercise and Sports Sciences</li>
+                                  <li>Bachelor of Science in Food Technology</li>
+                                  <li>Bachelor of Science in Entrepreneurship</li>
+                                </ul>
+                            </li>
+                          </ul>
+                        </li>
+
+                        <li>
+                            <h4 id="doctoral">DOCTORAL PROGRAMS</h4>
+                            <ul>
+                                <li>Doctor of Education - Language Education</li>
+                                <li>Doctor of Education - Science Education</li>
+                                <li>Doctor of Philosophy - Mathematics</li>
+                            </ul>
+                        </li>
+            
+                        <li>
+                            <h4 id="masters">MASTER PROGRAMS</h4>
+                            <ul>
+                                <li>Master of Engineering</li>
+                                <li>Master of Arts in Teaching</li>
+                                <li>Master of Arts in Education - English Language</li>
+                                <li>Master of Arts in Education - Mathematics</li>
+                                <li>Master of Arts in Education - Science</li> 
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3 id="application" class="heading3">Application Process</h3> <!-- Application Process -->
+                    <ol>
+                        <li>Entrance Requirement. All new students must apply for admission at the Guidance. Testing and Admission Office for Secondary, under graduate programs and graduate programs. They must submit the prescribed application credentials and must qualify in the Admission Test.</li>
+                        <li>Laboratory High School. Only applicants with an academic average of at least 83% and above and no grades below 80% in any subject in grade school can take the high school admission test.</li>
+                        <li>College of Engineering and Architecture. Only applicants with a high school academic average of at least 83% and above, no grades below 85% in Mathematics, English, and Science/Physics and no grades below 80% in any subject can take the College Admission Test.</li>
+                        <li>College of Education. Only applicants with a high school academic average of 83% and above and no grades below 85% in English, Mathematics, and Science/Physics for Malh, English and Physical Science Majors; and no grades below 80% in other subjects can take the College Admission Test.</li>
+                        <li>College of Trades and Technology. Only high school graduates can take the College Admission Test.</li>
+                        <li>College of Arts and Sciences. Only applicants with no failing grades in high school can take the College Admission Test.</li>
+                    </ol>
+            
+                    <h3 id="contacts" class="heading3">Contact Information</h3> <!-- Contact Information -->
+                    <ul>
+                        <li>Email: <a href="mailto:info@biscast.edu.ph">info@biscast.edu.ph</a></li>
+                        <li>Telephone: (054) 472-0414 or (054) 472-0415</li>
+                        <li>Website: <a href="https://sites.google.com/biscast.edu.ph/transparency-seal/college-officials?authuser=0">https://sites.google.com/biscast.edu.ph/transparency-seal/college-officials?authuser=0</a></li>
+                        <li>University Announcement: <a href="https://www.facebook.com/photo?fbid=849201893909256&set=a.622039719958809">https://www.facebook.com/photo?fbid=849201893909256&set=a.622039719958809</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- <script src="scriptProto.js"></script> -->
+</body>
+</html>

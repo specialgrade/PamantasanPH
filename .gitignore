@@ -1,4 +1,4 @@
 .venv/
 instance
 __pycache__
-.env
+.envapi_key.py

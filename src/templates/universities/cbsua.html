@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}"> -->
+    <title>PamantasanPH</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../static/styles/univsDetails2.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/univsDetails2.css') }}"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header> <!-- Navigation -->
+        <div class="container">
+            <div class="logo">
+                <!-- <img src="C:\Users\ALY\Documents\GitHub\PamantasanPH\src\static\images\logos\website\finallogo.png" alt="PamantasanPH Logo"> -->
+                <span>PamantasanPH</span>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-moon"></i>
+                <span>Username</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container"> <!-- Sidebar, NOT FINALIZE -->
+            <aside>
+                <div class="sidebar-item">
+                    <span>Create New List</span>
+                    <i class="fa-solid fa-circle-plus"></i>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Universities</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>Map</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-code-compare"></i>
+                    <span>Compare</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-users-rectangle"></i>
+                    <span>Team</span>
+                </div>
+                <div class="subscribe">
+                    <h3>Subscribe to our Newsletter!</h3>
+                    <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                    <input type="email" placeholder="Email">
+                    <button>Subscribe</button>
+                </div>
+                <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+            </aside>
+
+            <section> 
+                <div  id="navbar" class="heading-container"> <!-- Navigation -->
+                    <nav>
+                        <ul>
+                            <li class="dropdown">
+                                <button class="dropbtn">Requirements</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#gen">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Courses</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#special">Specializations</a>
+                                    <a href="#undergrad">Undergraduate Programs</a>
+                                    <a href="#doctoral">Doctoral Programs</a>
+                                    <a href="#masters">Master Programs</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Application</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#application">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#contacts" class="dropbtn">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div> 
+                
+                <!-- Central Bicol State University of Agriculture - Main -->
+                <div id="gen" class="container">
+                    <img src="{{ url_for('static', filename='images/logos/universities/CBSUALogo.png') }}" alt="Central Bicol State University of Agriculture - Main" class="univ-logo">
+                    <h1>Central Bicol State University of Agriculture - Main</h1>
+                    <h2 class="address">San Jose, Pili, Camarines Sur, Pili, Philippines</h2>
+                    <div class="status">
+                        <i class="status-icon fa fa-circle" id="status-icon"></i>
+                        <span class="close" id="status-text">CLOSED</span> 
+                    </div>
+            
+                    <h3 id="special" class="heading3">Admission Requirements</h3> <!-- Admission Requirements -->
+                    <ol>
+                        <ul><b>Graduating Grade 12</b>
+                            <li>Grade 11 Report Card</li>
+                            <li>Passport Size Picture, White Background, with Name Tag</li>
+                            <li>Photocopy of valid ID</li>
+                        </ul>
+
+                        <ul><b>SHS Graduate</b>
+                            <li>Grade 12 Report Card</li>
+                            <li>Passport Size Picture, White Background, with Name Tag</li>
+                            <li>Photocopy of valid ID</li>
+                        </ul>
+
+                        <ul><b>Transferee</b>
+                            <li>Transcript of Records or Certification of Grades</li>
+                            <li>Passport Size Picture, White Background, with Name Tag</li>
+                            <li>Photocopy of valid ID</li>
+                        </ul>
+
+                        <ul><b>Second Courser</b>
+                            <li>Transcript of Records</li>
+                            <li>Passport Size Picture, White Background, with Name Tag</li>
+                            <li>Photocopy of valid ID</li>
+                        </ul>          
+
+                        <ul>Note: Applicants who are scheduled to take the CAT shall bring the following requirements on the examination day:
+                            <li>a. Printed and signed CAT Test Permit</li> 
+                            <li>b. Photocopy of Valid ID</li>
+                            <li>c. Passport Size Picture, White Background, with Name Tag (for applicants who uploaded an invalid profile picture)</li> 
+                            <li>d. Black Ballpen</li>
+                        </ul>
+                    </ol>
+            
+                    <h3 id="undergrad" class="heading3">University Specializations</h3> <!-- University Specializations -->
+                    <ul>
+                        <li id="openuni">Agriculture</li>
+                    </ul>
+            
+                    <h3 class="heading3">University Courses</h3> <!-- University Courses --> 
+                    <ul>
+                        <li>
+                          <h4>UNDERGRADUATE PROGRAMS</h4>
+                          <ul>
+                            <li><b>College of Agriculture and Natural Resources</b>
+                              <ul>
+                                <li>Bachelor of Agricultural Technology</li>
+                                <li>Bachelor of Science in Agroforestry</li>
+                                <li>Bachelor of Science in Environmental Sciences</li> 
+                                <li>Bachelor of Science in Agriculture</li>  
+                                <p>Major in:</p>
+                                <ul>
+                                    <li>Agricultural Economics</li>
+                                    <li>Agricultural Extension</li>
+                                    <li>Agronomy</li>
+                                    <li>Animal Science</li>
+                                    <li>Entomology</li>
+                                    <li>Farming System</li>
+                                    <li>Horticulture</li>
+                                    <li>Plant Pathology</li>
+                                    <li>Soil Science</li>
+                                </ul>                     
+                              </ul>
+                            </li>
+            
+                            <li><b>College of Arts and Sciences</b>
+                              <ul>
+                                <li>Bachelor of Science in Biology</li>
+                                <li>Bachelor of Science in Environmental Science</li>
+                              </ul>
+                            </li>
+
+                            <li><b>College of Veterinary Medicine</b>
+                                <ul>
+                                  <li>Doctor of Veterinary Medicine (6 years)</li>
+                                </ul>
+                            </li>
+
+                            <li><b>College of Development Education</b>
+                                <ul>
+                                  <li>Bachelor of Secondary Education</li>
+                                  <p>Major in:</p>
+                                    <ul>
+                                        <li>English</li>
+                                        <li>Filipino</li>
+                                        <li>Mathematics</li>
+                                        <li>Science</li>
+                                    </ul>
+                                  <li>Bachelor of Elementary Education</li>
+                                </ul>
+                            </li>
+
+                            <li><b>College of Economics and Management</b>
+                                <ul>
+                                  <li>Bachelor of Science in Agribusiness</li>
+                                  <li>Bachelor of Science in Tourism Management - Agritourism</li>
+                                </ul>
+                            </li>
+
+                            <li><b>College of Engineering and Food Sciences</b>
+                                <ul>
+                                  <li>Bachelor of Science in Agricultural Engineering</li>
+                                  <li>Bachelor of Science in Food Technology</li>
+                                </ul>
+                            </li> 
+
+                            <h4 id="doctoral">DOCTORAL PROGRAMS</h4>
+                            <ul>
+                                <li>Doctor of Philosophy in Development Education</li>
+                                <li>Doctor of Philosophy in Plant Science</li>
+                                <p>Major in:</p>
+                                    <ul>
+                                        <li>Agronomy</li>
+                                        <li>Horticulture</li>
+                                    </ul>
+                            </ul>
+
+                            <li>
+                                <h4 id="masters">MASTER PROGRAMS</h4>
+                                <ul>
+                                    <li>Master of Science in Animal Science</li>
+                                    <li>Master of Science in Plant Science</li>
+                                    <p>Major in:</p>
+                                        <ul>
+                                            <li>Agronomy</li>
+                                            <li>Horticulture</li>
+                                        </ul>
+                                    <li>Master of Science in Agricultural Education</li>
+                                    <li>Master of Science in Agriculture Extension</li>
+                                    <li>Master of Science in Plant Protection</li>
+                                    <p>Major in:</p>
+                                        <ul>
+                                            <li>Entomology</li>
+                                            <li>Plant Pathology</li>
+                                        </ul>
+                                    <li>Master of Science in Resource Management</li>
+                                    <p>Major in:</p>
+                                        <ul>
+                                            <li>Entrepeneurship</li>
+                                            <li>Cooperative Management</li>
+                                            <li>Environmental Management</li>
+                                        </ul>
+                                    <li>Master of Science in Disaster Rish Management</li>
+
+                                </ul>
+                            </li>
+
+                    <h3 id="application" class="heading3">Application Process</h3> <!-- Application Process -->
+                    <ol>
+                        <li>Log in to: https://admission.cbsua.edu.ph</li>
+                        <li>Complete the information needed then click “submit”. You need to complete your profile to be included in the official list of applicants.</li>
+                        <li>Upload a scanned copy or image of your Grades and Passport Size Photo in White Background with Name Tag for validation. Please have the image or file ready before registration.</li>
+                        <li>Applicants will receive a confirmation message with examination schedule in their registered email address.</li>
+                        <li>The online application will start on December 11, 2023 up to April 19, 2024.</li>
+                    </ol>
+            
+                    <h3 id="contacts" class="heading3">Contact Information</h3> <!-- Contact Information -->
+                    <ul>
+                        <li>Email: <a href="mailto:admission.pili@cbsua.edu.ph">admission.pili@cbsua.edu.ph</a></li>
+                        <li>Telephone: NONE</li>
+                        <li>Website: <a href="https://w3.cbsua.edu.ph/">https://w3.cbsua.edu.ph/</a></li>
+                        <li>University Announcement: <a href="https://www.facebook.com/share/p/pPNmjJK3s5XY8CW4/">https://www.facebook.com/share/p/pPNmjJK3s5XY8CW4/</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- <script src="scriptProto.js"></script> -->
+</body>
+</html>
+

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}"> -->
+    <title>PamantasanPH</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../static/styles/univsDetails2.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/univsDetails2.css') }}"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header> <!-- Navigation -->
+        <div class="container">
+            <div class="logo">
+                <!-- <img src="C:\Users\ALY\Documents\GitHub\PamantasanPH\src\static\images\logos\website\finallogo.png" alt="PamantasanPH Logo"> -->
+                <span>PamantasanPH</span>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-moon"></i>
+                <span>Username</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container"> <!-- Sidebar, NOT FINALIZE -->
+            <aside>
+                <div class="sidebar-item">
+                    <span>Create New List</span>
+                    <i class="fa-solid fa-circle-plus"></i>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Universities</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>Map</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-code-compare"></i>
+                    <span>Compare</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-users-rectangle"></i>
+                    <span>Team</span>
+                </div>
+                <div class="subscribe">
+                    <h3>Subscribe to our Newsletter!</h3>
+                    <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                    <input type="email" placeholder="Email">
+                    <button>Subscribe</button>
+                </div>
+                <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+            </aside>
+
+            <section> 
+                <div  id="navbar" class="heading-container"> <!-- Navigation -->
+                    <nav>
+                        <ul>
+                            <li class="dropdown">
+                                <button class="dropbtn">Requirements</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#gen">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Courses</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#special">Specializations</a>
+                                    <a href="#undergrad">Undergraduate Programs</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Application</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#application">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#contacts" class="dropbtn">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div> 
+                
+                <!-- Bicol University - Main -->
+                <div id="gen" class="container">
+                    <img src="{{ url_for('static', filename='images/logos/universities/BULogo.png') }}" alt="Bicol University - Main" class="univ-logo">
+                    <h1>Bicol University - Main</h1>
+                    <h2 class="address">Rizal Street, Legazpi City, Albay, Legazpi, Philippines</h2>
+                    <div class="status">
+                        <i class="status-icon fa fa-circle" id="status-icon"></i>
+                        <span class="close" id="status-text">ON-GOING</span>
+                    </div>
+            
+                    <h3 id="special" class="heading3">Admission Requirements</h3> <!-- Admission Requirements -->
+                    <ol>
+                        <li>Correctly and completely accomplished BUCET Application Form;</li>
+                        <li>Two (2) copies of 2x2 recent, unedited or unfiltered studio- taken photograph of the applicant in white background with applicant’s signature and name tag;</li>
+                        <li>Grade 9 to Grade 11 High School academic ratings affixed at the reverse side of the BUCET Application Form and duly signed by the School Principal and has a school dry seal;</li>
+                        <li>Authenticated Photocopies of Grade 9-11 SF10 (Formerly Form 137) and Grade 12 SF9 (Formerly Form 138) FOR SENIOR HIGH SCHOOL GRADUATES who have not taken any college subject. For ALS graduates, submit your ALS Certificate of Rating and Certificate of Completion. DO NOT SUBMIT the original copies unless required by the office to be presented for authentication purposes;</li>
+                        <li>Photocopy of Person with Disability (PWD) ID pursuant to RA No. 7277(if applicable);</li>
+                        <li>Photocopy of parent's Solo Parent ID pursuant to RA No. 11861 (if applicable);</li>
+                        <li>Copy of Parent’s latest Income Tax Return (ITR) or Certificate of Tax Exemption from the Bureau of Internal Revenue (BIR);</li>
+                        <li>Accomplished NCIP - COC Form 4 or downloadable Certificate of Membership from the National Commission on Indigenous Peoples (NCIP) Regional Office, if applicant is a member of ethno-linguistic groups (Indigenous Peoples groups);</li>
+                        <li>Certification from the Barangay if applicant is a resident of or comes from Geographically-Isolated and Disadvantaged Areas, (GIDA) pursuant to RA No. 11148, please refer to this link GIDA List 2022;</li>
+                        <li>Certification from DSWD if member of 4P’s (Pantawid Pamilyang Pilipino Program);</li>
+                        <li>One long-sized window mailing envelope with Php 50.00 worth of mailing stamps from Postal Office attached on the upper right-hand corner for mailing of results;</li>
+                    </ol>
+            
+                    <h3 id="undergrad" class="heading3">University Specializations</h3> <!-- University Specializations -->
+                    <ul>
+                        <li id="openuni">Accountancy</li>
+                        <li>Engineering</li>
+                        <li>Midwifery</li>
+                        <li>Nursing</li>
+                        <li>Social Work</li>
+                        <li>Education</li>
+                    </ul>
+            
+                    <h3 class="heading3">University Courses</h3> <!-- University Courses --> 
+                    <ul>
+                        <li>
+                          <h4>UNDERGRADUATE PROGRAMS</h4>
+                          <ul>
+                            <li><b>College of Social Sciences and Philosophy</b>
+                              <ul>
+                                <li>AB Peace Studies</li>
+                                <li>AB Philosophy</li>
+                                <li>AB Political Science</li>
+                                <li>AB Sociology</li>
+                                <li>BS Psychology</li>
+                                <li>BS Social Work</li>
+                              </ul>
+                            </li>
+            
+                            <li><b>College of Science</b>
+                              <ul>
+                                <li>Bachelor of Science in Biology</li>
+                                <li>Bachelor of Science in Chemistry</li>
+                                <li>Bachelor of Science in Computer Science</li>
+                                <li>Bachelor of Science in Information Technology</li>
+                                <li>Bachelor of Science in Meteorology</li>
+                              </ul>
+                            </li>
+                    
+                            <li><b>College of Education</b>
+                                <ul>
+                                  <li>Bachelor of Early Childhood Education</li>
+                                  <li>Bachelor of Elementary Education</li>
+                                  <li>Bachelor of Secondary Education</li>
+                                  <li>Bachelor of Culture and Arts Education</li>
+                                </ul>
+                            </li>
+
+                            <li><b>College of Arts and Letters</b>
+                                <ul>
+                                  <li>AB Broadcasting</li>    
+                                  <li>AB Communication</li>   
+                                  <li>AB English Language</li>    
+                                  <li>AB Journalism</li>   
+                                  <li>AB Performing Arts Theater</li>
+                                  <li>AB Literature</li>                  
+                                </ul>
+                            </li>
+
+                            <li><b>College of Nursing</b>
+                                <ul>
+                                  <li>Bachelor of Science in Nursing</li>
+                                </ul>
+                            </li>
+
+                            <li><b>College of Business, Economics, and Management</b>
+                                <ul>
+                                  <li>Bachelor of Science in Accountancy</li>
+                                  <li>Bachelor of Science in Economics</li>
+                                  <li>Bachelor of Science in Entrepreneurship</li>
+                                  <li>Bachelor of Science in Management</li>
+                                  <li>BSBA Major in Financial Management</li>
+                                  <li>BSBA Major in Human Resource Management</li>
+                                  <li>BSBA Major in Marketing Management</li>
+                                  <li>BSBA Microfinance</li>
+                                  <li>BSBA Major in Operations Management</li>
+                                </ul>
+                            </li>
+
+                            <li><b>College of Industrial Technology</b>
+                                <ul>
+                                  <li>Bachelor of Science in Automotive Technology</li>
+                                  <li>Bachelor of Science in Civil Technology</li>
+                                  <li>Bachelor of Science in Electrical Technology</li>
+                                  <li>Bachelor of Science in Electronics Technology</li>
+                                  <li>Bachelor of Science in Mechanical Technology</li>
+                                  <li>Bachelor of Science in Food Technology</li>
+                                  <li>Bachelor of Industrial Design</li>
+                                  <li>B Technical - Vocational Teacher Education</li>
+                                  <p>Major in:</p>
+                                    <ul>
+                                        <li>Drafting Technology</li>
+                                        <li>Electrical Technology</li>
+                                        <li>Food Service Management</li>
+                                        <li>Garments, Fashion and Design</li>
+                                    </ul>
+                                </ul>
+                            </li>
+
+                            <li><b>College of Engineering</b>
+                                <ul>
+                                  <li>Bachelor of Science in Chemical Engineering</li>
+                                  <li>Bachelor of Science in Civil Engineering</li>
+                                  <li>Bachelor of Science in Electrical Engineering</li>
+                                  <li>Bachelor of Science in Geodetic Engineering</li>
+                                  <li>Bachelor of Science in Mechanical Engineering</li>
+                                  <li>Bachelor of Science in Mining Engineering</li>
+                                </ul>
+                            </li>
+
+                            <li><b>Institute of Design and Architecture</b>
+                                <ul>
+                                  <li>Bachelor of Science in Architecture</li>
+                                </ul>
+                            </li>
+
+                            <li><b>Institute of Physical Education, Sports, and Recreation</b>
+                                <ul>
+                                  <li>Bachelor of Science in Exercise and Sports Sciences</li>
+                                  <li>Bachelor of Physical Education</li>
+                                </ul>
+                            </li>
+                            
+                            <li><b>Jjese M. Robredo Institute of Governance and Developments</b>
+                                <ul>
+                                  <li>Bachelor of Public Administration</li>
+                                </ul>
+                            </li>
+                          </ul>
+                        </li>
+
+                    <h3 id="application" class="heading3">Application Process</h3> <!-- Application Process -->
+                    <ol>
+                        <li>The Online BUCET Application Form can be accessed through the BUAO website: buao.bicol-u.edu.ph . Make sure to have a stable internet connection. Whatever input that will be submitted by the applicant is final and cannot be changed. If any problem occurs in filling up the forms, please email: buao.bucet@gmail.com;</li>
+                        <li>Fill out the Online BUCET Application Form honestly and completely. For your course choice, refer to the code in the list of COURSE OFFERINGS;</li>
+                        <li>Print out the PDF copy of your BUCET Application Form. Use legal size (8.5”x13”) bond paper for printing the form;</li>
+                        <li>Give the BUCET Application Form to your High School Registrar/Principal/School Head to fill out the SECONDARY RECORD FORM at the back page of your BUCET Application Form. Make sure your School Principal/School Head has signed the BUCET Application Form and has a dry seal of your school;</li>
+                        <li>The fee of Php 250.00 is free for Filipino freshmen applicants pursuant to R.A. No. 10931;</li>
+                        <li>The following options are provided on how to submit your BUCET application documents:</li>
+                            <ul>
+                                <li>Option 1: Submit your BUCET application requirements to your High School Counselor or to any authorized school representative.</li>
+                                <li>Option 2: Submit your BUCET application requirements to the Bicol University Admissions Office (ONSITE) during your appointed submission date.</li>
+                                <li>Option 3: Mail your BUCET application documents through any courier service available in your locality.</li>
+                            </ul>
+                        <li>Assigned BUAO personnel will check and validate your requirements;</li>
+                        <li>Claim your Test Permit from your High School Counselor or authorized school representative if you chose Option 1; from BUAO if you choose Option2. For Option 3, your temporary test permit will be emailed to you at your official email address.</li>
+                        <li>Bring your Test Permit and Vaccination Card during your scheduled examination. For applicants who are not yet vaccinated kindly present an Antigen test result conducted a day before your scheduled examination. Only fully-vaccinated students shall be allowed to take the examination. Unvaccinated students shall be required to present a valid RT- PCR or Antigen test taken a day before the examination date for them to be allowed to take the BUCET. An examinee who feels sick or indisposed, complains of COVID-like symptoms or registers body temperature above the normal range during examination day shall be rescheduled.</li>
+                        <li>In all test venues, parents or companions shall not be allowed to wait or congregate inside the school premises before, during and after the examination. Only the BUCET examinees shall be allowed to enter the main gate/s to avoid overcrowding. Only authorized BU Testing Personnel or BU Officials shall be allowed to enter the testing hall or room during the BUCET administration.</li>
+                    </ol>
+            
+                    <h3 id="contacts" class="heading3">Contact Information</h3> <!-- Contact Information -->
+                    <ul>
+                        <li>Email: <a href="mailto:bu-cpro@bicol-u.edu.ph">bu-cpro@bicol-u.edu.ph</a></li>
+                        <li>Telephone: (052) 480-0179</li>
+                        <li>Website: <a href="https://bicol-u.edu.ph/programs/">https://bicol-u.edu.ph/programs/</a></li>
+                        <li>University Announcement: <a href="https://www.facebook.com/share/1h79cDyjWMEsstde/?mibextid=L0MuaQ">https://www.facebook.com/share/1h79cDyjWMEsstde/?mibextid=L0MuaQ</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- <script src="scriptProto.js"></script> -->
+</body>
+</html>

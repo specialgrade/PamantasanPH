@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}"> -->
+    <title>PamantasanPH</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../static/styles/univsDetails2.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/univsDetails2.css') }}"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span>PamantasanPH</span>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-moon"></i>
+                <span>Username</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <aside>
+                <div class="sidebar-item">
+                    <span>Create New List</span>
+                    <i class="fa-solid fa-circle-plus"></i>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Universities</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>Map</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-code-compare"></i>
+                    <span>Compare</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-users-rectangle"></i>
+                    <span>Team</span>
+                </div>
+                <div class="subscribe">
+                    <h3>Subscribe to our Newsletter!</h3>
+                    <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                    <input type="email" placeholder="Email">
+                    <button>Subscribe</button>
+                </div>
+                <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+            </aside>
+            <section>
+                <div id="navbar" class="heading-container">
+                    <nav>
+                        <ul>
+                            <li class="dropdown">
+                                <button class="dropbtn">Requirements</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#gen">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Courses</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#special">Specializations</a>
+                                    <a href="#offeredcourse">Offered Courses</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Application</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#application">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#contacts" class="dropbtn">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="gen" class="container">
+                    <img src="{{ url_for('static', filename='images/logos/universities/NMSCSTLogo.png') }}" alt="Northwestern Mindanao State College of Science and Technology" class="univ-logo">
+                    <h1>Northwestern Mindanao State College of Science and Technology</h1>
+                    <h2 class="address">Brgy. Labuyo, Tangub City, Misamis Occidental, Philippines</h2>
+                    <div class="status">
+                        <i class="status-icon fa fa-circle" id="status-icon"></i>
+                        <span class="close" id="status-text">NOT YET OPENED</span>
+                    </div>
+                    <h3 class="heading3">Admission Requirements</h3>
+                    <ul>
+                        <li>Admission to the college shall be made without regard to race, color, age, national origin, gender, marital status and belief.</li>
+                        <li>THE COLLEGE WELCOMES STUDENTS SEEKING ADMISSION WHO ARE:
+                            <ul>
+                                <li>Senior student of DepEd accredited schools;</li>
+                                <li>Graduate of DepEd - accredited schools or secondary schools abroad;</li>
+                                <li>Holders of Philippine Educational Placement Test (PEPT)/Accreditation and Equivalency Test (AET) Certificate or Alternative Learning System (ALS) Certificate issued by the Department of Education (DepEd);</li>
+                                <li>Transferees</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h3 class="heading3">Requirements for Enrollment</h3>
+                    <ul>
+                        <li>FOR JUNIOR HIGH SCHOOL
+                            <ul>
+                                <li>Entrance Test Result and admission slip issued by the principal.</li>
+                                <li>Original copy of Form 138 and Philippine Educational Placement Test PEPT Certification starting that the student is qualified for the level</li>
+                                <li>Certificate of good moral character certified by the principal or guidance counselor</li>
+                                <li>Certificate of Honors (for top-five (5) honor students only)</li>
+                                <li>PSA copy of Birth Certificate</li>
+                                <li>2x2 picture (2 pcs.)</li>
+                                <li>Long brown envelope</li>
+                            </ul>
+                        </li>
+                        <li>FOR SENIOR HIGH SCHOOL
+                            <ul>
+                                <li>Entrance Test Result and admission slip issued by the principal.</li>
+                                <li>Original copy of Form 138 and Philippine Educational Placement Test PEPT Certification stating that the student is qualified for the level</li>
+                                <li>Certificate of good moral character certified by the principal or guidance counselor</li>
+                                <li>PSA copy of Birth Certificate</li>
+                                <li>Certificate of Completion (Grade 10)</li>
+                                <li>ESC Certification (From Private Schools)</li>
+                                <li>2x2 picture (2 pcs.)</li>
+                            </ul>
+                        </li>
+                        <li>UNDERGRADUATE PROGRAMS
+                            <ul>
+                                <li>FOR FRESHMEN (HIGH SCHOOL GRADUATES WHO HAVE NOT ATTENDED COLLEGE)
+                                    <ul>
+                                        <li>Entrance Test Result issued by the Career Development and Counselling Office</li>
+                                        <li>Original High School Report Card or Form 138/PEPT/ALS Certificate</li>
+                                        <li>Good Moral</li>
+                                        <li>PSA Birth Certificate (Photocopy and Original)</li>
+                                        <li>Two (2) copies 2x2 pictures with name tag (with white background)</li>
+                                        <li>Police Clearance</li>
+                                        <li>One (1) copy of 1x1 picture</li>
+                                        <li>Long Brown Envelope</li>
+                                    </ul>
+                                </li>
+                                <li>FOR TRANSFEREES. (STUDENTS WHO HAVE ALREADY TAKEN SOME COLLEGE PROGRAMS OR HAVE ALREADY ENROLLED IN OTHER HEIS)
+                                    <ul>
+                                        <li>Entrance Test Result issued by the Career Development & Counselling Office</li>
+                                        <li>Transfer credentials (Certificate of Honorable Dismissal)</li>
+                                        <li>Good Moral</li>
+                                        <li>Original and authenticated copy of Transcript of Records / Informative copy of grades</li>
+                                        <li>PSA Birth Certificate (Photocopy and Original)</li>
+                                        <li>Two (2) copies 2x2 pictures with name tag (with white background)</li>
+                                        <li>Police Clearance</li>
+                                        <li>Long Brown Envelope</li>
+                                    </ul>
+                                </li>
+                                <li>FOR CONTINUING STUDENTS (COMMONLY KNOWN AS OLD STUDENTS)
+                                    <ul>
+                                        <li>Student Clearance</li>
+                                        <li>Accomplished Temporary Registration Form</li>
+                                    </ul>
+                                </li>
+                                <li>FOR RE-ADMISSION (STUDENTS WHO WOULD LIKE TO CONTINUE THEIR PROGRAM AFTER TAKING LEAVE OF ABSENCE)
+                                    <ul>
+                                        <li id="special">Copy of Approved Leave of Absence (ALA)</li>
+                                        <li>Latest 2x2 ID pictures with white background</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h3 id="offeredcourse" class="heading3">University Specializations</h3>
+                    <p>N/A</p>
+                    <h3 class="heading3">University Courses</h3>
+                    <h4>SCHOOL OF TEACHER EDUCATION</h4>
+                    <ul>
+                        <li>Bachelor of Elementary Education (BEEd)</li>
+                        <li>Bachelor of Secondary Education (BSEd) with majors in:
+                            <ul>
+                                <li>Mathematics</li>
+                                <li>Science</li>
+                            </ul>
+                        </li>
+                        <li>Bachelor of Technical-Vocational Teacher Education (BTVTEd) with majors in:
+                            <ul>
+                                <li>Automotive Technology</li>
+                                <li>Electronics Technology</li>
+                                <li>Electrical Technology</li>
+                                <li>Civil and Construction Technology</li>
+                                <li>Welding and Fabrication Technology</li>
+                                <li>Food and Service Management</li>
+                                <li>Computer Hardware Servicing</li>
+                                <li>Animal Production</li>
+                                <li>Agriculture Crops Production</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h4>SCHOOL OF INFORMATION AND COMMUNICATION TECHNOLOGY</h4>
+                    <ul>
+                        <li>Bachelor of Science in Information Technology (BSIT)</li>
+                        <li>Bachelor of Science in Information System (BSIS)</li>
+                        <li>Bachelor of Science in Communication Technology (BSCT)</li>
+                        <li>Bachelor of Science in Animation and Multimedia Arts (BSAM)</li>
+                    </ul>
+                    <h4>SCHOOL OF AGRICULTURE AND ENVIRONMENTAL SCIENCE</h4>
+                    <ul>
+                        <li>Bachelor of Science in Agriculture with majors in:
+                            <ul>
+                                <li>Crop Science</li>
+                                <li>Animal Science</li>
+                            </ul>
+                        </li>
+                        <li>Bachelor of Science in Environmental Science</li>
+                    </ul>
+                    <h4>SCHOOL OF ENGINEERING AND TECHNOLOGY</h4>
+                    <ul>
+                        <li>Bachelor of Science in Industrial Technology with majors in:
+                            <ul>
+                                <li>Automotive Technology</li>
+                                <li>Civil Technology</li>
+                                <li>Food Technology</li>
+                                <li>Electronics Technology</li>
+                                <li>Electrical Technology</li>
+                            </ul>
+                        </li>
+                        <li>Bachelor of Engineering Technology with majors in:
+                            <ul>
+                                <li>Electrical Engineering Technology</li>
+                                <li>Electronics Engineering Technology</li>
+                                <li>Mechanical Engineering Technology</li>
+                                <li>Construction Engineering Technology</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h4>SCHOOL OF BUSINESS ADMINISTRATION AND MANAGEMENT</h4>
+                    <ul>
+                        <li>Bachelor of Science in Hospitality Management (BSHM)</li>
+                        <li>Bachelor of Science in Tourism Management (BSTM)</li>
+                    </ul>
+                    <h4>SCHOOL OF ARTS AND SCIENCES</h4>
+                    <ul>
+                        <li>Bachelor of Science with majors in:
+                            <ul>
+                                <li>Mathematics (BS - Mathematics)</li>
+                                <li>Biology (BS - Biology)</li>
+                            </ul>
+                        </li>
+                        <li>English Language Studies (BAELS)</li>
+                        <li>Literature (BA in Literature)</li>
+                        <li>Political Science (BA in Political Science)</li>
+                    </ul>
+                    <h3 id="application" class="heading3">Application Process</h3>
+                    <h4>ENROLMENT SERVICES FOR FRESHMEN/NEW STUDENTS AND TRANSFEREES</h4>
+                    <ul>
+                        <li>REQUIREMENTS (FRESHMAN):
+                            <ul>
+                                <li>Original Report Card/Form 138A (Original)</li>
+                                <li>Certificate of Good Moral (Original)</li>
+                                <li>2pcs 2x2 ID Picture</li>
+                                <li>PSA – Authenticated Birth Certificate (Photocopy and Original)</li>
+                                <li>Place all of the above documents in a long brown envelope (Original)</li>
+                                <li>Place all of the above documents in a long brown envelope</li>
+                            </ul>
+                        </li>
+                        <li>REQUIREMENTS (TRANSFEREE):
+                            <ul>
+                                <li>Certificate of Honorable Dismissal (Original)</li>
+                                <li>TOR for Evaluation</li>
+                                <li>Certificate of Good Moral</li>
+                                <li>2 pcs 2x2ID picture</li>
+                                <li>PSA – Authenticated Birth Certificate (Photocopy)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h4>PROCESS</h4>
+                    <ol>
+                        <li>Go to the Student’s Assistance Desk
+                            <ul>
+                                <li>Ask from the Officer on Duty the enrollment form. Present all the requirements.</li>
+                            </ul>
+                        </li>
+                        <li>Go to the School/Department
+                            <ul>
+                                <li>Fill-out the Temporary Registration Form (TRF) and present to the School Dean.</li>
+                            </ul>
+                        </li>
+                        <li>Go to the Registrar’s Office
+                            <ul>
+                                <li>Present the signed TRF and submit all the requirements for enrollment.</li>
+                            </ul>
+                        </li>
+                        <li>Go to the E-Library
+                            <ul>
+                                <li>Submit the approved TRF</li>
+                            </ul>
+                        </li>
+                        <li>Go to the Office of Student Affairs and Services
+                            <ul>
+                                <li>Present COR.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <h3 id="contacts" class="heading3">Contact Information</h3>
+                    <ul>
+                        <li>Email Address(es): cdco@nmsc.edu.ph</li>
+                        <li>Website(s): <a href="https://www.cmu.edu.ph/">https://www.cmu.edu.ph/</a>, <a href="https://www.facebook.com/NMSCSTOfficial/">https://www.facebook.com/NMSCSTOfficial/</a></li>
+                        <li>Phone / Landline Number: (088) 586 - 0173</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- <script src="scriptProto.js"></script> -->
+</body>
+</html>
