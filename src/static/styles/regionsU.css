@@ -191,7 +191,7 @@ aside h1 {
     color: var(--white);
 }
 
-#compare span::after {
+#regions span::after {
     content: "";
     display: inline-block;
     width: 10px;
@@ -261,158 +261,147 @@ aside h1 {
 }
 
 /* Main content styling */
-.main-content {
-    padding: 20px;
-    margin-top: 80px;  
-    margin-left: 250px;  
+.container {
+    display: flex;
+    flex-direction: row;
 }
 
-aside {
-    position: fixed;  
-    top: 0;
-    left: 0;
-    width: 250px;  
-    height: 100vh;
-    background: linear-gradient(to right, #192f3f, #94273a);
-    color: var(--white);
+main {
+    flex: 1;
     padding: 20px;
+}
+
+.main-content {
+    padding: 8px;
+    background-color: var(--white);
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    overflow: auto;
+    align-items: left;
+    min-height: calc(100vh - 120px);  
+    box-sizing: border-box;
 }
 
-header {
+.univs {
     padding: 20px;
-    background: linear-gradient(to right, #192f3f, #94273a);
-    color: var(--white);
-    align-items: center;
-    position: fixed;  
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;  
-}
-
-header input {
-    padding: 10px;
-    width: 300px;
-    border-radius: 5px;
-    border: 1px solid var(--white);
-}
-
-header .user-profile {
-    display: flex;
-    align-items: center;
-}
-
-header .user-profile span {
-    margin-right: 10px;
-}
-
-section {
     background-color: var(--white);
-    padding: 20px;
-    border-radius: 10p;
+    border-radius: 8px;
+    max-width: 1358px;
+    width: 100%;
+    margin-top: 10px;
+    text-align: left;
 }
 
-section h1 {
-    color: var(--dark-blue);
+.univs h2 {
+    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 18px;
 }
 
 .universities-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 94px;
+    margin: 10px;
+    padding: 20px;
     cursor: pointer;
 }
 
-/* University card styling */
 .university-card {
-    width: calc(33.333% - 20px);
-    background-color: var(--white);
-    border-radius: 10px;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.2s ease;
+    height: 175px;
+    width: 400px;
+    align-items: left;
 }
 
-/* Background image styling */
-.bg-img {
-    position: relative;
-    height: 150px; 
-    overflow: hidden; 
-}
-
-.bg-img img {
+.university-card .bg-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
-    transition: transform 0.5s ease;
+    object-fit: cover;
+    object-position: center;
 }
 
-.bg-container:hover .bg-img img {
-    transform: scale(1.05); 
-}
-
-/* Overlay styling */
-.overlay {
+.university-card .school-name {
     position: absolute;
-    top: 0;
+    color: var(--dark-blue);
+    font-weight: bold;
+    text-align: center;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;  
-    padding: 20px;  
-    box-sizing: border-box;
-    background: rgba(0, 0, 0, 0.6); 
-    color: var(--white); 
-    opacity: 0;  
-    transition: opacity 0.5s ease; 
+    background-color: var(--white);
+    padding: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
-.university-card:hover .overlay {
-    opacity: 1;  
+.university-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-.school-name {
-    font-size: 18px; 
-    font-weight: regular;  
+@media (max-width: 1200px) {
+    aside {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+    }
 }
 
-.overlay span {
-    font-size: 18px;  
-    font-weight: normal;  
-    text-decoration: none;  
-    position: absolute;
-    bottom: 5px;  
-    left: 5px;  
-    padding: 10px;
+@media (max-width: 1024px) {
+    header {
+        padding: 15px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo span {
+        font-size: 18px;
+    }
+
+    .search input[type="text"] {
+        width: 50%;
+    }
+
+    .user {
+        margin-left: 10px;
+    }
+
+    aside {
+        width: 180px;
+    }
+
+    .main-content {
+        margin-left: 180px;
+        margin-top: 140px;
+    }
+
+    .university-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.overlay span:hover {
-    text-decoration: underline; 
-}
+@media (max-width: 768px) {
+    .search input[type="text"] {
+        width: 40%;
+    }
 
-.overlay .link-icon {
-    position: absolute;
-    bottom: 10px;  
-    right: 10px; 
-    font-size: 18px; 
-    background-color: rgba(0, 0, 0, 0.5);  
-    padding: 5px;  
-    border-radius: 50%;  
-}
+    .main-content {
+        margin-left: 0;
+        margin-top: 160px;
+    }
 
-.overlay a {
-    text-decoration: none;  
-    color: var(--white);  
-}
-
-.overlay a:hover {
-    text-decoration: underline;  
-}
-
-.university-card:hover .overlay .link-icon {
-    background-color: rgba(0, 0, 0, 0.7); 
+    .university-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
