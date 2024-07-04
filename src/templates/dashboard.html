@@ -13,7 +13,7 @@
 <body>
   <header> <!-- Navigation -->
     <div class="logo">
-      <img src="C:\Users\ALY\Downloads\PamantasanPH_LOGO.png" alt="PamantasanPH Logo">
+      <img src="{{ url_for('static', filename='images/logos/website/finallogo.png') }}" alt="PamantasanPH Logo">
       <span>PamantasanPH</span>
     </div>
     <div class="search">
@@ -38,31 +38,36 @@
         <i class="fa-solid fa-circle-plus"></i>
       </div>
       <div id="dashboard" class="sidebar-item">
-        <a href="dashboard.html">
+        <!--<a href="dashboard.html">-->
+        <a href="{{ url_for('dashboard') }}">
           <i class="fa-solid fa-box-archive"></i>
           <span>Dashboard</span>
         </a>
       </div>
       <div class="sidebar-item">
-        <a href="regions.html">
+        <!--<a href="regions.html">-->
+        <a href="{{ url_for('universities') }}">
           <i class="fa-solid fa-graduation-cap"></i>
           <span>Universities</span>
         </a>
       </div>
       <div class="sidebar-item">
-        <a href="map.html">
+        <!--<a href="map.html">-->
+        <a href="{{ url_for('map') }}">
           <i class="fa-solid fa-map-location-dot"></i>
           <span>Map</span>
         </a>
       </div>
       <div class="sidebar-item">
-        <a href="compare.html">
+        <!--<a href="compare.html">-->
+        <a href="{{ url_for('compare') }}">
           <i class="fa-solid fa-code-compare"></i>
           <span>Compare</span>
         </a>
       </div>
       <div class="sidebar-item">
-        <a href="teams.html">
+        <!--<a href="teams.html">-->
+        <a href="{{ url_for('teams') }}">
           <i class="fa-solid fa-users-rectangle"></i>
           <span>Team</span>
         </a>
@@ -80,7 +85,8 @@
       <div class="banner">
         <h2>Hi, Username!</h2>
         <p>Ready to Discover State Universities here in the Philippines?</p>
-        <img src="../static/images/logos/website/clipartsample.png" alt="PamantasanPH">
+        <!--<img src="../static/images/logos/website/clipartsample.png" alt="PamantasanPH">-->
+        <img src="{{ url_for('static', filename='images/logos/website/clipartsample.png') }}" alt="PamantasanPH">
       </div>
 
       <div class="sections">

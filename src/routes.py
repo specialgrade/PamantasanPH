@@ -32,11 +32,20 @@ def init_app(app):
     def compare():
         return render_template('compare.html')
 
-
     # teams 
     @app.route('/dashboard/teams/', methods=['GET', 'POST'])
     def teams():
         return render_template('teams.html')
+    
+    # map feature
+    @app.route('/dashboard/map/', methods=['GET', 'POST'])
+    def map():
+        return render_template('map.html')
+    
+    # route for regions/universities
+    @app.route('/dashboard/universities/', methods=['GET', 'POST'])
+    def universities():
+        return render_template('regions.html')
     
     # REGISTER-LOGIN-LOGOUT--------------------------------------------------------------------------------
     @app.route('/register', methods=['GET', 'POST'])
@@ -239,7 +248,7 @@ def init_app(app):
         return render_template(template_name, university=university, average_rating=average_rating, rating_form=rating_form)
     
     # FOR TO-DO FEATURE================================================================
-    @app.route('dashboard/todo')
+    @app.route('/dashboard/todo')
     @login_required
     def todo():
         todo_list = Todo.query.filter_by(user_id=current_user.id).all()

@@ -519,7 +519,8 @@
 <body>
   <header> <!-- Navigation -->
     <div class="logo">
-      <img src="C:\Users\ALY\Downloads\PamantasanPH_LOGO.png" alt="PamantasanPH Logo">
+      <!--<img src="../static/images/logos/website/finallogo.png" alt="PamantasanPH Logo">-->
+      <img src="{{ url_for('static', filename='images/logos/website/finallogo.png') }}" alt="PamantasanPH Logo">
       <span>PamantasanPH</span>
     </div>
     <div class="search">
@@ -544,31 +545,36 @@
         <i class="fa-solid fa-circle-plus"></i>
       </div>
       <div class="sidebar-item">
-        <a href="dashboard.html">
+        <!--<a href="dashboard.html">-->
+        <a href="{{ url_for('dashboard') }}">
           <i class="fa-solid fa-box-archive"></i>
           <span>Dashboard</span>
         </a>
       </div>
       <div class="sidebar-item">
-        <a href="univs.html">
+        <!--<a href="regions.html">-->
+        <a href="{{ url_for('universities') }}">
           <i class="fa-solid fa-graduation-cap"></i>
           <span>Universities</span>
         </a>
       </div>
       <div id="sidebar-map" class="sidebar-item">
-        <a href="map.html">
+        <!--<a href="map.html">-->
+        <a href="{{ url_for('map') }}">
           <i class="fa-solid fa-map-location-dot"></i>
           <span>Map</span>
         </a>
       </div>
       <div class="sidebar-item">
-        <a href="compare.html">
+        <!--<a href="compare.html">-->
+        <a href="{{ url_for('compare') }}">
           <i class="fa-solid fa-code-compare"></i>
           <span>Compare</span>
         </a>
       </div>
       <div class="sidebar-item">
-        <a href="team.html">
+        <!--<a href="teams.html">-->
+        <a href="{{ url_for('teams') }}">
           <i class="fa-solid fa-users-rectangle"></i>
           <span>Team</span>
         </a>
@@ -803,6 +809,7 @@
     
   </main>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_commutes_v2_c" async defer></script>
-  <script src="../static/js/map.js"></script>
+  <!--<script src="../static/js/map.js"></script>-->
+  <script src="{{ url_for('static', filename='js/map.js') }}"></script>
 </body>
 </html>
