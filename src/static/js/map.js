@@ -3,6 +3,52 @@
 /**
  * Element selectors for commutes widget.
  */
+  // Manually add coordinates for destinations
+  function initializeMapWithUserLocation(position) {
+    const userLocation = {
+      lat: position.coords.latitude,
+      lng: position.coords.longitude
+    };
+  
+    // Initialize map with user's location
+    const mapOptions = {
+      center: userLocation,
+      zoom: 14
+    };
+  
+    const map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    
+    // Add a marker at the user's location
+    new google.maps.Marker({
+      position: userLocation,
+      map: map,
+      title: "You are here!"
+    });
+  }
+  
+  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(browserHasGeolocation
+      ? "Error: The Geolocation service failed."
+      : "Error: Your browser doesn't support geolocation.");
+    infoWindow.open(map);
+  }
+  
+  function initMapView() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        initializeMapWithUserLocation,
+        (error) => handleLocationError(true, infoWindow, map.getCenter())
+      );
+    } else {
+      // Browser doesn't support Geolocation
+      handleLocationError(false, infoWindow, map.getCenter());
+    }
+  }
+  
+  window.onload = initMapView;
+  
+
 const commutesEl = {
   map: document.querySelector('.map-view'),
   initialStatePanel: document.querySelector('.commutes-initial-state'),
@@ -458,14 +504,7 @@ function Commutes(configuration) {
     destination.polylines.outerStroke.setMap(null);
     destination.marker.setMap(null);
   }
-
-  /**
-   * Generates destination card template, attach event target listeners, and
-   * adds template to destination list depending on the operations:
-   * - add new destination card template to the end of the list on add.
-   * - replace destination card template for current selected on edit.
-   * - do nothing on default or delete.
-   */
+  
   function buildDestinationCardTemplate(
       destination, destinationIdx, destinationOperation) {
     let editButtonEl;

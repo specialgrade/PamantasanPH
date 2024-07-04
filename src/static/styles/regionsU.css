@@ -1,4 +1,4 @@
-/* Imported font families */
+/*Imported font families */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Global styling variables */
@@ -14,7 +14,7 @@
 }
 
 * {
-    box-sizing: content-box;  
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -119,8 +119,8 @@ aside {
     background: linear-gradient(to right, #192f3f, #94273a);
     color: var(--white);
     padding: 20px;
-    width: calc(250px - 40px);  
-    height: calc(100vh - 40px);  
+    width: 250px;
+    height: 100vh;  
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -191,7 +191,7 @@ aside h1 {
     color: var(--white);
 }
 
-#sidebar-map span::after {
+#compare span::after {
     content: "";
     display: inline-block;
     width: 10px;
@@ -199,7 +199,7 @@ aside h1 {
     background-color: var(--white); 
     border-radius: 50%;
     margin-left: 6px;
-}
+  }
 
 .subscribe {
     background-color: var(--white);
@@ -225,7 +225,7 @@ aside h1 {
 }
 
 .subscribe input[type="email"] {
-    width: calc(100% - 24px);  
+    width: 100%;
     padding: 12px;  
     margin-bottom: 20px;
     margin-top: 10px;
@@ -260,25 +260,159 @@ aside h1 {
     font-family: 'Inter', sans-serif;
 }
 
-/* Map styling */
-main {
-    display: flex;
-    flex-direction: row;
+/* Main content styling */
+.main-content {
+    padding: 20px;
+    margin-top: 80px;  
+    margin-left: 250px;  
 }
 
-.map-container {
-    flex: 1; 
-    padding: 10px;
-    margin-top: 10px; 
+aside {
+    position: fixed;  
+    top: 0;
+    left: 0;
+    width: 250px;  
+    height: 100vh;
+    background: linear-gradient(to right, #192f3f, #94273a);
+    color: var(--white);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
 }
-  
-.map {
-    width: calc(100% - 22px);  
-    height: calc(100vh - 80px - 22px);  
-    border: 1px solid #ccc;
+
+header {
+    padding: 20px;
+    background: linear-gradient(to right, #192f3f, #94273a);
+    color: var(--white);
+    align-items: center;
+    position: fixed;  
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;  
+}
+
+header input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid var(--white);
+}
+
+header .user-profile {
+    display: flex;
+    align-items: center;
+}
+
+header .user-profile span {
+    margin-right: 10px;
+}
+
+section {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10p;
+}
+
+section h1 {
+    color: var(--dark-blue);
+}
+
+.universities-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* University card styling */
+.university-card {
+    width: calc(33.333% - 20px);
+    background-color: var(--white);
     border-radius: 10px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    margin-top: 0;
-    padding: 0;
-    box-sizing: content-box;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Background image styling */
+.bg-img {
+    position: relative;
+    height: 150px; 
+    overflow: hidden; 
+}
+
+.bg-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.5s ease;
+}
+
+.bg-container:hover .bg-img img {
+    transform: scale(1.05); 
+}
+
+/* Overlay styling */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;  
+    padding: 20px;  
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.6); 
+    color: var(--white); 
+    opacity: 0;  
+    transition: opacity 0.5s ease; 
+}
+
+.university-card:hover .overlay {
+    opacity: 1;  
+}
+
+.school-name {
+    font-size: 18px; 
+    font-weight: regular;  
+}
+
+.overlay span {
+    font-size: 18px;  
+    font-weight: normal;  
+    text-decoration: none;  
+    position: absolute;
+    bottom: 5px;  
+    left: 5px;  
+    padding: 10px;
+}
+
+.overlay span:hover {
+    text-decoration: underline; 
+}
+
+.overlay .link-icon {
+    position: absolute;
+    bottom: 10px;  
+    right: 10px; 
+    font-size: 18px; 
+    background-color: rgba(0, 0, 0, 0.5);  
+    padding: 5px;  
+    border-radius: 50%;  
+}
+
+.overlay a {
+    text-decoration: none;  
+    color: var(--white);  
+}
+
+.overlay a:hover {
+    text-decoration: underline;  
+}
+
+.university-card:hover .overlay .link-icon {
+    background-color: rgba(0, 0, 0, 0.7); 
 }

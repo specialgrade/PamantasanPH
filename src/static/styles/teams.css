@@ -283,7 +283,7 @@ main {
     font-size: 2rem;
 }
 
-h3, p {
+.member-info {
     padding: 10px;
     text-align: left; 
 }
