@@ -2,4 +2,3 @@
 instance
 __pycache__
 .env
-api_key.py
