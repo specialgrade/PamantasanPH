@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}"> -->
+    <title>PamantasanPH</title>
+    <!-- <link rel="stylesheet" type="text/css" href="stylesProto.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header> <!-- Navigation -->
+        <div class="container">
+            <div class="logo">
+                <!-- <img src="C:\Users\ALY\Documents\GitHub\PamantasanPH\src\static\images\logos\website\finallogo.png" alt="PamantasanPH Logo"> -->
+                <span>PamantasanPH</span>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-moon"></i>
+                <span>Username</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container"> <!-- Sidebar, NOT FINALIZE -->
+            <aside>
+                <div class="sidebar-item">
+                    <span>Create New List</span>
+                    <i class="fa-solid fa-circle-plus"></i>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Universities</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>Map</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-code-compare"></i>
+                    <span>Compare</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-users-rectangle"></i>
+                    <span>Team</span>
+                </div>
+                <div class="subscribe">
+                    <h3>Subscribe to our Newsletter!</h3>
+                    <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                    <input type="email" placeholder="Email">
+                    <button>Subscribe</button>
+                </div>
+                <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+            </aside>
+
+            <section> 
+                <div  id="navbar" class="heading-container"> <!-- Navigation -->
+                    <nav>
+                        <ul>
+                            <li class="dropdown">
+                                <button class="dropbtn">Branches</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#openuni">Open University</a>
+                                    <a href="#main">Lingayen</a>
+                                    <a href="#alaminos">Alaminos</a>
+                                    <a href="#asingan">Asingan</a>
+                                    <a href="#bayambang">Bayambang</a>
+                                    <a href="#binmaley">Binmaley</a>
+                                    <a href="#infanta">Infanta</a>
+                                    <a href="#san carlos city">San Carlos City</a>
+                                    <a href="#santa maria">Santa Maria</a>
+                                    <a href="#urdaneta city">Urdaneta City</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Requirements</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#gen">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Courses</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#special">Specializations</a>
+                                    <a href="#undergrad">Undergraduate Programs</a>
+                                    <a href="#doctoral">Doctoral Programs</a>
+                                    <a href="#masters">Master Programs</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Application</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#application">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#contacts" class="dropbtn">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div> 
+                
+                <!-- Pangasinan State University -->
+                <div id="gen" class="container">
+                    <img src="{{ url_for('static', C:\Users\bianc_d72o04d\Downloads\40811eyack.com.MAIL_xsbsxxypt8dh6!App\Pangasinan State Univ..png') }}" alt="Pangasinan State University" class="univ-logo">
+                    <h1>Pangasinan State University</h1>
+                    <h2 class="address">Alvear St., Poblacion, Lingayen, 2401 Pangasinan</h2>
+                    <div class="status">
+                        <i class="status-icon fa fa-circle" id="status-icon"></i>
+                        <span class="close" id="status-text">NOT YET OPENED</span>
+                    </div>
+            
+                    <h3 id="special" class="heading3">Admission Requirements</h3> <!-- Admission Requirements -->
+                    <ol>
+                        <li>Please ensure that you have a softcopy of the following requirements to be uploaded before proceeding:</li>
+                        <li>2x2 picture in white background</li>
+                        <li>Clear copy of grades</li>
+                        <li>Grade 11 card for graduating Senior High School</li>
+                        <li>Grade 12 for graduates of Senior High School</li>
+                        <li>Certification of Grades of Transcript of Records for Transferees</li>
+                        <li>Only ONE application can be filed for the whole University System. Multiple submission of application can be a ground for disqualification.</li>
+                            
+                    </ol>
+            
+                    <h3 id="undergrad" class="heading3">University Specializations</h3> <!-- University Specializations -->
+                    <ul>
+                        <li id="openuni">NONE</li>
+                    </ul>
+            
+                    <h3 class="heading3">University Courses</h3> <!-- University Courses --> 
+                    <ul>
+                        <li>
+                          <h4>UNDERGRADUATE PROGRAMS</h4>
+                          <ul>
+                            <li>Open Uni
+                              <ul>
+                                <li>COLLEGE OF ARTS, SCIENCES AND LETTERS</li>
+                                    <li>Bachelor of Arts in English Language</li>
+                                    <li>Bachelor of Arts in Economics</li>
+                                    <li>Bachelor of Science in Biology</li>
+                                    <li>Bachelor of Science in Nutrition and Dietetics</li>
+                                    <li>Bachelor of Science in Social Work</li>
+                              </ul>
+                                    <li>COLLEGE OF BUSINESS AND PUBLIC ADMINISTRATION</li>
+                                    <li>Bachelor of Public Administration</li>
+                                    <li>Bachelor of Science in Business Administration</li>
+                                    <li>Major in Financial Management</li>
+                                    <li>Major in Operations Management</li>
+                                </ul>
+                                <li>COLLEGE OF COMPUTING SCIENCES</li>
+                                    <li>Bachelor of Science in Computer Science</li>
+                                    <li>Bachelor of Science in Information Technology</li>
+                                    <li>Bachelor of Science in Mathematics</li>
+                                    <li>Major in Pure Math</li>
+                                    <li>Major in Statistics</li>
+                                    <li>Major in CIT</li>
+                                </ul>
+                                <li>COLLEGE OF HOSPITALITY AND TOURISM MANAGEMENT</li>
+                                    <li>Bachelor of Science Hospitality Management</li>
+                                </ul>
+                                <li>COLLEGE OF TEACHER EDUCATION</li>
+                                    <li>Bachelor of Secondary Education</li>
+                                        <li>Bachelor of Technical- Vocational Teacher Education</li>
+                                            <li>Bachelor of Technology and Livelihood Education</li>
+                                </ul>
+                                <li>COLLEGE OF INDUSTRIAL TECHNOLOGY</li>
+                                    <li>Bachelor Industrial Technology</li>
+                                        <li>Major in Automotive Technology</li>
+                                            <li>Major in Ceramics Technology</li>
+                                                <li>Major in Civil Technology</li>
+                                                    <li>Major in Drafting Technology</li>
+                                                        <li>Major in Electrical Technology</li>
+                                                            <li>Major in Electronics Technology</li>
+                                                                <li>Major in Food Service Management</li>
+                                                                    <li>Major in Garments, Fashion and Design</li>
+                                                                        <li>Major in Mechanical Technology</li>                                    
+                                </ul>
+                            </li>
+                      </ul>
+            
+                    <h3 class="heading3">Application Process</h3> <!-- Application Process -->
+                    <ol>
+                        <li>Get/secure application form from the:</li>
+                        <li>Guidance Office/Student Services Office of the chosen campus.</li>
+                        <li>Admission and Testing Office, PSU Lingayen, Pangasinan.</li>
+                        <li>Download the form here.</li>
+                        <li>Properly accomplish PSU-CAT application form and attach recent two (2) identical 2 X 2 photo with name tag.</li>
+                        <li>Pay testing fee to designated cashier and get official receipt.</li>
+                        <li>Submit accomplished PSU-CAT form with requirements and the official receipt to the Guidance Office/Student Services Office of chosen campus.</li>
+                        <li>Get examination test permit.</li>
+                        <li>During the Examination day</li>
+                        </ul>
+                        <li>Go to the designated testing center specified in the examination permit.</li>
+                        <li>Bring Mongol pencil #2.</li>
+                        <li>Present examination permit to the examiner.</li>
+                        <li>For those who passed the PSU-CAT get/secure interview schedule from the campus where PSU-CAT was taken. Result of PSU-CAT</li>
+                        </ul>
+                        <li>Results will be published thru the internet at the PSU website (www.psu.edu.ph)</a></li>
+                        <li>Examinees will be sent their individual notice (for those who submitted self-addressed envelope).</li>
+                            <li>Note: Application Forms will be released (2) two weeks before the examination day.</li>                            
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+            
+                    <h3 class="heading3">Contact Information</h3> <!-- Contact Information -->
+                    <ul>
+                        <li>Telephone (+63) 752 060 802 & (+63) 755 424 261</li>
+                        <li>Fax (+63) 755 424 057</li>
+                        <li><a href= "mailto:jpereyras@psu.edu.ph">E-mail: jpereyras@psu.edu.ph</a></li>
+                        <li><a href= "mailto:psu.ip.itso@gmail.com">psu.ip.itso@gmail.com</a></li>
+                        <li><a href= "https://www.psu.edu.ph">Web site: https://www.psu.edu.ph</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- <script src="scriptProto.js"></script> -->
+</body>
+</html>

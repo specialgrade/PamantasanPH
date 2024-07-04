@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}"> -->
+    <title>PamantasanPH</title>
+    <!-- <link rel="stylesheet" type="text/css" href="stylesProto.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header> <!-- Navigation -->
+        <div class="container">
+            <div class="logo">
+                <!-- <img src="C:\Users\ALY\Documents\GitHub\PamantasanPH\src\static\images\logos\website\finallogo.png" alt="PamantasanPH Logo"> -->
+                <span>PamantasanPH</span>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-moon"></i>
+                <span>Username</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container"> <!-- Sidebar, NOT FINALIZE -->
+            <aside>
+                <div class="sidebar-item">
+                    <span>Create New List</span>
+                    <i class="fa-solid fa-circle-plus"></i>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Universities</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>Map</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-code-compare"></i>
+                    <span>Compare</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-users-rectangle"></i>
+                    <span>Team</span>
+                </div>
+                <div class="subscribe">
+                    <h3>Subscribe to our Newsletter!</h3>
+                    <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                    <input type="email" placeholder="Email">
+                    <button>Subscribe</button>
+                </div>
+                <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+            </aside>
+
+            <section> 
+                <div  id="navbar" class="heading-container"> <!-- Navigation -->
+                    <nav>
+                        <ul>
+                            <li class="dropdown">
+                                <button class="dropbtn">Requirements</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#gen">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Courses</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#special">Specializations</a>
+                                    <a href="#undergrad">Undergraduate Programs</a>
+                                    <a href="#doctoral">Doctoral Programs</a>
+                                    <a href="#masters">Master Programs</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Application</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#application">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#contacts" class="dropbtn">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div> 
+                
+                <!-- Nueva Ecija University of Science and Technology -->
+                <div id="gen" class="container">
+                    <img src="{{ url_for('static', C:\Users\bianc_d72o04d\Downloads\40811eyack.com.MAIL_xsbsxxypt8dh6!App\University of Northern Philippines.png') }}" alt="Nueva Ecija University of Science and Technology" class="univ-logo">
+                    <h1>Nueva Ecija University of Science and Technology</h1>
+                    <h2 class="address">Gen. Tinio
+                        Street, Quezon District, Cabanatuan City, Nueva Ecija 3100
+                        </h2>
+                    <div class="status">
+                        <i class="status-icon fa fa-circle" id="status-icon"></i>
+                        <span class="close" id="status-text">NOT YET OPENED</span>
+                    </div>
+            
+                    <h3 id="special" class="heading3">Admission Requirements</h3> <!-- Admission Requirements -->
+                    <ol>
+                        <li>GENERAL REQUIREMENTS FOR ADMISSION:
+
+                            FOR FRESHMEN:
+                            <li> Senior high school graduate who has not taken and is not taking any college degree in other higher educational institution;
+                                <li> Student applicant has a General Weighted Average (GWA) of 85% for Board Programs;
+                                    <li> Applicant with GWA lower than 85% may still be admitted but only for non-board programs;
+                                        <li> Must pass the NEUST-College Admission Test (NEUST-CAT);
+                                            <li> Accomplished application form, photocopy of Form 138 (SHS card), two copies of 2×2 pictures with name tag in white background; and Certificate of Good Moral Character.
+                                                <li> Some course has a minimum height requirements
+                                                    <li>BS Nursing (5’0)
+                                                        <li>BS Criminology(5’2)
+                                                            <li>BS Hospitality Management (5’0)
+                            </li>
+                            
+                    </ol>
+            
+                    <h3 id="undergrad" class="heading3">University Specializations</h3> <!-- University Specializations -->
+                    <ul>
+                        <li id="openuni">NONE</li>
+                    </ul>
+            
+                    <h3 class="heading3">University Courses</h3> <!-- University Courses --> 
+                    <ul>
+                        <li>
+                          <h4>UNDERGRADUATE PROGRAMS</h4>
+                          <ul>
+                            <li>Open Uni
+                              <ul>
+                                <li>COLLEGE OF ARTS AND SCIENCES
+                                    <li>Bachelor Science in Biology
+                                        <li>Bachelor Science in Food Technology
+                                            <li>Bachelor Science in Psychology
+                                                <li>Bachelor of Science in Chemistry
+                                                    <li>Bachelor of Science in Environmental Science
+                                                        <li>Pollution Control and Waste Management
+                                                        </ul>
+                                                        <li>COLLEGE OF EDUCATION
+                                                            <li>Laboratory High School
+                                                                <li>JHS
+                                                                    <li>SHS
+                                                                        <li>– ABM
+                                                                            <li>– STEM
+                                </ul>
+                                <li>COLLEGE OF INDUSTRIAL TECHNOLOGY
+                                    <li>Accelerated Vocational Training Program
+                                        <li>Bachelor of Industrial Technology
+                                            <li> – Apparel and Fashion Technology
+                                                <li>– Automotive Technology
+                                                    <li>– Drafting Technology
+                                                        <li>– Electrical Technology
+                                                            <li>– Electronics Technology
+                                                                <li>– Food Technology
+                                                                    <li>– Heating, Ventilating and Air-Conditioning Technology
+                                                                        <li>– Mechanical Technology
+                                                                            <li>Electronics and Communication Engineering Technology
+                                                                            </ul>
+                                                                            <li>COLLEGE OF NURSING
+                                                                                <li>Bachelor of Science in Nursing
+                                    </li>                                    
+                                </ul>
+                            </li>
+                      </ul>
+            
+                    <h3 class="heading3">Application Process</h3> <!-- Application Process -->
+                    <ol>
+
+                           <li>PROCEDURE
+                            <li>ONLINE ADMISSION PROCEDURES
+                                <li>Log in to Applicant's Profile Page
+                                    <li><a href= "www.admission.neust.edu.ph">(www.admission.neust.edu.ph)</a>using the username and password given by the Office of Admission and Registration of NEUST.
+                                        <li>Upon login to admission page using the valid username and password, applicant must upload/submit soft copy of the following:
+                                            <li>2x2 Photograph
+                                                <li>Selfie picture
+                                                    <li>Electronic signature using blue ink with white background
+                                                        <li>When requirements are uploaded already, click request email confirmation. Applicant must check his/her email to get the verification code.
+                                                            <li>Examination code/key and the schedule of online examination will be sent to the applicant. The examination code/key will serve as the applicant's access code to take the ONLINE EXAM and can only be used once. Applicant must ensure that he/she has a stable internet connection before taking the admission test.
+                                                                <li>After taking the admission test, the applicant will wait for the result of his/her test. The Office of Admission and Registration will post the list of qualified applicants in the University's website (www.neust.edu.ph) aside from the message that he/she will receive in her/his email. If qualified, then the applicant may proceed to the ONLINE ENROLMENT.
+                            </li>                            
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+            
+                    <h3 class="heading3">Contact Information</h3> <!-- Contact Information -->
+                    <ul>
+                        <li>University Email:
+                            <li><a href= "mailto:neustmain@neust.edu.ph">neustmain@neust.edu.ph</a>
+                            </ul>
+                                <li>Office of Admission and
+                                    <li><a href= "oar@neust.edu.ph">Registration: oar@neust.edu.ph</a>
+                            </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- <script src="scriptProto.js"></script> -->
+</body>
+</html>

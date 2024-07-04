@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}"> -->
+    <title>PamantasanPH</title>
+    <!-- <link rel="stylesheet" type="text/css" href="stylesProto.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header> <!-- Navigation -->
+        <div class="container">
+            <div class="logo">
+                <!-- <img src="C:\Users\ALY\Documents\GitHub\PamantasanPH\src\static\images\logos\website\finallogo.png" alt="PamantasanPH Logo"> -->
+                <span>PamantasanPH</span>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-moon"></i>
+                <span>Username</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container"> <!-- Sidebar, NOT FINALIZE -->
+            <aside>
+                <div class="sidebar-item">
+                    <span>Create New List</span>
+                    <i class="fa-solid fa-circle-plus"></i>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Universities</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>Map</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-code-compare"></i>
+                    <span>Compare</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-users-rectangle"></i>
+                    <span>Team</span>
+                </div>
+                <div class="subscribe">
+                    <h3>Subscribe to our Newsletter!</h3>
+                    <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                    <input type="email" placeholder="Email">
+                    <button>Subscribe</button>
+                </div>
+                <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+            </aside>
+
+            <section> 
+                <div  id="navbar" class="heading-container"> <!-- Navigation -->
+                    <nav>
+                        <ul>
+                            <li class="dropdown">
+                                <button class="dropbtn">Requirements</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#gen">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Courses</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#special">Specializations</a>
+                                    <a href="#undergrad">Undergraduate Programs</a>
+                                    <a href="#doctoral">Doctoral Programs</a>
+                                    <a href="#masters">Master Programs</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Application</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#application">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#contacts" class="dropbtn">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div> 
+                
+                <!-- University of Northern Philippines -->
+                <div id="gen" class="container">
+                    <img src="{{ url_for('static', C:\Users\bianc_d72o04d\Downloads\40811eyack.com.MAIL_xsbsxxypt8dh6!App\University of Northern Philippines.png') }}" alt="University of Northern Philippines" class="univ-logo">
+                    <h1>University of Northern Philippines</h1>
+                    <h2 class="address">Tamag, Vigan, Ilocos Sur</h2>
+                    <div class="status">
+                        <i class="status-icon fa fa-circle" id="status-icon"></i>
+                        <span class="close" id="status-text">NOT YET OPENED</span>
+                    </div>
+            
+                    <h3 id="special" class="heading3">Admission Requirements</h3> <!-- Admission Requirements -->
+                    <ol>
+                        <li>Required documents for UNP-CAT Application</li>
+                        </ul>
+                        <li>Softcopy of passport size picture (1.8 inches X 1.4 inches), taken within the last 6 months. Must be in white background with name tag.</li>
+                            <li>For HS/SHS Graduate: Scanned copy of Form 138 or School Form 9 (4th-year high school or Grade-12 report card).</li>
+                            
+                    </ol>
+            
+                    <h3 id="undergrad" class="heading3">University Specializations</h3> <!-- University Specializations -->
+                    <ul>
+                        <li id="openuni">NONE</li>
+                    </ul>
+            
+                    <h3 class="heading3">University Courses</h3> <!-- University Courses --> 
+                    <ul>
+                        <li>
+                          <h4>UNDERGRADUATE PROGRAMS</h4>
+                          <ul>
+                            <li>Open Uni
+                              <ul>
+                                <li>Teacher Education
+                                    <li>Bachelor of Elementary Education
+                                    <li>major in:
+                                    <li>Early Childhood Education 
+                                    <li>General Education 
+                                    <li>Bachelor of Secondary Education
+                                    <li>major in:
+                                    <li>Biology 
+                                    <li>English 
+                                    <li>Filipino 
+                                    <li>Mathematics 
+                                    <li>Music, Arts, Physical Education and Health 
+                                    <li>Physical Science 
+                                    <li>Social Science 
+                                    <li>Values Education 
+                                    <li>BS in Industrial Education
+                                    <li>major in:
+                                    <li>Electronics Technology 
+                                    <li>Home Economics 
+                                </ul>
+                                <li>Professional & Technical Courses
+                                    <li>BS in Industrial Technology
+                                    <li>major in:
+                                    <li>Automotive Technology 
+                                    <li>Electrical Technology 
+                                    <li>Electronics Technology 
+                                </ul>
+                                <li>Medical & Healthcare
+                                    <li> BS in Community Health Management 
+                                    <li> Bachelor in Medical Laboratory Science 
+                                    <li>BS in Midwifery 
+                                    <li>BS in Nursing 
+                                </ul>
+                                <li>Business
+                                    <li>BS in Accountancy 
+                                    <li>BS in Business Administration
+                                    <li>major in:
+                                    <li>Financial Management 
+                                    <li>Human Resource Development Management 
+                                    <li>Management Accounting 
+                                    <li>BS in Entrepreneurship 
+                                </ul>
+                                <li>Science
+                                    <li>BS in Biology
+                                    <li>major in:
+                                    <li>Marine Biology 
+                                    <li>BS in Environmental Science 
+                                    <li>BS in Mathematics 
+                                    <li>BS in Physics 
+                                </ul>
+                                <li>Social Science
+                                    <li>AB in Political Science BS in Criminology 
+                                    <li>BS in Psychology 
+                                    <li>BSEd in Social Science 
+                                </ul>
+                                <li>Arts and Design
+                                    <li> Bachelor Of Fine Arts
+                                    <li>major in:
+                                    <li>Painting 
+                                    <li>Visual Communication 
+                                    <li>BS in Interior Design 
+                                </ul>
+                                <li>Communication & Information Science
+                                    <li>AB in Mass Communication Bachelor of Fine Arts major in Visual Communication
+                                    <li>Bachelor of Library & Information Science
+                                    <li>major in:
+                                    <li>Academic Librarianship 
+                                </ul>
+                                <li>Engineering
+                                    <li>BS in Civil Engineering BS in Geodetic Engineering 
+                                    <li>BS in Sanitary Engineering 
+                                </ul>
+                                <li>Administration
+                                    <li>BS in Cooperative Management 
+                                    <li>BS in Law Enforcement 
+                                    <li>Administration
+                                </ul>
+                                <li>Architecture
+                                    <li>BS in Architecture 
+                                </ul>
+                                <li>IT, Computer Science & Programming
+                                    <li>BS in Computer Science BS in Information Technology 
+                                </ul>
+                                <li>Tourism, Hospitality & Culinary
+                                    <li>BS in Hotel and Restaurant Management BS in Tourism</li>                                    
+                                </ul>
+                            </li>
+                      </ul>
+            
+                    <h3 class="heading3">Application Process</h3> <!-- Application Process -->
+                    <ol>
+
+                           <li>Open your browser and go to unp.priisms.online/padmission
+                            <li>Select from the dropdown menu the following:
+                            <li>• School Campus (always select Main Campus)
+                            <li>• Application Type
+                            <li>• Classification (select College for 4-year program; or Diploma, Certificate or Associ for 2-year program)
+                            <li>• Grade/Level  
+                            <li>Select first, second, and third choice of Academic Program, then, click next.
+                            <li>Fill out all required fields in Personal Information. Then, click next.
+                            <li>Fill out your Educational Background by clicking the 'Create New' button.
+                            <li>Fill out your Current/Last School Attended Information, then, click 'Add.' Then, click next.
+                            <li>Add your photo by clicking the 'Browse Image' button.
+                            <li>Fill out all required fields in Family Information.
+                            <li>Fill out Contact Person in Case of Emergency.
+                            <li>Select one from Father, Mother, or Guardian in the drop-down menu. Then, click next.
+                            <li>Fill out all required fields in Other Information. Then, click next
+                            <li>Upload required documents by clicking the 'Choose File' button.
+                            <li>File Name of your documents should be your LAST NAME, FIRST NAME MI (e.g. DELA CRUZ, CARL F.).
+                            <li>Make sure that your documents are CORRECT and COMPLETE.
+                            <li>Review your Information
+                            <li>(Reminder: Double check that you have placed your correct and active email address).
+                            <li>Click the boxes to confirm that you have read, understood, and accepted the UNP Admission Policies and Data Privacy Policy.
+                            <li>Read carefully the Admission Policy, then, click 'I AGREE' button.
+                            <li>Read carefully the Data Privacy Policy, then, click 'I AGREE' button.
+                            <li>Click Proceed and Submit
+                            <li>(Reminder: Double check that you have placed your correct and active email address before submitting).
+                            <li>Application successfully submitted.
+                            <li>Login to your email account and check notifications sent to you to view the status of your application.
+                            <li>After your application is checked and verified by the Admission Personnel, your TEST PERMIT and HEALTH DECLARATION FORM will be sent to your email address.
+                            <li>Take note of your schedule and venue of exam. Print your test permit and health declaration form to be presented on the date of your examination.</li>                            
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+            
+                    <h3 class="heading3">Contact Information</h3> <!-- Contact Information -->
+                    <ul>
+                        <li>(077) 644-2261</li>
+                        <li><a href="mailto:op@unp.edu.ph">op@unp.edu.ph</a></li>
+                        <li>Registrar's Office
+                            <ul>
+                                <li><a href="mailto:registrar@unp.edu.ph">registrar@unp.edu.ph</a></li>
+                                <li>fb: UNP Registrar's Office</li>
+                            </ul>
+                        </li>
+                        <li>Admission Services
+                            <ul>
+                                <li><a href="mailto:admissionservices@unp.edu.ph">admissionservices@unp.edu.ph</a></li>
+                                <li>fb: UNP Admission Services</li>
+                            </ul>
+                        </li>
+                        <li>Public Information Office
+                            <ul>
+                                <li><a href="mailto:pioffice@unp.edu.ph">pioffice@unp.edu.ph</a></li>
+                                <li>fb: University of Northern Philippines</li>
+                                <li><a href="mailto:guidance@unp.edu.ph">guidance@unp.edu.ph</a></li>
+                                <li>fb: University of Northern Philippines</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- <script src="scriptProto.js"></script> -->
+</body>
+</html>
