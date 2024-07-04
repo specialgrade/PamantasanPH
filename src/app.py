@@ -5,6 +5,7 @@ from flask_login import LoginManager
 from flask_mail import Mail, Message
 from authlib.integrations.flask_client import OAuth
 import os 
+from api_key import GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, FACEBOOK_APP_ID, FACEBOOK_APP_SECRET
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -42,16 +43,16 @@ def create_app():
 
     google = oauth.register(
         name='google',
-        client_id=os.getenv('GOOGLE_CLIENT_ID'),
-        client_secret=os.getenv('GOOGLE_CLIENT_SECRET'),
+        client_id=GOOGLE_CLIENT_ID,
+        client_secret=GOOGLE_CLIENT_SECRET,
         server_metadata_url='https://accounts.google.com/.well-known/openid-configuration',
         client_kwargs={'scope': 'openid profile email'}
     )
 
     facebook = oauth.register(
         name='facebook',
-        client_id=os.getenv('FACEBOOK_APP_ID'),
-        client_secret=os.getenv('FACEBOOK_APP_SECRET'),
+        client_id=FACEBOOK_APP_ID,
+        client_secret=FACEBOOK_APP_SECRET,
         authorize_url='https://www.facebook.com/dialog/oauth',
         access_token_url='https://graph.facebook.com/oauth/access_token',
         authorize_params=None,
