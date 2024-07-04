@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PamantasanPH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span>PamantasanPH</span>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-moon"></i>
+                <span>Username</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <aside>
+                <div class="sidebar-item">
+                    <span>Create New List</span>
+                    <i class="fa-solid fa-circle-plus"></i>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Universities</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>Map</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-code-compare"></i>
+                    <span>Compare</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-users-rectangle"></i>
+                    <span>Team</span>
+                </div>
+                <div class="subscribe">
+                    <h3>Subscribe to our Newsletter!</h3>
+                    <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                    <input type="email" placeholder="Email">
+                    <button>Subscribe</button>
+                </div>
+                <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+            </aside>
+            <section>
+                <div id="navbar" class="heading-container">
+                    <nav>
+                        <ul>
+                            <li class="dropdown">
+                                <button class="dropbtn">Requirements</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#gen">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Courses</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#special">Specializations</a>
+                                    <a href="#undergrad">Undergraduate Programs</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Application</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#application">General</a>
+                                </div>         
+                            </li>
+                            <li class="dropdown">
+                                <a href="#contacts" class="dropbtn">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="gen" class="container">
+                    <img src="{{ url_for('static', filename='images/logos/universities/WMSULogo.png') }}" alt="Western Mindanao State University" class="univ-logo">
+                    <h1>Western Mindanao State University</h1>
+                    <h2 class="address">Normal Road, Baliwasan, Zamboanga City, Philippines</h2>
+                    <div class="status">
+                        <i class="status-icon fa fa-circle" id="status-icon"></i>
+                        <span class="close" id="status-text">Admission Ongoing</span>
+                    </div>
+                    <h3 id="special" class="heading3">Admission Requirements</h3>
+                    <ol>
+                        <li>NSO certified birth certificate (the original and two photocopies)</li>
+                        <li>College entrance test results (the original document and one photocopy)</li>
+                        <li>Form 138 – their high school report card (the original and one photocopy)</li>
+                        <li>Medical certificate of physical health (the original and one photocopy)</li>
+                        <li>Certificate of good moral character (the original and one photocopy)</li>
+                        <li>College admission evaluation or interview form (the original and one photocopy)</li>
+                        <li>Parent(s)/ guardian(s) income tax return or a certificate of indigency</li>
+                        <li>Must be a graduate of an accredited 4-year high school recognized by the DepEd</li>
+                        <li>Must pass the College Entrance Test (CET) and Aptitude Test for courses like Engineering, Nursing, Criminology and Education</li>
+                        <li>Must submit high school card (or equivalent certification) to the Office of the Dean of Admissions</li>
+                    </ol>
+                    <h3 id="undergrad" class="heading3">University Specializations</h3>
+                    <p>N/A</p>
+                    <h3 class="heading3">University Courses</h3>
+                    <ul>
+                        <li>
+                            <h4 id="undergrad">Undergraduate Courses/Programs</h4>
+                            <ul>
+                                <li>Bachelor of Elementary Education - major in: Early Childhood Education, General Education, Special Education</li>
+                                <li>Bachelor of Physical Education</li>
+                                <li>Bachelor of Secondary Education - major in: Biology, English, Filipino, Mathematics, Music, Arts, Physical Education and Health, Physical Science, Social Studies, Values Education</li>
+                                <li>BS in Home Economics Education</li>
+                                <li>AB in Asian Studies - major in: Southeast Asia</li>
+                                <li>AB in Political Science</li>
+                                <li>AB in Social Studies</li>
+                                <li>BS in Community Development</li>
+                                <li>BS in Criminology</li>
+                                <li>BS in Psychology</li>
+                                <li>BS in Social Studies</li>
+                                <li>BS in Social Work</li>
+                                <li>BS in Agricultural Engineering</li>
+                                <li>BS in Civil Engineering</li>
+                                <li>BS in Computer Engineering</li>
+                                <li>BS in Electrical Engineering</li>
+                                <li>BS in Electronics Engineering</li>
+                                <li>BS in Environmental Engineering</li>
+                                <li>BS in Geodetic Engineering</li>
+                                <li>BS in Industrial Engineering</li>
+                                <li>BS in Mechanical Engineering</li>
+                                <li>BS in Sanitary Engineering</li>
+                                <li>Bachelor in Agricultural Technology</li>
+                                <li>BS in AgriBusiness</li>
+                                <li>BS in Agricultural Engineering</li>
+                                <li>BS in Agriculture - major in: Animal Science, Crop Science</li>
+                                <li>BS in Agroforestry</li>
+                                <li>BS in Forestry - major in: Forest Biological Science, Forest Resource Management, Community Forestry</li>
+                                <li>BS in Biology</li>
+                                <li>BS in Chemistry</li>
+                                <li>BS in Environmental Science</li>
+                                <li>BS in Mathematics</li>
+                                <li>BS in Physics</li>
+                                <li>BS in Statistics</li>
+                                <li>BS in Nursing</li>
+                                <li>BS in Nutrition and Dietetics</li>
+                                <li>AB in English</li>
+                                <li>AB in Filipino</li>
+                                <li>BS in Architecture - major in: Architectural Design, Construction Technology, Housing, Planning</li>
+                                <li>BS in Computer Engineering</li>
+                                <li>BS in Computer Science - major in: Information Technology, Software Technology</li>
+                                <li>BS in Accountancy</li>
+                                <li>BS in Economics</li>
+                                <li>AB in Mass Communication - major in: Broadcasting, Journalism</li>
+                                <li>BS in Food Technology</li>
+                                <li>AB in Asian Studies - major in: Southeast Asia</li>
+                                <li>BA in History</li>
+                                <li>BS in Islamic Studies</li>
+                                <li>BS in Hotel and Restaurant Management</li>
+                            </ul>
+                            
+                        </li>
+                    </ul>
+                    <h3 id="application" class="heading3">Application Process</h3>
+                    <ol>
+                        <li>Admission Guide - New Students</li>
+                        <li>Pay the necessary Fee for the Physical Medical Examination at the WMSU Cashier’s Office. Ground Floor Administration Building, WMSU.</li>
+                        <li>Proceed to the University Health Center, WMSU Main Campus and inquire about necessary requirements for Physical/Medical Examination and have your PME. When done secure PME certification.</li>
+                        <li>Go to the College of your choice for the interview (if needed, and/or enrollment on the appointed date). If you get disqualified in the first course you chose, you may proceed to the next college of your choice, provided however, you meet all requirements of your next chosen college.</li>
+                        <li>Go to the college where you qualify and enroll.</li>
+                        <li>NEW STUDENTS (FRESHMEN – GRADUATE & UNDERGRADUATE PROGRAMS) - Proceed to the College for Admission.
+                            <ul>
+                                <li>Present the following documents in two (2) long brown Envelopes (write name at upper left corner):
+                                    <ul>
+                                        <li>NSO Certified Birth Certificate (Original & 2 photocopies)</li>
+                                        <li>College Entrance Test Result (Original & 1 photocopy)</li>
+                                        <li>Form 138 (H.S. Card) (Original & 1 photocopy)</li>
+                                        <li>Medical Certificate (Original & 1 photocopy)</li>
+                                        <li>Certificate of Good Moral Character (Original & 1 photocopy)</li>
+                                        <li>College Admission Evaluation Form/College Admission interview form (Original & 1 photocopy)</li>
+                                        <li>Parent’s/Guardian Income Tax Return or Certificate of Indigency</li>
+                                    </ul>
+                                </li>
+                                <li>Fill up the admission form legibly and submit to Admission officer.</li>
+                                <li>Photocopy the Approved Admission form (2 copies)</li>
+                                <li>Present the original copy of the admission form to the Program Adviser for issuance of Enrolment Advising Form</li>
+                                <li>Fill up the Enrolment Advising form, write legibly Name, Course major (if any), College, Year Level, Semester and School Year; Subject ID, Subject Code, Subject Description, Units, Time, Days and Room.</li>
+                                <li>Present duly accomplished advising form to the adviser for approval.</li>
+                                <li>Proceed to the Encoding/Advising Center and present the Approved Advising form and the photocopy of the admission form.</li>
+                                <li>Then proceed to Assessment for assessment of fees then pay at the cashier.</li>
+                                <li>Proceed to enlistment center for Enlistment to class (for confirmation of enrolment) and will be issued a Certificate of Registration (COR)</li>
+                                <li>Proceed to the college and present COR-Green copy. Enrollment is Complete.</li>
+                            </ul>
+                        </li>
+                        <li>OLD STUDENTS - Secure clearance for enrolment from the College.</li>
+                        <li>RETURNING STUDENTS - Secure Clearance for enrolment, present to the Dean your Leave of Absence Form (LOA) duly approved by the Dean of Admission for re-admission.
+                            <ul>
+                                <li>Present accomplished clearance form and LOA to your program adviser for issuance of enrolment advising form, present secure/ present grade from previous subject enrolled.</li>
+                                <li>FOLLOW PROCEDURE 3 TO 10 OF PART II. Enrollment is complete.</li>
+                            </ul>
+                        </li>
+                        <li>TRANSFEREE - Proceed to the University Dean of Admission Office.
+                            <ul>
+                                <li>Present the following document in two (2) long brown envelopes:
+                                    <ul>
+                                        <li>NSO Certified Birth Certificate (Original & 2 photocopies)</li>
+                                        <li>College Entrance Test Result (Original & 1 photocopy)</li>
+                                        <li>Transcript of Records (Original & 2 photocopies)</li>
+                                        <li>Medical Certificate (Original & 1 photocopy)</li>
+                                        <li>Certificate of Eligibility to Transfer</li>
+                                        <li>College Admission Evaluation Form/College Admission interview form (Original & 1 photocopy)</li>
+                                    </ul>
+                                </li>
+                                <li>FOLLOW PROCEDURE 3 TO 11 OF PART I. Enrollment is complete.</li>
+                            </ul>
+                        </li>
+                        <li>CROSS ENROLLEE - Proceed to the University Dean of Admission Office.
+                            <ul>
+                                <li>Present the following document in two (2) long brown Envelopes:
+                                    <ul>
+                                        <li>Certificate of Eligibility to CROSS-ENROLL</li>
+                                        <li>Medical Certificate (Original & 1 photocopy)</li>
+                                    </ul>
+                                </li>
+                                <li>Proceed to the college where the subject/course you intend to cross-enroll is offered with a duly accomplished admission application form; enrollment advising form will be issued.</li>
+                                <li>FOLLOW PROCEDURE 3 TO 11 OF PART I. Enrollment is complete.</li>
+                            </ul>
+                        </li>
+                    </ol>                    
+                    <h3 id="contacts" class="heading3">Contact Information</h3>
+                    <ul>
+                        <li>Email Address: wmsu@wmsu.edu.ph, admissions@wmsu.edu.ph</li>
+                        <li>Website(s): <a href="https://www.facebook.com/wmsu.edu.ph/" target="_blank">https://www.facebook.com/wmsu.edu.ph/</a></li>
+                        <li>Phone / Landline Number: 991 – 1771, (062) 991 1771</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- <script src="scriptProto.js"></script> -->
+</body>
+</html>
+

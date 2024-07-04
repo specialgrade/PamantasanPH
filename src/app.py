@@ -24,6 +24,15 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('SQLALCHEMY_DATABASE_URI')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
+    app.config ['MAIL_SERVER'] = 'smtp.gmail.com'
+    app.config ['MAIL_PORT'] = 465
+    app.config ['MAIL_USERNAME'] = 'pamantasanph@gmail.com'
+    app.config ['MAIL_PASSWORD'] = 'PamantasanPH2024'
+    app.config ['MAIL_USE_TLS'] = False
+    app.config ['MAIL_USE_SSL'] = True
+
+    db.init_app(app)
+    mail.init_app(app)
     db.init_app(app)
     bcrypt.init_app(app)
     login_manager.init_app(app)

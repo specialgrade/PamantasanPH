@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}"> -->
+    <title>PamantasanPH</title>
+    <!-- <link rel="stylesheet" type="text/css" href="stylesProto.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header> <!-- Navigation -->
+        <div class="container">
+            <div class="logo">
+                <!-- <img src="C:\Users\ALY\Documents\GitHub\PamantasanPH\src\static\images\logos\website\finallogo.png" alt="PamantasanPH Logo"> -->
+                <span>PamantasanPH</span>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-moon"></i>
+                <span>Username</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container"> <!-- Sidebar, NOT FINALIZE -->
+            <aside>
+                <div class="sidebar-item">
+                    <span>Create New List</span>
+                    <i class="fa-solid fa-circle-plus"></i>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Universities</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>Map</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-code-compare"></i>
+                    <span>Compare</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-users-rectangle"></i>
+                    <span>Team</span>
+                </div>
+                <div class="subscribe">
+                    <h3>Subscribe to our Newsletter!</h3>
+                    <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                    <input type="email" placeholder="Email">
+                    <button>Subscribe</button>
+                </div>
+                <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+            </aside>
+
+            <section> 
+                <div id="navbar" class="heading-container"> <!-- Navigation -->
+                    <nav>
+                        <ul>
+                            <li class="dropdown">
+                                <button class="dropbtn">Requirements</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#gen">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Courses</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#special">Specializations</a>
+                                    <a href="#undergrad">Undergraduate Programs</a>
+                                    <a href="#doctoral">Doctoral Programs</a>
+                                    <a href="#masters">Master Programs</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Application</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#application">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#contacts" class="dropbtn">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div> 
+                
+                <!-- La Carlota City College -->
+                <div id="gen" class="container">
+                    <img src="{{ url_for('static', filename='images/logos/universities/LCCCLogo.png') }}" alt="La Carlota City College" class="univ-logo">
+                    <h1>La Carlota City College</h1>
+                    <h2 class="address">Gurrea Street, La Carlota City, Negros Occidental Philippines</h2>
+                    <div class="status">
+                        <i class="status-icon fa fa-circle" id="status-icon"></i>
+                        <span class="close" id="status-text">CLOSED</span>
+                    </div>
+            
+                    <h3 class="heading3">Admission Requirements</h3> <!-- Admission Requirements -->
+                    <ol>
+                        <li><b>High School Graduate</b></li>
+                        <p>
+                            <ul>
+                                <li>Report Card (Form 138-A)</li>
+                                <li>Two ID Pictures 2x2</li>
+                                <li>Birth Certificate (Photocopy)NSO</li>
+                                <li>Certificate of good Moral Character (Original)</li>
+                                <li>Police Clearance (for Criminology students)</li> 
+                                <li>Laboratory & X-ray (for CHA & DM students)</li>
+                            </ul>
+                        </p>
+                        <li><b>Transferee</b></li>
+                        <p>
+                            <ul>
+                                <li>Transfer Credential or Honorable Dismissal from the school last attended</li> 
+                                <li>Transcript of Records</li> 
+                                <li>Two ID pictures 2x2</li> 
+                                <li>Certificate of Good Moral Character from the school last attended</li> 
+                                <li>Birth Certificate (Photocopy) NSO</li>                            
+                            </ul>
+                        </p>
+                        <li><b>Cross Enrollee</b></li>
+                        <p>
+                            <ul id="special">
+                                <li>Two ID pictures 2x2</li> 
+                                <li>Permit to enroll from the School Registrar</li>                            
+                            </ul>
+                        </p>
+                        <li><b>Returning Students</b></li>
+                        <p>
+                            <ul>
+                                <li>Two ID pictures 2x2</li> 
+                                <li> School clearance from the office of the Administrative Officer</li>                            
+                            </ul>
+                        </p>
+                    </ol>
+            
+                    <h3 id="undergrad" class="heading3">University Specializations</h3> <!-- University Specializations -->
+                    <ul>
+                        <li id="openuni">Education</li>
+                        <li>Agriculture</li>
+                        <li>Public Administration</li>
+                    </ul>
+            
+                    <h3 class="heading3">University Courses</h3> <!-- University Courses --> 
+                    <ul>
+                        <li>
+                          <h4>UNDERGRADUATE PROGRAMS</h4>
+                          <ul>
+                            <li>College of Education
+                                <ul>
+                                    <li>Bachelor of Arts in English Language Studies</li>
+                                    <li>Bachelor of Science in Agriculture</li>
+                                    <li>Bachelor of Elementary Education</li>
+                                    <li>Bachelor of Early Childhood Education</li>
+                                    <li>Bachelor of Physical Education</li>
+                                    <li>Bachelor of Secondary Education</li>
+                                    <p>Major in:
+                                        <ul>
+                                            <li>English</li>
+                                            <li>Mathematics</li>
+                                            <li>Filipino</li>
+                                        </ul>
+                                    </p>
+                                    <li>Bachelor of Science in Business Administration</li>
+                                    <li>Bachelor of Science in Management Accounting</li>
+                                    <li>Bachelor of Science in Office Administration</li>
+                                    <li>Bachelor of Science in Public Administration</li>
+                                    <li>Bachelor of Science in Criminology</li>
+                                </ul>
+                            </li>
+                          </ul>
+                        </li>
+
+                        <li>
+                            <h4 id="doctoral">DOCTORAL PROGRAMS</h4>
+                            <ul>
+                                <li>Doctor of Education in Educational Management</li>
+                            </ul>
+                        </li>
+            
+                        <li>
+                            <h4 id="masters">MASTER PROGRAMS</h4>
+                            <ul>
+                                <li>Master of Arts in Education Educational Management</li>
+                                <li>Master of Arts in Education</li>
+                                <p>Specialization:</p>
+                                    <ul>
+                                        <li>Mathematics</li>
+                                        <li>English</li>
+                                        <li>Filipino</li>
+                                        <li>Early Childhood Education</li>
+                                    </ul>
+                                <li>Master in Business Administration</li>
+                                <li>Master in Public Administration</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3 id="application" class="heading3">Application Process</h3> <!-- Application Process -->
+                    <ol>
+                        <li>Go to LCCC Automate Online Admission</li>
+                        <li>Click “Proceed”</li>
+                        <li>Fill up all the required details. Click “I Agree” then Submit.</li>
+                        <li>Take note of your reference number. If you have corrections  to your data, click “Edit again?”</li>
+                        <li>For the schedule of exams, please wait for your name to be posted on the La Carlota City College Guidance Services Facebook page and La Carlota City College Official Facebook page.</li>
+                    </ol>
+            
+                    <h3 id="contacts" class="heading3">Contact Information</h3> <!-- Contact Information -->
+                    <ul>
+                        <li>Email: <a href="mailto:leriocarlota@gmail.com">leriocarlota@gmail.com</a></li>
+                        <li>Telephone: (034) 460 2303</li>
+                        <li>Website: <a href="https://lacarlotacitycollege.edu.ph/main.html">https://lacarlotacitycollege.edu.ph/main.html</a></li>
+                        <li>University Announcement: NONE</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- <script src="scriptProto.js"></script> -->
+</body>
+</html>

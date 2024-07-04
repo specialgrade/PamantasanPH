@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PamantasanPH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header> <!-- Navigation -->
+        <div class="container">
+            <div class="logo">
+                <span>PamantasanPH</span>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-moon"></i>
+                <span>Username</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container"> <!-- Sidebar, NOT FINALIZE -->
+            <aside>
+                <div class="sidebar-item">
+                    <span>Create New List</span>
+                    <i class="fa-solid fa-circle-plus"></i>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Universities</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>Map</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-code-compare"></i>
+                    <span>Compare</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-users-rectangle"></i>
+                    <span>Team</span>
+                </div>
+                <div class="subscribe">
+                    <h3>Subscribe to our Newsletter!</h3>
+                    <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                    <input type="email" placeholder="Email">
+                    <button>Subscribe</button>
+                </div>
+                <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+            </aside>
+
+            <section> 
+                <div id="navbar" class="heading-container"> <!-- Navigation -->
+                    <nav>
+                        <ul>
+                            <li class="dropdown">
+                                <button class="dropbtn">Requirements</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#gen">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Courses</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#special">Specializations</a>
+                                    <a href="#undergrad">Undergraduate Programs</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Application</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#application">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#contacts" class="dropbtn">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div> 
+                
+                <!-- Eastern Visayas State University -->
+                <div id="gen" class="container">
+                    <img src="{{ url_for('static', filename='images/logos/universities/EVSULogo.png') }}" alt="Eastern Visayas State University" class="univ-logo">
+                    <h1>Eastern Visayas State University</h1>
+                    <h2 class="address">Arch. Lino R. Gonzaga Avenue, Tacloban City, Philippines</h2>
+                    <div class="status">
+                        <i class="status-icon fa fa-circle" id="status-icon"></i>
+                        <span class="close" id="status-text">NOT YET OPENED</span>
+                    </div
+                    <h3 id="special" class="heading3"> Admission Requirements</h3>
+                    <ul>
+                        <li>New Students/Transferees only</li>
+                        <li>2 pcs 2 x 2 latest ID picture (white background)</li>
+                        <li>Original Certificate of Good Moral Character</li>
+                        <li>Certificate of Live Birth from PSA/Local Civil Registrar (Original & Photocopy)</li>
+                        <li>Original Copy of report Card for New Students</li>
+                        <li>Informative Copy of the TOR for Transferees</li>
+                        <li>Honorable Dismissal for Transferee</li>
+                        <li>Subject Checklist (Shiftee/New/Transferee)</li>
+                        <li>1 long Folder</li>
+                        <li>1 long Brown Envelope</li>
+                    </ul>
+
+                    <h3 id="undergrad" class="heading3">University Specializations</h3>
+                    <p>Education and Technology</p>
+
+                    <h3 class="heading3">University Courses</h3>
+                    <ul>
+                        <h4>College of Architecture and Allied Discipline</h4>
+                            <ul>
+                                <li>Bachelor of Science in Architecture (BSAr)</li>
+                                <li>Bachelor of Science in Interior Design (BSID)</li>
+                            </ul>
+                        <h4>College of Arts and Sciences</h4>
+                            <ul>
+                                <li>Bachelor of Science in Economics</li>
+                                <li>Batsilyer ng Sining sa Filipino</li>
+                                <li>Bachelor of Arts in English Language (BAEL)</li>
+                                <li>Bachelor of Science in Mathematics (BSMath)</li>
+                                <li>Bachelor of Science in Environmental Science (BSES)</li>
+                                <li>Bachelor of Science in Chemistry (BSChem)</li>
+                                <li>Bachelor of Science in Statistics (BSStat)</li>
+                            </ul>
+                        <h4>College of Business and Entrepreneurship</h4>
+                            <ul>
+                                <li>Bachelor of Science in Entrepreneurship (BSE)</li>
+                                <li>Bachelor of Science in Office Administration (BSOA)</li>
+                                <li>Bachelor of Science in Accountancy (BSA)</li>
+                                <li>Bachelor of Science in Marketing (BSM)</li>
+                            </ul>
+                        <h4>College of Education</h4>
+                            <ul>
+                                <li>Bachelor of Secondary Education (BSEd) major in:
+                                    <ul>
+                                        <li>Mathematics</li>
+                                        <li>Science</li>
+                                    </ul>
+                                </li>
+                                <li>Bachelor of Culture & Arts Education (BCAEd)</li>
+                                <li>Bachelor of Physical Education (BPEd)</li>
+                                <li>Bachelor in Elementary Education (BEED)</li>
+                                <li>Bachelor of Technical-Vocational Teacher Education (BTVTEd) major in:
+                                    <ul>
+                                        <li>Food and Service Management (FSM)</li>
+                                        <li>Civil and Construction</li>
+                                        <li>Automotive Technology (AT)</li>
+                                        <li>Electrical Technology (ET)</li>
+                                        <li>Garments, Fashion & Design (GFD)</li>
+                                        <li>Heating, Ventilating, Air-Conditioning and Refrigeration Technology</li>
+                                    </ul>
+                                </li>
+                                <li>Bachelor of Technology & Livelihood Education (BTLEd) major in:
+                                    <ul>
+                                        <li>Industrial Arts (IA)</li>
+                                        <li>Home Economics (HE)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        <h4>College of Engineering</h4>
+                            <ul>
+                                <li>Bachelor of Science in Chemical Engineering (BSChE)</li>
+                                <li>Bachelor of Science in Civil Engineering (BSCE)</li>
+                                <li>Bachelor of Science in Electrical Engineering (BSEE)</li>
+                                <li>Bachelor of Science in Electronics Engineering (BSECE)</li>
+                                <li>Bachelor of Science in Geodetic Engineering (BSGE)</li>
+                                <li>Bachelor of Science in Mechanical Engineering (BSME)</li>
+                                <li>Bachelor of Science in Industrial Engineering (BSIE)</li>
+                                <li>Bachelor of Science in Information Technology (BSIT)</li>
+                            </ul>
+                        <h4>College of Technology</h4>
+                            <ul>
+                                <li>Bachelor of Science in Hospitality Management (BSHM)</li>
+                                <li>Bachelor of Science in Nutrition & Dietetics (BSND)</li>
+                                <li>Bachelor of Science in Industrial Technology with major in:
+                                    <ul>
+                                        <li>Civil Construction</li>
+                                        <li>Clothing and Fashion Design</li>
+                                        <li>Graphics Arts and Printing</li>
+                                        <li>Refrigeration Air Conditioning</li>
+                                        <li>Electricity</li>
+                                        <li>Culinary Arts</li>
+                                        <li>Electronics</li>
+                                    </ul>
+                                </li>
+                                <li>Bachelor of Science in Mechanical Technology with major in:
+                                    <ul>
+                                        <li>Automotive</li>
+                                        <li>Metallurgy</li>
+                                        <li>Machine Shop</li>
+                                        <li>Welding and Fabrication</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                    </ul>
+
+                    <h3 class="heading3">Application Process</h3>
+                    <ol>
+                        <li>Log in to our website at <a href="https://apps.evsu.edu.ph/admissions/confirmation_login">https://apps.evsu.edu.ph/admissions/confirmation_login</a> using your Application Number and Birthdate or your LRN as your password.</li>
+                        <li>After logging in successfully, carefully read and comprehend all of the information included in your admission results. Then, click the "CONFIRM INTENT TO ENROLL" button to proceed to the next steps.</li>
+                    </ol>
+
+                    <p>Note: FOR APPLICANTS ON THE WAITING LIST STATUS, you must apply for a position on the waitlist, which must be authorized by the Head of Department. Your application will be accepted if a slot becomes available.</p>
+
+                    <h3 class="heading3">Contact Information</h3>
+                    <ul>
+                        <li>Email: <a href="president@evsu.edu.ph">president@evsu.edu.ph</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- <script src="scriptProto.js"></script> -->
+</body>
+</html>
+

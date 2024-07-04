@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}"> -->
+    <title>PamantasanPH</title>
+    <!-- <link rel="stylesheet" type="text/css" href="stylesProto.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header> <!-- Navigation -->
+        <div class="container">
+            <div class="logo">
+                <!-- <img src="C:\Users\ALY\Documents\GitHub\PamantasanPH\src\static\images\logos\website\finallogo.png" alt="PamantasanPH Logo"> -->
+                <span>PamantasanPH</span>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-moon"></i>
+                <span>Username</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container"> <!-- Sidebar, NOT FINALIZE -->
+            <aside>
+                <div class="sidebar-item">
+                    <span>Create New List</span>
+                    <i class="fa-solid fa-circle-plus"></i>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Universities</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>Map</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-code-compare"></i>
+                    <span>Compare</span>
+                </div>
+                <div class="sidebar-item">
+                    <i class="fa-solid fa-users-rectangle"></i>
+                    <span>Team</span>
+                </div>
+                <div class="subscribe">
+                    <h3>Subscribe to our Newsletter!</h3>
+                    <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                    <input type="email" placeholder="Email">
+                    <button>Subscribe</button>
+                </div>
+                <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+            </aside>
+
+            <section> 
+                <div  id="navbar" class="heading-container"> <!-- Navigation -->
+                    <nav>
+                        <ul>
+                            <li class="dropdown">
+                                <button class="dropbtn">Requirements</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#gen">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Courses</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#special">Specializations</a>
+                                    <a href="#undergrad">Undergraduate Programs</a>
+                                    <a href="#doctoral">Doctoral Programs</a>
+                                    <a href="#masters">Master Programs</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Application</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#application">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#contacts" class="dropbtn">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div> 
+                
+                <!-- Cagayan State University -->
+                <div id="gen" class="container">
+                    <img src="{{ url_for('static', C:\Users\bianc_d72o04d\Downloads\40811eyack.com.MAIL_xsbsxxypt8dh6!App\Cagayan State Univ..png') }}" alt="Cagayan State University" class="univ-logo">
+                    <h1>Cagayan State University</h1>
+                    <h2 class="address">Caritan Sur, Tuguegarao City, Cagayan Valley 3500</h2>
+                    <div class="status">
+                        <i class="status-icon fa fa-circle" id="status-icon"></i>
+                        <span class="close" id="status-text">NOT YET OPENED</span>
+                    </div>
+            
+                    <h3 id="special" class="heading3">Admission Requirements</h3> <!-- Admission Requirements -->
+                    <ol>
+                        <li>Undergraduate Level
+                        <li>A passing rate in the CSU Admission Test.
+                        <li>Form 138 or HS card.
+                        <li>Certificate of Good Moral Character from head of school or guidance counselor.
+                        <li>Police clearance and Barangay clearance.
+                        <li>Five (5) copies I.D. picture.
+                        <li>Birth certificate (photocopy)
+                            </li>
+                            
+                    </ol>
+            
+                    <h3 id="undergrad" class="heading3">University Specializations</h3> <!-- University Specializations -->
+                    <ul>
+                        <li id="openuni">NONE</li>
+                    </ul>
+            
+                    <h3 class="heading3">University Courses</h3> <!-- University Courses --> 
+                    <ul>
+                        <li>
+                          <h4>UNDERGRADUATE PROGRAMS</h4>
+                          <ul>
+                            <li>Open Uni
+                              <ul>
+                                <li>Bachelor in Early Childhood Education 
+                                <li>Bachelor of Culture and Arts Education 
+                                <li>major in Music                                     
+                                <li>Bachelor of Elementary Education                                    
+                                <li>Bachelor of Secondary Education 
+                                <li>major in English                                   
+                                <li>Bachelor of Secondary Education 
+                                <li>major in Filipino                                     
+                                <li>Bachelor of Secondary Education 
+                                <li>major in Mathematics                                    
+                                <li>Bachelor of Secondary Education 
+                                <li>major in Science                                     
+                                <li>Bachelor of Secondary Education 
+                                <li>major in Social Studies                                     
+                                <li>Bachelor of Technical-Vocational Teacher Education 
+                                <li>major in Electronics Technology                                     
+                                <li>Bachelor of Technical-Vocational Teacher Education 
+                                <li>major in Food Service Management                                     
+                                <li>Bachelor of Technology and Livelihood Education major in Home Economics                                     
+                                <li>Bachelor of Science in Accountancy                                    
+                                <li>Bachelor of Science in Accounting Information System                                     
+                                <li>Bachelor of Science in Business Administration major in Financial Management                                     
+                                <li>Bachelor of Science in Business Administration major in Marketing Management                                     
+                                <li>Bachelor of Science in Entrepreneurship                                     
+                                <li>Bachelor of Science in Hospitality Management                                     
+                                <li>Bachelor of Science in Legal Management                                     
+                                <li>Bachelor of Science in Medical Laboratory Science                                     
+                                <li>Bachelor of Science in Public Health                                     
+                                <li>Bachelor of Science in Respiratory Therapy                                     
+                                <li>Bachelor of Science in Nutrition and Dietetics
+                                    </li>                                    
+                                </ul>
+                            </li>
+                      </ul>
+            
+                    <h3 class="heading3">Application Process</h3> <!-- Application Process -->
+                    <ol>
+
+                           <li>For New Students
+                            <li>If you’re a new student and wish to register for admission, please follow the instructions outlined below:
+                            <li><a href= "myportal.csu.edu.ph.">Visit the website: myportal.csu.edu.ph.</a></li>
+                            <li>If you haven’t registered yet, click on the Register here button.
+                            <li>Enter your email address to verify. Ensure that the email address is valid. Alternatively, you can choose to log in via Google if you’re already signed in.
+                            <li>Click on "Verify Email". A verification email will be sent to your inbox. Open the email and click on the provided link to proceed with pre-registration.
+                            <li>Complete the form, ensuring all necessary information is correctly filled in.
+                            <li>After submission, you have the option to verify or modify the data you’ve entered.
+                            <li>Once you’ve checked everything, click on "Submit". Your login credentials will then be displayed.
+                            <li>The system will generate an automated password for you to use, and your username will be the email address you registered with.
+                            <li>Log into the system using your new username and password.
+                            <li>Once logged in, your dashboard will appear with a "Register for Admission" button.
+                            <li>Clicking this button will bring up forms that need to be completed with the required information.
+                            <li>Ensure all necessary data has been filled in correctly.
+                            <li>Click on "Agree" to accept the data privacy agreement policy.
+                            <li>After submission, you’ll be redirected back to your dashboard where you can wait for your CSU-CAT Examination schedule. You’ll be notified once a schedule has been assigned to you.
+                            </li>                            
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+            
+                    <h3 class="heading3">Contact Information</h3> <!-- Contact Information -->
+                    <ul>
+                        <li>Phone: (078) 844-0098/0099 Loc. 122
+                        <li><a href= "mailto:president@csu.edu.ph">Email: president@csu.edu.ph</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- <script src="scriptProto.js"></script> -->
+</body>
+</html>
