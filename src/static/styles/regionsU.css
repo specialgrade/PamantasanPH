@@ -120,7 +120,7 @@ aside {
     color: var(--white);
     padding: 20px;
     width: 250px;
-    height: 100vh;  
+    /* height: 100vh;   */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -264,21 +264,53 @@ aside h1 {
 .container {
     display: flex;
     flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+aside {
+    position: fixed;
+    top: 104px; 
+    left: 0;
+    width: 250px; /* Adjust the sidebar width as needed */
+    height: calc(100vh - 10px); 
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    /* box-sizing: border-box; */
+    overflow-y: auto;
 }
 
 main {
+    margin-left: 120px; /* Adjust based on sidebar width */
+    margin-top: 50px; /* Adjust based on header height */
     flex: 1;
     padding: 20px;
+    overflow-y: auto;
+    height: calc(100vh - 80px); /* Adjust based on header height */
+    box-sizing: border-box;
 }
 
 .main-content {
     padding: 8px;
     background-color: var(--white);
-    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: left;
-    min-height: calc(100vh - 120px);  
+    align-items: flex-start;
     box-sizing: border-box;
 }
 
@@ -286,10 +318,10 @@ main {
     padding: 20px;
     background-color: var(--white);
     border-radius: 8px;
-    max-width: 1358px;
     width: 100%;
     margin-top: 10px;
     text-align: left;
+    box-sizing: border-box;
 }
 
 .univs h2 {
@@ -300,11 +332,12 @@ main {
 
 .universities-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 94px;
-    margin: 10px;
+    grid-template-columns: repeat(3, 1fr); /* 3 containers each row */
+    gap: 20px;
+    margin: 10px 0;
     padding: 20px;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 .university-card {
@@ -314,16 +347,25 @@ main {
     overflow: hidden;
     box-shadow: var(--box-shadow);
     transition: transform 0.2s ease;
-    height: 175px;
-    width: 400px;
-    align-items: left;
+    width: 100%;
+    padding-bottom: calc(100% / 4.85); /* Maintain the 4.85:1 aspect ratio */
+    align-items: flex-start;
+    box-sizing: border-box;
 }
 
 .university-card .bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
+    overflow: hidden;
+}
+
+.university-card .bg-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the entire image fits within the container */
 }
 
 .university-card .school-name {
@@ -350,8 +392,12 @@ main {
         width: 200px;
     }
 
-    .main-content {
+    main {
         margin-left: 200px;
+    }
+
+    .universities-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 containers each row for smaller screens */
     }
 }
 
@@ -381,13 +427,13 @@ main {
         width: 180px;
     }
 
-    .main-content {
+    main {
         margin-left: 180px;
-        margin-top: 140px;
+        margin-top: 80px;
     }
 
-    .university-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .universities-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 containers each row for smaller screens */
     }
 }
 
@@ -396,12 +442,12 @@ main {
         width: 40%;
     }
 
-    .main-content {
+    main {
         margin-left: 0;
-        margin-top: 160px;
+        margin-top: 80px;
     }
 
-    .university-grid {
-        grid-template-columns: repeat(1, 1fr);
+    .universities-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 container each row for smaller screens */
     }
 }
