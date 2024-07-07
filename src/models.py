@@ -24,7 +24,6 @@ class User(db.Model, UserMixin):
     image_file = db.Column(db.String(20), nullable=False, default='default.jpg')
     password = db.Column(db.String(128), nullable=False)
 
-    ratings = db.relationship('Rating', backref='user', lazy=True)
     todos = db.relationship('Todo', backref='user', lazy=True)
 
     def get_reset_token(self, expires_sec=1800):
@@ -51,27 +50,6 @@ class User(db.Model, UserMixin):
     def check_password(self, password):
         return bcrypt.check_password_hash(self.password, password)
 
-# this is the model for university reviews=========================================================
-class Rating(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    university_id = db.Column(db.Integer, db.ForeignKey('university.id'), nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
-    rating = db.Column(db.Integer, nullable=False)
-    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
-        
-    def __repr__(self):
-        return f'<Rating {self.rating} for University {self.university_id} by User {self.user_id}>'
-        
-class University(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(255), nullable=False)
-    description = db.Column(db.Text)
-    location = db.Column(db.String(255))
-
-    ratings = db.relationship('Rating', backref='university', lazy=True)
-
-    def __repr__(self):
-        return '<University %r>' % self.name
 
 # this is the model for user's todo list==========================================================
 class Todo(db.Model):
