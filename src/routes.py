@@ -1,6 +1,6 @@
 from flask import render_template, redirect, url_for, request, jsonify, render_template_string, flash, abort, session, current_app
 from src.app import db, mail, bcrypt, oauth, login_manager
-from src.forms import RegistrationForm, LoginForm, RequestResetForm, ResetPasswordForm, UpdateAccountForm, VerifyOTPForm
+from src.forms import RegistrationForm, LoginForm, RequestResetForm, ResetPasswordForm, VerifyOTPForm
 from src.models import Subscribe, User, University, Rating, Todo
 from flask import send_from_directory
 from flask_login import login_user, current_user, logout_user, login_required, UserMixin, LoginManager
@@ -37,6 +37,7 @@ def init_app(app):
     
     
     @app.route('/dashboard/map/', methods=['GET', 'POST'])
+    @login_required
     def map():
         return render_template('map.html')
     
@@ -54,12 +55,6 @@ def init_app(app):
     def teams():
         return render_template('teams.html')
     
-    #settings
-    @app.route('/dashboard/settings', methods=['GET', 'POST'])
-    @login_required
-    def settings():
-        form = UpdateAccountForm()
-        return render_template('settings.html', form=form)
     
     # REGISTER-LOGIN-LOGOUT--------------------------------------------------------------------------------
     @app.route('/register', methods=['GET', 'POST'])
@@ -98,80 +93,117 @@ def init_app(app):
     @app.route('/logout')
     def logout():
         logout_user()
-        return redirect(url_for('login'))
-    
-    # FOR SAVING PROFILE PIC-------------------------------------------------------------------------
-    def save_picture(form_picture):
-        random_hex = secrets.token_hex(8)
-        _, f_ext = os.path.splitext(form_picture.filename)
-        picture_fn = random_hex + f_ext
-        picture_path = os.path.join(app.root_path, 'static/profile_pics', picture_fn)
-        output_size = (125, 125)
-        i = Image.open(form_picture)
-        i.thumbnail(output_size)
-        i.save(picture_path)
-        return picture_fn
+        return redirect(url_for('dashboard'))
 
-    # FOR UPDATING ACCOUNT INFORMATION----------------------------------------------------------------
-    @app.route('/account', methods=['POST', 'GET'])
-    @login_required
-    def account():
-        form = UpdateAccountForm()
-        if form.validate_on_submit():
-            if form.picture.data:
-                picture_file = save_picture(form.picture.data)
-                current_user.image_file = picture_file
-            current_user.username = form.username.data
-            current_user.email = form.email.data
-            db.session.commit()
-            flash("Your account has been updated", 'success')
-            return redirect(url_for('dashboard'))
-        elif request.method == 'GET':
-            form.username.data = current_user.username
-            form.email.data = current_user.email
-        image_file = url_for('static', filename='profile_pics/' + current_user.image_file)
-        return render_template('dashboard.html', title='Account', form=form, image_file=image_file)
-    
-    def send_reset_email(user):
-        token = user.get_reset_token()
+
+    # FOR PASSWORD RESET ----------------------------------------------------------------    
+    def generate_otp():
+        return str(random.randint(1000, 9999))  # Generate a random 4-digit OTP
+
+    def send_reset_email(user, otp):
         msg = Message('Password Reset Request', sender='MAIL_USERNAME', recipients=[user.email])
-        email_body = render_template('reset_pw.txt', username=user.username)
+        email_body = render_template('reset_pw.txt', otp=otp, username=user.username)
         current_app.logger.info(f"Email body content: {email_body}")  # Log email body content
         msg.body = email_body
         mail.send(msg)
 
-
-    @app.route('/reset_password', methods=['POST', 'GET'])
+    @app.route('/forgot_password', methods=['POST', 'GET'])
     def forgot_password():
         if current_user.is_authenticated:
             return redirect(url_for('dashboard'))
+
         form = RequestResetForm()
         if form.validate_on_submit():
-            user = User.query.filter_by(email=form.email.data).first()
-            send_reset_email(user)
-            flash('An email has been sent with a password reset link. Please check your inbox.', 'info')
-            return redirect(url_for('login'))
-        return render_template('forgotPassword.html', form=form, title='Reset Request')
-    
-    @app.route('/reset_password/<token>', methods=['POST', 'GET'])
-    def reset_token(token):
+            email = form.email.data
+            user = User.query.filter_by(email=email).first()
+            if user:
+                otp = generate_otp()
+                send_reset_email(user, otp)
+                session['reset_email'] = email  # Store email in session for verification step
+                session['reset_otp'] = otp  # Store OTP in session for verification step
+                session['reset_verified'] = False  # Initialize verification status
+                flash('An email has been sent with instructions to reset your password.', 'info')
+                return redirect(url_for('verify_email'))
+            else:
+                flash('User does not exist.', 'error')
+                return redirect(url_for('forgot_password'))
+
+        return render_template('forgotPassword.html', title='Forgot Password', form=form)
+
+    @app.route('/verify_email', methods=['POST', 'GET'])
+    def verify_email():
         if current_user.is_authenticated:
             return redirect(url_for('dashboard'))
-        user = User.verify_reset_token(token)
-        if user is None:
-            flash('This is an invalid or expired token. Please try again.', 'warning')
+
+        reset_email = session.get('reset_email')
+        reset_otp = session.get('reset_otp')
+
+        if not reset_email or not reset_otp :
+            flash('Session expired or unauthorized access. Please request password reset again.', 'error')
             return redirect(url_for('forgot_password'))
+
+        form = VerifyOTPForm()
+        if form.validate_on_submit():
+            otp_entered = form.digit1.data + form.digit2.data + form.digit3.data + form.digit4.data
+            if otp_entered == reset_otp:
+                session.pop('reset_otp')
+                session['reset_verified'] = True
+                return render_template('changePassword.html', form=form, title='Change Password')
+            else:
+                flash('Invalid OTP. Please try again.', 'error')
+
+        return render_template('verifyEmail.html', title='Verify Email', form=form, user_email=reset_email)
+
+    @app.route('/change_password', methods=['POST', 'GET'])
+    def change_password():
+        if current_user.is_authenticated:
+            return redirect(url_for('dashboard'))
+
+        if not session.get('reset_verified'):
+            flash('Unauthorized access. Please verify your email first.', 'error')
+            return redirect(url_for('forgot_password'))
+
         form = ResetPasswordForm()
         if form.validate_on_submit():
-            hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
-            user.password = hashed_password
-            db.session.commit()
-            flash('Password has been reset. You can now log in with your new password.', 'info')
-            return redirect(url_for('login'))
-        return render_template('changePassword.html', form=form, title='Reset Password')
+            password = form.password.data
+            email = session.get('reset_email')
+            user = User.query.filter_by(email=email).first()
 
-    
-    
+            if user:
+                hashed_password = generate_password_hash(password).decode('utf-8')
+                user.password = hashed_password
+                db.session.commit()
+                flash('Your password has been reset! You are now able to log in.', 'success')
+                # Clear session variables after successful password change
+                session.pop('reset_email', None)
+                session.pop('reset_verified', None)
+                return redirect(url_for('login'))
+            else:
+                flash('User not found.', 'error')
+                return redirect(url_for('forgot_password'))
+
+        return render_template('changePassword.html', title='Change Password', form=form)
+
+    @app.route('/resend_otp', methods=['POST', 'GET'])
+    def resend_otp():
+        form = RequestResetForm()
+        if form.validate_on_submit():
+            email = form.email.data
+            user = User.query.filter_by(email=email).first()
+            if user:
+                otp = generate_otp()
+                session['reset_email'] = email  # Store email in session for verification step
+                session['reset_otp'] = otp  # Store new OTP in session for verification step
+                send_reset_email(user, otp)
+                flash('An email with a new OTP has been sent.', 'info')
+                return redirect(url_for('verify_email'))
+            else:
+                flash('User does not exist.', 'error')
+                return redirect(url_for('forgot_password'))
+
+        # If form validation fails, render the form again with the error messages
+        return render_template('forgotPassword.html', title='Forgot Password', form=form)
+
     
     # GOOGLE LOGIN-----------------------------------------------------------------------------------------
     
