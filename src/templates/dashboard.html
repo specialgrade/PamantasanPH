@@ -1,86 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="../static/images/logos/website/finallogo.png">
-  <title>PamantasanPH</title>
-  <link rel="stylesheet" type="text/css" href="../static/styles/dashboard.css" />
-  <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/dashboard.css') }}"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}">
+    <title>PamantasanPH</title>
+    <!--<link rel="stylesheet" type="text/css" href="../static/styles/regionsU.css">-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/dashboard.css') }}" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-  <header> <!-- Navigation -->
-    <div class="logo">
-      <img src="../static/images/logos/website/finallogo.png" alt="PamantasanPH Logo">
-      <span>PamantasanPH</span>
-    </div>
+    <header> <!-- Navigation -->
+        <div class="logo">
+            <!--<img src="../static/images/logos/website/finallogo.png" alt="PamantasanPH Logo">-->
+            <img src="{{ url_for('static', filename='images/logos/website/finallogo.png') }}" alt="PamantasanPH Logo">
+            <span>PamantasanPH</span>
+        </div>
     <div class="search">
       <input type="text" placeholder="Search">
       <button>
         <i class="fa-solid fa-magnifying-glass"></i>
       </button>
-    </div>
-    <div class="user">
-        <i class="fa-solid fa-moon moon-icon"></i>
-        <div class="gradient-container">
-          <span>Username</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </div>
+      <div class="result-box">
+        <!-- Result items will be dynamically added here -->
       </div>
+    </div>
+        
+    <div class="user">
+      <i class="fa-solid fa-moon moon-icon"></i>
+      <div class="gradient-container">
+        {% if current_user.is_authenticated %}
+            <span>{{ current_user.username }}</span>
+        {% else %}
+            <span>Guest</span>
+        {% endif %}
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="dropdown-menu">
+        <a href="{{ url_for('settings') }}" class="dropdown-item">Settings</a>
+        <a href="{{ url_for('logout') }}" class="dropdown-item">Logout</a>
+      </div>
+    </div>
   </header>
 
   <main>
-    <aside> <!-- Sidebar -->
+    <aside>
+      <!-- Sidebar -->
       <div class="create-item">
         <span>Create New List</span>
         <i class="fa-solid fa-circle-plus"></i>
       </div>
       <div id="dashboard" class="sidebar-item">
-        <a href="dashboard.html">
+        <!--<a href="dashboard.html">-->
+        <a href="{{ url_for('dashboard') }}">
           <i class="fa-solid fa-box-archive"></i>
           <span>Dashboard</span>
         </a>
       </div>
       <div class="sidebar-item">
-        <a href="regions.html">
+        <!--<a href="regions.html">-->
+        <a href="{{ url_for('regions') }}">
           <i class="fa-solid fa-graduation-cap"></i>
           <span>Universities</span>
         </a>
       </div>
       <div class="sidebar-item">
-        <a href="map.html">
+        <!--<a href="map.html">-->
+        <a href="{{ url_for('map') }}">
           <i class="fa-solid fa-map-location-dot"></i>
           <span>Map</span>
         </a>
       </div>
       <div class="sidebar-item">
-        <a href="compare.html">
+        <!--<a href="compare.html">-->
+        <a href="{{ url_for('compare') }}">          
           <i class="fa-solid fa-code-compare"></i>
           <span>Compare</span>
         </a>
       </div>
       <div class="sidebar-item">
-        <a href="teams.html">
+        <!--<a href="teams.html">-->
+        <a href="{{ url_for('teams') }}">
           <i class="fa-solid fa-users-rectangle"></i>
           <span>Team</span>
         </a>
       </div>
       <div class="subscribe">
-        <h3>Subscribe to our Newsletter!</h3>
-        <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
-        <input type="email" placeholder="Email">
-        <button>Subscribe</button>
+          <h3>Subscribe to our Newsletter!</h3>
+          <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+          <form action="{{ url_for('newsletter') }}" method="post">
+              {% if csrf_token %}
+              <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+              {% endif %}
+              <input type="email" name="email" placeholder="Email" required>
+              <button type="submit">Subscribe</button>
+          </form>
       </div>
       <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
-    </aside>
+  </aside>
 
     <div class="main-content">
       <div class="banner">
-        <h2>Hi, Username!</h2>
+        {% if current_user.is_authenticated %}
+           <h2>Hi, {{ current_user.username }}!</h2>
+        {% else %}
+           <h2>Hi, Guest!</h2>
+        {% endif %}
         <p>Ready to Discover State Universities here in the Philippines?</p>
-        <img src="../static/images/logos/website/clipartsample.png" alt="PamantasanPH">
+        <!--<img src="../static/images/logos/website/clipartsample.png" alt="PamantasanPH">-->
+        <img src="{{ url_for('static', filename='images/logos/website/clipartsample.png') }}" alt="PamantasanPH">
       </div>
 
       <div class="sections">
@@ -89,64 +118,70 @@
           <!-- Placeholder text will be displayed if there are no bookmarked containers -->
           <p id="placeholderText">Add your bookmarks here</p>
         </div>
-        
+
         <div class="section">
           <h3>To do</h3>
           <div class="progress">
-            <div class="progress-bar"></div>
-            <span class="progress-text">0%</span>
+              <div class="progress-bar"></div>
+              <span class="progress-text">0%</span>
           </div>
-          
+      
           <div class="tasks">
-            <form action="/add_task" method="post">
-              <div class="add-task">
-                <input type="text" name="task" placeholder="Add task here">
-                <button type="submit" class="add-button">
-                  <span class="icon">&#x270E;</span>
-                  <span class="text">Add</span>
-                </button>
-              </div>
-            </form>
-            <ul id="list-container">
-              {% for todo in todo_list %}
-              <div class="todo-item">
-                <a href="/update_task/{{todo.task_id}}">
-                  <li class="{{ 'checked' if todo.status else 'unchecked' }}">{{todo.task}}</li>
-                </a>
-                <a href="/delete_task/{{todo.task_id}}" class="delete"><img src="../static/images/x.svg" alt="delete task" class="x-button"></a>
-              </div>
-              {% endfor %}
-            </ul>
+              <form action="{{ url_for('add_task') }}" method="post">
+                  {% if csrf_token %}
+                  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                  {% endif %}
+                  <div class="add-task">
+                      <input type="text" name="task" placeholder="Add task here" required>
+                      <button type="submit" class="add-button">
+                          <span class="icon">&#x270E;</span>
+                          <span class="text">Add</span>
+                      </button>
+                  </div>
+              </form>
+              <ul id="list-container">
+                  {% for todo in todo_list %}
+                  <li class="todo-item">
+                      <a href="{{ url_for('update_task', task_id=todo.task_id) }}">
+                          <span class="{{ 'checked' if todo.status else 'unchecked' }}">{{ todo.task }}</span>
+                      </a>
+                      <a href="{{ url_for('delete_task', task_id=todo.task_id) }}" class="delete">
+                          <img src="{{ url_for('static', filename='images/logos/website/x.svg') }}" alt="delete task" class="x-button">
+                      </a>
+                  </li>
+                  {% endfor %}
+              </ul>
           </div>
-        </div>
-        
+      </div>
+
         <div class="calendar">
           <div class="month">
-              <button class="prev-month">&lt;</button>
-              <span></span>
-              <button class="next-month">&gt;</button>
+            <button class="prev-month">&lt;</button>
+            <span class="month-name"></span>
+            <button class="next-month">&gt;</button>
           </div>
           <div class="weekdays"></div>
           <div class="days"></div>
-      </div>
-      
-      <div class="event-modal">
+        </div>
+
+        <div class="event-modal">
           <div class="modal-header">
-              <h2>Add Event</h2>
-              <span class="close-modal">&times;</span>
+            <h2>Add Event</h2>
+            <span class="close-modal">&times;</span>
           </div>
           <input type="text" id="event-name" placeholder="Event Name" required>
           <input type="date" id="event-date" required>
           <input type="time" id="event-time" required>
           <textarea id="event-description" placeholder="Enter event description"></textarea>
           <div class="modal-footer">
-              <button id="save-event-btn">Save Event</button>
+            <button id="save-event-btn">Save Event</button>
           </div>
-      </div>      
+        </div>
       </div>
     </div>
   </main>
 
-  <!-- <script src="../static/scripts/dashboard.js"></script> -->
+  <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bookmarks.js') }}"></script>
 </body>
 </html>

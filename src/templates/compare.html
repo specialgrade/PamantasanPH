@@ -3,16 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../static/images/logos/website/finallogo.png">
+    <!--<link rel="icon" href="../static/images/logos/website/finallogo.png">-->
+    <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}">
     <title>PamantasanPH</title>
-    <link rel="stylesheet" type="text/css" href="../static/styles/compare.css">
-    <!-- <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='styles/compare.css') }}" /> -->
+    <!--<link rel="stylesheet" type="text/css" href="../static/styles/compare.css">-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/compare.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            max-height: 200px; /* Set a maximum height */
+            overflow-y: auto;  /* Enable vertical scrolling */
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown.show .dropdown-content {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <header> <!-- Navigation -->
+    <header>
+        <!-- Navigation -->
         <div class="logo">
-            <img src="../static/images/logos/website/finallogo.png" alt="PamantasanPH Logo">
+            <!--<img src="../static/images/logos/website/finallogo.png" alt="PamantasanPH Logo">-->
+            <img src="{{ url_for('static', filename='images/logos/website/finallogo.png') }}" alt="PamantasanPH Logo">
             <span>PamantasanPH</span>
         </div>
         <div class="search">
@@ -24,143 +59,146 @@
         <div class="user">
             <i class="fa-solid fa-moon moon-icon"></i>
             <div class="gradient-container">
-                <span>Username</span>
+                {% if current_user.is_authenticated %}
+                    <span>{{ current_user.username }}</span>
+                {% else %}
+                    <span>Guest</span>
+                {% endif %}
                 <i class="fa-solid fa-chevron-down"></i>
-            </div>
+              </div>
         </div>
     </header>
     <div class="container">
-        <aside> <!-- Sidebar -->
-            <div class="create-item">
-                <span>Create New List</span>
-                <i class="fa-solid fa-circle-plus"></i>
-            </div>
-            <div class="sidebar-item">
-                <a href="dashboard.html">
-                    <i class="fa-solid fa-box-archive"></i>
-                    <span>Dashboard</span>
-                </a>
-            </div>
-            <div class="sidebar-item">
-                <a href="regions.html">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    <span>Universities</span>
-                </a>
-            </div>
-            <div class="sidebar-item">
-                <a href="map.html">
-                    <i class="fa-solid fa-map-location-dot"></i>
-                    <span>Map</span>
-                </a>
-            </div>
-            <div id="compare" class="sidebar-item">
-                <a href="compare.html">
-                    <i class="fa-solid fa-code-compare"></i>
-                    <span>Compare</span>
-                </a>
-            </div>
-            <div class="sidebar-item">
-                <a href="teams.html">
-                    <i class="fa-solid fa-users-rectangle"></i>
-                    <span>Team</span>
-                </a>
-            </div>
-            <div class="subscribe">
-                <h3>Subscribe to our Newsletter!</h3>
-                <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
-                <input type="email" placeholder="Email">
-                <button>Subscribe</button>
-            </div>
-            <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
-        </aside>
-
-        <main class="comparison-container"> <!-- Comparison Content -->
+      <aside>
+        <!-- Sidebar -->
+        <div class="create-item">
+          <span>Create New List</span>
+          <i class="fa-solid fa-circle-plus"></i>
+        </div>
+        <div id="dashboard" class="sidebar-item">
+          <!--<a href="dashboard.html">-->
+          <a href="{{ url_for('dashboard') }}">
+            <i class="fa-solid fa-box-archive"></i>
+            <span>Dashboard</span>
+          </a>
+        </div>
+        <div class="sidebar-item">
+          <!--<a href="regions.html">-->
+          <a href="{{ url_for('regions') }}">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Universities</span>
+          </a>
+        </div>
+        <div class="sidebar-item">
+          <!--<a href="map.html">-->
+          <a href="{{ url_for('map') }}">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>Map</span>
+          </a>
+        </div>
+        <div class="sidebar-item">
+          <!--<a href="compare.html">-->
+          <a href="{{ url_for('compare') }}">          
+            <i class="fa-solid fa-code-compare"></i>
+            <span>Compare</span>
+          </a>
+        </div>
+        <div class="sidebar-item">
+          <!--<a href="teams.html">-->
+          <a href="{{ url_for('teams') }}">
+            <i class="fa-solid fa-users-rectangle"></i>
+            <span>Team</span>
+          </a>
+        </div>
+        <div class="subscribe">
+          <h3>Subscribe to our Newsletter!</h3>
+          <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+          <form action="{{ url_for('newsletter') }}" method="post">
+              {% if csrf_token %}
+              <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+              {% endif %}
+              <input type="email" name="email" placeholder="Email" required>
+              <button type="submit">Subscribe</button>
+          </form>
+      </div>
+      <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+      </aside>
+        <main class="comparison-container">
+            <!-- Comparison Content -->
             <div class="input-wrapper">
-                <div class="input-container">
-                    <input type="text" placeholder="Enter University 1" onfocus="showDropdown(this)" oninput="filterDropdown(this)">
-                    <i class="fa-solid fa-chevron-down dropdown-icon"></i>
-                    <div class="dropdown-content">
-                        <!-- NCR (NATIONAL CAPITAL REGION) -->
-                        <a href="#" onclick="selectUniversity(this, '1')">City of Malabon University</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Dr. Filemon C. Aguilar Memorial College of Las Piñas</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Eulogio "Amang" Rodriguez Institute of Science & Technology (EARIST)</a>
+                <div class="input-container dropdown" id="dropdown-container1">
+                    <input type="text" id="university1" onkeyup="filterFunction('dropdown1')" placeholder="Select University">
+                    <i class="dropdown-icon fa fa-caret-down" onclick="toggleDropdown('dropdown1')"></i>
+                    <div id="dropdown1" class="dropdown-content">
+                        <a href="#" onclick="selectUniversity(this, '1')">Agusan del Sur State College of Agriculture and Technology</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Bohol Island State University - Clarin</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Bukidnon State University</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">City Of Malabon University</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Dr Filemon C Aguilar Memorial College Of Las Pi�as</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Eulogio Amang Rodriguez Institute Of Science And Technology</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Marikina Polytechnic College</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Navotas Polytechnic College</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Pamantasan ng Lungsod ng Marikina</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Pamantasan ng Lungsod ng Maynila</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Pamantasan ng Lungsod ng Muntinlupa</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Pamantasan ng Lungsod ng Pasig</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Pamantasan ng Valenzuela</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Parañaque City College</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Pamantasan Ng Lungsod Ng Marikina</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Pamantasan Ng Lungsod Ng Maynila</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Pamantasan Ng Lungsod Ng Muntinlupa</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Pamantasan Ng Lungsod Ng Pasig</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Pamantasan Ng Valenzuela</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Para�aque City College</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Philippine Normal University</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Philippine State College of Aeronautics</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Polytechnic College of the City of Meycauayan</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Polytechnic University of the Philippines</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Philippine State College Of Aeronautics</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Polytechnic College Of The City Of Meycauayan</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Polytechnic University Of The Philippines</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Quezon City University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Taguig City University</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Technological University of the Philippines</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Universidad de Manila</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">University of Makati</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">University of the Philippines</a>                        
-
-                        <!-- BANGSAMORO REGION -->
+                        <a href="#" onclick="selectUniversity(this, '1')">Technological University Of The Philippines</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Universidad De Manila</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">University Of Makati</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">University Of The Philippines</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Adiong Memorial State College</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Balabagan Trade School</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Basilan State College</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Cotabato Foundation College of Science and Technology</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Cotabato Foundation College Of Science And Technology</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Cotabato State University</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Hadji Butu School of Arts and Trades</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Hadji Butu School Of Arts And Trades</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Lanao Agricultural College</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Lapak Agricultural School</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Mindanao State University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Regional Madrasah Graduate Academy</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Sulu State College</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Tawi-tawi Regional Agricultural College</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Tawi Tawi Regional Agricultural College</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Unda Memorial National Agricultural School</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">University of Southern Mindanao</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">University Of Southern Mindanao</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Upi Agricultural School</a>
-                    
-                        <!-- CORDILLERA REGION -->
-                        <a href="#" onclick="selectUniversity(this, '1')">Abra State Institute of Science and Technology</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Abra State Institute Of Science And Technology</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Apayao State College</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Benguet State University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Ifugao State University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Kalinga State University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Mountain Province State University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Philippine Military Academy</a>
-                    
-                        <!-- ILOCOS REGION (REGION 1) -->
                         <a href="#" onclick="selectUniversity(this, '1')">Binalatongan Community College</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Don Mariano Marcos Memorial State University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Ilocos Sur Polytechnic State College</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Mariano Marcos State University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Pangasinan State University</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">University of Northern Philippines</a>
-                    
-                        <!-- CAGAYAN VALLEY (REGION 2) -->
+                        <a href="#" onclick="selectUniversity(this, '1')">University Of Northern Philippines</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Batanes State College</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Cagayan State University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Isabela State University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Nueva Vizcaya State University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Quirino State University</a>
-                    
-                        <!-- CENTRAL LUZON (REGION 3) -->
                         <a href="#" onclick="selectUniversity(this, '1')">Bulacan Agricultural State College</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Bulacan State University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Central Luzon State University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Don Honorio Ventura State University</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Nueva Ecija University of Science and Technology</a>
-                    
-                        <!-- CALABARZON (REGION 4-A) -->
+                        <a href="#" onclick="selectUniversity(this, '1')">Nueva Ecija University Of Science And Technology</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Batangas State University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Cavite State University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Laguna State Polytechnic University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Southern Luzon State University</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">University of Rizal System</a>
-                    
-                        <!-- MIMAROPA REGION (REGION 4-B) -->
+                        <a href="#" onclick="selectUniversity(this, '1')">University Of Rizal System</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Baco Community College</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">City College of Calapan</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">City College Of Calapan</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Marinduque State College</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Mindoro State University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Occidental Mindoro State College</a>
@@ -168,156 +206,121 @@
                         <a href="#" onclick="selectUniversity(this, '1')">Pola Community College</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Romblon State University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Western Philippines University</a>
-                    
-                        <!-- BICOL REGION (REGION 5) -->
-                        <a href="#" onclick="selectUniversity(this, '1')">Bicol State College of Applied Sciences and Technology</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Bicol State College Of Applied Sciences And Technology</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Bicol University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Catanduanes State University</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Central Bicol State University of Agriculture</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Central Bicol State University Of Agriculture</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Partido State University</a>
-                    
-                        <!-- WESTERN VISAYAS (REGION 6) -->
                         <a href="#" onclick="selectUniversity(this, '1')">Bago City College</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Carlos Hilado Memorial State University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">La Carlota City College</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Philippine Normal University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">West Visayas State University</a>
-                    
-                        <!-- CENTRAL VISAYAS (REGION 7) -->
                         <a href="#" onclick="selectUniversity(this, '1')">Bohol Island State University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Cebu Normal University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Cebu Technological University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Negros Oriental State University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Siquijor State College</a>
-                    
-                        <!-- EASTERN VISAYAS (REGION 8) -->
                         <a href="#" onclick="selectUniversity(this, '1')">Eastern Samar State University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Eastern Visayas State University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Leyte Normal University</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Palompon Institute of Technology</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">University of Eastern Philippines</a>
-                    
-                        <!-- ZAMBOANGA PENINSULA (REGION 9) -->
-                        <a href="#" onclick="selectUniversity(this, '1')">Basilan State College</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">JH Cerilles State College</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Palompon Institute Of Technology</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">University Of Eastern Philippines</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Jh Cerilles State College</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Jose Rizal Memorial State University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Western Mindanao State University</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Zamboanga State College of Marine Sciences and Technology</a>
-                    
-                        <!-- NORTHERN MINDANAO (REGION 10) -->
+                        <a href="#" onclick="selectUniversity(this, '1')">Zamboanga State College Of Marine Sciences And Technology</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Bukidnon State University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Central Mindanao University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Camiguin Polytechnic State College</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Northern Mindanao State College of Science and Technology</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">University of Science and Technology of Southern Philippines</a>
-                    
-                        <!-- DAVAO REGION (REGION 11) -->
-                        <a href="#" onclick="selectUniversity(this, '1')">Davao del Norte State College</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Davao del Sur State College</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Northwestern Mindanao State College Of Science And Technology</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">University Of Science And Technology Of Southern Philippines</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Davao Del Norte State College</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Davao Del Sur State College</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Davao Oriental State University</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Southern Philippines Agri-Business and Marine and Aquatic School of Technology</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">University of Southern Philippines</a>
-                    
-                        <!-- SOCCSKSARGEN (REGION 12) -->
-                        <a href="#" onclick="selectUniversity(this, '1')">Cotabato Foundation College of Science and Technology</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Southern Philippines Agri Business Marine And Aquatic School Of Technology</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">University Of Southeastern Philippines</a>
                         <a href="#" onclick="selectUniversity(this, '1')">South Cotabato State College</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Sultan Kudarat State University</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">University of Southern Mindanao</a>
-                    
-                        <!-- CARAGA (REGION 13) -->
-                        <a href="#" onclick="selectUniversity(this, '1')">Agusan del Sur State College of Agriculture and Technology</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">CARAGA State University</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Agusan Del Sur State College Of Agriculture And Technology</a>
+                        <a href="#" onclick="selectUniversity(this, '1')">Caraga State University</a>
                         <a href="#" onclick="selectUniversity(this, '1')">Hinatuan Southern College</a>
                         <a href="#" onclick="selectUniversity(this, '1')">North Eastern Mindanao State University</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">Surigao del Norte State University</a>
-                        <a href="#" onclick="selectUniversity(this, '1')">University of Southeastern Philippines</a>
-                    </div>                    
+                        <a href="#" onclick="selectUniversity(this, '1')">Surigao Del Norte State University</a>
+                    </div>
                 </div>
-                <div class="input-container">
-                    <input type="text" placeholder="Enter University 2" onfocus="showDropdown(this)" oninput="filterDropdown(this)">
-                    <i class="fa-solid fa-chevron-down dropdown-icon"></i>
-                    <div class="dropdown-content">
-                        <!-- NCR (NATIONAL CAPITAL REGION) -->
-                        <a href="#" onclick="selectUniversity(this, '2')">City of Malabon University</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Dr. Filemon C. Aguilar Memorial College of Las Piñas</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Eulogio "Amang" Rodriguez Institute of Science & Technology (EARIST)</a>
+                <div class="input-container dropdown" id="dropdown-container2">
+                    <input type="text" id="university2" onkeyup="filterFunction('dropdown2')" placeholder="Select University">
+                    <i class="dropdown-icon fa fa-caret-down" onclick="toggleDropdown('dropdown2')"></i>
+                    <div id="dropdown2" class="dropdown-content">
+                        <a href="#" onclick="selectUniversity(this, '2')">Agusan del Sur State College of Agriculture and Technology</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Bohol Island State University - Clarin</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Bukidnon State University</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">City Of Malabon University</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Dr Filemon C Aguilar Memorial College Of Las Pi�as</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Eulogio Amang Rodriguez Institute Of Science And Technology</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Marikina Polytechnic College</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Navotas Polytechnic College</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Pamantasan ng Lungsod ng Marikina</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Pamantasan ng Lungsod ng Maynila</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Pamantasan ng Lungsod ng Muntinlupa</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Pamantasan ng Lungsod ng Pasig</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Pamantasan ng Valenzuela</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Parañaque City College</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Pamantasan Ng Lungsod Ng Marikina</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Pamantasan Ng Lungsod Ng Maynila</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Pamantasan Ng Lungsod Ng Muntinlupa</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Pamantasan Ng Lungsod Ng Pasig</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Pamantasan Ng Valenzuela</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Para�aque City College</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Philippine Normal University</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Philippine State College of Aeronautics</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Polytechnic College of the City of Meycauayan</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Polytechnic University of the Philippines</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Philippine State College Of Aeronautics</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Polytechnic College Of The City Of Meycauayan</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Polytechnic University Of The Philippines</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Quezon City University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Taguig City University</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Technological University of the Philippines</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Universidad de Manila</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">University of Makati</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">University of the Philippines</a>                        
-
-                        <!-- BANGSAMORO REGION -->
+                        <a href="#" onclick="selectUniversity(this, '2')">Technological University Of The Philippines</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Universidad De Manila</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">University Of Makati</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">University Of The Philippines</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Adiong Memorial State College</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Balabagan Trade School</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Basilan State College</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Cotabato Foundation College of Science and Technology</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Cotabato Foundation College Of Science And Technology</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Cotabato State University</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Hadji Butu School of Arts and Trades</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Hadji Butu School Of Arts And Trades</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Lanao Agricultural College</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Lapak Agricultural School</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Mindanao State University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Regional Madrasah Graduate Academy</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Sulu State College</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Tawi-tawi Regional Agricultural College</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Tawi Tawi Regional Agricultural College</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Unda Memorial National Agricultural School</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">University of Southern Mindanao</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">University Of Southern Mindanao</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Upi Agricultural School</a>
-                    
-                        <!-- CORDILLERA REGION -->
-                        <a href="#" onclick="selectUniversity(this, '2')">Abra State Institute of Science and Technology</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Abra State Institute Of Science And Technology</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Apayao State College</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Benguet State University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Ifugao State University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Kalinga State University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Mountain Province State University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Philippine Military Academy</a>
-                    
-                        <!-- ILOCOS REGION (REGION 1) -->
                         <a href="#" onclick="selectUniversity(this, '2')">Binalatongan Community College</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Don Mariano Marcos Memorial State University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Ilocos Sur Polytechnic State College</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Mariano Marcos State University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Pangasinan State University</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">University of Northern Philippines</a>
-                    
-                        <!-- CAGAYAN VALLEY (REGION 2) -->
+                        <a href="#" onclick="selectUniversity(this, '2')">University Of Northern Philippines</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Batanes State College</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Cagayan State University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Isabela State University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Nueva Vizcaya State University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Quirino State University</a>
-                    
-                        <!-- CENTRAL LUZON (REGION 3) -->
                         <a href="#" onclick="selectUniversity(this, '2')">Bulacan Agricultural State College</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Bulacan State University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Central Luzon State University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Don Honorio Ventura State University</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Nueva Ecija University of Science and Technology</a>
-                    
-                        <!-- CALABARZON (REGION 4-A) -->
+                        <a href="#" onclick="selectUniversity(this, '2')">Nueva Ecija University Of Science And Technology</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Batangas State University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Cavite State University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Laguna State Polytechnic University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Southern Luzon State University</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">University of Rizal System</a>
-                    
-                        <!-- MIMAROPA REGION (REGION 4-B) -->
+                        <a href="#" onclick="selectUniversity(this, '2')">University Of Rizal System</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Baco Community College</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">City College of Calapan</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">City College Of Calapan</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Marinduque State College</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Mindoro State University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Occidental Mindoro State College</a>
@@ -325,77 +328,121 @@
                         <a href="#" onclick="selectUniversity(this, '2')">Pola Community College</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Romblon State University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Western Philippines University</a>
-                    
-                        <!-- BICOL REGION (REGION 5) -->
-                        <a href="#" onclick="selectUniversity(this, '2')">Bicol State College of Applied Sciences and Technology</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Bicol State College Of Applied Sciences And Technology</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Bicol University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Catanduanes State University</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Central Bicol State University of Agriculture</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Central Bicol State University Of Agriculture</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Partido State University</a>
-                    
-                        <!-- WESTERN VISAYAS (REGION 6) -->
                         <a href="#" onclick="selectUniversity(this, '2')">Bago City College</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Carlos Hilado Memorial State University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">La Carlota City College</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Philippine Normal University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">West Visayas State University</a>
-                    
-                        <!-- CENTRAL VISAYAS (REGION 7) -->
                         <a href="#" onclick="selectUniversity(this, '2')">Bohol Island State University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Cebu Normal University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Cebu Technological University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Negros Oriental State University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Siquijor State College</a>
-                    
-                        <!-- EASTERN VISAYAS (REGION 8) -->
                         <a href="#" onclick="selectUniversity(this, '2')">Eastern Samar State University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Eastern Visayas State University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Leyte Normal University</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Palompon Institute of Technology</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">University of Eastern Philippines</a>
-                    
-                        <!-- ZAMBOANGA PENINSULA (REGION 9) -->
-                        <a href="#" onclick="selectUniversity(this, '2')">Basilan State College</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">JH Cerilles State College</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Palompon Institute Of Technology</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">University Of Eastern Philippines</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Jh Cerilles State College</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Jose Rizal Memorial State University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Western Mindanao State University</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Zamboanga State College of Marine Sciences and Technology</a>
-                    
-                        <!-- NORTHERN MINDANAO (REGION 10) -->
+                        <a href="#" onclick="selectUniversity(this, '2')">Zamboanga State College Of Marine Sciences And Technology</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Bukidnon State University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Central Mindanao University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Camiguin Polytechnic State College</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Northern Mindanao State College of Science and Technology</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">University of Science and Technology of Southern Philippines</a>
-                    
-                        <!-- DAVAO REGION (REGION 11) -->
-                        <a href="#" onclick="selectUniversity(this, '2')">Davao del Norte State College</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Davao del Sur State College</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Northwestern Mindanao State College Of Science And Technology</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">University Of Science And Technology Of Southern Philippines</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Davao Del Norte State College</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Davao Del Sur State College</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Davao Oriental State University</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Southern Philippines Agri-Business and Marine and Aquatic School of Technology</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">University of Southern Philippines</a>
-                    
-                        <!-- SOCCSKSARGEN (REGION 12) -->
-                        <a href="#" onclick="selectUniversity(this, '2')">Cotabato Foundation College of Science and Technology</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Southern Philippines Agri Business Marine And Aquatic School Of Technology</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">University Of Southeastern Philippines</a>
                         <a href="#" onclick="selectUniversity(this, '2')">South Cotabato State College</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Sultan Kudarat State University</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">University of Southern Mindanao</a>
-                    
-                        <!-- CARAGA (REGION 13) -->
-                        <a href="#" onclick="selectUniversity(this, '2')">Agusan del Sur State College of Agriculture and Technology</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">CARAGA State University</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Agusan Del Sur State College Of Agriculture And Technology</a>
+                        <a href="#" onclick="selectUniversity(this, '2')">Caraga State University</a>
                         <a href="#" onclick="selectUniversity(this, '2')">Hinatuan Southern College</a>
                         <a href="#" onclick="selectUniversity(this, '2')">North Eastern Mindanao State University</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">Surigao del Norte State University</a>
-                        <a href="#" onclick="selectUniversity(this, '2')">University of Southeastern Philippines</a>
-                    </div>                    
+                        <a href="#" onclick="selectUniversity(this, '2')">Surigao Del Norte State University</a>
+                    </div>
                 </div>
             </div>
-            <div class="comparison-column" id="university-details-1"></div>
-            <div class="comparison-column" id="university-details-2"></div>
+            <div id="university-details">
+                <div id="university1-details" class="university-column"></div>
+                <div id="university2-details" class="university-column"></div>
+            </div>
         </main>
     </div>
-    
-    <!-- <script src="../static/scripts/compare.js"></script> -->
+    <script>
+        function toggleDropdown(id) {
+            document.getElementById('dropdown-container' + id.slice(-1)).classList.toggle('show');
+        }
+
+        function selectUniversity(element, inputNumber) {
+            const universityName = element.innerText.replace(/\s+/g, '-').toUpperCase();
+            console.log(`Selected University: ${element.innerText}`);
+            console.log(`Transformed University Name: ${universityName}`);
+            document.getElementById('university' + inputNumber).value = element.innerText;
+            document.getElementById('dropdown-container' + inputNumber).classList.remove('show');
+            loadUniversityDetails(universityName, inputNumber);
+        }
+
+        function loadUniversityDetails(universityName, inputNumber) {
+            const url = `/university/${universityName}`;
+            console.log(`Fetching details from: ${url}`);
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    const container = document.getElementById('university' + inputNumber + '-details');
+
+                    // Clear any previous shadow root content if it exists
+                    if (container.shadowRoot) {
+                        container.shadowRoot.innerHTML = '';
+                    } else {
+                        container.attachShadow({ mode: 'open' });
+                    }
+
+                    // Set the new content in the shadow root
+                    container.shadowRoot.innerHTML = html;
+                })
+                .catch(error => console.error('Error loading university details:', error));
+        }
+
+        function filterFunction(id) {
+            var input, filter, div, a, i;
+            input = document.getElementById(id.replace('dropdown', 'university'));
+            filter = input.value.toUpperCase();
+            div = document.getElementById(id);
+            a = div.getElementsByTagName("a");
+            for (i = 0; i < a.length; i++) {
+                if (a[i].innerText.toUpperCase().indexOf(filter) > -1) {
+                    a[i].style.display = "";
+                } else {
+                    a[i].style.display = "none";
+                }
+            }
+        }
+
+        document.addEventListener('click', function(event) {
+            if (!event.target.matches('.dropdown *')) {
+                var dropdowns = document.getElementsByClassName('dropdown-content');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>

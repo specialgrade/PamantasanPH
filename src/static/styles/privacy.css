@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, #192236, #9a2626); /* Adjust gradient to match the image */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.container {
+    background-color: #fefefe; /* White background for the container */
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff; /* Red header background */
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.header h1 {
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.5em;
+    color: black;
+    margin-top: 10px;
+}
+
+.back-arrow {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #000000;
+}
+
+.content {
+    padding: 20px;
+    background: linear-gradient(90deg, #001727, #9a2626); /* Matching gradient background */
+    color: #000000;
+}
+
+.content h2 {
+    text-align: center;
+    color: #ffffff;
+}
+
+.policy-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.section {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.section h3 {
+    margin-top: 0;
+    color: #000000;
+}
+
+.section ul {
+    padding-left: 20px;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+}
+
+.section a {
+    color: #920d18;
+    text-decoration: underline;
+}

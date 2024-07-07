@@ -53,10 +53,13 @@ header {
     font-family: 'Raleway', sans-serif;
 }
 
+/* Searhbar styling */
 .search {
     display: flex;
     align-items: center;
-    flex: 1;  
+    flex-grow: 1;  
+    justify-content: flex-start;
+    position: relative;
 }
 
 .search input[type="text"] {
@@ -78,6 +81,31 @@ header {
 .search button i {
     color: var(--white);
     font-size: 24px;  
+}
+
+.result-box {
+    position: absolute;
+    top: calc(100% + 5px); 
+    left: 0;
+    width: 60%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000; 
+}
+
+.result-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    color: var(--dark-blue);
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+}
+
+.result-item:last-child {
+    border-bottom: none;
 }
 
 .user {
@@ -140,7 +168,7 @@ aside h1 {
     border-radius: 5px;
     margin-bottom: 10px;
     cursor: pointer;
-    height: 80px;  
+    height: 40px;  
 }
 
 .create-item span {

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="icon" href="../static/images/logos/website/finallogo.png">-->
+    <link rel="icon" href="{{ url_for('static', filename='/images/logos/website/finallogo.png') }}">
+    <title>PamantasanPH</title>
+    <!--<link rel="stylesheet" type="text/css" href="../static/styles/univsDetails2.css">-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/univsDetails2.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <!--<img src="../static/images/logos/website/finallogo.png" alt="PamantasanPH Logo">-->
+            <img src="{{ url_for('static', filename='images/logos/website/finallogo.png') }}" alt="PamantasanPH Logo">
+            <span>PamantasanPH</span>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+        <div class="user">
+            <i class="fa-solid fa-moon moon-icon"></i>
+            <div class="gradient-container">
+                {% if current_user.is_authenticated %}
+                    <span>{{ current_user.username }}</span>
+                {% else %}
+                    <span>Guest</span>
+                {% endif %}
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+        </div>
+    </header>
+
+    <main>
+        <aside>
+            <!-- Sidebar -->
+            <div class="create-item">
+              <span>Create New List</span>
+              <i class="fa-solid fa-circle-plus"></i>
+            </div>
+            <div id="dashboard" class="sidebar-item">
+              <!--<a href="dashboard.html">-->
+              <a href="{{ url_for('dashboard') }}">
+                <i class="fa-solid fa-box-archive"></i>
+                <span>Dashboard</span>
+              </a>
+            </div>
+            <div class="sidebar-item">
+              <!--<a href="regions.html">-->
+              <a href="{{ url_for('regions') }}">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Universities</span>
+              </a>
+            </div>
+            <div class="sidebar-item">
+              <!--<a href="map.html">-->
+              <a href="{{ url_for('map') }}">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <span>Map</span>
+              </a>
+            </div>
+            <div class="sidebar-item">
+              <!--<a href="compare.html">-->
+              <a href="{{ url_for('compare') }}">          
+                <i class="fa-solid fa-code-compare"></i>
+                <span>Compare</span>
+              </a>
+            </div>
+            <div class="sidebar-item">
+              <!--<a href="teams.html">-->
+              <a href="{{ url_for('teams') }}">
+                <i class="fa-solid fa-users-rectangle"></i>
+                <span>Team</span>
+              </a>
+            </div>
+            <div class="subscribe">
+                <h3>Subscribe to our Newsletter!</h3>
+                <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                <form action="{{ url_for('newsletter') }}" method="post">
+                    {% if csrf_token %}
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    {% endif %}
+                    <input type="email" name="email" placeholder="Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+          </aside>
+            <section>
+                <div id="navbar" class="heading-container">
+                    <nav>
+                        <ul>
+                            <li class="dropdown">
+                                <button class="dropbtn">Requirements</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#gen">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Courses</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#special">Specializations</a>
+                                    <a href="#undergrad">Undergraduate Programs</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Application</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#application">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown"> 
+                                <a href="#contacts" class="dropbtn">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="gen" class="container">
+                    <img src="{{ url_for('static', filename='images/logos/website/universities/bscLOGO.png') }}" alt="Basilan State College" class="univ-logo">
+                    <h1>Basilan State College</h1>
+                    <h2 class="address">Sumagdang, Isabela City, Basilan, Philippines</h2>
+                    <div class="status">
+                        <i class="status-icon fa fa-circle" id="status-icon"></i>
+                        <span class="close" id="status-text">NOT YET OPENED</span>
+                    </div>
+                    <h3 id="special" class="heading3">Admission Requirements</h3>
+                    <ul>
+                        <li>Old Students: Passbook</li>
+                        <li>New Students:
+                            <ol>
+                                <li>One (1) Brown Envelope long</li>
+                                <li>FORM 138-A (High School Report Card)</li>
+                                <li>Certificate of Good Moral Character</li>
+                                <li>Birth Certificate (NSO)</li>
+                                <li>Three (3) pieces 2x2 picture</li>
+                                <li>College Entrance Test Result</li>
+                                <li>Aptitude Test Result (BS Crim, BSED, BEED, BSN, and BSCS)</li>
+                                <li>Police Clearance from Police Station of the Enrollee's origin (MALE) For Freshman Students. OSAS Requirements.</li>
+                            </ol>
+                        </li>
+                        <li>Transferees - Additional Requirements:
+                            <ol>
+                                <li>Transcript of Records (TOR) Original Copy for Evaluation</li>
+                                <li>Honorable Dismissal (H.D.) Original Copy</li>
+                            </ol>
+                        </li>
+                    </ul>
+                    <h3 id="undergrad" class="heading3">University Specializations</h3>
+                    <p>N/A</p>
+                    <h3 class="heading3">University Courses</h3>
+                    <ul>
+                        <li>
+                            <h4>UNDERGRADUATE COURSES/PROGRAMS</h4>
+                            <ul>
+                                <li>Bachelor of Secondary Education (BSEd) Major: English, Filipino, General Science, Mathematics, and Social Studies</li>
+                                <li>Bachelor of Elementary Education (BEED)</li>
+                                <li>Bachelor of Early Childhood Education (BECED)</li>
+                                <li>Bachelor of Arts in Political Science (BAPOS)</li>
+                                <li>Bachelor of Arts in English Language Studies (BAELS)</li>
+                                <li>Bachelor of Arts in Islamic Studies (BAIS)</li>
+                                <li>Bachelor of Public Administration (BPA)</li>
+                                <li>Bachelor of Science in Social Work (BSSW)</li>
+                                <li>Bachelor of Science in Computer Science (BSCS)</li>
+                                <li>Bachelor of Science in Criminology (BSCrim)</li>
+                                <li>Bachelor of Science in Nursing (BSN)</li>
+                                <li>Bachelor of Science in Nutrition and Dietetics (BSND)</li>
+                                <li>Bachelor of Agricultural Technology (BAT)</li>
+                                <li>Bachelor of Science in Agriculture (BSA) Major: Crop Science and Animal Science</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>POSTGRADUATE COURSES/PROGRAMS</h4>
+                            <ul>
+                                <li>Doctor of Education (EdD) Major: Educational Administration</li>
+                                <li>Doctor of Philosophy (PhD) Major: Educational Development</li>
+                                <li>Doctor of Public Administration (DPA)</li>
+                                <li>Master of Public Administration (MPA) Major: Organizational Management</li>
+                                <li>Master of Arts in Education (MAED) Major: Educational Administration</li>
+                                <li>Master of Arts in Teaching:
+                                    <ul>
+                                        <li>English</li>
+                                        <li>Filipino</li>
+                                        <li>Science</li>
+                                        <li>Mathematics</li>
+                                        <li>Social Science</li>
+                                        <li>Guidance</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h3>OFF-SITE CLASSES</h3>
+                    <ul>
+                        <li>STA. CLARA
+                            <ul>
+                                <li>Bachelor of Agricultural Technology (BAT)</li>
+                                <li>Bachelor of Science in Agriculture (BSA) Major: Crop Science and Animal Science</li>
+                            </ul>
+                        </li>
+                        <li>LAMITAN
+                            <ul>
+                                <li>Bachelor of Elementary Education (BEEd)</li>
+                                <li>Bachelor of Arts in Political Science (BAPOS)</li>
+                                <li>Bachelor in Science in Criminology (BSCrim)</li>
+                            </ul>
+                        </li>
+                        <li>MALUSO
+                            <ul>
+                                <li>Bachelor of Elementary Education (BEEd)</li>
+                                <li>Bachelor of Arts in Political Science (BAPOS)</li>
+                            </ul>
+                        </li>
+                        <li>TIPO-TIPO
+                            <ul>
+                                <li>Bachelor of Arts in Political Science (BAPOS)</li>
+                                <li>Bachelor of Arts in Islamic Studies (BAIS)</li>
+                                <li>Bachelor of Science in Agriculture (BSA) Major: Crop Science and Animal Science</li>
+                            </ul>
+                        </li>
+                        <li>ISABELA TOWN SITE
+                            <ul>
+                                <li>Bachelor of Science in Computer Science (BSCS)</li>
+                                <li>Bachelor of Arts in Political Science (BAPOS)</li>
+                                <li>Bachelor of Public Administration (BPA)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h3 id="application" class="heading3">Application Process</h3>
+                    <ol>
+                        <li>Submit your enrollment requirements at the Office of the Admission.</li>
+                        <li>Proceed to Registrar's office, OSAS, Guidance Office for Clearance.</li>
+                        <li>Fill up the Registration Form and Enrollment Form then proceed to your respective colleges for listing of courses (subjects) to be taken.</li>
+                        <li>Proceed to the Assessment Office, present your Certificate of Registration (COR) for assessment of fees.</li>
+                        <li>Proceed to the Collecting Office (Cashier), present your Assessment Form for payment of fees.</li>
+                    </ol>
+                    <h3 id="contacts" class="heading3">Contact Information</h3>
+                    <ul>
+                        <li>Email: basilanstatecollege1984@gmail.com</li>
+                        <li>Website: <a href="https://bassc.edu.ph/basc/index.php" target="_blank">https://bassc.edu.ph/basc/index.php</a></li>
+                        <li>Phone / Landline Numbers:
+                            <ul>
+                                <li>(062) 200-7523</li>
+                                <li>(062) 200-3817</li>
+                                <li>(062) 200-7705</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- <script src="scriptProto.js"></script> -->
+</body>
+</html>

@@ -26,14 +26,14 @@ def create_app():
 
     app.config ['MAIL_SERVER'] = 'smtp.gmail.com'
     app.config ['MAIL_PORT'] = 465
-    app.config ['MAIL_USERNAME'] = 'pamantasanph@gmail.com'
-    app.config ['MAIL_PASSWORD'] = 'PamantasanPH2024'
+    app.config ['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
+    app.config ['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
     app.config ['MAIL_USE_TLS'] = False
     app.config ['MAIL_USE_SSL'] = True
 
     db.init_app(app)
     mail.init_app(app)
-    db.init_app(app)
+    #db.init_app(app)
     bcrypt.init_app(app)
     login_manager.init_app(app)
     oauth.init_app(app)

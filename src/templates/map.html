@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="../static/images/logos/website/finallogo.png">
+  <!--<link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}">-->
   <title>PamantasanPH</title>
   <link rel="stylesheet" type="text/css" href="../static/styles/map.css">
-  <!-- <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='styles/map.css') }}" /> -->
+  <!--<link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='styles/map.css') }}" />--> 
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -519,7 +520,8 @@
 <body>
   <header> <!-- Navigation -->
     <div class="logo">
-      <img src="../static/images/logos/website/finallogo.png" alt="PamantasanPH Logo">
+      <!--<img src="../static/images/logos/website/finallogo.png" alt="PamantasanPH Logo">-->
+      <img src="{{ url_for('static', filename='images/logos/website/finallogo.png') }}" alt="PamantasanPH Logo">-->
       <span>PamantasanPH</span>
     </div>
     <div class="search">
@@ -527,48 +529,58 @@
       <button>
         <i class="fa-solid fa-magnifying-glass"></i>
       </button>
+      <div class="result-box">
+        <!-- Result items will be dynamically added here -->
+      </div>
     </div>
+    
     <div class="user">
         <i class="fa-solid fa-moon moon-icon"></i>
         <div class="gradient-container">
-          <span>Username</span>
+          <span>{{ current_user.username }}</span>
           <i class="fa-solid fa-chevron-down"></i>
         </div>
       </div>
   </header>
 
   <main>
-    <aside> <!-- Sidebar -->
+    <aside>
+      <!-- Sidebar -->
       <div class="create-item">
         <span>Create New List</span>
         <i class="fa-solid fa-circle-plus"></i>
       </div>
-      <div class="sidebar-item">
-        <a href="dashboard.html">
+      <div id="dashboard" class="sidebar-item">
+        <!--<a href="dashboard.html">-->
+        <a href="{{ url_for('dashboard') }}">
           <i class="fa-solid fa-box-archive"></i>
           <span>Dashboard</span>
         </a>
       </div>
       <div class="sidebar-item">
-        <a href="univs.html">
+        <!--<a href="regions.html">-->
+        <a href="{{ url_for('regions') }}">
           <i class="fa-solid fa-graduation-cap"></i>
           <span>Universities</span>
         </a>
       </div>
-      <div id="sidebar-map" class="sidebar-item">
-        <a href="map.html">
+      <div class="sidebar-item">
+        <!--<a href="map.html">-->
+        <a href="{{ url_for('map') }}">
           <i class="fa-solid fa-map-location-dot"></i>
           <span>Map</span>
         </a>
       </div>
       <div class="sidebar-item">
-        <a href="compare.html">
+        <!--<a href="compare.html">-->
+        <a href="{{ url_for('compare') }}">          
           <i class="fa-solid fa-code-compare"></i>
           <span>Compare</span>
         </a>
       </div>
       <div class="sidebar-item">
-        <a href="team.html">
+        <!--<a href="teams.html">-->
+        <a href="{{ url_for('teams') }}">
           <i class="fa-solid fa-users-rectangle"></i>
           <span>Team</span>
         </a>
@@ -576,10 +588,15 @@
       <div class="subscribe">
         <h3>Subscribe to our Newsletter!</h3>
         <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
-        <input type="email" placeholder="Email">
-        <button>Subscribe</button>
-      </div>
-      <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+        <form action="{{ url_for('newsletter') }}" method="post">
+            {% if csrf_token %}
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            {% endif %}
+            <input type="email" name="email" placeholder="Email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+    <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
     </aside>
 
 
@@ -806,6 +823,7 @@
     }
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_commutes_v2_c" async defer></script>
-  <script src="../static/js/map.js"></script>
+  <!--<script src="../static/js/map.js"></script> -->
+  <script src="{{ url_for('static', filename='js/map.js') }}"></script>
 </body>
 </html>

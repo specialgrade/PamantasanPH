@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../static/images/logos/website/finallogo.png">
+    <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}">
     <title>PamantasanPH</title>
-    <link rel="stylesheet" type="text/css" href="../static/styles/regionsU.css">
-    <!-- <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='styles/regionsU.css') }}" /> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/regionsU.css') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 
 <body>
     <header> <!-- Navigation -->
         <div class="logo">
-            <img src="../static/images/logos/website/finallogo.png" alt="PamantasanPH Logo">
+            <!--<img src="../static/images/logos/website/finallogo.png" alt="PamantasanPH Logo">-->
+            <img src="{{ url_for('static', filename='images/logos/website/finallogo.png') }}" alt="PamantasanPH Logo">
             <span>PamantasanPH</span>
         </div>
         <div class="search">
@@ -25,56 +26,67 @@
         <div class="user">
             <i class="fa-solid fa-moon moon-icon"></i>
             <div class="gradient-container">
-                <span>Username</span>
+                <span>{{ current_user.username }}</span>
                 <i class="fa-solid fa-chevron-down"></i>
             </div>
         </div>
     </header>
 
     <div class="container"> <!-- Main Container -->
-        <aside> <!-- Sidebar -->
+        <aside>
+            <!-- Sidebar -->
             <div class="create-item">
-                <span>Create New List</span>
-                <i class="fa-solid fa-circle-plus"></i>
+              <span>Create New List</span>
+              <i class="fa-solid fa-circle-plus"></i>
+            </div>
+            <div id="dashboard" class="sidebar-item">
+              <!--<a href="dashboard.html">-->
+              <a href="{{ url_for('dashboard') }}">
+                <i class="fa-solid fa-box-archive"></i>
+                <span>Dashboard</span>
+              </a>
             </div>
             <div class="sidebar-item">
-                <a href="dashboard.html">
-                    <i class="fa-solid fa-box-archive"></i>
-                    <span>Dashboard</span>
-                </a>
-            </div>
-            <div id="regions" class="sidebar-item">
-                <a href="regions.html">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    <span>Universities</span>
-                </a>
+              <!--<a href="regions.html">-->
+              <a href="{{ url_for('regions') }}">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Universities</span>
+              </a>
             </div>
             <div class="sidebar-item">
-                <a href="map.html">
-                    <i class="fa-solid fa-map-location-dot"></i>
-                    <span>Map</span>
-                </a>
+              <!--<a href="map.html">-->
+              <a href="{{ url_for('map') }}">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <span>Map</span>
+              </a>
             </div>
             <div class="sidebar-item">
-                <a href="compare.html">
-                    <i class="fa-solid fa-code-compare"></i>
-                    <span>Compare</span>
-                </a>
+              <!--<a href="compare.html">-->
+              <a href="{{ url_for('compare') }}">          
+                <i class="fa-solid fa-code-compare"></i>
+                <span>Compare</span>
+              </a>
             </div>
             <div class="sidebar-item">
-                <a href="teams.html">
-                    <i class="fa-solid fa-users-rectangle"></i>
-                    <span>Team</span>
-                </a>
+              <!--<a href="teams.html">-->
+              <a href="{{ url_for('teams') }}">
+                <i class="fa-solid fa-users-rectangle"></i>
+                <span>Team</span>
+              </a>
             </div>
             <div class="subscribe">
                 <h3>Subscribe to our Newsletter!</h3>
                 <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
-                <input type="email" placeholder="Email">
-                <button>Subscribe</button>
+                <form action="{{ url_for('newsletter') }}" method="post">
+                    {% if csrf_token %}
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    {% endif %}
+                    <input type="email" name="email" placeholder="Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
             </div>
             <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
-        </aside>
+          </aside>
 
       <!-- Main Content -->
        <main>
@@ -86,190 +98,63 @@
                     <div class="universities-grid"> 
                         <!-- Each university -->
                         <div class="university-card">
-                            <div class="bg-img">
-                                <img src="../static/images/logos/bg_img/cmu-standard-scale-2_00x-gigapixel.jpg" alt="City of Malabon University">
-                            </div>
-                            <div class="overlay">
-                                <a href="../templates/universities/cmu.html"><span class="school-name">City of Malabon University</span></a>
-                            </div>
+                            <a href="{{ url_for('universityDeets', university_id='cfcst') }}">
+                                <div class="bg-img">
+                                    <img src="{{ url_for('static', filename='images/logos/bg_img/cfcstBG.jpg') }}" alt="Cotabato Foundation College of Science and Technology">
+                                </div>
+                                <div class="overlay">
+                                    <span class="school-name">Cotabato Foundation College of Science and Technology</span>
+                                </div>
+                            </a>
+                            <button class="bookmark-btn">
+                                <i class="fa-solid fa-bookmark"></i>
+                            </button>
                         </div>
                         <div class="university-card">
-                            <div class="bg-img">
-                                <img src="../static/images/logos/bg_img/dr.fil-gigapixel-standard-height-1080px.jpg" alt="Dr. Filemon C. Aguilar Memorial College">
-                            </div>
-                            <div class="overlay">
-                                <span class="school-name">Dr. Filemon C. Aguilar Memorial College</span>
-                                <a href="../templates/universities/dr.fil.html"></a>
-                            </div>
+                            <a href="{{ url_for('universityDeets', university_id='scsc') }}">
+                                <div class="bg-img">
+                                    <img src="{{ url_for('static', filename='images/logos/bg_img/scscBG.jpg') }}" alt="South Cotabato State College">
+                                </div>
+                                <div class="overlay">
+                                    <span class="school-name">South Cotabato State College</span>
+                                </div>
+                            </a>
+                            <button class="bookmark-btn">
+                                <i class="fa-solid fa-bookmark"></i>
+                            </button>
                         </div>
                         <div class="university-card">
-                            <div class="bg-img">
-                                <img src="../static/images/logos/bg_img/earist-gigapixel-standard-height-1080px.jpg" alt="Eulogio Amang Rodriguez Institute of Science and Technology">
-                            </div>
-                            <div class="overlay">
-                                <span class="school-name">Eulogio Amang Rodriguez Institute of Science and Technology</span>
-                                <a href="../templates/universities/earist.html"></a>
-                            </div>
+                            <a href="{{ url_for('universityDeets', university_id='sksu') }}">
+                                <div class="bg-img">
+                                    <img src="{{ url_for('static', filename='images/logos/bg_img/sksuBG.jpg') }}" alt="Sultan Kudarat State University">
+                                </div>
+                                <div class="overlay">
+                                    <span class="school-name">Sultan Kudarat State University</span>
+                                </div>
+                            </a>
+                            <button class="bookmark-btn">
+                                <i class="fa-solid fa-bookmark"></i>
+                            </button>
                         </div>
                         <div class="university-card">
-                            <div class="bg-img">
-                                <img src="../static/images/logos/bg_img/mpc-gigapixel-standard-height-1080px.jpg" alt="Manila Polytechnic College">
-                            </div>
-                            <div class="overlay">
-                                <span class="school-name">Manila Polytechnic College</span>
-                                <a href="../templates/universities/mpc.html"></a>
-                            </div>
+                            <a href="{{ url_for('universityDeets', university_id='usm') }}">
+                                <div class="bg-img">
+                                    <img src="{{ url_for('static', filename='images/logos/bg_img/usmBG.jpg') }}" alt="University of Southern Mindanao">
+                                </div>
+                                <div class="overlay">
+                                    <span class="school-name">University of Southern Mindanao</span>
+                                </div>
+                            </a>
+                            <button class="bookmark-btn">
+                                <i class="fa-solid fa-bookmark"></i>
+                            </button>
                         </div>
-                        <div class="university-card">
-                            <div class="bg-img">
-                                <img src="../static/images/logos/bg_img/npc-gigapixel-standard-height-1080px.jpg" alt="Navotas Polytechnic College">
-                            </div>
-                            <div class="overlay">
-                                <span class="school-name">Navotas Polytechnic College</span>
-                                <a href="../templates/universities/npc.html"></a>
-                            </div>
-                        </div>
-                        <div class="university-card">
-                            <div class="bg-img">
-                                <img src="../static/images/logos/bg_img/pcc-gigapixel-standard-height-1080px.jpg" alt="Pasay City College">
-                            </div>
-                            <div class="overlay">
-                                <span class="school-name">Pasay City College</span>
-                                <a href="../templates/universities/pcc.html"></a>
-                            </div>
-                        </div>
-                        <div class="university-card">
-                            <div class="bg-img">
-                                <img src="../static/images/logos/bg_img/pccm-gigapixel-standard-height-1080px.jpg" alt="Pasay City College of Medicine">
-                            </div>
-                            <div class="overlay">
-                                <span class="school-name">Pasay City College of Medicine</span>
-                                <a href="../templates/universities/pccm.html"></a>
-                            </div>
-                        </div>
-                        <div class="university-card">
-                            <div class="bg-img">
-                                <img src="../static/images/logos/bg_img/plm-gigapixel-standard-height-1080px.jpg" alt="Pamantasan ng Lungsod ng Maynila">
-                            </div>
-                            <div class="overlay">
-                                <span class="school-name">Pamantasan ng Lungsod ng Maynila</span>
-                                <a href="../templates/universities/plm.html"></a>
-                            </div>
-                        </div>
-                        <div class="university-card">
-                            <div class="bg-img">
-                                <img src="../static/images/logos/bg_img/plmar-gigapixel-standard-height-1080px.jpg" alt="Pamantasan ng Lungsod ng Marikina">
-                            </div>
-                            <div class="overlay">
-                                <span class="school-name">Pamantasan ng Lungsod ng Marikina</span>
-                                <a href="../templates/universities/plmar.html"></a>
-                            </div>
-                        </div>
-                        <div class="university-card">
-                            <div class="bg-img">
-                                <img src="../static/images/logos/bg_img/plmun-gigapixel-standard-height-1080px.jpg" alt="Pamantasan ng Lungsod ng Muntinlupa">
-                            </div>
-                            <div class="overlay">
-                                <span class="school-name">Pamantasan ng Lungsod ng Muntinlupa</span>
-                                <a href="../templates/universities/plmun.html"></a>
-                            </div>
-                        </div>
-                        <div class="university-card">
-                            <div class="bg-img">
-                                <img src="../static/images/logos/bg_img/plp-gigapixel-standard-height-1080px.jpg" alt="Pamantasan ng Lungsod ng Pasig">
-                            </div>
-                            <div class="overlay">
-                                <span class="school-name">Pamantasan ng Lungsod ng Pasig</span>
-                                <a href="../templates/universities/plp.html"></a>
-                            </div>
-                        </div>
-                        <div class="university-card">
-                            <div class="bg-img">
-                                <img src="../static/images/logos/bg_img/plv-gigapixel-standard-height-1080px.jpg" alt="Pamantasan ng Lungsod ng Valenzuela">
-                            </div>
-                            <div class="overlay">
-                                <span class="school-name">Pamantasan ng Lungsod ng Valenzuela</span>
-                                <a href="../templates/universities/plv.html"></a>
-                            </div>
-                        </div>
-                        <div class="university-card">
-                            <div class="bg-img">
-                                <img src="../static/images/logos/bg_img/pnu-gigapixel-standard-height-1080px.jpg" alt="Philippine Normal University">
-                            </div>
-                            <div class="overlay">
-                                <span class="school-name">Philippine Normal University</span>
-                                <a href="../templates/universities/pnu.html"></a>
-                            </div>
-                        </div>
-                        <div class="university-card">
-                            <div class="bg-img">
-                                <img src="../static/images/logos/bg_img/pup-gigapixel-standard-height-1080px.jpg" alt="Polytechnic University of the Philippines">
-                            </div>
-                            <div class="overlay">
-                                <span class="school-name">Polytechnic University of the Philippines</span>
-                                <a href="../templates/universities/pup.html"></a>
-                            </div>
-                        </div>
-                        <div class="university-card">
-                            <div class="bg-img">
-                                <img src="../static/images/logos/bg_img/qcu-gigapixel-standard-height-1080px.jpg" alt="Quezon City University">
-                            </div>
-                            <div class="overlay">
-                                <span class="school-name">Quezon City University</span>
-                                <a href="../templates/universities/qcu.html"></a>
-                            </div>
-                        </div>
-                        <div class="university-card">
-                            <div class="bg-img">
-                                <img src="../static/images/logos/bg_img/tcu-gigapixel-standard-height-1080px.jpg" alt="Taguig City University">
-                            </div>
-                            <div class="overlay">
-                                <span class="school-name">Taguig City University</span>
-                                <a href="../templates/universities/tcu.html"></a>
-                            </div>
-                        </div>
-                        <div class="university-card">
-                            <div class="bg-img">
-                                <img src="../static/images/logos/bg_img/tup-gigapixel-standard-height-1080px.jpg" alt="Technological University of the Philippines">
-                            </div>
-                            <div class="overlay">
-                                <span class="school-name">Technological University of the Philippines</span>
-                                <a href="../templates/universities/tup.html"></a>
-                            </div>
-                        </div>
-                        <div class="university-card">
-                            <div class="bg-img">
-                                <img src="../static/images/logos/bg_img/udm-gigapixel-standard-height-1080px.jpg" alt="Universidad De Manila">
-                            </div>
-                            <div class="overlay">
-                                <span class="school-name">Universidad De Manila</span>
-                                <a href="../templates/universities/udm.html"></a>
-                            </div>
-                        </div>
-                        <div class="university-card">
-                            <div class="bg-img">
-                                <img src="../static/images/logos/bg_img/um-gigapixel-standard-height-1080px.jpg" alt="University of Makati">
-                            </div>
-                            <div class="overlay">
-                                <span class="school-name">University of Makati</span>
-                                <a href="../templates/universities/um.html"></a>
-                            </div>
-                        </div>
-                        <div class="university-card">
-                            <div class="bg-img">
-                                <img src="../static/images/logos/bg_img/up-gigapixel-standard-height-1080px.jpg" alt="University of the Philippines">
-                            </div>
-                            <div class="overlay">
-                                <span class="school-name">University of the Philippines</span>
-                                <a href="../templates/universities/up.html"></a>
-                            </div>
-                        </div>
-                    </div>
+                    </div>                    
                 </section>
             </div>
         </main>
         
-
-<!-- <script src="../static/js/regionsU.js"></script> -->
+<!--<script src="../static/js/regionsU.js"></script>-->
+<script src="{{ url_for('static', filename='js/regionsU.js') }}"></script>
 </body>
 </html>

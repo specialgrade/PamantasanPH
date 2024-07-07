@@ -14,11 +14,7 @@
 }
 
 /* Body styling */
-<<<<<<< HEAD
-html, body { 
-=======
 html, body {
->>>>>>> 32009e5584ac9f93a7bc2c4ad3181539d5d9ffc9
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -188,11 +184,6 @@ h1 {
     background-color: var(--white);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> 32009e5584ac9f93a7bc2c4ad3181539d5d9ffc9
 #favsContainer {
     position: relative;
     width: 100%;
@@ -207,28 +198,6 @@ h1 {
     text-align: center;
 }
 
-<<<<<<< HEAD
-/* Bookmark styling */
-.bookmark-icon {
-  position: absolute;
-  top: 25px;
-  right: 45px;
-  width: 30px;
-  height: 30px;
-  cursor: pointer; 
-  z-index: 999; 
-  transition: transform 0.3s ease;
-}
-
-.bookmark-icon i {
-  font-size: 24px;
-  color: var(--white);
-  cursor: pointer;
-}
-
-.bookmark-icon:hover i {
-  color: var(--gray);
-=======
 .bookmark-container {
     position: relative;
 }
@@ -247,7 +216,6 @@ h1 {
     background-color: var(--maroon);
     transition: transform 0.3s ease;
     z-index: 1;
->>>>>>> 32009e5584ac9f93a7bc2c4ad3181539d5d9ffc9
 }
 
 /* Background image styling */

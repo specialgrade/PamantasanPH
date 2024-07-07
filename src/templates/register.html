@@ -2,59 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="C:\Users\ALY\Downloads\PamantasanPH_LOGO.png">
-    <title>PamantasanPH</title>
-    <!--<link rel="stylesheet" type="text/css" href="../static/styles/register.css">-->
-    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='styles/register.css') }}" />
+    <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}">
+    <title>PamantasanPH - Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/register.css') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body> 
     <div class="container">
-        <a href="login1.html" class="back-btn"> <!-- Back button -->
+        <a href="{{ url_for('login') }}" class="back-btn"> 
             <i class="fa-solid fa-arrow-left"></i>
         </a>
 
-        <h1>Sign Up</h1> <!-- Header -->
+        <h1>Sign Up</h1>
 
-        <div class="input-group"> <!-- First Name -->
-            <!-- <label for="firstName">First Name</label> -->
-            <input type="text" id="firstName" placeholder="First Name">
-        </div>
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            
+            <div class="input-group">
+                <i class="fa-solid fa-user"></i>
+                {{ form.username(class="form-control", placeholder="Username") }}
+                {% for error in form.username.errors %}
+                    <small class="text-danger">{{ error }}</small>
+                {% endfor %}
+            </div>
 
-        <div class="input-group"> <!-- Last Name -->
-            <!-- <label for="lastName">Last Name</label> -->
-            <input type="text" id="lastName" placeholder="Last Name">
-        </div>
+            <div class="input-group">
+                <i class="fa-solid fa-envelope"></i>
+                {{ form.email(class="form-control", placeholder="Email") }}
+                {% for error in form.email.errors %}
+                    <small class="text-danger">{{ error }}</small>
+                {% endfor %}
+            </div>
 
-        <div class="input-group"> <!-- Email -->
-            <i class="fa-solid fa-envelope"></i>
-            <!-- <label for="email">Email</label> -->
-            <input type="email" id="email" placeholder="Email">
-        </div>
+            <div class="input-group">
+                <i class="fa-solid fa-lock"></i>
+                {{ form.password(class="form-control", placeholder="Password") }}
+                {% for error in form.password.errors %}
+                    <small class="text-danger">{{ error }}</small>
+                {% endfor %}
+            </div>
 
-        <div class="input-group"> <!-- Password -->
-            <i class="fa-solid fa-lock"></i>
-            <!-- <label for="password">Password</label> -->
-            <input type="password" id="password" placeholder="Password">
-        </div>
+            <div class="input-group">
+                <i class="fa-solid fa-lock"></i>
+                {{ form.confirm_password(class="form-control", placeholder="Confirm Password") }}
+                {% for error in form.confirm_password.errors %}
+                    <small class="text-danger">{{ error }}</small>
+                {% endfor %}
+            </div>
 
-        <div class="input-group"> <!-- Confirm Password -->
-            <i class="fa-solid fa-lock"></i>
-            <!-- <label for="confirmPassword">Confirm Password</label> -->
-            <input type="password" id="confirmPassword" placeholder="Confirm Password">
-        </div>
+            <div class="input-group">
+                {{ form.submit(class="btn btn-primary btn-block", id="submitBtn", disabled=true) }}
+            </div>
+        </form>
 
-        <button>Sign Up</button> <!-- Sign Up-->
-
-        <div class="checkbox-group"> <!-- Privacy Policy -->
+        <div class="checkbox-group">
             <input type="checkbox" id="agree">
-            <label for="agree">I Agree with <a href="#">privacy</a> and <a href="#">policy</a>.</label>
+            <label for="agree">I Agree with <a href="{{ url_for('privacy') }}">privacy and policy</a>.</label>
         </div>
     </div>
 
-    <!-- <script src="login2.js"></script> -->
+    <!-- Link your JavaScript file -->
+    <script>
+    const agreeCheckbox = document.getElementById('agree');
+    const submitBtn = document.getElementById('submitBtn');
+    
+    agreeCheckbox.addEventListener('change', function() {
+        if (agreeCheckbox.checked) {
+            submitBtn.removeAttribute('disabled'); // Enable the button
+        } else {
+            submitBtn.setAttribute('disabled', 'disabled'); // Disable the button
+        }
+    });
+
+    </script>
 </body>
 </html>

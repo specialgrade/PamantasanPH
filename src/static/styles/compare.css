@@ -360,3 +360,105 @@ main {
     margin-top: 10px;
     background-color: #f9f9f9;
 }
+
+
+/*added styles - GPT GENNERATED DI AKO MARUNONNNG E*/
+.comparison-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    width: 48%;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.show {
+    display: block;
+}
+
+#university-details {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.university-column {
+    width: 48%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+/* Ensure your CSS file compare.css contains the following styles */
+
+.comparison-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    position: relative;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.university-column {
+    flex: 1;
+    overflow-y: auto; /* Allows scrolling within each university column */
+    width: 50%; /* Ensure the width is half of the container */
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ccc; /* Optional: for better visibility */
+}
+
+#university-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: calc(100vh - 200px); /* Adjust as needed */
+    overflow-x: auto; /* Horizontal scrolling for the whole container */
+}

@@ -2,38 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="C:\Users\ALY\Downloads\PamantasanPH_LOGO.png">
-    <title>PamantasanPH</title>
-    <!--<link rel="stylesheet" type="text/css" href="../static/styles/verifyEmail.css">-->
-    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='styles/verifyEmail.css') }}" />
+    <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}">
+    <title>PamantasanPH - Verify Your Email</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/verifyEmail.css') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
-<body> 
+<body>
     <div class="container">
-        <a href="login1.html" class="back-btn"> <!-- Back button -->
-            <i class="fa-solid fa-arrow-left"></i>
+        <a href="{{ url_for('login') }}" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i> 
         </a>
-        
-        <h1>Verify Your Email</h1> <!-- Header-->
-        <p class="sub-header">Please enter the 4 - Number Code Sent to <span id="user-email"></span>.</p> <!-- User's email will be displayed here -->
 
-        <form action="/verify-code" method="POST"> <!-- 4 Number Code -->
-            <input type="text" class="code-input" maxlength="1" name="digit1" required>
-            <input type="text" class="code-input" maxlength="1" name="digit2" required>
-            <input type="text" class="code-input" maxlength="1" name="digit3" required>
-            <input type="text" class="code-input" maxlength="1" name="digit4" required>
+        <h1>Verify Your Email</h1>
+        <p class="sub-header">Please enter the 4-digit code sent to <span id="user-email">{{ user_email }}</span>.</p>
+
+        <!-- WTForms integration -->
+        <form action="{{ url_for('verify_email') }}" method="POST">
+            {{ form.hidden_tag() }} <!-- Include hidden fields for CSRF protection -->
+
+            <div class="code-input-group">
+                {{ form.digit1(class_="code-input", maxlength="1", required="required") }}
+                {{ form.digit2(class_="code-input", maxlength="1", required="required") }}
+                {{ form.digit3(class_="code-input", maxlength="1", required="required") }}
+                {{ form.digit4(class_="code-input", maxlength="1", required="required") }}
+            </div>
+
+            <button type="submit" class="verify-btn">Verify</button> <!-- Render submit button -->
+
+            <div class="resend">
+                <p><a href="{{ url_for('resend_otp') }}">Resend Code</a></p>
+            </div>
         </form>
-
-        <div class="resend"> <!-- Code Resend Button -->
-            <p><a href="#">Resend Code</a></p>
-        </div>
-
-        <button type="submit" class="verify-btn">Verify</button> <!-- Verify Button-->
+        <!-- End WTForms integration -->
     </div>
-
-    <!-- <script src="verifyEmail.js"></script> -->
 </body>
 </html>

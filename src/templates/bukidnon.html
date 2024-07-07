@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="icon" href="../static/images/logos/website/finallogo.png">-->
+    <link rel="icon" href="{{ url_for('static', filename='/images/logos/website/finallogo.png') }}">
+    <title>PamantasanPH</title>
+    <!--<link rel="stylesheet" type="text/css" href="../static/styles/univsDetails2.css">-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/univsDetails2.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <!--<img src="../static/images/logos/website/finallogo.png" alt="PamantasanPH Logo">-->
+            <img src="{{ url_for('static', filename='images/logos/website/finallogo.png') }}" alt="PamantasanPH Logo">
+            <span>PamantasanPH</span>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+        <div class="user">
+            <i class="fa-solid fa-moon moon-icon"></i>
+            <div class="gradient-container">
+                <span>{{ current_user.username }}</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <aside>
+            <!-- Sidebar -->
+            <div class="create-item">
+              <span>Create New List</span>
+              <i class="fa-solid fa-circle-plus"></i>
+            </div>
+            <div id="dashboard" class="sidebar-item">
+              <!--<a href="dashboard.html">-->
+              <a href="{{ url_for('dashboard') }}">
+                <i class="fa-solid fa-box-archive"></i>
+                <span>Dashboard</span>
+              </a>
+            </div>
+            <div class="sidebar-item">
+              <!--<a href="regions.html">-->
+              <a href="{{ url_for('regions') }}">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Universities</span>
+              </a>
+            </div>
+            <div class="sidebar-item">
+              <!--<a href="map.html">-->
+              <a href="{{ url_for('map') }}">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <span>Map</span>
+              </a>
+            </div>
+            <div class="sidebar-item">
+              <!--<a href="compare.html">-->
+              <a href="{{ url_for('compare') }}">          
+                <i class="fa-solid fa-code-compare"></i>
+                <span>Compare</span>
+              </a>
+            </div>
+            <div class="sidebar-item">
+              <!--<a href="teams.html">-->
+              <a href="{{ url_for('teams') }}">
+                <i class="fa-solid fa-users-rectangle"></i>
+                <span>Team</span>
+              </a>
+            </div>
+            <div class="subscribe">
+                <h3>Subscribe to our Newsletter!</h3>
+                <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                <form action="{{ url_for('newsletter') }}" method="post">
+                    {% if csrf_token %}
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    {% endif %}
+                    <input type="email" name="email" placeholder="Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+          </aside>
+            <section>
+                <div id="navbar" class="heading-container">
+                    <nav>
+                        <ul>
+                            <li class="dropdown">
+                                <button class="dropbtn">Requirements</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#gen">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Courses</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#special">Specializations</a>
+                                    <a href="#boardcourse">Board Courses</a>
+                                    <a href="#nonboard">Non-board Courses</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Application</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#application">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#contacts" class="dropbtn">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="gen" class="container">
+                    <img src="{{ url_for('static', filename='images/logos/website/universities/BUKSULogo.png) }}" alt="Bukidnon State University" class="univ-logo">
+                    <h1>Bukidnon State University</h1>
+                    <h2 class="address">Bukidnon, Malaybay City, Philippines</h2>
+                    <div class="status">
+                        <i class="status-icon fa fa-circle" id="status-icon"></i>
+                        <span class="close" id="status-text">NOT YET OPENED</span>
+                    </div>
+                    <h3 id="special" class="heading3">Admission Requirements</h3>
+                    <ol>
+                        <li>Personal E-mail Address</li>
+                        <li>For currently enrolled Grade 12 students: Certification from the office of the school principal confirming applicant as Grade 12 student or Grade 12 Report Card</li>
+                        <li>For Senior High School graduates: Report Card or High School Diploma</li>
+                        <li>For Transferees: Transcript of Records/Honorable Dismissal or Certification from the Office of the Registrar confirming applicant's current enrollment to the institution.</li>
+                        <li>For Returnees (enrolled in college, but stopped studying in BukSU before 2018): Certification from the Registrar to be requested via this form (<a href="https://forms.gle/aKoX7zTJmnTSBNNFA">https://forms.gle/aKoX7zTJmnTSBNNFA</a>)</li>
+                        <li>Soft copy of 2”x2” ID picture. (applicant must be wearing white t-shirt on white background)</li>
+                        <li>Accurately filled out the necessary information on the BukSU-CAT website.</li>
+                    </ol>
+                    <h3 id="boardcourse" class="heading3">University Specializations</h3>
+                    <p>N/A</p>
+                    <h3 class="heading3">University Courses</h3>
+                    <ul>
+                        <li>
+                            <h4>BOARD COURSES</h4>
+                            <ul>
+                                <li>COLLEGE OF BUSINESS
+                                    <ul>
+                                        <li>Bachelor of Science in Accountancy</li>
+                                    </ul>
+                                </li>
+                                <li>COLLEGE OF EDUCATION
+                                    <ul>
+                                        <li>Bachelor of Early Childhood Education</li>
+                                        <li>Bachelor of Elementary Education</li>
+                                        <li>Bachelor of Physical Education</li>
+                                        <li>Bachelor of Secondary Education Major in English</li>
+                                        <li>Bachelor of Secondary Education - major in: Filipino</li>
+                                        <li>Bachelor of Secondary Education Major in Mathematics</li>
+                                        <li>Bachelor of Secondary Education - major in: Social Studies</li>
+                                        <li>Bachelor of Secondary Education - major in: Science</li>
+                                    </ul>
+                                </li>
+                                <li>COLLEGE OF TECHNOLOGIES
+                                    <ul>
+                                        <li>Bachelor of Science in Food Technology</li>
+                                    </ul>
+                                </li>
+                                <li>COLLEGE OF NURSING
+                                    <ul>
+                                        <li id="nonboard">Bachelor of Science in Nursing</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>NON-BOARD COURSES</h4>
+                            <ul>
+                                <li>COLLEGE OF ADMINISTRATION
+                                    <ul>
+                                        <li>Bachelor of Public Administration</li>
+                                    </ul>
+                                </li>
+                                <li>COLLEGE OF ARTS AND SCIENCES
+                                    <ul>
+                                        <li>Bachelor of Arts in Economics</li>
+                                        <li>Bachelor of Arts in English Language</li>
+                                        <li>Bachelor of Arts in Philosophy</li>
+                                        <li>Bachelor of Arts in Sociology</li>
+                                        <li>Bachelor of Science in Community Development</li>
+                                        <li>Bachelor of Science in Development Communication</li>
+                                        <li>Bachelor of Science in Mathematics</li>
+                                        <li>Bachelor of Science in Biology - major in: Biotechnology</li>
+                                        <li>Bachelor of Science in Environmental Science - major in: Environmental Heritage Studies</li>
+                                    </ul>
+                                </li>
+                                <li>COLLEGE OF BUSINESS
+                                    <ul>
+                                        <li>Bachelor of Science in Business Administration - major in: Financial Management</li>
+                                        <li>Bachelor of Science in Hospitality Management</li>
+                                    </ul>
+                                </li>
+                                <li>COLLEGE OF TECHNOLOGIES
+                                    <ul>                                        <li>Bachelor of Science in Automotive Technology</li>
+                                        <li>Bachelor of Science in Electronics Technology</li>
+                                        <li>Bachelor of Science in Entertainment and Multimedia Computing - major in: Digital Animation Technology</li>
+                                        <li>Bachelor of Science in Entertainment and Multimedia Computing - major in: Game Development</li>
+                                        <li>Bachelor of Science in Information Technology</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h3 id="application" class="heading3">Application Process</h3>
+                    <ol>
+                        <li>NEW STUDENT ENROLLMENT GUIDE</li>
+                        <li>Step 1
+                            <ul>
+                                <li>Log-in at admissions.buksu.edu.ph</li>
+                            </ul>
+                        </li>
+                        <li>Step 2
+                            <ul>
+                                <li>In your dashboard, click your admissions status</li>
+                                <li>In the Admission Overview, click show exam result.</li>
+                                <li>Then click proceed to enrollment.</li>
+                            </ul>
+                        </li>
+                        <li>NOTE: Please contact the Admission and Testing Office if there are no test results.</li>
+                        <li>Apply for Enrollment (6 steps in this process)
+                            <ul>
+                                <li>Campus Selection</li>
+                                <li>Course Selection</li>
+                                <li>Course Requirements</li>
+                                <li>Learning Modality Preference</li>
+                                <li>Academic Information</li>
+                                <li>Enrollment Confirmation
+                                    <ul>
+                                        <li>NOTE: In the enrollment confirmation, you need to confirm and sign your application, unsigned applications won’t be able to complete the enrollment process.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>After the confirmation of enrollment, please wait for the evaluator to evaluate you and after the approval of your application, you may download your Certificate of Registration (COR), if it’s incorrect, please click the Report Incorrect COR.</li>
+                    </ol>
+                    <h3 id="contacts" class="heading3">Contact Information</h3>
+                    <ul>
+                        <li>Email Address: </li>
+                        <li>Website(s): <a href="https://www.facebook.com/BukidnonStateUniversityOfficialPage/">https://www.facebook.com/BukidnonStateUniversityOfficialPage/</a>, <a href="https://admissions.buksu.edu.ph/">https://admissions.buksu.edu.ph/</a>, <a href="https://buksu.edu.ph/">https://buksu.edu.ph/</a></li>
+                        <li>Phone / Landline Number:
+                            <ul>
+                                <li>(088) 813-2717;</li>
+                                <li>(088) 221-2196</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- <script src="scriptProto.js"></script> -->
+</body>
+</html>
+

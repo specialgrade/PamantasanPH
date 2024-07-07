@@ -1,80 +1,65 @@
-<<<<<<< HEAD
-// Bookmark function
-document.addEventListener("DOMContentLoaded", function() {
-    var favsContainer = document.getElementById('favsContainer');
-=======
-// Unbookmark
 document.addEventListener("DOMContentLoaded", function() {
     var favsContainer = document.getElementById('favsContainer');
     var placeholderText = document.getElementById('placeholderText');
->>>>>>> 32009e5584ac9f93a7bc2c4ad3181539d5d9ffc9
 
-    var bookmarkedContent = localStorage.getItem('bookmarkedContent');
-    if (bookmarkedContent) {
-        bookmarkedContent = JSON.parse(bookmarkedContent);
-        bookmarkedContent.forEach(function(content) {
+    // Retrieve bookmarks from local storage
+    var bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
+
+    // Generate or update bookmarks display
+    if (bookmarks.length > 0) {
+        placeholderText.style.display = 'none';
+        bookmarks.forEach(function(bookmarkHTML, index) {
+            // Create a div for each bookmarked university card
             var div = document.createElement('div');
-            div.innerHTML = content;
-<<<<<<< HEAD
-
-            var bookmarkIcon = div.querySelector('.bookmark-icon');  
-            bookmarkIcon.addEventListener('click', function() {
-                 
-                var confirmation = confirm("Click 'OK' to Remove from Bookmarks.");
-                if (confirmation) {
-                    favsContainer.removeChild(div);
-
-                    var index = bookmarkedContent.indexOf(content);
-                    if (index !== -1) {
-                        bookmarkedContent.splice(index, 1);
-                        localStorage.setItem('bookmarkedContent', JSON.stringify(bookmarkedContent));
-                    }
-                }
-            });
-
-            favsContainer.appendChild(div);
-        });
-    }
-});
-
-// Displayed text when the container is empty
-function checkEmptyContainer() {
-    var bookmarkedContent = localStorage.getItem('bookmarkedContent');
-    var favsContainer = document.getElementById('favsContainer');
-
-    if (!bookmarkedContent || JSON.parse(bookmarkedContent).length === 0) {
-        favsContainer.innerHTML = '<p class="bookmarks-text">Add your bookmarks here</p>';
-    } else {
-        favsContainer.innerHTML = ''; 
-    }
-}
-=======
             div.classList.add('bookmark-container');  
 
-            var unbookmarkButton = document.createElement('button');
-            unbookmarkButton.textContent = 'Unbookmark';
-            unbookmarkButton.classList.add('unbookmark', 'button-style');  
+            div.innerHTML = bookmarkHTML; // Assign the stored HTML content
 
-            unbookmarkButton.addEventListener('click', function() {
+            // Create remove button
+            var removeButton = document.createElement('button');
+            removeButton.textContent = 'Remove';
+            removeButton.classList.add('remove-btn', 'button-style');  
+
+            // Add event listener to remove button
+            removeButton.addEventListener('click', function() {
+                // Remove the div from DOM
                 favsContainer.removeChild(div);
 
-                var index = bookmarkedContent.indexOf(content);
-                if (index !== -1) {
-                    bookmarkedContent.splice(index, 1);
-                    localStorage.setItem('bookmarkedContent', JSON.stringify(bookmarkedContent));
-                }
+                // Remove the bookmark from local storage
+                bookmarks.splice(index, 1);
+                localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
 
-                if (favsContainer.children.length === 0) {
+                // Show placeholder text if there are no bookmarks left
+                if (bookmarks.length === 0) {
                     placeholderText.style.display = 'block';
                 }
+
+                // Display confirmation message
+                alert("University removed!");
             });
 
-            div.appendChild(unbookmarkButton);
+            // Append remove button to the bookmark container
+            div.appendChild(removeButton);
 
+            // Append the div to favsContainer
             favsContainer.appendChild(div);
         });
     } else {
         placeholderText.style.display = 'block';
     }
+
+    // Function to display confirmation message
+    function displayConfirmation(message) {
+        // Create a confirmation message element
+        var confirmationMsg = document.createElement('div');
+        confirmationMsg.textContent = message;
+        confirmationMsg.classList.add('confirmation-msg');  
+
+        document.body.appendChild(confirmationMsg);
+
+        setTimeout(function() {
+            document.body.removeChild(confirmationMsg);
+        }, 3000);  
+    }
 });
->>>>>>> 32009e5584ac9f93a7bc2c4ad3181539d5d9ffc9
+

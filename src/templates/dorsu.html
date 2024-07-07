@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="icon" href="../static/images/logos/website/finallogo.png">-->
+    <link rel="icon" href="{{ url_for('static', filename='/images/logos/website/finallogo.png') }}">
+    <title>PamantasanPH</title>
+    <!--<link rel="stylesheet" type="text/css" href="../static/styles/univsDetails2.css">-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/univsDetails2.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <!--<img src="../static/images/logos/website/finallogo.png" alt="PamantasanPH Logo">-->
+            <img src="{{ url_for('static', filename='images/logos/website/finallogo.png') }}" alt="PamantasanPH Logo">
+            <span>PamantasanPH</span>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+        <div class="user">
+            <i class="fa-solid fa-moon moon-icon"></i>
+            <div class="gradient-container">
+                <span>{{ current_user.username }}</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <aside>
+            <!-- Sidebar -->
+            <div class="create-item">
+              <span>Create New List</span>
+              <i class="fa-solid fa-circle-plus"></i>
+            </div>
+            <div id="dashboard" class="sidebar-item">
+              <!--<a href="dashboard.html">-->
+              <a href="{{ url_for('dashboard') }}">
+                <i class="fa-solid fa-box-archive"></i>
+                <span>Dashboard</span>
+              </a>
+            </div>
+            <div class="sidebar-item">
+              <!--<a href="regions.html">-->
+              <a href="{{ url_for('regions') }}">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Universities</span>
+              </a>
+            </div>
+            <div class="sidebar-item">
+              <!--<a href="map.html">-->
+              <a href="{{ url_for('map') }}">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <span>Map</span>
+              </a>
+            </div>
+            <div class="sidebar-item">
+              <!--<a href="compare.html">-->
+              <a href="{{ url_for('compare') }}">          
+                <i class="fa-solid fa-code-compare"></i>
+                <span>Compare</span>
+              </a>
+            </div>
+            <div class="sidebar-item">
+              <!--<a href="teams.html">-->
+              <a href="{{ url_for('teams') }}">
+                <i class="fa-solid fa-users-rectangle"></i>
+                <span>Team</span>
+              </a>
+            </div>
+            <div class="subscribe">
+                <h3>Subscribe to our Newsletter!</h3>
+                <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                <form action="{{ url_for('newsletter') }}" method="post">
+                    {% if csrf_token %}
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    {% endif %}
+                    <input type="email" name="email" placeholder="Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+          </aside>
+
+            <section> 
+                <div id="navbar" class="heading-container">
+                    <nav>
+                        <ul>
+                            <li class="dropdown">
+                                <button class="dropbtn">Requirements</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#gen">General</a>
+                                </div>
+                            </li> 
+                            <li class="dropdown">
+                                <button class="dropbtn">Courses</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#undergrad">Undergraduate Programs</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <button class="dropbtn">Application</button>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <div class="dropdown-content">
+                                    <a href="#application">General</a>
+                                </div>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#contacts" class="dropbtn">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div> 
+
+    <div class="main-content">
+        <div>
+            <h2>Davao Oriental State University</h2>
+            <p>Address – City of Mati, Davao Oriental, Philippines</p>
+            <div class="status">
+                <i class="status-icon fa fa-circle" id="status-icon"></i>
+                <span class="close" id="status-text">NOT YET OPENED</span>
+        </div>
+
+        <div class="section">
+            <h3 id="special" class="heading3">Admission Requirements</h3>
+            <ul>
+                <li class="sub-section-title">UNDERGRADUATE</li>
+                <ul>
+                    <li class="sub-section-title">INCOMING FIRST YEAR STUDENTS</li>
+                    <ul>
+                        <li>Admissions Profile Form</li>
+                        <li>Form 138-A with original signature of the School Principal</li>
+                        <li>Certificate of Good Moral Character</li>
+                        <li>PSA-authenticated Birth Certificate</li>
+                        <li>Certified Photocopy of Marriage Contract (for married women only)</li>
+                        <li>PSA-authenticated Birth Certificate of Husband (for married women only)</li>
+                        <li>5pcs. recent 2×2 ID picture</li>
+                        <li>1 short brown envelope</li>
+                        <li>1 long brown envelope</li>
+                        <li>1 window envelope with mailing stamp</li>
+                    </ul>
+                    <li class="sub-section-title">RETURNING STUDENTS</li>
+                    <ul>
+                        <li>Admissions Profile Form</li>
+                        <li>University Clearance</li>
+                        <li>Report of Grades (ROG) for the last semester attended</li>
+                        <li>1 window envelope with mailing stamp</li>
+                    </ul>
+                    <li class="sub-section-title">TRANSFEREES</li>
+                    <ul>
+                        <li>Admissions Profile Form</li>
+                        <li>Informative Copy of the Transcript of Records (TOR)</li>
+                        <li>Certificate of Transfer Credential or Honorable Dismissal</li>
+                        <li>Certificate of Good Moral Character</li>
+                        <li>PSA-authenticated Birth Certificate</li>
+                        <li>5pcs. recent 2×2 ID picture</li>
+                        <li>1 short brown envelope</li>
+                        <li>1 long brown envelope</li>
+                        <li>1 window envelope with mailing stamp</li>
+                    </ul>
+                </ul>
+                <li class="sub-section-title">GRADUATE SCHOOL</li>
+                <ul>
+                    <li class="sub-section-title">MSES</li>
+                    <ul>
+                        <li>Bachelor’s Degree</li>
+                        <li>Good moral / Academic record</li>
+                        <li>Honorable Dismissal for non-DOCST graduates and transferees</li>
+                        <li>Completed application & Admission forms</li>
+                        <li>Photocopy of Transcript of Records (TOR)</li>
+                        <li>Two (2) Recommendation Letter as reference (academic reference and employment reference)</li>
+                        <li>NSO copy of birth certificate</li>
+                        <li>NSO copy of marriage certificate for married individuals</li>
+                        <li>Results from DOSCST Graduate School diagnostic test or entrance exam conducted by the Guidance Office (Suspended until further notice)</li>
+                        <li>Approved Program of Study (C/O by the Program Head / Adviser)</li>
+                    </ul>
+                    <li class="sub-section-title">MBA / MAED / MST</li>
+                    <ul>
+                        <li>Bachelor’s Degree</li>
+                        <li>Good moral / Academic record</li>
+                        <li>Honorable Dismissal for non-DOSCST graduates and transferees</li>
+                        <li>Completed application & Admission forms</li>
+                        <li>Photocopy of Transcript of Records (TOR)</li>
+                        <li>Two (2) Recommendation Letter as reference (academic reference and employment reference)</li>
+                        <li>NSO copy of birth certificate</li>
+                        <li>NSO copy of marriage certificate for married individuals</li>
+                    </ul>
+                    <li class="sub-section-title">PhD ES / PhD Bio / EdD</li>
+                    <ul>
+                        <li>Bachelor’s Degree</li>
+                        <li>Good moral / Academic record</li>
+                        <li>Honorable Dismissal for non-DOSCST graduates and transferees</li>
+                        <li>Abstract of Master’s Degree Thesis</li>
+                        <li>Completed application & Admission forms</li>
+                        <li>Photocopy of Transcript of Records (TOR)</li>
+                        <li>Two (2) Recommendation Letter as reference (academic reference and employment reference)</li>
+                        <li>NSO copy of birth certificate</li>
+                        <li>NSO copy of marriage certificate for married individuals</li>
+                        <li>Results from DOSCST Graduate School diagnostic test or entrance exam conducted by the Guidance Office (Suspended until further notice)</li>
+                        <li>Concept paper of proposed dissertation topic</li>
+                        <li>Approved Program of Study (C/O by the Program Head / Adviser)</li>
+                    </ul>
+                </ul>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3 id="special" class="heading3">University Specializations</h3>
+            <p>N/A</p>
+        </div>
+
+        <div class="section">
+            <h3 id="special" class="heading3">University Courses</h3>
+            <ul>
+                <li class="sub-section-title">GRADUATE PROGRAMS</li>
+                <ul>
+                    <li>Master of Science in Teaching – General Science</li>
+                    <li>Master of Science in Teaching – Mathematics</li>
+                    <li>Master of Arts in Education – Education Management</li>
+                    <li>Master of Arts in Education – Teaching English</li>
+                    <li>Master of Public Administration</li>
+                </ul>
+                <li class="sub-section-title">UNDERGRADUATE PROGRAMS</li>
+                <ul>
+                    <li class="sub-section-title">FACULTY OF NURSING AND ALLIED HEALTH SCIENCES (FNAHS)</li>
+                    <ul>
+                        <li>Bachelor of Science in Nursing</li>
+                    </ul>
+                    <li class="sub-section-title">FACULTY OF AGRICULTURE AND LIFE SCIENCES (FALS)</li>
+                    <ul>
+                        <li>Bachelor of Science in Agribusiness Management</li>
+                        <li>Bachelor of Agricultural Technology</li>
+                        <li>Bachelor of Science in Biology</li>
+                        <li>Bachelor of Science in Development Communication</li>
+                        <li>Bachelor of Science in Environmental Science</li>
+                    </ul>
+                    <li class="sub-section-title">FACULTY OF GOVERNANCE AND BUSINESS MANAGEMENT (FGBM)</li>
+                    <ul>
+                        <li>Bachelor of Science in Business Administration</li>
+                        <li>Bachelor of Science in Criminology</li>
+                        <li>Bachelor of Science in Hospitality Management</li>
+                    </ul>
+                    <li class="sub-section-title">FACULTY OF COMPUTING DATA SCIENCES, ENGINEERING AND TECHNOLOGY (FCDSET)</li>
+                    <ul>
+                        <li>Bachelor of Science in Civil Engineering</li>
+                        <li>Bachelor of Industrial Technology Management</li>
+                        <li>Bachelor of Science in Information Technology</li>
+                        <li>Bachelor of Science in Mathematics with Business and Finance</li>
+                    </ul>
+                    <li class="sub-section-title">FACULTY OF TEACHER EDUCATION (FTED)</li>
+                    <ul>
+                        <li>Bachelor of Elementary Education</li>
+                        <li>Bachelor of Secondary Education - major in: Biological Sciences</li>
+                        <li>Bachelor of Secondary Education - major in: English</li>
+                        <li>Bachelor of Secondary Education - major in: Mathematics</li>
+                        <li>Bachelor of Secondary Education - major in: Science</li>
+                        <li>Bachelor of Physical Education - major in: School Physical Education</li>
+                        <li>Bachelor of Special Needs Education</li>
+                    </ul>
+                </ul>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3 id="special" class="heading3">Application Process</h3>
+            <ul>
+                <li class="sub-section-title">2024-2025 - FIRST SEMESTER PRE-REGISTRATION FOR SCHOOLS WITHIN DAVAO ORIENTAL ONLY</li>
+                <ul>
+                    <li>STEP 1 - Applicants must fill-out the Applicant's Profile Google Forms BEFORE their examination schedules. This google form is NOT A SLOT RESERVATION. If you wish to secure a slot, submit your requirements to your school's designated guidance advocates.</li>
+                    <li>STEP 2 - Applicants will prepare their examination requirements and submit them (except payment) to their school's designated guidance advocates. Make sure to comply the complete requirements.</li>
+                    <li>STEP 3 - School advocates will drop-off the requirements BY SCHOOL (except payment) at their designated drop-off areas BEFORE the pick-up schedule.</li>
+                    <li>STEP 4 - OSCD staff will pick-up the submitted requirements from the drop-off areas for checking. Only those with complete requirements will be included in the final schedule. WAIT FOR YOUR FINAL SCHEDULE TO BE POSTED AND DISSEMINATED.</li>
+                </ul>
+                <li class="sub-section-title">APTITUDE AND SCHOLARSHIP TEST (SUAST) PROCESS FOR A.Y. 2024-2025 - FIRST SEMESTER EXAMINATION DAY PROCEDURES</li>
+                <ul>
+                    <li>STEP 1 - Applicants will proceed outside their designated testing rooms for attendance and payment of testing fee (150.00). The testing room in-charge will also verify if they have fill-out the Applicants Profile Google Forms.</li>
+                    <li>STEP 2 - Applicants will take the entrance examination for 1 hour.</li>
+                    <li>STEP 3 - After the final instructions, applicants will leave the testing room.</li>
+                </ul>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3 id="special" class="heading3">Contact Information</h3>
+            <ul>
+                <li>Email Address(es): admission@dorsu.edu.ph</li>
+                <li>Website(s): <a href="https://www.facebook.com/dorsuofficial/">https://www.facebook.com/dorsuofficial/</a>, <a href="https://dorsu.edu.ph/">https://dorsu.edu.ph/</a></li>
+                <li>Phone / Landline Number:</li>
+                <ul>
+                    <li>(087) 388 3195</li>
+                    <li>0975 591 5727</li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

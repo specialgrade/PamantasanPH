@@ -3,84 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../static/images/logos/website/finallogo.png">
+    <!--<link rel="icon" href="../static/images/logos/website/finallogo.png">-->
+    <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}">
     <title>PamantasanPH</title>
-    <link rel="stylesheet" type="text/css" href="../static/styles/teams.css">
-    <!-- <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='styles/teams.css') }}" /> -->
+    <!--<link rel="stylesheet" type="text/css" href="../static/styles/teams.css">-->
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='styles/teams.css') }}" /> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <header> <!-- Navigation -->
         <div class="logo">
-            <img src="../static/images/logos/website/finallogo.png" alt="PamantasanPH Logo">
+            <!--<img src="../static/images/logos/website/finallogo.png" alt="PamantasanPH Logo">-->
+            <img src="{{ url_for('static', filename='images/logos/website/finallogo.png') }}" alt="PamantasanPH Logo">
             <span>PamantasanPH</span>
         </div>
         <div class="search">
             <input type="text" placeholder="Search">
             <button>
-                <i class="fa-solid fa-magnifying-glass"></i>
-           </button>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <div class="result-box">
+              <!-- Result items will be dynamically added here -->
+            </div>
         </div>
+        
         <div class="user">
             <i class="fa-solid fa-moon moon-icon"></i>
             <div class="gradient-container">
-                <span>Username</span>
+                {% if current_user.is_authenticated %}
+                    <span>{{ current_user.username }}</span>
+                {% else %}
+                    <span>Guest</span>
+                {% endif %}
                 <i class="fa-solid fa-chevron-down"></i>
-            </div>
+              </div>
         </div>
     </header>
 
     <div class="container"> <!-- Main Container -->
-        <aside> <!-- Sidebar -->
+        <aside>
+            <!-- Sidebar -->
             <div class="create-item">
-                <span>Create New List</span>
-                <i class="fa-solid fa-circle-plus"></i>
+              <span>Create New List</span>
+              <i class="fa-solid fa-circle-plus"></i>
+            </div>
+            <div id="dashboard" class="sidebar-item">
+              <!--<a href="dashboard.html">-->
+              <a href="{{ url_for('dashboard') }}">
+                <i class="fa-solid fa-box-archive"></i>
+                <span>Dashboard</span>
+              </a>
             </div>
             <div class="sidebar-item">
-                <a href="dashboard.html">
-                    <i class="fa-solid fa-box-archive"></i>
-                    <span>Dashboard</span>
-                </a>
+              <!--<a href="regions.html">-->
+              <a href="{{ url_for('regions') }}">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Universities</span>
+              </a>
             </div>
             <div class="sidebar-item">
-                <a href="regions.html">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    <span>Universities</span>
-                </a>
+              <!--<a href="map.html">-->
+              <a href="{{ url_for('map') }}">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <span>Map</span>
+              </a>
             </div>
             <div class="sidebar-item">
-                <a href="map.html">
-                    <i class="fa-solid fa-map-location-dot"></i>
-                    <span>Map</span>
-                </a>
+              <!--<a href="compare.html">-->
+              <a href="{{ url_for('compare') }}">          
+                <i class="fa-solid fa-code-compare"></i>
+                <span>Compare</span>
+              </a>
             </div>
             <div class="sidebar-item">
-                <a href="compare.html">
-                    <i class="fa-solid fa-code-compare"></i>
-                    <span>Compare</span>
-                </a>
-            </div>
-            <div id="team" class="sidebar-item">
-                <a href="teams.html">
-                    <i class="fa-solid fa-users-rectangle"></i>
-                    <span>Team</span>
-                </a>
+              <!--<a href="teams.html">-->
+              <a href="{{ url_for('teams') }}">
+                <i class="fa-solid fa-users-rectangle"></i>
+                <span>Team</span>
+              </a>
             </div>
             <div class="subscribe">
                 <h3>Subscribe to our Newsletter!</h3>
                 <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
-                <input type="email" placeholder="Email">
-                <button>Subscribe</button>
+                <form action="{{ url_for('newsletter') }}" method="post">
+                    {% if csrf_token %}
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    {% endif %}
+                    <input type="email" name="email" placeholder="Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
             </div>
             <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
-        </aside>
+          </aside>
 
         <main> <!-- Main Content -->
             <div class="team-section">
                 <h1>Meet the Innovat3rs</h1>
                 <div class="team-leader">
-                    <img src="../static/images/members/delacruz.png">
+                    <!--<img src="../static/images/members/delacruz.png">-->
+                    <img src="{{ url_for('static', filename='images/members/delacruz.png') }}">
                     <div class="member-info">
                         <h3>Alyssa Marie Dela Cruz</h3>
                         <p>Project Manager, Frontend Developer, UI/UX Designer</p>
@@ -88,56 +110,64 @@
                 </div>
                 <div class="team-members">
                     <div class="team-member">
-                        <img src="../static/images/members/delavega.png">
+                        <!--<img src="../static/images/members/delavega.png">-->
+                        <img src="{{ url_for('static', filename='images/members/delavega.png') }}">
                         <div class="member-info">
                             <h3>Bianca Isabelle Dela Vega</h3>
                             <p>Technical Designer, UI/UX Designer</p>
                         </div>
                     </div>
                     <div class="team-member">
-                        <img src="../static/images/members/segura.png">
+                        <!--<img src="../static/images/members/segura.png">-->
+                        <img src="{{ url_for('static', filename='images/members/segura.png') }}">
                         <div class="member-info">
                             <h3>Odracir Rod Ivan Segura</h3>
                             <p>Frontend Developer</p>
                         </div>
                     </div>
                     <div class="team-member">
-                        <img src="../static/images/members/simara.png">
+                        <!--<img src="../static/images/members/simara.png">-->
+                        <img src="{{ url_for('static', filename='images/members/simara.png') }}">
                         <div class="member-info">
                             <h3>Daniella Simara</h3>
                             <p>Backend Developer</p>
                         </div>
                     </div>
                     <div class="team-member">
-                        <img src="../static/images/members/natada.png">
+                        <!--<img src="../static/images/members/natada.png">-->
+                        <img src="{{ url_for('static', filename='images/members/natada.png') }}">
                         <div class="member-info">
                             <h3>Christopher Natada</h3>
                             <p>Business Analyst, Frontend Developer</p>
                         </div>
                     </div>
                     <div class="team-member">
-                        <img src="../static/images/members/rico.png">
+                        <!--<img src="../static/images/members/rico.png">-->
+                        <img src="{{ url_for('static', filename='images/members/rico.png') }}">
                         <div class="member-info">
                             <h3>Jenascia Rico</h3>
                             <p>Business Analyst, Frontend Developer</p>
                         </div>
                     </div>
                     <div class="team-member">
-                        <img src="../static/images/members/calot.png">
+                        <!--<img src="../static/images/members/calot.png">-->
+                        <img src="{{ url_for('static', filename='images/members/calot.png') }}">
                         <div class="member-info">
                             <h3>Patrick Fran Calot</h3>
                             <p>System Analyst</p>
                         </div>
                     </div>
                     <div class="team-member">
-                        <img src="../static/images/members/deguzman.png">
+                        <!--<img src="../static/images/members/deguzman.png">-->
+                        <img src="{{ url_for('static', filename='images/members/deguzman.png') }}">
                         <div class="member-info">
                             <h3>John Reynald De Guzman</h3>
                             <p>Technical Writer, Creatives</p>
                         </div>
                     </div>
                     <div class="team-member">
-                        <img src="../static/images/members/lopez.png">
+                        <!--<img src="../static/images/members/lopez.png">-->
+                        <img src="{{ url_for('static', filename='images/members/lopez.png') }}">
                         <div class="member-info">
                             <h3>Angel Grace Lopez</h3>
                             <p>Technical Writer, UI/UX Designer</p>
@@ -148,6 +178,7 @@
         </main>
     </div>
 
-  <!-- <script src="../static/scripts/teams.js"></script> -->
+  <!--<script src="../static/scripts/teams.js"></script>-->
+  <script src="{{ url_for('static', filename='js/teams.js') }}"></script>
 </body>
 </html>

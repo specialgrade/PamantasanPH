@@ -1,5 +1,6 @@
 from src.app import create_app 
 from src import routes
+from flask_login import login_manager
 
 app = create_app()
 

@@ -30,49 +30,60 @@
         </div>
     </header>
     <div class="container">
-        <aside> <!-- Sidebar -->
+        <aside>
+            <!-- Sidebar -->
             <div class="create-item">
-                <span>Create New List</span>
-                <i class="fa-solid fa-circle-plus"></i>
+              <span>Create New List</span>
+              <i class="fa-solid fa-circle-plus"></i>
+            </div>
+            <div id="dashboard" class="sidebar-item">
+              <!--<a href="dashboard.html">-->
+              <a href="{{ url_for('dashboard') }}">
+                <i class="fa-solid fa-box-archive"></i>
+                <span>Dashboard</span>
+              </a>
             </div>
             <div class="sidebar-item">
-                <a href="dashboard.html">
-                    <i class="fa-solid fa-box-archive"></i>
-                    <span>Dashboard</span>
-                </a>
+              <!--<a href="regions.html">-->
+              <a href="{{ url_for('regions') }}">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Universities</span>
+              </a>
             </div>
             <div class="sidebar-item">
-                <a href="regions.html">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    <span>Universities</span>
-                </a>
+              <!--<a href="map.html">-->
+              <a href="{{ url_for('map') }}">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <span>Map</span>
+              </a>
             </div>
             <div class="sidebar-item">
-                <a href="map.html">
-                    <i class="fa-solid fa-map-location-dot"></i>
-                    <span>Map</span>
-                </a>
-            </div>
-            <div id="compare" class="sidebar-item">
-                <a href="compare.html">
-                    <i class="fa-solid fa-code-compare"></i>
-                    <span>Compare</span>
-                </a>
+              <!--<a href="compare.html">-->
+              <a href="{{ url_for('compare') }}">          
+                <i class="fa-solid fa-code-compare"></i>
+                <span>Compare</span>
+              </a>
             </div>
             <div class="sidebar-item">
-                <a href="team2.html">
-                    <i class="fa-solid fa-users-rectangle"></i>
-                    <span>Team</span>
-                </a>
+              <!--<a href="teams.html">-->
+              <a href="{{ url_for('teams') }}">
+                <i class="fa-solid fa-users-rectangle"></i>
+                <span>Team</span>
+              </a>
             </div>
             <div class="subscribe">
                 <h3>Subscribe to our Newsletter!</h3>
                 <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
-                <input type="email" placeholder="Email">
-                <button>Subscribe</button>
+                <form action="{{ url_for('newsletter') }}" method="post">
+                    {% if csrf_token %}
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    {% endif %}
+                    <input type="email" name="email" placeholder="Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
             </div>
             <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
-        </aside>
+          </aside>
 
         <!-- Main Content -->
         <div class="main-content">

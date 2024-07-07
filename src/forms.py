@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, SelectField
-from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
+from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError, Regexp
 from .models import User
 from wtforms.widgets import html_params
 from flask_login import current_user
@@ -67,6 +67,22 @@ class UpdateAccountForm(FlaskForm):
                 raise ValidationError('That email is taken. Please choose another one.')
             
 
-class RatingForm(FlaskForm):
-    rating = SubmitField('★')  
-    submit = SubmitField('Submit Rating')
+class VerifyOTPForm(FlaskForm):
+    otp = StringField('OTP', validators=[DataRequired()])
+    digit1 = StringField('Digit 1', validators=[
+        DataRequired(), Length(min=1, max=1),
+        Regexp('^[0-9]$', message="Please enter a digit (0-9) only.")
+    ])
+    digit2 = StringField('Digit 2', validators=[
+        DataRequired(), Length(min=1, max=1),
+        Regexp('^[0-9]$', message="Please enter a digit (0-9) only.")
+    ])
+    digit3 = StringField('Digit 3', validators=[
+        DataRequired(), Length(min=1, max=1),
+        Regexp('^[0-9]$', message="Please enter a digit (0-9) only.")
+    ])
+    digit4 = StringField('Digit 4', validators=[
+        DataRequired(), Length(min=1, max=1),
+        Regexp('^[0-9]$', message="Please enter a digit (0-9) only.")
+    ])
+    submit = SubmitField('Verify')

@@ -96,7 +96,7 @@ input {
     text-align: center;
 }
 
-button {
+.button {
   background: linear-gradient(to right, #192f3f, #94273a);
   color: var(--white);
   padding: 15px 20px;  
@@ -108,7 +108,7 @@ button {
   font-size: 14px;  
 }
 
-button:hover {
+.button:hover {
     background: linear-gradient(to right, #7a1f2c, #94273a);
 }
 

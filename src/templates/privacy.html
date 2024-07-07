@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy and Policy</title>
+    <!--<link rel="stylesheet" href="../static/styles/privary.css">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/privacy.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <!--<a href="dashboard.html" class="back-arrow">&#8592;</a> --><!-- Change the h ref nalang here and change the arrow -->
+            <a href="{{ url_for('dashboard') }}" class="back-arror">&#8592;</a>
+            <h1>Privacy and Policy</h1>
+        </div>
+        <div class="content">
+            <h2>Privacy Policy for PamantasanPH</h2>
+            <div class="policy-sections">
+                <div class="section">
+                    <h3>Information We Collect</h3>
+                    <p>When you log in to PamantasanPH, we collect:</p>
+                    <ul>
+                        <li><b>Personal Information:</b> Name, email address, and contact details</li>
+                        <li><b>Log Data:</b> IP address, device information, and log-in timestamps</li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h3>Data Security</h3>
+                    <p>We implement industry-standard measures to protect your information from unauthorized access, disclosure, alteration, or destruction.</p>
+                </div>
+                <div class="section">
+                    <h3>How We Use Your Information</h3>
+                    <p>We use your information to:</p>
+                    <ul>
+                        <li>Provide and improve our services</li>
+                        <li>Communicate with you about updates and important information</li>
+                        <li>Ensure security and prevent unauthorized access</li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h3>Your Rights</h3>
+                    <p>You have the right to:</p>
+                    <ul>
+                        <li>Access and update your personal information</li>
+                        <li>Opt-out of promotional communications</li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h3>Information Sharing and Disclosure</h3>
+                    <p>We do not sell or share your personal information with third parties except:</p>
+                    <ul>
+                        <li>When required by law</li>
+                        <li>To protect our rights and property</li>
+                        <li>With service providers who assist us in operating the application</li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h3>Contact Us</h3>
+                    <p>If you have any questions or concerns about this Privacy Policy, please contact us at <a href="mailto:pamantasanph@gmail.com">pamantasanph@gmail.com</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -2,31 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}">
+    <!--<link rel="icon" href="../static/images/logos/website/finallogo.png">-->
+    <link rel="icon" href="{{ url_for('static', filename='/images/logos/website/finallogo.png') }}">
     <title>PamantasanPH</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/univs21.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--<link rel="stylesheet" type="text/css" href="../static/styles/univsDetails2.css">-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/univsDetails2.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-	<header class="header"> <!--navigation div-->
-        <div class="title">
-            <img src="{{ url_for('static', filename='images/logos/website/finallogo.png') }}" alt="PamantasanPH" class="logo">
-            <p>Pamantasan<span>PH</span></p>
+    <header>
+        <div class="logo">
+            <!--<img src="../static/images/logos/website/finallogo.png" alt="PamantasanPH Logo">-->
+            <img src="{{ url_for('static', filename='images/logos/website/finallogo.png') }}" alt="PamantasanPH Logo">
+            <span>PamantasanPH</span>
         </div>
-        <nav> 
-            <ul id="navigation">
-                <li><a id="home" href="{{ url_for('home') }}">Home</a></li>
-                <li><a id="univs" href="{{ url_for('universities') }}">Universities</a></li>
-                <li><a id="favs" href="{{ url_for('bookmarks') }}">Bookmarks</a></li>
-				<li><a id="team" href="{{ url_for('team') }}">Team</a></li>
-            </ul>
-        </nav>
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+        <div class="user">
+            <i class="fa-solid fa-moon moon-icon"></i>
+            <div class="gradient-container">
+                <span>{{ current_user.username }}</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
     </header>
+
+    <main>
+        <aside>
+            <!-- Sidebar -->
+            <div class="create-item">
+              <span>Create New List</span>
+              <i class="fa-solid fa-circle-plus"></i>
+            </div>
+            <div id="dashboard" class="sidebar-item">
+              <!--<a href="dashboard.html">-->
+              <a href="{{ url_for('dashboard') }}">
+                <i class="fa-solid fa-box-archive"></i>
+                <span>Dashboard</span>
+              </a>
+            </div>
+            <div class="sidebar-item">
+              <!--<a href="regions.html">-->
+              <a href="{{ url_for('regions') }}">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Universities</span>
+              </a>
+            </div>
+            <div class="sidebar-item">
+              <!--<a href="map.html">-->
+              <a href="{{ url_for('map') }}">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <span>Map</span>
+              </a>
+            </div>
+            <div class="sidebar-item">
+              <!--<a href="compare.html">-->
+              <a href="{{ url_for('compare') }}">          
+                <i class="fa-solid fa-code-compare"></i>
+                <span>Compare</span>
+              </a>
+            </div>
+            <div class="sidebar-item">
+              <!--<a href="teams.html">-->
+              <a href="{{ url_for('teams') }}">
+                <i class="fa-solid fa-users-rectangle"></i>
+                <span>Team</span>
+              </a>
+            </div>
+            <div class="subscribe">
+                <h3>Subscribe to our Newsletter!</h3>
+                <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
+                <form action="{{ url_for('newsletter') }}" method="post">
+                    {% if csrf_token %}
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    {% endif %}
+                    <input type="email" name="email" placeholder="Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
+          </aside>
 
 	<div  id="navbar" class="heading-container">
         <nav>
@@ -63,7 +124,7 @@
 
     <!-- Universidad de Manila -->
 	<div id="quali" class="container">
-		<img src="{{ url_for('static', filename='images/logos/universities/UDMLogo.png') }}" alt="Universidad de Manila" class="univ-logo">
+		<img src="{{ url_for('static', filename='images/logos/website/universities/UDMLogo.png') }}" alt="Universidad de Manila" class="univ-logo">
 		<h1>Universidad de Manila</h1>
 		<h2 class="address">Cecilia Muñoz-Palma cor. Antonio J. Villegas Streets, Manila, Philippines</h2>
 		<div class="status">

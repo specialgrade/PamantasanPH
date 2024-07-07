@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../static/images/logos/website/finallogo.png">
+    <!--<link rel="icon" href="../static/images/logos/website/finallogo.png">-->
+    <link rel="icon" href="{{ url_for('static', filename='images/logos/website/finallogo.png') }}">
     <title>PamantasanPH</title>
-    <link rel="stylesheet" type="text/css" href="../static/styles/regions.css">
-    <!-- <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='styles/regions.css') }}" /> -->
+    <!--<link rel="stylesheet" type="text/css" href="../static/styles/regions.css">-->
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='styles/regions.css') }}" /> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <header> <!-- Navigation -->
         <div class="logo">
-            <img src="../static/images/logos/website/finallogo.png" alt="PamantasanPH Logo">
+            <!--<img src="../static/images/logos/website/finallogo.png" alt="PamantasanPH Logo">-->
+            <img src="{{ url_for('static', filename='images/logos/website/finallogo.png') }}" alt="PamantasanPH Logo">
             <span>PamantasanPH</span>
         </div>
         <div class="search">
@@ -25,128 +27,139 @@
         <div class="user">
             <i class="fa-solid fa-moon moon-icon"></i>
             <div class="gradient-container">
-                <span>Username</span>
+                <span>{{ current_user.username }}</span>
                 <i class="fa-solid fa-chevron-down"></i>
             </div>
         </div>
     </header>
 
     <div class="container"> <!-- Main Container -->
-        <aside> <!-- Sidebar -->
+        <aside>
+            <!-- Sidebar -->
             <div class="create-item">
-                <span>Create New List</span>
-                <i class="fa-solid fa-circle-plus"></i>
+              <span>Create New List</span>
+              <i class="fa-solid fa-circle-plus"></i>
+            </div>
+            <div id="dashboard" class="sidebar-item">
+              <!--<a href="dashboard.html">-->
+              <a href="{{ url_for('dashboard') }}">
+                <i class="fa-solid fa-box-archive"></i>
+                <span>Dashboard</span>
+              </a>
             </div>
             <div class="sidebar-item">
-                <a href="dashboard.html">
-                    <i class="fa-solid fa-box-archive"></i>
-                    <span>Dashboard</span>
-                </a>
-            </div>
-            <div id="regions" class="sidebar-item">
-                <a href="regions.html">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    <span>Universities</span>
-                </a>
+              <!--<a href="regions.html">-->
+              <a href="{{ url_for('regions') }}">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Universities</span>
+              </a>
             </div>
             <div class="sidebar-item">
-                <a href="map.html">
-                    <i class="fa-solid fa-map-location-dot"></i>
-                    <span>Map</span>
-                </a>
+              <!--<a href="map.html">-->
+              <a href="{{ url_for('map') }}">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <span>Map</span>
+              </a>
             </div>
             <div class="sidebar-item">
-                <a href="compare.html">
-                    <i class="fa-solid fa-code-compare"></i>
-                    <span>Compare</span>
-                </a>
+              <!--<a href="compare.html">-->
+              <a href="{{ url_for('compare') }}">          
+                <i class="fa-solid fa-code-compare"></i>
+                <span>Compare</span>
+              </a>
             </div>
             <div class="sidebar-item">
-                <a href="teams.html">
-                    <i class="fa-solid fa-users-rectangle"></i>
-                    <span>Team</span>
-                </a>
+              <!--<a href="teams.html">-->
+              <a href="{{ url_for('teams') }}">
+                <i class="fa-solid fa-users-rectangle"></i>
+                <span>Team</span>
+              </a>
             </div>
             <div class="subscribe">
                 <h3>Subscribe to our Newsletter!</h3>
                 <p>To be updated with all the latest news, articles, and FAQs about PamantasanPH.</p>
-                <input type="email" placeholder="Email">
-                <button>Subscribe</button>
+                <form action="{{ url_for('newsletter') }}" method="post">
+                    {% if csrf_token %}
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    {% endif %}
+                    <input type="email" name="email" placeholder="Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
             </div>
             <p class="copyright">© 2024 PamantasanPH, All rights reserved</p>
-        </aside>
+          </aside>
     
     <main class="main-content"> <!-- Main Content -->
       <div class="locations">
         <section>
           <h2>Choose your location</h2>
           <div class="region-grid">
-            <a href="../templates/region1.html" class="region-card">
-                <img src="../static/images/regions/ILOCOS.jpg" alt="Ilocos Region">
+            <a href="{{ url_for('region1') }}" class="region-card">
+                <img src="{{ url_for('static', filename='images/regions/ILOCOS.jpg') }}" alt="Ilocos Region">
                 <span>Ilocos Region</span>
             </a>
-            <a href="../templates/region2.html" class="region-card">
-                <img src="../static/images/regions/CAGAYAN.jpg" alt="Cagayan Valley">
+            <a href="{{ url_for('region2') }}" class="region-card">
+                <img src="{{ url_for('static', filename='images/regions/CAGAYAN.jpg') }}" alt="Cagayan Valley">
                 <span>Cagayan Valley</span>
             </a>
-            <a href="../templates/region3.html" class="region-card">
-                <img src="../static/images/regions/CENTRAL_LUZON.jpg" alt="Central Luzon">
+            <a href="{{ url_for('region3') }}" class="region-card">
+                <img src="{{ url_for('static', filename='images/regions/CENTRAL_LUZON.jpg') }}" alt="Central Luzon">
                 <span>Central Luzon</span>
             </a>
-            <a href="../templates/region4a.html" class="region-card">
-                <img src="../static/images/regions/CALABARZON.jpg" alt="CALABARZON">
+            <a href="{{ url_for('region4a') }}" class="region-card">
+                <img src="{{ url_for('static', filename='images/regions/CALABARZON.jpg') }}" alt="CALABARZON">
                 <span>CALABARZON</span>
             </a>
-            <a href="../templates/region4b.html" class="region-card">
-                <img src="../static/images/regions/MIMAROPA.jpg" alt="MIMAROPA">
+            <a href="{{ url_for('region4b') }}" class="region-card">
+                <img src="{{ url_for('static', filename='images/regions/MIMAROPA.jpg') }}" alt="MIMAROPA">
                 <span>MIMAROPA</span>
             </a>
-            <a href="../templates/region5.html" class="region-card">
-                <img src="../static/images/regions/BICOL.jpg" alt="Bicol Region">
+            <a href="{{ url_for('region5') }}" class="region-card">
+                <img src="{{ url_for('static', filename='images/regions/BICOL.jpg') }}" alt="Bicol Region">
                 <span>Bicol Region</span>
             </a>
-            <a href="../templates/region6.html" class="region-card">
-                <img src="../static/images/regions/WESTERN_VISAYAS.jpg" alt="Western Visayas">
+            <a href="{{ url_for('region6') }}" class="region-card">
+                <img src="{{ url_for('static', filename='images/regions/WESTERN_VISAYAS.jpg') }}" alt="Western Visayas">
                 <span>Western Visayas</span>
             </a>
-            <a href="../templates/region7.html" class="region-card">
-                <img src="../static/images/regions/CENTRAL_VISAYAS.jpg" alt="Central Visayas">
+            <a href="{{ url_for('region7') }}" class="region-card">
+                <img src="{{ url_for('static', filename='images/regions/CENTRAL_VISAYAS.jpg') }}" alt="Central Visayas">
                 <span>Central Visayas</span>
             </a>
-            <a href="../templates/region8.html" class="region-card">
-                <img src="../static/images/regions/EASTERN_VISAYAS.jpg" alt="Eastern Visayas">
+            <a href="{{ url_for('region8') }}" class="region-card">
+                <img src="{{ url_for('static', filename='images/regions/EASTERN_VISAYAS.jpg') }}" alt="Eastern Visayas">
                 <span>Eastern Visayas</span>
             </a>
-            <a href="../templates/region9.html" class="region-card">
-                <img src="../static/images/regions/ZAMBOANGA_PENINSULA.jpg" alt="Zamboanga Peninsula">
+            <a href="{{ url_for('region9') }}" class="region-card">
+                <img src="{{ url_for('static', filename='images/regions/ZAMBOANGA_PENINSULA.jpg') }}" alt="Zamboanga Peninsula">
                 <span>Zamboanga Peninsula</span>
             </a>
-            <a href="../templates/region10.html" class="region-card">
-                <img src="../static/images/regions/NORTHERN_MINDANAO.jpg" alt="Northern Mindanao">
+            <a href="{{ url_for('region10') }}" class="region-card">
+                <img src="{{ url_for('static', filename='images/regions/NORTHERN_MINDANAO.jpg') }}" alt="Northern Mindanao">
                 <span>Northern Mindanao</span>
             </a>
-            <a href="../templates/region11.html" class="region-card">
-                <img src="../static/images/regions/DAVAO.jpg" alt="Davao Region">
+            <a href="{{ url_for('region11') }}" class="region-card">
+                <img src="{{ url_for('static', filename='images/regions/DAVAO.jpg') }}" alt="Davao Region">
                 <span>Davao Region</span>
             </a>
-            <a href="../templates/region12.html" class="region-card">
-                <img src="../static/images/regions/SOCCSKSARGEN.jpg" alt="SOCCSKSARGEN">
+            <a href="{{ url_for('region12') }}" class="region-card">
+                <img src="{{ url_for('static', filename='images/regions/SOCCSKSARGEN.jpg') }}" alt="SOCCSKSARGEN">
                 <span>SOCCSKSARGEN</span>
             </a>
-            <a href="../templates/region13.html" class="region-card">
-                <img src="../static/images/regions/CARAGA.jpg" alt="Caraga">
+            <a href="{{ url_for('region13') }}" class="region-card">
+                <img src="{{ url_for('static', filename='images/regions/CARAGA.jpg') }}" alt="Caraga">
                 <span>Caraga</span>
             </a>
-            <a href="../templates/ncr.html" class="region-card">
-                <img src="../static/images/regions/NCR.jpg" alt="NCR">
+            <a href="{{ url_for('ncr') }}" class="region-card">
+                <img src="{{ url_for('static', filename='images/regions/NCR.jpg') }}" alt="NCR">
                 <span>NCR</span>
             </a>
-            <a href="../templates/cordillera.html" class="region-card">
-                <img src="../static/images/regions/CAR.jpg" alt="CAR">
+            <a href="{{ url_for('cordillera') }}" class="region-card">
+                <img src="{{ url_for('static', filename='images/regions/CAR.jpg') }}" alt="CAR">
                 <span>CAR</span>
             </a>
-            <a href="../templates/bangsamoro.html" class="region-card">
-                <img src="../static/images/regions/BARMM.jpg" alt="BARMM">
+            <a href="{{ url_for('bangsamoro') }}" class="region-card">
+                <img src="{{ url_for('static', filename='images/regions/BARMM.jpg') }}" alt="BARMM">
                 <span>BARMM</span>
             </a>
         </div>
@@ -154,5 +167,6 @@
     </div>
 
     <!-- <script src="../static/js/regionsU.js"></script> -->
+     <script src="{{ url_for('static', filename='js/regions.js') }}"></script>
 </body>
 </html>

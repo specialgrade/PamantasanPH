@@ -1,8 +1,8 @@
-Hi {user.username},
+Hi {{ username }},
 
 We received a request to change the password associated with your account. To proceed with this request, please use the OTP (One-Time Password) provided below:
 
-Your email OTP is: {otp}
+Your email OTP is: {{ otp }}
 
 If you did not initiate this request or need further assistance, please contact our support team immediately.
 
