@@ -1,7 +1,7 @@
 from flask import render_template, redirect, url_for, request, jsonify, render_template_string, flash, abort, session, current_app
 from src.app import db, mail, bcrypt, oauth, login_manager
 from src.forms import RegistrationForm, LoginForm, RequestResetForm, ResetPasswordForm, VerifyOTPForm
-from src.models import Subscribe, User, University, Rating, Todo
+from src.models import Subscribe, User, Todo
 from flask import send_from_directory
 from flask_login import login_user, current_user, logout_user, login_required, UserMixin, LoginManager
 from flask_mail import Message
